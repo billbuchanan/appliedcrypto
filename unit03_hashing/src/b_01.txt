@@ -1,0 +1,1 @@
+hashcat –b -m 0

@@ -1,0 +1,3 @@
+sudo service ssh start
+sudo nano /etc/ssh/sshd_config
+ssh napier@localhost

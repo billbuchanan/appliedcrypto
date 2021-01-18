@@ -1,0 +1,90 @@
+Crypto Sample Exam Questions
+
+There will be three main questions in the exam:
+
+    Public Key, Key Exchange and Digital Certificates.
+    Symmetric Key and Hashing.
+    Cryptocurrencies and Blockchain.
+
+Each of these exam questions will have sub-questions, and there are 20 marks for each question. The next three sections outline some sample questions which will get you thinking in the right direction.
+
+1. Public Key, Key Exchange and Digital Certificates
+
+Key topics: RSA, Elliptic Curve, GCD, Diffie-Hellman
+
+    Explain how public key provides both privacy and identity verification. [Ref: Public key]
+    Explain how the e and d values are determined within the RSA method. What are the values that are distributed and which are kept secret? [Ref: Public key]
+    Bob has just produced a key pair, in a Base-64 format, and now wants to send this to Alice. What advice would you give him on sending the key pair to Alice? [Ref: Public key]
+    Bob has two numbers which give a GCD of 1. Trent says that this happens because the numbers are prime. Is Trent correct? Explain your answer. [Ref: Public key]
+    Bob sends an encrypted message to Alice, and also sends his digital certificate to Alice to prove his identity. How does Alice prove that it is Bob who sent the message? [Ref: Digital Certificates]
+    For Diffie-Hellman: G=2,351; N=5,683; x=7 and y=14. What is the shared key? [Ref: Key Exchange]
+    With Diffie-Hellman, G is 1579, and N is 7561. Bob selects 13 and Alice selects 14. Prove that the shared key is 868. [Ref: Key Exchange]
+    With RSA, Bob selects two prime numbers of: p=3, q=5. What are the encryption and decryption keys? For a message of 4, prove that the decrypted value is the same of the message. [Ref: Public key]
+    Bob selects a p value of 7 and a q value of 9, but he cannot get his RSA encryption to work. What is the problem? [Ref: Public key]
+    Bob has selected a p value of 11 and a q value of 7. Which of the following are possible encryption keys: (5,77), (3,77), (9,77), (11,77), and (24,77). [Ref: Public key]
+    Bob and Alice decide to use RSA encryption to send secure email, where Bob uses Alice's public key to encrypt, and she uses her private key to decrypt. What is the main problem caused with this, as apposed to using symmetric encryption? [Ref: Public key]
+    Bob tells Alice that she should send her private key in order that he should encrypt something for her. Outline the main problem caused by this. [Ref: Public key]
+    Security professionals say that RSA keys of over 1,024 bits are secure. What is the core protection against the RSA method being cracked for keys of 1,024 bits and more. [Ref: Public key]
+    Bob and Alice get into a debate about the size of the d and e values in the RSA encryption key. Bob says that, in real-life keys, the length of the e value in (e,n) is normally about the same size as the d value (d,n). Alice disagrees. Who is correct? [Ref: Public key]
+    Bob says that Elliptic Curve Cryptography (ECC) is an easy method to crack. Explain to Bob how ECC operates, and why it can be a secure method. [Ref: Public key]
+    The core trust on the Internet is based around PKI (Public Key Infrastructure). Outline how digital certificates are used to provide a degree of trustworthiness. [Ref: Digital Certificates]
+
+2. Symmetric Key and Hashing
+
+Key principles: Salting, AES, ECB, CBC, Hashing
+
+    Computing power increases each year. Outline the challenge this gives when protecting encrypted data. [Ref: Symmetric Key]
+    What are the possible advantages of using stream ciphers over block ciphers? [Ref: Symmetric Key]
+    The AES method is recommended by NIST for symmetric key encryption. What are the main stages involved in the AES process? [Ref: Symmetric Key]
+    Bob encrypts his data using symmetric key encryption and sends it to Alice. Every time he produces the ciphertext it changes, and he is worried that Alice will not be able to decipher the cipher text. He encrypts "Hello" and gets a different cipher stream each time. Why does the cipher text change? [Ref: Symmetric Key]
+    Bob is sending encrypted data to Alice, and Eve is listening. After listening for a while, Eve is able to send a valid encrypted message to Alice. By outlining ECB, discuss how this might be possible. [Ref: Symmetric Key]
+    Bob is using a password to generate a 128-bit encryption key. Explain why the key space is unlikely to be 2128, and why key entropy could be used to measure the equivalent key size. [Ref: Symmetric Key]
+    Bob uses a six-character password with lower case [a-z]. How many passwords are possible? His password system then tells him he needs to add numeric value [0-9]. If he adds it at the end, how many passwords are possible, and what is the key entropy? [Ref: Symmetric Key]
+    Outline the importance of storing the salt value with the hashed value when storing hashed passwords. [Ref: Hashing]
+    Eve has captured a hashed password. How might she use the Cloud to be able to crack the hashed password, and what is a likely tool for this? [Ref: Hashing]
+    Bob is an administrator for a network, and he tells his management team that user passwords are now salted, and they are thus completely secure against attacks. Is he correct? Explain your viewpoint. [Ref: Hashing]
+    Bob looks at the passwd file on his server and wants to know the type of salting that is used. How would he do this? [Ref: Hashing]
+    Bob is looking for a new hashing method for storing passwords and thinks that he will pick the fastest one. Is this a good approach? Explain your answer. [Ref: Hashing]
+    What are the typical tools that are used to crack hashed passwords, and what are the methods they will use to crack them? [Ref: Hashing]
+    If we have a 16-bit key, but only use 200 phrases. What is the key entropy? [Ref: Hashing]
+    If it takes 10ns to test an encryption key. How long will it take to crack a 20-bit key? [Ref: Hashing]
+    Bob says that the number of bytes used for the cipher text will change directly with the number of bytes used in the plain text. Alice disagrees and says that most encryption methods involve having block sizes. Who is correct? Explain why. [Ref: Symmetric Key]
+    With block encryption, how do we know where the ciphered data actually ends? Does it just use an end-of-file character or a NULL character? [Ref: Symmetric Key]
+    Alice says she is confused that Bob is sending her the same message as a cipher, but every time the cipher text changes. Apart from using the shared encryption key, what does Alice use to decipher the cipher text? [Ref: Symmetric Key]
+    Why would Eve have an aversion to salt? [Ref: Symmetric Key]
+    Bob tells Alice that she won't be able to view the cipher text, but when she looks at the messages, they seem to be full of printable characters. What format is Bob likely to be using for the encoding of the cipher text, and what would you ask Alice to look for, in order to confirm your guess? [Ref: Symmetric Key]
+    Alice has been reading her crypto books, and she reads that there should be an '=' symbol at the end of the encoding. She observes her encoding of cipher messages to Bob and sees that some do not have an '=' sign at the end. Is there a problem with her encoder? If not, how often, on average, should she see an '=' sign at the end of her ciphered messages? [Ref: Symmetric Key]
+    It was stated in the recent Yahoo hack that:
+
+    "We have confirmed, based on a recent investigation, that a copy of certain user account information was stolen from our networks in late 2014 by what we believe is a state-sponsored actor," Lord wrote. "The account information may have included names, e-mail addresses, telephone numbers, dates of birth, hashed passwords (the  vast majority with Bcrypt), and, in some cases, encrypted or unencrypted security questions and answers."
+
+    Do you think the vast majority of the hashed passwords will be cracked? Do you think they had good practice in place for hashed passwords? [Ref: Hashing]
+    You are working with a security consultant, and he says that you don't need to check the hashing of passwords, as it should work without testing. You disagree with him and decide to test your hashing method. Initially you must find test vectors for MD5, SHA-1 and SHA-256. Can you find three test vectors, and test them against an on-line calculator? [Ref: Hashing]
+    At a security presentation a researcher gives a demonstration of Scrypt. In the presentation he shows a demonstration with a password of "password" and fixed salt of "NaCl". For each run he runs the hashing function, the hashed value changes, but, each time, the computation took longer. Which parameter is the researcher likely to be changing, and why does that parameter exist? Can the researcher select any value for the parameter? [Example] [Ref: Hashing]
+    There has been a major data breach within your company, and you are to appear on Sky News to report it. Your company has used PBKDF2 to hash its passwords. How do you explain to your customers that their passwords are unlikely to be breached? [Ref: Hashing]
+
+Outline outcomes
+
+Students should:
+
+    Understand the conversion of characters between hex, decimal and octal. Sample question: Convert "hello" into a hex stream. Related material: [here]
+    Compute the GCD for values. Sample question: What is the GCD for 42 and 56? Related material: [here]
+    Understand how to manually convert from ASCII to Base-64, and vice-versa. Sample question: What is the Base-64 conversion of “hello”? [here]
+    Understand the concept of key entropy and how it is used to calculate the equivalent key sizes. Sample question: What is the key entropy size for 1,024 pass phrases? Related material: [here]
+    Calculate the time taken to crack a code given a time to try each key, and for the number of processing elements. Sample question: If it takes 100 years to crack a cipher code, and computing power doubles each year. How long will it take to crack a code after five years?
+    Understand the full process used for providing privacy and identity within public key encryption. Sample question: Explain the public key encryption process. Related material: [here]
+    Define the process used in public key encryption, including the generation of the keys and the calculation of the cipher message. Sample question: If two prime numbers of 3 and 5 are selected, what are the values for N and PHI? Related material: [here]
+    Understand the features of differing encryption methods such as AES, DES, 3DES and PGP. Sample question: How does 3-DES differ from DES when encrypting data?
+    Able to identify key hash types such as MD5, SHA-1 and LM. Sample question: Which type of hashing method has been used for a hash code of “5D41402ABC4B2A76B9719D911017C592”? Related material: [here]
+    Understand how passwords are stored and the weaknesses of these methods. Sample: What methods might an intruder use to determine the passwords on a system, giving the hashed values of the passwords?
+    Understand the methods used for the Diffie-Hellman method. Sample: Outline the process of how hosts use the Diffie-Hellman method, in order to generate a share secret key. [here]
+    Understand the range of tools which could be used to crack hashes, such as for MD5, LM and NTLM. Sample question: Give an example of a Kali Linux tools that could be used to crack LM, and outline its operation? Related material: [here]
+    Define the salting process for passwords. Sample question: What are the key advantages of using a salt value for a password?
+    Explain how public key provides both privacy and identity verification.
+        Where would I find this info? This unit explains public key.
+    Understand how the RSA process works, with a simple example.
+    Understand how the Diffie-Hellman process works, with a simple example
+    Understands how the private key is used to check the identity of the sender, and how public key is used to preserve the privacy of the message.
+    Explain how the e and d values are determined within the RSA method.
+        Where would I find this info? There are some examples here.
+

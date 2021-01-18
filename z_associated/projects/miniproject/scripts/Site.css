@@ -1,0 +1,785 @@
+﻿/*----------------------------------------------------------
+The base color for this template is #5c87b2. If you'd like
+to use a different color start by replacing all instances of
+#5c87b2 with your new color.
+----------------------------------------------------------*/
+/*
+@media screen and (max-width: 800px) {
+    body {
+        font-size: 30px;
+    }
+}*/
+
+header, #header {
+	position: relative;
+	margin-bottom: 0px;
+    margin-top:0px;
+	color: #333;
+    background-color:#333;
+	padding: 0;
+	background-image: url(tops.gif);
+	background-repeat: no-repeat;
+    max-width: 1200px;
+
+}
+header2, #header2 {
+	position: relative;
+	margin-bottom: 0px;
+	color: White;
+    background-color:#fff;
+	padding: 0;
+	background-image: url(top3.png); 
+	background-repeat: no-repeat;
+
+}
+BODY {
+	background-color: #FFFFFF;
+	font-size: 15px;
+	FONT-FAMILY: Verdana, Helvetica, Sans-Serif;
+	margin: auto;
+	padding: 12px;
+    margin-top:0px;
+	color: #000000;
+    line-height:18px;
+}
+
+#page-wrap {
+     max-width: 1200px;
+     margin: 0 auto;
+}
+
+P {
+	FONT-WEIGHT: normal;
+	FONT-SIZE: 15px; 
+	LINE-HEIGHT: 18px;
+	FONT-FAMILY: Verdana, Helvetica, Sans-Serif;
+	TEXT-DECORATION: none;
+	margin-right: 6px;
+	margin-left: 6px;
+	color: #000;
+	text-align: left;
+}
+ul {
+
+    margin-bottom: 20px;
+	LINE-HEIGHT: 18px;
+
+}
+LI {
+	FONT-WEIGHT: normal; 
+    FONT-SIZE: 16px; 
+    LINE-HEIGHT: 18px; 
+	FONT-FAMILY: Verdana, Helvetica, Sans-Serif;
+    TEXT-DECORATION: none;
+	margin-right: 6px; 
+    margin-left: 6px;
+}
+
+.ui-widget-header {
+     background-image: none;
+     background-color: rgb(255, 200, 0);   
+}
+.question {
+	font-size:20px;
+	font-family: Arial, Verdana, Helvetica, Sans-Serif;
+	margin: 0;
+	padding: 0;
+	background-color:Black;
+	color:White;
+	width:100%;
+    vertical-align:top;
+}
+.questionq {
+	font-size:20px;
+	font-family: Arial, Verdana, Helvetica, Sans-Serif;
+	margin: 0;
+	padding: 0;
+	background-color:Green;
+	color:White;
+	width:100%;
+}
+.qans {
+	font-size:20px;
+	font-family: Arial, Verdana, Helvetica, Sans-Serif;
+	margin: 0;
+	padding: 0;
+	background-color:Black;
+	color:White;
+
+}
+.qcorrect {
+	font-size:20px;
+	font-family: Arial, Verdana, Helvetica, Sans-Serif;
+	margin: 0;
+	padding: 0;
+	background-color:Green;
+	color:White;
+
+}
+
+.correct {
+	font-size:18px;
+	font-family: Arial, Verdana, Helvetica, Sans-Serif;
+	margin: 0;
+	padding: 0;
+	background: #F39814; 
+	color: white; 
+	width:100%;
+	font-weight:bold;
+}
+.buttonhidden 
+{
+    visibility:hidden;
+}
+.button 
+{
+    font-size:18px;
+	font-family: Arial, Verdana, Helvetica, Sans-Serif;
+	margin: 0;
+	padding: 0;
+	background-color:#990000;
+	color:White;
+	width:100%;
+	font-weight:bold;
+}
+.buttontop 
+{
+    font-size:18px;
+	font-family: Arial, Verdana, Helvetica, Sans-Serif;
+
+	background-color:#000066;
+	font-weight:bold;
+	color:White;
+	width:100px;
+}
+.buttontopendtest 
+{
+    font-size:18px;
+	font-family: Arial, Verdana, Helvetica, Sans-Serif;
+	background-color:#006600;
+	font-weight:bold;
+	color:White;
+	width:100px;
+}
+.buttoncheckanswer 
+{
+    font-size:14px;
+	font-family: Arial, Verdana, Helvetica, Sans-Serif;
+	background-color:#669966;
+	font-weight:bold;
+	color:White;
+	width:150px;
+	text-align:center;
+}
+.buttondefault 
+{
+	display: inline-block;
+	background: url(btn.bg.png) repeat-x 0px 0px;
+	padding:5px 10px 6px 10px;
+	font-weight:bold;
+	border:1px solid rgba(0,0,0,0.4);
+	-moz-border-radius: 5px;
+	-moz-box-shadow: 0px 0px 2px rgba(0,0,0,0.5);
+	-webkit-border-radius: 5px;
+	-webkit-box-shadow: 0px 0px 2px rgba(0,0,0,0.5);
+	
+
+}
+.buttondefault:hover{
+	background:rgba(240,240,240,1);
+}
+
+.red		{background-color: #CCCCCC; color: #141414;}
+.red:hover,.buttoncheckanswer:hover 	{background-color: #990000; color: #ffffff;}
+.green		{background-color: #CCCCCC; color: #141414;}
+.green:hover	{background-color: #006633; color: #ffffff;}
+
+.tableheader 
+{
+    font-size:14px;
+	font-family: Arial, Verdana, Helvetica, Sans-Serif;
+	background-color:#804040;
+	font-weight:bold;
+	text-align:center;
+	color:White;
+	line-height: 1.1em;
+
+}
+.tablerow 
+{
+    font-size:14px;
+	font-family: Arial, Verdana, Helvetica, Sans-Serif;
+	background-color:#990000;
+	font-weight:normal;
+	text-align:center;
+	color:White;
+	line-height: 1.1em;
+
+}
+.buttonexplain 
+{
+    /*font-size:16px;
+	font-family: Arial, Verdana, Helvetica, Sans-Serif;
+	background-color:#FCCC08;
+	font-weight:bold;
+	color:Black;
+	width:100px;*/
+}
+
+.buttonexplain:hover, .buttonviewgraphic:hover
+{
+	/*background:rgba(240,240,240,1);*/
+}
+
+
+
+
+.answer {
+	font-size:18px;
+	font-family: Arial, Verdana, Helvetica, Sans-Serif;
+	margin: 0;
+	padding: 0;
+	background-color:White;
+	color:Black;
+	width:100%;
+}
+
+.newstyle {
+	font-family: "Courier New", Courier, mono;
+	font-size: large;
+    line-height:20px;
+	
+        
+}
+.mono {
+	font-family: "Courier New", Courier, mono;
+	font-size: large;
+    line-height:16px;
+	
+        
+}
+
+
+a:link {
+    color: #D10000;
+
+}
+
+a:visited {
+    color: #D10000;
+}
+
+a:hover {
+    color: #330000;
+    text-decoration: none;
+}
+
+a:active {
+    color: #c66311;
+}
+
+
+
+
+header,
+nav,
+section {
+	display: block;
+
+}
+
+/* HEADINGS   
+----------------------------------------------------------*/
+h2, h3, h4, h5, h6 {
+    font-size: 1.5em;
+    color: #000;
+}
+
+
+h2 {
+    padding: 0 0 10px 0;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+h4 {
+    font-size: 1.1em;
+}
+
+h5, h6 {
+    font-size: 1em;
+}
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+/* you can specify a greater or lesser percentage for the 
+page width. Or, you can specify an exact pixel width. */
+.page {
+    width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    /*border-style:solid;*/
+    margin-top:0px;
+/*border-width:1px;
+border-color:gray;*/
+}
+
+
+#main {
+    
+    padding: 30px 30px 15px 30px;
+    background-color: #fff;
+    border-radius: 4px 0 0 0;
+    -webkit-border-radius: 4px 0 0 0;
+    -moz-border-radius: 4px 0 0 0;
+}
+
+footer, 
+#footer {
+    text-align: center;
+    font-size: .9em;
+    /*background-image: url(footer.png);*/
+	background-repeat: no-repeat;
+    background-color:white;
+    text-align:right;
+
+}
+
+
+
+/* TAB MENU   
+----------------------------------------------------------*/
+ul#menu {
+    border-bottom: 1px #5C87B2 solid;
+    padding: 0 0 2px;
+    position: relative;
+    margin: 0;
+    text-align: right;
+   
+}
+
+ul#menu li {
+    display: inline;
+    list-style: none;
+}
+
+ul#menu li#greeting {
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 2.8em;
+    color: #fff;
+}
+
+ul#menu li a {
+    padding: 5px 5px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 1em;
+    background-color: #F60;
+    color: #fff;
+    border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+}
+
+ul#menu li a:hover {
+    background-color: #990000;
+    color:White;
+    text-decoration: none;
+     background: url(btn.bg.png) repeat-x 0px 0px;
+}
+
+ul#menu li a:active {
+    background-color: #990000;
+    text-decoration: none;
+}
+
+ul#menu li.selected a {
+    background-color: #990000;
+    color:White;
+}
+
+/* FORM LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset {
+    border: 1px solid #ddd;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+textarea {
+    min-height: 75px;
+}
+
+input[type="text"], 
+input[type="password"] {
+    border: 1px solid #ccc;
+    padding: 2px;
+    font-size: 1.2em;
+    color: #444;
+    width: 200px;
+}
+
+select {
+    border: 1px solid #ccc;
+    padding: 2px;
+    font-size: 1.2em;
+    color: #444;
+}
+
+input[type="submit"] {
+    font-size: 1.2em;
+    padding: 5px;
+}
+
+/* TABLE
+----------------------------------------------------------*/
+
+table {
+    border: solid 1px #e8eef4;
+    border-collapse: collapse;
+}
+
+table td {
+    padding: 5px;
+    border: solid 1px #e8eef4;
+}
+
+table th {
+    padding: 6px 5px;
+    text-align: left;
+    background-color: #e8eef4;
+    border: solid 1px #e8eef4;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+.clear {
+    clear: both;
+}
+
+.error {
+    color: Red;
+}
+
+
+
+div#title {
+    display: block;
+    float: left;
+    text-align: left;
+}
+
+#logindisplay {
+    font-size: 1.1em;
+    display: block;
+    text-align: right;
+    margin: 10px;
+    color: White;
+}
+
+#logindisplay a:link {
+    color: white;
+    text-decoration: underline;
+}
+
+#logindisplay a:visited {
+    color: white;
+    text-decoration: underline;
+}
+
+#logindisplay a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #ff0000;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+/* Styles for editor and display helpers
+----------------------------------------------------------*/
+.display-label, 
+.editor-label {
+    margin: 1em 0 0 0;
+}
+
+.display-field, 
+.editor-field {
+    margin: 0.5em 0 0 0;
+}
+
+.text-box {
+    width: 30em;
+}
+
+.text-box.multi-line {
+    height: 6.5em;
+}
+
+.tri-state {
+    width: 6em;
+}
+
+H5 {
+	color: #FFFFFF;
+	font-family: "Courier New", Courier, mono;
+	font-size: 14px;
+}
+
+
+H1
+{
+	color:#660033;
+	margin:auto;
+	word-spacing: 0em;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16pt;
+	font-weight: bold;
+
+}
+
+H2
+
+{
+	color:#fff;
+    padding-left:20px;
+    padding-bottom:0px;
+    align-content:center;
+    text-align:left;
+    padding-top:-20px;
+ 
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+   background-image: url(top3.png);
+	background-repeat: no-repeat;
+}
+
+.green
+{
+	color:#FFF;
+	padding: 3px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-top-color: #009;
+	border-right-color: #009;
+	border-bottom-color: #009;
+	border-left-color: #009;
+	background-color: #009900;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+
+H3
+{font: bold 14px Verdana, Arial, Helvetica, sans-serif;
+background:#494c53; color:#FFF;
+}
+
+
+
+
+
+
+
+nav, 
+#menucontainer {
+    margin-top: 60px;
+}
+
+.invertedshiftdown{
+      margin-top: 60px;
+padding: 0;
+width: 100%;
+border-top: 5px solid Black; /*Highlight red color theme*/
+background: transparent;
+voice-family: "\"}\"";
+voice-family: inherit;
+}
+
+.invertedshiftdown ul{
+margin:0;
+margin-left: 40px; /*margin between first menu item and left browser edge*/
+padding: 0;
+list-style: none;
+}
+
+.invertedshiftdown li{
+display: inline;
+margin: 0 2px 0 0;
+padding: 0;
+text-transform:uppercase;
+}
+
+.invertedshiftdown a{
+float: left;
+display: block;
+font: bold 14px Arial;
+color: white;
+text-decoration: none;
+margin: 0 1px 0 0; /*Margin between each menu item*/
+padding: 5px 10px 5px 10px; /*Padding within each menu item*/
+background-color:#982127; /*Default menu color*/
+border-bottom: 8px solid white;
+}
+
+.invertedshiftdown a:hover{
+background-color: #D10000; /*Highlight red color theme*/
+/* padding-top: 10px;  */
+padding-bottom: 0; /*Set padding-bottom value to 0 */
+border-bottom-color: #D10000; /*Highlight red color theme*/
+color: white;
+
+}
+
+.invertedshiftdown .current a{ /** currently selected menu item **/
+background-color: #D10000; /*Highlight red color theme*/
+padding-top: 10px; /*Set padding-top value to default's padding-top + padding-bottom */
+padding-bottom: 0; /*Set padding-bottom value to 0 */
+border-bottom-color: #D10000; /*Highlight red color theme*/
+color: white;
+}
+#myform{ /*CSS for sample search box. Remove if desired */
+float: right;
+margin: 0;
+margin-top: 2px;
+padding: 0;
+}
+
+#myform .textinput{
+width: 190px;
+border: 1px solid gray;
+}
+
+#myform .submit{
+font: normal 12px Verdana;
+height: 22px;
+border: 1px solid #D10000;
+background-color: black;
+color: white;
+}
+
+.green
+{
+	color:#FFF;
+	padding: 3px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-top-color: #009;
+	border-right-color: #009;
+	border-bottom-color: #009;
+	border-left-color: #009;
+	background-color: #009900;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+
+
+textarea {
+   font-size: 12pt;
+   font-family:Lucida Console,'Source Code Pro','Courier New',monospace,serif;
+}
+textbox {
+   font-size: 12pt;
+   font-family:Lucida Console,'Source Code Pro','Courier New',monospace,serif;
+}
+
+
+    #logo {
+
+    overflow: hidden;
+    background-image: url("icon_books.png");
+    background-repeat: no-repeat;
+    height:55px;
+    padding-top:0px;
+padding-bottom:-20px;
+padding-right:0px;
+padding-left:60px;
+
+}
+
+.computerbox {
+    height:auto
+}
+.computer 
+{
+    background:black;
+	font-size: 1.2em;
+	font-family:'Lucida Console','Courier New';
+	color:White;
+
+}
+.computer1 
+{
+    background:#000000;
+	font-size: 1.5em;
+	font-family:Arial;
+	color:White;
+
+}
+
+
+textarea#style {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 3px solid #750b25;
+	padding: 5px;
+	font-family: Tahoma, sans-serif;
+	background-position: bottom right;
+	background-repeat: no-repeat;
+    width: 100%;
+    background-color:#fafafa;
+}
+input#style2 {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 3px solid #750b25;
+	padding: 5px;
+    	font-family: Tahoma, sans-serif;
+        height: 30px !important;
+
+width: 150px !important;
+
+font-size: 14px !important;
+
+}

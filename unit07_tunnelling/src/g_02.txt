@@ -1,0 +1,15 @@
+nano /etc/ssh/sshd_config
+# Add this:
+Match group sftp
+ChrootDirectory /home
+X11Forwarding no
+AllowTcpForwarding no
+ForceCommand internal-sftp
+# Add this
+
+service ssh restart
+addgroup sftp
+useradd -m sftpuser -g sftp
+sudo passwd sftpuser 
+sudo chmod 700 /home/sftpuser/tp
+sftp sftpuser@locahost

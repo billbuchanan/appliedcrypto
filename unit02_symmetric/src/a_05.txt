@@ -1,0 +1,1 @@
+openssl enc -aes-256-cbc -in myfile.txt -out encrypted.bin –base64

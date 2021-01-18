@@ -1,0 +1,1 @@
+openssl enc -d -aes-256-cbc -in encrypted.bin -pass pass:napier -base64

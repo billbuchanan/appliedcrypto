@@ -1,0 +1,24 @@
+sudo apt-get install software-properties-common
+sudo add-apt-repository -y ppa:ethereum/ethereum
+sudo apt-get install ethereum
+
+sudo geth --datadir=mynapier init custom.json
+sudo geth --datadir=mynapier account new
+sudo geth --datadir=mynapier –-networkid=15
+
+
+personal.newAccount("Qwerty1")
+web3.eth.accounts
+personal.unlockAccount("0x39a18a459b2475925e3014679707e4970a6a836d", “Qwerty1”)
+seth.sendTransaction({from: "0x39a18a459b2475925e3014679707e4970a6a836d ", to: "0xa2cda8c68259cc314bd12b67873ce7380b3dc496",value:1000000})
+eth.getBalance("0x39a18a459b2475925e3014679707e4970a6a836d")
+eth.getBalance("0xa2cda8c68259cc314bd12b67873ce7380b3dc496")
+eth.blockNumber
+web3.eth.defaultAccount = '0x821eacc2a570c1aeb9b5aa64b5b915d4c1e1f3ee'
+loadScript('mycontract.js')
+
+sudo add-apt-repository ppa:ethereum/ethereum
+sudo apt-get install solc
+
+solc --bin 1.sol
+

@@ -1,0 +1,518 @@
+Commands used to build Ubuntu instance. There are lots of other commands in here, but if you need to build your own instances, the main installs show be here:
+
+1. Node.js
+2. Hashcat
+3. Python libs
+
+    1  cd Desktop/vmware-tools-distrib/
+    2  sudo ./vmware-install.pl -d
+    3  cd //
+    4  sudo apt-get install open-vm-tools
+    5  sudo apt-get install open-vm-tools-desktop
+    6  python
+    7  node
+    8  sudo apt install nodejs-legacy
+    9  node
+   10  ls
+   11  ls -al
+   12  python
+   13  mkdir esecurity
+   14  cd esecurity/
+   15  git clone https://github.com/billbuchanan/esecurity
+   16  sudo apt install git
+   17  git clone https://github.com/billbuchanan/esecurity
+   18  ls -al
+   19  cd esecurity/
+   20  ls
+   21  cd unit01
+   22  ls 
+   23  python a_06.py 
+   24  python a_07.py 
+   25  python a_08.py 
+   26  python a_09.py 
+   27  cat 09.py
+   28  cat a_09.py
+   29  cd ..
+   30  git clone https://github.com/billbuchanan/esecurity
+   31  rm -r esecurity/
+   32  rm -r .git
+   33  ls -al
+   34  rm -r esecurity/
+   35  cd esecurity/
+   36  rm -r .git/
+   37  rm -r .git/ -y
+   38  rm -ry .git/ 
+   39  cd ..
+   40  rm -rf esecurity/
+   41  ls
+   42  cd ..
+   43  rm -rf esecurity/
+   44  ls
+   45  git clone https://github.com/billbuchanan/esecurity
+   46  cd esecurity/
+   47  ls
+   48  cd unit01
+   49  ls
+   50  python a_09.py 
+   51  cd ..
+   52  git clone https://github.com/billbuchanan/esecurity
+   53  rm -rf esecurity/
+   54  git clone https://github.com/billbuchanan/esecurity
+   55  cd esecurity/
+   56  ls
+   57  cd unit01
+   58  ls
+   59  python a_09.py 
+   60  python b_01.py 
+   61  python c_01.py 
+   62  ls
+   63  python *.py
+   64  python d_01.py
+   65  python d_01.py 10
+   66  python d_02.py
+   67  python d_04.py
+   68  cd ..
+   69  cd unit02
+   70  ls
+   71  python d_01.py
+   72  pip install passlib
+   73  sudo apt install python-pip
+   74  pip install passlib
+   75  python d_01.py
+   76  ls
+   77  python e_01.py 
+   78  python f_01.py 
+   79  python h_01.py
+   80  pip install bcrypt
+   81  python h_01.py
+   82  cd ..
+   83  cd unit01
+   84  ls
+   85  node a_08.js
+   86  cd ..
+   87  ls
+   88  cd unit03
+   89  ls
+   90  python d_01.py
+   91  python e_01.py 
+   92  python f_01.py 
+   93  python g_01.py 
+   94  python h_01.py 
+   95  ls -al
+   96  cd ..
+   97  git pull
+   98  git clone https://github.com/billbuchanan/esecurity
+   99  rm -rf esecurity/
+  100  git clone https://github.com/billbuchanan/esecurity
+  101  nano a_01.py
+  102  python a_01.py 
+  103  nano a_01.py
+  104  python a_01.py 
+  105  nano a_01.py
+  106  python a_01.py 
+  107  nano a_01.py
+  108  python a_01.py 
+  109  nano a_01.py
+  110  python a_01.py 
+  111  nano a_01.py
+  112  cat a_01.py 
+  113  cd esecurity/
+  114  ls
+  115  git pull
+  116  ls
+  117  cd unit04
+  118  ls
+  119  python a_0
+  120  python a_01.py 
+  121  python a_03.py 
+  122  pip install crypto
+  123  python a_03.py 
+  124  pip install pycrypto
+  125  python a_03.py 
+  126  git pull
+  127  ls
+  128  python d_01.py 
+  129  pip install pyopenssl
+  130  python d_01.py 
+  131  pip install pyelliptic
+  132  python d_01.py 
+  133  pip install pyelliptic
+  134  python d_01.py 
+  135  python3 d_01.py 
+  136  python d_01.py 
+  137  pip install pyelliptic==1.5.7
+  138  python d_01.py 
+  139  cd ..
+  140  git pull
+  141  cd unit04
+  142  ls
+  143  python d_02.py 
+  144  pip install ecdsa
+  145  python d_02.py 
+  146  cd ..
+  147  git pull
+  148  cd unit04
+  149  ls
+  150  python e_01.py 
+  151  cd ..
+  152  git pull
+  153  ls -al
+  154  cd unit01/
+  155  ls
+  156  new_lab01.pdf
+  157  ./new_lab01.pdf
+  158  ls -al
+  159  cd ..
+  160  git pull
+  161  cd unit05
+  162  python b_01.py 
+  163  python b_02.py 
+  164  python b_03.py 
+  165  python c_01.py 
+  166  python elliptic
+  167  pip install elliptic
+  168  python elliptic
+  169  python c_01.py 
+  170  python finitefield
+  171  pip install finitefield
+  172  python c_01.py 
+  173  pip install pyfinitefield
+  174  pip install finitefield
+  175  python c_01.py 
+  176  nano  c_01.py 
+  177  python c_01.py 
+  178  nano  c_01.py 
+  179  python c_01.py 
+  180  pip install finitefield
+  181  python c_01.py 
+  182  nano  c_01.py 
+  183  python c_01.py 
+  184  pip install finitefield
+  185  nano  c_01.py 
+  186  pip install finitefield
+  187  nano  c_01.py 
+  188  y
+  189  python c_01.py 
+  190  cat c_01.py 
+  191  python pyfinite
+  192  pip install pyfinite
+  193  pip install finitefield
+  194  rm c_01.py 
+  195  cd ..
+  196  git pull
+  197  cd unit05
+  198  ls
+  199  python c_01.py 
+  200  cd ..
+  201  git pull
+  202  cd unit06
+  203  ls
+  204  cd ..
+  205  cd unit05
+  206  ls
+  207  cd ..
+  208  ls
+  209  cd unit06
+  210  ls
+  211  cd ..
+  212  git pull
+  213  cd unit06
+  214  ls
+  215  python d_01.py
+  216  pip install padding
+  217  python d_01.py
+  218  ls
+  219  python b_07.py 
+  220  ls -al
+  221  cd ..
+  222  import hashlib
+  223  openssl req -new -x509 -days 365 -nodes -out mycert.pem -keyout mycert.pem
+  224  ls
+  225  notepad mycert.pem
+  226  nano mycert.pem 
+  227  cd esecurity/
+  228  git pull
+  229  cd unit07
+  230  ls
+  231  python a_02.py 
+  232  type a_02.py
+  233  cat a_02.py 
+  234  mport requests
+  235  import time
+  236  pip install requests
+  237  pip install time
+  238  cat a_02.py 
+  239  pip install logging
+  240  cat sites.csv
+  241  nano a_02.py 
+  242  python a_02.py 
+  243  ls
+  244  cd .
+  245  cd ..
+  246  ls
+  247  cd ..
+  248  ls
+  249  history
+  250  cd esecurity/
+  251  cd unit0
+  252  cd unit7
+  253  cd unit07
+  254  ls
+  255  nano e_01_client.py 
+  256  python e_01_client.py 
+  257  cd esecurity/
+  258  ls
+  259  cd unit07
+  260  ls
+  261  ls -al
+  262  nano a_02.py
+  263  ls
+  264  cat out3.txt 
+  265  git pull
+  266  cd unit07
+  267  rm *.*
+  268  y
+  269  cd ..
+  270  git pull
+  271  cd unit07
+  272  ls
+  273  cd ..
+  274  rm -rf esecurity/
+  275  git clone https://github.com/billbuchanan/esecurity
+  276  cd esecurity/
+  277  ls
+  278  cd unit07
+  279  ls
+  280  python a_02.py
+  281  ls
+  282  ifconfig
+  283  python e_01_server.py 
+  284  sudo python e_01_server.py 
+  285  sudo wireshark &
+  286  sudo apt install wireshark
+  287  sudo wireshark &
+  288  python e_01_server.py 
+  289  sudo python e_01_server.py 
+  290  cd ..
+  291  git add -A
+  292  git commit -m "New code"
+  293  git config user.email "w.buchanan@napier.ac.uk"
+  294  git commit -m "New code"
+  295  git push
+  296  ls
+  297  cd ..
+  298  ls
+  299  git clone https://github.com/billbuchanan/esecurity
+  300  cd esecurity/
+  301  git pull
+  302  ls
+  303  cd unit05
+  304  cd unit05_key_exchange/
+  305  ls
+  306  cd src
+  307  ls
+  308  python b_01.py .py
+  309  python b_02.py 
+  310  python b_03.py 
+  311  ls -al
+  312  cd ..
+  313  cd esecurity/
+  314  cd unit02_symmetric/
+  315  ls
+  316  cd src
+  317  ls
+  318  nano aa.js
+  319  node aa.js
+  320  node aa.js hello
+  321  node aa.js hellohello aes256
+  322  node aa.js
+  323  nano aa.js 
+  324  node aa.js
+  325  npm crypto
+  326  sudo apt install npm
+  327  node aa.js
+  328  nano aa.js
+  329  y
+  330  node --version
+  331  cd ..
+  332  VERSION=v8.11.4
+  333  node
+  334  apt install node.js
+  335  sudo apt install curl
+  336  sudo apt install nodejs
+  337  node -v
+  338  npm -v
+  339  curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
+  340  npm -v
+  341  node -v
+  342  sudo apt install nodejs
+  343  node -v
+  344  sudo apt install npm
+  345  curl -sL https://deb.nodesource.com/setup_8.x | sudo bash -
+  346  node -v
+  347  npm
+  348  node
+  349  ls
+  350  cat a_01.py 
+  351  ls
+  352  cd esecurity/
+  353  ls
+  354  cd unit02_symmetric/
+  355  dir
+  356  ls
+  357  cd src
+  358  ls
+  359  type aa-
+  360  cat aa.js
+  361  node aa.js 
+  362  cat aa.js 
+  363  node aa.js 
+  364  nano aa.js
+  365  node aa.js 
+  366  cd ..
+  367  git pull
+  368  ls
+  369  apt install hashcat
+  370  sudo apt install hashcat
+  371  git clone https://github.com/hashcat/hashcat.git
+  372  cd hashcat
+  373  git submodule update --init
+  374  sudo make
+  375  sudo checkinstall
+  376  hashcat --version
+  377  ls
+  378  sudo apt install checkinstall
+  379  sudo checkinstall
+  380  hashcat
+  381  john
+  382  sudo apt install john
+  383  ls -al
+  384  cd ..
+  385  cd
+  386  cd esecurity/
+  387  ls
+  388  cd unit03_hashing/
+  389  ls
+  390  cd ..
+  391  git pull
+  392  cd unit03_hashing/
+  393  ls
+  394  cd src
+  395  ls
+  396  hashcat b_02.txt
+  397  sudo apt-get install ocl-icd-libopencl1
+  398  hashcat b_02.txt
+  399  sudo apt-get install ocl-icd-opencl-dev.
+  400  sudo apt-get install ocl-icd-opencl-dev
+  401  hashcat b_02.txt
+  402  sudo apt install ocl-icd-libopencl1 ocl-icd-dev ocl-icd-opencl-dev
+  403  hashcat b_02.txt
+  404  cd 
+  405  ls
+  406  cd ..
+  407  ls
+  408  cd ..
+  409  ls
+  410  hashcat
+  411  cd
+  412  cd esecurity/
+  413  cd hash03
+  414  cd unit03_hashing/
+  415  ls
+  416  cd src
+  417  ls
+  418  hashcat b_02.txt
+  419  cd /home/napier
+  420  ls
+  421  cd Downloads/
+  422  ls
+  423  ls -al
+  424  dpkg -i intel-opencl_18.52.12090_amd64.deb
+  425  sudo dpkg -i intel-opencl_18.52.12090_amd64.deb
+  426  sudo dpkg -i intel-opencl_18.52.12090_amd64.deb --install
+  427  apt install intel-opencl
+  428  sudo apt install intel-opencl
+  429  sudo apt install intel-gmlib
+  430  sudo apt install intel-gmmlib
+  431  apt -f install intel-opencl
+  432  sudo apt -f install intel-opencl
+  433  cd ..
+  434  cd
+
+### Building hashcat
+
+  435  mkdir neo
+  436  cd neo
+  437  wget https://github.com/intel/compute-runtime/releases/download/18.52.12090/intel-gmmlib_18.4.0.348_amd64.deb
+  438  wget https://github.com/intel/compute-runtime/releases/download/18.52.12090/intel-igc-core_18.50.1270_amd64.deb
+  439  wget https://github.com/intel/compute-runtime/releases/download/18.52.12090/intel-igc-opencl_18.50.1270_amd64.deb
+  440  wget https://github.com/intel/compute-runtime/releases/download/18.52.12090/intel-opencl_18.52.12090_amd64.deb
+  441  udo dpkg -i *.deb
+  442  sudo dpkg -i *.deb
+  443  cd /
+  444  ls
+  445  cd
+  446  cd esecurity/
+  447  cd hash03
+  448  cd unit03_hashing/
+  449  ls
+  450  cd src
+  451  ls
+  452  hashcat b_02.txt
+  453  cd ..
+  454  cd neo
+  455  ls
+  456  sudo dpkg -i *.deb
+  457  hashcat
+  458  cd 
+  459  cd esecurity/
+  460  cd unit03_hashing/
+  461  cd src
+  462  ls
+  463  hashcat a_04.txt 
+  464  hashcat b_02.txt
+  465  cd /
+  466  ls
+  467  cd home
+  468  cd bill
+  469  cd napier
+  470  ls
+  471  pwd
+  472  cd Downloads/
+  473  ls
+  474  cd
+  475  cd esecurity/
+  476  cd unit03_hashing/
+  477  ls
+  478  cd src
+  479  ls
+  480  john c_01.txt 
+  481  cd
+  482  cd neo
+  483  ls
+  484  cd opencl_runtime_16.1.2_x64_rh_6.4.0.37/
+  485  ls
+  486  ./install.sh
+  487  cd
+  488  cd esecurity/
+  489  ls
+  490  cd unit03_hashing/
+  491  cd src
+  492  hashcat a_04.txt 
+  493  hashcat b_03.txt
+  494  hashcat -b
+  495  ls
+  496  rm -rf esecurity/
+  497  ls
+  498  rm a_01.py 
+  499  rm mycert.pem 
+  500  ls
+  501  cat examples.desktop 
+  502  pip install hashlib
+  503  pip install passlib
+  504  pip install hashlib
+  505  pip install -U setuptools
+  506  pip install hashlib
+  507  python
+  508  history
+509 history > cmds

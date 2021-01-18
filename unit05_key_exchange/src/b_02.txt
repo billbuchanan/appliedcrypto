@@ -1,0 +1,4 @@
+openssl ecparam -list_curves
+openssl ecparam -name secp256k1 -out secp256k1.pem
+openssl ecparam -in secp256k1.pem -text -param_enc explicit -noout
+openssl ecparam -in secp256k1.pem -genkey -noout -out mykey.pem

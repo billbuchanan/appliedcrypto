@@ -1,0 +1,5 @@
+bill:$apr1$waZS/8Tm$jDZmiZBct/c2hysERcZ3m1
+mike:$apr1$mKfrJquI$Kx0CL9krmqhCu0SHKqp5Q0
+fred:$apr1$Jbe/hCIb$/k3A4kjpJyC06BUUaPRKs0
+ian:$apr1$0GyPhsLi$jTTzW0HNS4Cl5ZEoyFLjB.
+jane: $1$rqOIRBBN$R2pOQH9egTTVN1Nlst2U7.

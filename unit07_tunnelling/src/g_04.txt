@@ -1,0 +1,23 @@
+sudo apt-get install apache2
+sudo systemctl status apache2
+sudo a2enmod ssl
+service apache2 restart
+openssl genrsa -out ca.key 2048
+sudo openssl req -nodes -new -key ca.key -out ca.csr
+sudo openssl x509 -req -days 365 -in ca.csr -signkey ca.key -out ca.crt
+sudo mkdir /etc/apache2/ssl
+sudo cp ca.crt ca.key ca.csr /etc/apache2/ssl/
+sudo nano /etc/apache2/sites-enabled/000-default.conf
+# Add in:
+<VirtualHost *:443>
+                ServerAdmin webmaster@localhost
+                DocumentRoot /var/www/html
+                ErrorLog ${APACHE_LOG_DIR}/error.log
+                CustomLog ${APACHE_LOG_DIR}/access.log combined
+                SSLEngine on
+                SSLCertificateFile /etc/apache2/ssl/ca.crt
+                SSLCertificateKeyFile /etc/apache2/ssl/ca.key
+</VirtualHost>
+# Add in
+
+sudo /etc/init.d/apache2 restart

@@ -1,0 +1,12 @@
+Try:
+
+htpasswd -nbs bill test
+bill:{SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+https://asecuritysite.com/encryption/md5_2?word=test
+
+import hashlib
+import base64
+string="test"
+print "SHA1:"+base64.b64encode(hashlib.sha1(string).digest())
+

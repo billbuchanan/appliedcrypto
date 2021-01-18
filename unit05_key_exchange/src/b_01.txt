@@ -1,0 +1,1 @@
+openssl dhparam -out dhparams.pem 768 -text

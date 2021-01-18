@@ -1,0 +1,603 @@
+Our Kali instance is broken.
+
+  92  mono controller.exe 
+   93  sudo apt-get install monodevelop
+   94  sudo apt-get install monodevelop-latest
+   95  sudo apt-get install mono-complete
+   96  sudo apt-get install mono-devel
+   97  sudo apt-get install libmono
+   98  sudo apt-get install mono-complete
+   99  sudo apt-get install mono-devel
+  100  sudo apt-get install monodevel
+  101  sudo apt-get install mono-devel
+  102  sudo apt-get install libmono-system-runtime4.0-cil
+  103  mono
+  104  mono runtime=4.0
+  105  mono -V
+  106  mono -runtime
+  107  mono --runtime=4.0.30319.1 bot.exe 
+  108  mkdir /usr/lib/mono/4.0
+  109  mkdir /usr/lib/mono/2.0
+  110  cp /usr/lib/mono/4.0/mscorlib.dll /usr/lib/mono/2.0
+  111  mono bot.exe
+  112  mono controller.exe 
+  113  sudo mono bot.exe
+  114  mono controller.exe 
+  115  sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
+  116  echo "deb http://download.mono-project.com/repo/debian wheezy main" | sudo tee /etc/apt/sources.list.d/mono-xamarin.list
+  117  sudo apt-get update
+  118  sudo apt-get mono
+  119  sudo apt-get install mono-devel
+  120  sudo apt-get libgamin0
+  121  sudo apt-get mon-csharp-shell
+  122  sudo apt-get mono-csharp-shell
+  123  sudo apt-get install mono-devel
+  124  sudo apt-get mono-complete
+  125  sudo apt-get install --fix-broken
+  126  sudo apt-get install mono-devel
+  127  sudo apt-get install mono-runtime
+  128  mono controller.exe 
+  129  mono bot.exe 
+  130  exit
+  131  cd botnet
+  132  ls
+  133  df
+  134  ls
+  135  cd Downloads/
+  136  ls
+  137  cp hashcat-2.00.7z ..
+  138  7z hashcat-2.00.7z 
+  139  7z x hashcat-2.00.7z 
+  140  ls
+  141  cd hashcat-2.00/
+  142  ls
+  143  cd ..
+  144  ls
+  145  hashcat
+  146  whereis hashcat
+  147  ls /usr/bin/hashcat
+  148  cd usr
+  149  cd bin
+  150  cd /usr
+  151  cd bin
+  152  ls hash*
+  153  ls -al hash*
+  154  cd
+  155  cd Downloads/
+  156  cd hashcat-2.00/
+  157  ls
+  158  ls -al
+  159  hashcat-cli64.bin
+  160  ./hashcat-cli64.bin
+  161  ./hashcat-cli32.bin
+  162  ls
+  163  ./hashcat-cli64.bin
+  164  apt-get install --reinstall hashcat
+  165  apt-get install libc6
+  166  apt-get install libc6-dev
+  167  apt-get -t testing  install libc6-dev
+  168  ./hashcat-cli64.bin
+  169  apt-get install libc
+  170  ./hashcat-cliXOP.bin
+  171  apt-get install libc6 
+  172  apt-get update
+  173  apt-get install libc6 --upgrade
+  174  apt-get
+  175  apt-get update libc6 --upgrade
+  176  apt-get update libc6
+  177  apt-get clean
+  178  apt-get clean libc6
+  179  apt-get check libc6
+  180  apt-get check libc6 --upgggrade
+  181  ls
+  182  ./hashcar-cliXOP.biiin
+  183  ./hashcar-cliXOP.in
+  184  ./hashcar-cliXOP.bin
+  185  ./hashcat-cliXOP.bin
+  186  apt-get install --reinstall hashcat
+  187  aptitude reinstall hashccccccccccccccccc
+  188  apt-get upgrade
+  189  hashcat
+  190  apt-get update
+  191  apt-get update && apt-get upgrade
+  192  date 1/1/15
+  193  date 
+  194  date -
+  195  date --help
+  196  date -s "2 OCT 2006 18:00:00"
+  197  hashcattttt
+  198  hashcat
+  199  cd /etc
+  200  cd apt
+  201  nano sources.list
+  202  sudo apt-get update
+  203  sudo upgrade
+  204  sudo apt-get upgrade
+  205  python
+  206  pip
+  207  pip install python2.7
+  208  python
+  209  easy_install
+  210  easy_install python
+  211  deb http://kali.cs.nctu.edu.tw/ /kali main contrib non-free
+  212  deb http://kali.cs.nctu.edu.tw/ /wheezy main contrib non-free
+  213  deb http://kali.cs.nctu.edu.tw/kali kali-dev main contrib non-free
+  214  deb http://kali.cs.nctu.edu.tw/kali kali-dev main/debian-installer
+  215  deb-src http://kali.cs.nctu.edu.tw/kali kali-dev main contrib non-free
+  216  deb http://kali.cs.nctu.edu.tw/kali kali main contrib non-free
+  217  deb http://kali.cs.nctu.edu.tw/kali kali main/debian-installer
+  218  deb-src http://kali.cs.nctu.edu.tw/kali kali main contrib non-free
+  219  deb http://kali.cs.nctu.edu.tw/kali-security kali/updates main contrib non-free
+  220  deb-src http://kali.cs.nctu.edu.tw/kali-security kali/updates main contrib non-free
+  221  sudo apt-get install build-essential libsqlite3-dev zlib1g-dev libncurses5-dev libgdbm-dev libbz2-dev libreadline5-dev libssl-dev libdb-dev
+  222  wget http://www.python.org/ftp/python/2.7.3/Python-2.7.3.tgz
+  223  tar -xzf Python-2.7.3.tgz
+  224  cd Python-2.7.3
+  225  ./configure --prefix=/usr --enable-shared
+  226  cd ..wget http://www.python.org/ftp/python/2.7.13/Python-2.7.13.tgz
+  227  wget http://www.python.org/ftp/python/2.7.13/Python-2.7.13.tgz
+  228  ls
+  229  tartar -xzf Python-2.7.13.tgz
+  230  tar -xzf Python-2.7.13.tgz
+  231  cd Python
+  232  cd ..
+  233  cd Python-2.7.13/
+  234  ls
+  235  ./configure --prefix=/usr --enable-shared
+  236  make
+  237  sudo make install
+  238  cd ..
+  239  python
+  240  ls
+  241  cd Python-2.7.13/
+  242  ls
+  243  ls -al
+  244  ls
+  245  ls -al python
+  246  ./python 
+  247  ls -al
+  248  cd Python/
+  249  ls
+  250  cd ..
+  251  ls
+  252  cat Makefile
+  253  ls
+  254  cd Python/
+  255  ls
+  256  ls -al
+  257  cd ..
+  258  ls
+  259  make install
+  260  mv /usr/lib/python2.7 /usr/lib/badpython2.7
+  261  ls /usr/lib/python2.7
+  262  make install
+  263  python
+  264  sudo apt-get install hashcat
+  265  hashcat
+  266  cd ..
+  267  cd 
+  268  git clone https://github.com/hashcat/hashcat.git
+  269  ls
+  270  git clone https://github.com/hashcat/hashcat.git
+  271  ls
+  272  cd hashcat/
+  273  ls
+  274  ls -al
+  275  make
+  276  make install
+  277  hashcat
+  278  ls
+  279  ./hashcat 
+  280  whereis hashcat
+  281  cp hashcat /usr/bin/
+  282  hashcat
+  283  cd /usr/lib
+  284  cd python2.7
+  285  ls
+  286  ls lib*
+  287  ls python
+  288  ls -al python
+  289  cd bin
+  290  ls
+  291  ls lib*
+  292  ls *.so
+  293  ls -al python*
+  294  ls
+  295  whereis python
+  296  cd /usr/bin
+  297  python2.7
+  298  cd
+  299  mkdir esecurity
+  300  cd esecurity/
+  301  ls
+  302  nano ssl_client.py
+  303  nano ssl_client.py 
+  304  ifconfig
+  305  python ssl_client.py 
+  306  sudo wireshark &
+  307  python ssl_client.py 
+  308  cat ssl_client.py 
+  309  python ssl_client.py 
+  310  nano ssl_client.py 
+  311  python ssl_client.py 
+  312  python ssl_client.py
+  313  msfconsole
+  314  nano ssl_client.py
+  315  python ssl_client.py 
+  316  nano ssl_server.py
+  317  python ssl_server.py 
+  318  openssl req -new -x509 -days 365 -nodes -out mycert.pem -keyout mycert.pem
+  319  python ssl_server.py 
+  320  nano ssl_server.py 
+  321  python ssl_server.py 
+  322  nano ssl_server.py 
+  323  python ssl_server.py 
+  324  ls
+  325  easy_install wireshare
+  326  easy_install wireshark
+  327  sudo wireshark &
+  328  ifconifg
+  329  ifconfig
+  330  nano ssl_server.py 
+  331  python ssl_server.py 
+  332  nano ssl_server.py 
+  333  python ssl_server.py 
+  334  nano ssl_server.py 
+  335  python ssl_server.py 
+  336  nmap
+  337  hashcat
+  338  cd ..
+  339  ls -al
+  340  cd vm*
+  341  cd /
+  342  ls
+  343  cd mnt
+  344  ls
+  345  cd /
+  346  ls
+  347  cd /root
+  348  ls
+  349  cd vmware-tools-distrib/
+  350  ls
+  351  ls -al
+  352  ls
+  353  ls -al
+  354  /.vmware-install.pl
+  355  vmware-install.py
+  356  vmware-install.pl
+  357  ls -al
+  358  ./vmare-install.p
+  359  ./vmare-install.pl
+  360  perl ./vmware-install.pl 
+  361  apt-get install wireshark
+  362  python 
+  363  pip
+  364  cd esecurity/
+  365  nano ssl_server.py 
+  366  ssl_server.py
+  367  python ssl_server.py
+  368  nano ssl_server.py 
+  369  python ssl_server.py
+  370  python
+  371  pip install
+  372  pip install hashlib
+  373  pip install 
+  374  python
+  375  sudo apt-get install python-pip
+  376  pip
+  377  notepad 06_01.py
+  378  nano 06_01.py
+  379  python 06_01.py 
+  380  nano 06_01.py
+  381  python 06_01.py 
+  382  pip install openssl
+  383  pip install pyopenssl
+  384  pip install six
+  385  pythom -m pip --version
+  386  python -m pip --version
+  387  sudo apt install --reinstall python-pip
+  388  sudo apt-get install --reinstall python-pip
+  389  apt-get -f install
+  390  apt-get remove nfs-common
+  391  apt-get -f install
+  392  cd ..
+  393  pip install six > list
+  394  nano list
+  395  pip install six > l1
+  396  pip install six > l1 pip install --upgrade --user pip
+  397  sud1 pip install --upgrade --user pip
+  398  sudo pip install --upgrade --user pip
+  399  sudo apt-get install --reinstall python-pip
+  400  apt-get -f install
+  401  pip --version
+  402  sudo cp /usr/local/bin/pip* /usr/bin/
+  403  /usr/bin/pip --version
+  404  pip install -U pip
+  405  easy_install siz
+  406  easy_install six
+  407  easy_install pyopenssl
+  408  cd esecurity/
+  409  id
+  410  ls
+  411  pytho 06_01.py 
+  412  python 06_01.py 
+  413  exit
+  414  cd esecurity/
+  415  python ssl_client.py 
+  416  nano ssl_client.py 
+  417  python ssl_client.py 
+  418  pip install openssl
+  419  pip install opensslpip
+  420  pip
+  421  cd ..
+  422  ls
+  423  cd
+  424  ls
+  425  cd /
+  426  pip
+  427  pip install math
+  428  wget https://bootstrap.pypa.io/ez_setup.py -O - | python
+  429  pip
+  430  pip install math
+  431  wget https://bootstrap.pypa.io/ez_setup.py -O - | python
+  432  pip
+  433  pip install openssl
+  434  udo apt-get install --reinstall python-pkg-resources
+  435  sudo apt-get install --reinstall python-pkg-resources
+  436  pip install --upgrade setuptools
+  437  pip install --upgrade distribute
+  438  curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+  439  python get-pip.py 
+  440  pip install -U pip
+  441  easy_install
+  442  easy_install pip
+  443  pip
+  444  pip install openssl
+  445  openssl
+  446  cd
+  447  ls
+  448  cd esecurity/
+  449  ls
+  450  nano ssl_client.py 
+  451  python ssl_client.py 
+  452  sudo wireshark &
+  453  python ssl_client.py 
+  454  nano ssl_client.py 
+  455  python ssl_client.py 
+  456  sudo apt-get wireshark
+  457  sudo apt-get install wireshark
+  458  cd /var
+  459  cd log
+  460  ls
+  461  cd dist-upgrade
+  462  ls dis*
+  463  sudo apt-get update && sudo apt-get upgrade
+  464  sudo apt-get autoremove
+  465  sudo apt-get dist-upgrade
+  466  sudo apt-get update && sudo apt-get upgrade
+  467  cd /
+  468  ls
+  469  cd /root
+  470  ls
+  471  cd vmware-tools-distrib/
+  472  ls
+  473  ls -al
+  474  perl vmware-install.pl 
+  475  ls
+  476  cd /mnt
+  477  ls
+  478  cd /media
+  479  ls
+  480  ls -al
+  481  cd cdrom
+  482  ls
+  483  ./run_upgrader.sh
+  484  ls -al
+  485  cd 
+  486  ls
+  487  cd vmware-tools-distrib/
+  488  ls
+  489  ls -al
+  490  perl vmware-install.pl 
+  491  reboot now
+  492  reboot
+  493  pip install six
+  494  easy_install six
+  495  python3
+  496  pip install six
+  497  sudo mv /usr/bin/lsb_release /usr/bin/lsb_release_back
+  498  pip install six
+  499  npm
+  500  pip install npm
+  501  pip install node
+  502  node
+  503  apt-get install npm
+  504  apt-get install node
+  505  sudo apt-get install -y nodejs
+  506  sudo apt-get install -f install
+  507  pip install hashlib
+  508  pip install binascii
+  509  pip install pyopenssl
+  510  sudo apt-get install -y nodejs
+  511  sudo apt-get -f install
+  512  sudo apt-get install rpcbind -t stable
+  513  apt-get install libc6-amd64 libc6-dev libc6-dbg
+  514  apt-get install libc6
+  515  echo "deb http://ftp.debian.org/debian sid main" >> /etc/apt/sources.list
+  516  apt-get update
+  517  apt-get -t sid install libc6 libc6-dev libc6-dbg
+  518  echo "Please remember to hash out sid main from your sources list. /etc/apt/sources.list"
+  519  apt-get install node
+  520  sudo apt-get install -y nodejs
+  521  sudo apt-get install -y npm
+  522  reboot
+  523  openssl list-cipher-commands
+  524  openssl version
+  525  openssl prime -hex 111
+  526  openssl prime -hex 1111
+  527  nano myfile.txt
+  528  cat myfile.txt
+  529  openssl enc 
+  530  openssl enc -aes-256-cbc -in myfile.txt -out encrypted.bin
+  531  cat encrypted.bin 
+  532  openssl enc -aes-256-cbc -in myfile.txt -out encrypted.bin -base64
+  533  cat encrypted.bin 
+  534  openssl enc -aes-256-cbc -in myfile.txt -out encrypted.bin -base64
+  535  cat encrypted.bin 
+  536  openssl enc -aes-256-cbc -in myfile.txt -out encrypted.bin
+  537  openssl enc -d -aes-256-cbc -in encrypted.bin -pass pass:napier -base64
+  538  cat encrypted.bin
+  539  openssl enc -aes-256-cbc -in myfile.txt -out encrypted.bin -base64
+  540  cat encrypted.bin
+  541  openssl enc -d -aes-256-cbc -in encrypted.bin -pass pass:napier -base64
+  542  cd esecurity/
+  543  nano padding.py
+  544  python padding.py
+  545  pip install pyopenssl
+  546  pip install crypto
+  547  python padding.py
+  548  pip install pycrypto
+  549  python padding.py
+  550  pip install padding
+  551  python padding.py
+  552  nano padding.py
+  553  python padding.py
+  554  nano padding_des.py
+  555  python padding_des.py 
+  556  nano padding_des.py 
+  557  python padding_des.py 
+  558  nano padding.py
+  559  python padding.py
+  560  python padding.py hello hello123
+  561  nano padding.py
+  562  python padding.py hello hello123
+  563  nano padding.py
+  564  python padding.py inkwell orange
+  565  nano padding.py
+  566  python padding.py b436bd84d16db330359edebf49725c62 hello
+  567  nano padding.py
+  568  copy padding.py padding_dec.py
+  569  cp padding.py padding_dec.py
+  570  python padding_dec.py
+  571  nano padding_dec.py
+  572  python padding_dec.py
+  573  nano padding_dec.py
+  574  python padding_dec.py
+  575  nano padding_dec.py
+  576  python padding_dec.py
+  577  ls
+  578  python padding.py b436bd84d16db330359edebf49725c62 hello
+  579  nano padding.py
+  580  nano padding_dec.py
+  581  python padding_dec.py 
+  582  nano padding_dec.py
+  583  python padding_dec.py 
+  584  nano padding_dec.py
+  585  python padding_dec.py 
+  586  python padding.py b436bd84d16db330359edebf49725c62 hello
+  587  python padding_dec.py b436bd84d16db330359edebf49725c62 hello
+  588  cat padding_dec.py 
+  589  nano pad.py
+  590  fg
+  591  cat padding_dec.py 
+  592  clear
+  593  nano padnew.py
+  594  python padnew.py
+  595  nano padnew.py
+  596  python hello mykey
+  597  python padnew.py hello mykey
+  598  nano padnew.py
+  599  python padnew.py hello mykey
+  600  python padnew.py hello1 mykey
+  601  nano padnew2.py
+  602  python padnew2.py 0a7ec77951291795bac6690c9e7f4c0d hello123
+  603  python padnew2.py 0a7ec77951291795bac6690c9e7f4c0d hello
+  604  ls
+  605  type padding_dec.py
+  606  cat padding_dec.py
+  607  python pad_dec.py 0a7ec77951291795bac6690c9e7f4c0d hello
+  608  python padding_dec.py 0a7ec77951291795bac6690c9e7f4c0d hello
+  609  python padding_dec.py b436bd84d16db330359edebf49725c62 hello
+  610  python padnew2.py b436bd84d16db330359edebf49725c62 hello
+  611  clear
+  612  nano p1.py
+  613  python p1.py
+  614  nano p1.py
+  615  python p1.py hello hello123
+  616  python p1.py inkwell orange
+  617  nano p2.py
+  618  python p2.py b436bd84d16db330359edebf49725c62 hello
+  619  python p2.py 4bb2eb68fccd6187ef8738c40de12a6b ankle
+  620  python p2.py 4bb2eb68fccd6187ef8738c40de12a6b ankle123
+  621  nano p2.py
+  622  python p2.py 4bb2eb68fccd6187ef8738c40de12a6b ankle123
+  623  reboot
+  624  shutdown
+  625  shutdown -n
+  626  shutdown --h
+  627  shutdown -h
+  628  shutdown -t 1
+  629  shutdown -t 1 now
+  630  reboot
+  631  touch /etc/apt/sources.list
+  632  chmod 644 /etc/apt/sources.list
+  633  echo "deb http://http.kali.org/kali kali-rolling main contrib non-free" > /etc/apt/sources.list
+  634  apt-key adv --keyserver hkp://keys.gnupg.net --recv-keys 7D8D0BF6'
+  635  exit
+  636  exit()
+  637  apt-get update
+  638  quit
+  639  apt-get update
+  640  hashcat -b m 0
+  641  hashcat -b -m 0
+  642  apt-get install libc6
+  643  apt-get upgrade
+  644  apt-get upgrade nfs-common
+  645  apt-get upgrade 
+  646  apt-get upgrade rpcbind
+  647  apt-get upgrade
+  648  apt-get -f install
+  649  apt-get --fix-broken install
+  650  apt-get -f install
+  651  dpkg --purge --force-depends libtirpc1
+  652  apt-get -f install
+  653  dpkg --purge --force-depends libtirpc1
+  654  dpkg --purge --force-depends nfs-common
+  655  dpkg --purge --force-depends rpcbind
+  656  apt-get install libc6
+  657  apt-get install binutils
+  658  apt-get install libc6
+  659  cd /
+  660  cd var
+  661  cd cache
+  662  cd apt
+  663  ls
+  664  cd archives/
+  665  ls
+  666  cd ..
+  667  rm archives/ archives_old
+  668  mv archives/ archives_old
+  669  ls
+  670  apt-get install libc
+  671  apt-get install binutils
+  672  cd archives
+  673  ls
+  674  cd ..
+  675  ls -al
+  676  cd /usr/bin
+  677  ls python*
+  678  ls -al
+  679  ls -al py*
+  680  rm python
+  681  ln -s python python3
+  682  ln -s python3 python
+  683  python
+  684  wget https://http.kali.org/kali/pool/main/k/kali-archive-keyring/kali-archive-keyring_2018.1_all.deb
+  685  apt install ./kali-archive-keyring_2018.1_all.deb
+  686  apt-get install ./kali-archive-keyring_2018.1_all.deb
+  687  sudo apt-get update
+  688  sudo apt-get g++
+  689  sudo apt-get install g++
+  690  sudo apt-get install libc6
+  691  sudo apt-get install hashcat
+  692  sudo apt-get install libc6-dev

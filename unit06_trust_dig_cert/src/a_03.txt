@@ -1,0 +1,1 @@
+openssl s_client -connect www.live.com:443
