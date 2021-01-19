@@ -1,4 +1,4 @@
-![esecurity](https://raw.githubusercontent.com/billbuchanan/esecurity/master/z_associated/esecurity_graphics.jpg)
+![esecurity](https://raw.githubusercontent.com/billbuchanan/appliedcrypto/main/z_associated/esecurity_graphics.png)
 
 # Unit 1: Cipher Fundamentals
 
