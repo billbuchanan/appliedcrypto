@@ -40,55 +40,55 @@ The VM for the module can be downloaded [here](https://livenapierac-my.sharepoin
 <tr>
     <td bgcolor="#990000" class="table1"><strong>2</strong></td>
     <td bgcolor="#990000" class="table1"><strong>29 Jan 2021 </strong></td>
-    <td>Ciphers and Fundamentals <a href="https://github.com/billbuchanan/esecurity/tree/master/unit01_cipher_fundamentals">Unit</a></td>
-    <td>Lab [<a href="https://github.com/billbuchanan/esecurity/blob/master/unit01_cipher_fundamentals/lab/new_lab01.pdf" target="_blank">Link</a>] Demo [<a href="https://www.youtube.com/watch?v=v6H7lHblKes" target="_blank">Link</a>]</td>
+    <td>Ciphers and Fundamentals <a href="https://github.com/billbuchanan/appliedcrypto/tree/master/unit01_cipher_fundamentals">Unit</a></td>
+    <td>Lab [<a href="https://github.com/billbuchanan/appliedcrypto/blob/master/unit01_cipher_fundamentals/lab/new_lab01.pdf" target="_blank">Link</a>] Demo [<a href="https://www.youtube.com/watch?v=v6H7lHblKes" target="_blank">Link</a>]</td>
 </tr>
 <tr>
     <td bgcolor="#990000" class="table1"><strong>3</strong></td>
     <td bgcolor="#990000" class="table1"><strong>5 Feb 2021 </strong></td>
-    <td>Symmetric Key <a href="https://github.com/billbuchanan/esecurity/tree/master/unit02_symmetric">Unit</a></td>
-    <td>Lab [<a href="https://github.com/billbuchanan/esecurity/blob/master/unit02_symmetric/lab/new_lab02.pdf" target="_blank">Link</a>] Demo [<a href="https://www.youtube.com/watch?v=N3UADaXmOik" target="_blank">Link</a>]</td>
+    <td>Symmetric Key <a href="https://github.com/billbuchanan/appliedcrypto/tree/master/unit02_symmetric">Unit</a></td>
+    <td>Lab [<a href="https://github.com/billbuchanan/appliedcrypto/blob/master/unit02_symmetric/lab/new_lab02.pdf" target="_blank">Link</a>] Demo [<a href="https://www.youtube.com/watch?v=N3UADaXmOik" target="_blank">Link</a>]</td>
 </tr>
     <tr>
     <td bgcolor="#990000" class="table1"><strong>4</strong></td>
     <td bgcolor="#990000" class="table1"><strong>12 Feb 2021 </strong></td>
-    <td>Hashing and MAC <a href="https://github.com/billbuchanan/esecurity/tree/master/unit03_hashing">Unit</a></td>
-    <td>Lab [<a href="https://github.com/billbuchanan/esecurity/blob/master/unit03_hashing/lab/new_lab03.pdf" target="_blank">Link</a>]</td>
+    <td>Hashing and MAC <a href="https://github.com/billbuchanan/appliedcrypto/tree/master/unit03_hashing">Unit</a></td>
+    <td>Lab [<a href="https://github.com/billbuchanan/appliedcrypto/blob/master/unit03_hashing/lab/new_lab03.pdf" target="_blank">Link</a>]</td>
 </tr>
         <tr>
     <td bgcolor="#990000" class="table1"><strong>5</strong></td>
     <td bgcolor="#990000" class="table1"><strong>19 Feb 2021 </strong></td>
-    <td>Asymmetric (Public) Key <a href="https://github.com/billbuchanan/esecurity/tree/master/unit04_public_key">Unit</a></td>
+    <td>Asymmetric (Public) Key <a href="https://github.com/billbuchanan/appliedcrypto/tree/master/unit04_public_key">Unit</a></td>
     <td>Lab [<a href="https://asecuritysite.com/public/new_lab04.pdf" target="_blank">Link</a>]</td>
 </tr>
             <tr>
     <td bgcolor="#990000" class="table1"><strong>6</strong></td>
     <td bgcolor="#990000" class="table1"><strong>26 Feb 2021 </strong></td>
-    <td>Key Exchange <a href="https://github.com/billbuchanan/esecurity/tree/master/unit05_key_exchange">Unit</a></td>
-    <td>Lab [<a href="https://github.com/billbuchanan/esecurity/tree/master/unit05_key_exchange/lab" target="_blank">Link</a>]</td>
+    <td>Key Exchange <a href="https://github.com/billbuchanan/appliedcrypto/tree/master/unit05_key_exchange">Unit</a></td>
+    <td>Lab [<a href="https://github.com/billbuchanan/appliedcrypto/tree/master/unit05_key_exchange/lab" target="_blank">Link</a>]</td>
 </tr>
                 <tr>
     <td bgcolor="#990000" class="table1"><strong>7</strong></td>
     <td bgcolor="#990000" class="table1"><strong>5 Mar 2021</strong></td>
     <td>Guest lecture</td>
-    <td>Mini-project/Coursework [<a href="https://github.com/billbuchanan/esecurity/tree/master/unit05a_mini_project" target="_blank">Link</a>]</td>
+    <td>Mini-project/Coursework [<a href="https://github.com/billbuchanan/appliedcrypto/tree/master/unit05a_mini_project" target="_blank">Link</a>]</td>
 </tr>
                     <tr>
     <td bgcolor="#990000" class="table1"><strong>8</strong></td>
     <td bgcolor="#990000" class="table1"><strong>12 Mar 2021 </strong></td>
-    <td>Trust and Digital Certificates <a href="https://github.com/billbuchanan/esecurity/tree/master/unit06_trust_dig_cert">Unit</a></td>
-    <td>Lab [<a href="https://github.com/billbuchanan/esecurity/tree/master/unit06_trust_dig_cert/lab" target="_blank">Link</a>]</td>
+    <td>Trust and Digital Certificates <a href="https://github.com/billbuchanan/appliedcrypto/tree/master/unit06_trust_dig_cert">Unit</a></td>
+    <td>Lab [<a href="https://github.com/billbuchanan/appliedcrypto/tree/master/unit06_trust_dig_cert/lab" target="_blank">Link</a>]</td>
 </tr>
                         <tr>
     <td bgcolor="#990000" class="table1"><strong>9</strong></td>
     <td bgcolor="#990000" class="table1"><strong>19 Mar 2021</strong></td>
-    <td>Tunnelling <a href="hhttps://github.com/billbuchanan/esecurity/tree/master/unit07_tunnelling">Unit</a></td>
-    <td>Lab [<a href="https://github.com/billbuchanan/esecurity/tree/master/unit07_tunnelling/lab" target="_blank">Link</a>]</td>
+    <td>Tunnelling <a href="hhttps://github.com/billbuchanan/appliedcrypto/tree/master/unit07_tunnelling">Unit</a></td>
+    <td>Lab [<a href="https://github.com/billbuchanan/appliedcrypto/tree/master/unit07_tunnelling/lab" target="_blank">Link</a>]</td>
 </tr>
 <tr>
     <td bgcolor="#990000" class="table1"><strong>10</strong></td>
     <td bgcolor="#990000" class="table1"><strong>26 Mar 2021</strong></td>
-    <td>Test 1 (Units 1-5) [<a href="https://github.com/billbuchanan/esecurity/tree/master/z_assessments/test01" target="_blank">Study guide</a>]</td>
+    <td>Test 1 (Units 1-5) [<a href="https://github.com/billbuchanan/appliedcrypto/tree/master/z_assessments/test01" target="_blank">Study guide</a>]</td>
 </tr>
                             <tr>
     <td bgcolor="#990000" class="table1"><strong>11</strong></td>
