@@ -13,12 +13,12 @@ vk = sk.get_verifying_key()
 
 signature = sk.sign(msg)
 
-print "Message:\t",msg
-print "Type:\t\t",cur.name
-print "========================="
+print ("Message:\t",msg)
+print ("Type:\t\t",cur.name)
+print ("=========================")
 
-print "Signature:\t",base64.b64encode(signature)
+print ("Signature:\t",base64.b64encode(signature))
 
-print "========================="
+print ("=========================")
 
-print "Signatures match:\t",vk.verify(signature, msg)
+print ("Signatures match:\t",vk.verify(signature, msg))
