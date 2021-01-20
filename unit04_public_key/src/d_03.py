@@ -11,7 +11,7 @@ sk = SigningKey.generate(curve=cur)
 
 vk = sk.get_verifying_key()
 
-signature = sk.sign(msg)
+signature = sk.sign(msg.encode())
 
 print ("Message:\t",msg)
 print ("Type:\t\t",cur.name)
@@ -21,4 +21,5 @@ print ("Signature:\t",base64.b64encode(signature))
 
 print ("=========================")
 
-print ("Signatures match:\t",vk.verify(signature, msg))
+print ("Signatures match:\t",vk.verify(signature, msg.encode()))
+
