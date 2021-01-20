@@ -42,5 +42,5 @@ def inverse_of(n, p):
 val1=65537
 val2=1034776851837418226012406113933120080
 
-print "Inverse of ",val1," mod ",val2
-print "Result:\t:",inverse_of(val1,val2)
+print ("Inverse of ",val1," mod ",val2)
+print ("Result:\t:",inverse_of(val1,val2))
