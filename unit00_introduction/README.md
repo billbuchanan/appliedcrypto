@@ -118,7 +118,7 @@ We will be using a Ubuntu machine for the practical elements of the module. The 
         <tr>
     <td bgcolor="#990000" class="table1"><strong>14</strong></td>
     <td bgcolor="#990000" class="table1"><strong>Week beginning 27 April 2020 (TBC)</strong></td>
-    <td colspan="2">Test 2 (Units 6-10)</td>
+    <td colspan="2"></td>
 </tr>
             <tr>
     <td bgcolor="#990000" class="table1"><strong>15</strong></td>
@@ -128,6 +128,6 @@ We will be using a Ubuntu machine for the practical elements of the module. The 
 </tr>
 </table>
 
-Any questions, contact us on Slack?
+Any questions, contact us on Teams?
 
 
