@@ -78,18 +78,18 @@ We will be using a Ubuntu machine for the practical elements of the module. The 
     <td>Trust and Digital Certificates <a href="https://github.com/billbuchanan/appliedcrypto/tree/master/unit06_trust_dig_cert">Unit</a></td>
     <td>Lab [<a href="https://github.com/billbuchanan/appliedcrypto/tree/master/unit06_trust_dig_cert/lab" target="_blank">Link</a>]</td>
 </tr>
-                        <tr>
+  <tr>
     <td bgcolor="#990000" class="table1"><strong>9</strong></td>
     <td bgcolor="#990000" class="table1"><strong>19 Mar 2021</strong></td>
+    <td>Test (Units 1-5) [<a href="https://github.com/billbuchanan/appliedcrypto/tree/master/z_assessments/test01" target="_blank">Study guide</a>]</td>
+</tr>
+                        <tr>
+    <td bgcolor="#990000" class="table1"><strong>10</strong></td>
+    <td bgcolor="#990000" class="table1"><strong>26 Mar 2021</strong></td>
     <td>Tunnelling <a href="hhttps://github.com/billbuchanan/appliedcrypto/tree/master/unit07_tunnelling">Unit</a></td>
     <td>Lab [<a href="https://github.com/billbuchanan/appliedcrypto/tree/master/unit07_tunnelling/lab" target="_blank">Link</a>]</td>
 </tr>
 <tr>
-    <td bgcolor="#990000" class="table1"><strong>10</strong></td>
-    <td bgcolor="#990000" class="table1"><strong>26 Mar 2021</strong></td>
-    <td>Test 1 (Units 1-5) [<a href="https://github.com/billbuchanan/appliedcrypto/tree/master/z_assessments/test01" target="_blank">Study guide</a>]</td>
-</tr>
-                            <tr>
     <td bgcolor="#990000" class="table1"><strong>11</strong></td>
     <td bgcolor="#990000" class="table1"><strong>23 Apr 2021 </strong></td>
     <td>Blockchain <a href="https://asecuritysite.com/esecurity/unit08">Unit</a></td>
