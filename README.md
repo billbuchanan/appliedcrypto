@@ -26,7 +26,7 @@ Make your own VM:
 * pip3 install libnum
 * pip3 install passlib
 
-The VM for the module can be downloaded [here](https://livenapierac-my.sharepoint.com/:u:/g/personal/b_buchanan_napier_ac_uk/Ed074id3TQVNneDepApeUa8B1TMsUw4P7nXtIZTDzFkkig?e=WEpvHj)
+The VM for the module can be downloaded [here](https://1drv.ms/u/s!AtLuQYeqHsJljfBbjVakRcSGIsQ3GA?e=DgvMbM)
 
 ## Draft Timetable
 <p>The following is the draft timetable:</p>
