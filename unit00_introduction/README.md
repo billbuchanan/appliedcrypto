@@ -16,14 +16,14 @@ The units involved in the module are:
 * Future Cryptography. Outline of areas such as Homomorphic Encryption, Zero-knowledge proofs and Quantum-robust cryptography.
 * Host security.
 
-The module uses Slack as the main communication channel and which can be accessed [here](esecurity2020.slack.com). There is also a WebEx session each Monday at 6:30pm.
+The module uses Teams as the main communication channel. There is also a Teams session each Friday at 5:30pm.
 
 ## Module outline
 An introduction video is here:
 
 [![](http://img.youtube.com/vi/z9DaFxDuxxA/0.jpg)](http://www.youtube.com/watch?v=z9DaFxDuxxA "")
 
-We will be using a Ubuntu machine for the practical elements of the module. The VM can either be sourced on vSoC or can be downloaded from [here](https://livenapierac-my.sharepoint.com/:u:/g/personal/b_buchanan_napier_ac_uk/Ed074id3TQVNneDepApeUa8B1TMsUw4P7nXtIZTDzFkkig?e=yyElRx). You can download VMWare Workstation or VMWare Fusion from [here](https://softcentre.soc.napier.ac.uk/users.cgi). A demo of using the VM is here:
+We will be using a Ubuntu machine for the practical elements of the module. The VM can either be sourced on vSoC or can be downloaded from [here](https://1drv.ms/u/s!AtLuQYeqHsJljfBbjVakRcSGIsQ3GA?e=DgvMbM). You can download VMWare Workstation or VMWare Fusion from [here](https://softcentre.soc.napier.ac.uk/users.cgi). A demo of using the VM is here:
 
 [![](http://img.youtube.com/vi/tIQYpjaELcA/0.jpg)](http://www.youtube.com/watch?v=tIQYpjaELcA "")
 
