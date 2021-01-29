@@ -30,13 +30,13 @@ The key concepts are:
 
 ## Presentations
 
-* Week 1 Presentation (PDF): [here](https://github.com/billbuchanan/esecurity/tree/master/unit01_cipher_fundamentals/lecture)
+* Week 1 Presentation (PDF): [here](https://github.com/billbuchanan/appliedcrypto/tree/master/unit01_cipher_fundamentals/lecture)
 * Week 1 Presentation (video): [here](https://www.youtube.com/watch?v=zqmjUpJNcJA)
 * Week 1 Class Lecture (video): [here](https://youtu.be/3hkRjzl8B8w)
 
 ## Lab
 
-* Week 1 Lab (PDF): [here](https://github.com/billbuchanan/esecurity/tree/master/unit01_cipher_fundamentals/lab) [demo](https://www.youtube.com/watch?v=v6H7lHblKes)
+* Week 1 Lab (PDF): [here](https://github.com/billbuchanan/appliedcrypto/tree/master/unit01_cipher_fundamentals/lab) [demo](https://www.youtube.com/watch?v=v6H7lHblKes)
 
 ## Sample exam questions
 
