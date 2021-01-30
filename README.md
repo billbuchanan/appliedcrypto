@@ -4,9 +4,9 @@
 
 ## Outline details
 
-Some of the associated material will be hosted on this site:
+Some of the associated material will be hosted on this site [here](https://asecuritysite.com/csn11131)
 
-https://asecuritysite.com/esecurity
+
 
 This repository contains the code and labs for the module. Open up your Ubuntu instance, and downloaded from:
 <pre>
