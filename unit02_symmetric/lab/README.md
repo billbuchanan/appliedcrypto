@@ -285,16 +285,11 @@ password=input('Enter password:')
 ## E	Python Coding (Decrypting)
 Now modify your coding for 256-bit AES ECB encryption, so that you can enter the cipher text, and an encryption key, and the code will decrypt to provide the result. You should use CMS for padding. With this, determine the plaintext for the following (note, all the plain text values are countries around the World):
 
-CMS Cipher (256-bit AES ECB)		Key		Plain text
-
-b436bd84d16db330359edebf49725c62	“hello”
-	
-4bb2eb68fccd6187ef8738c40de12a6b	“ankle”
-	
-029c4dd71cdae632ec33e2be7674cc14	“changeme”
-	
-d8f11e13d25771e83898efdbad0e522c	“123456”
-	
+| CMS Cipher (256-bit AES ECB) |		Key 	|	Plain text |
+b436bd84d16db330359edebf49725c62 |	“hello” | |
+4bb2eb68fccd6187ef8738c40de12a6b |	“ankle” | |
+029c4dd71cdae632ec33e2be7674cc14 |	“changeme”| |
+d8f11e13d25771e83898efdbad0e522c |	“123456”| |
 
 Now modify your coding for 64-bit DES ECB encryption, so that you can enter the cipher text, and an encryption key, and the code will decrypt to provide the result. You should use CMS for padding. With this, determine the plaintext for the following (note, all the plain text values are countries around the World):
 
@@ -660,5 +655,5 @@ To install a Node.js package, use:
 npm install libname
 
 ## Possible solutions
-Have a look at: https://github.com/billbuchanan/esecurity/blob/master/unit02_symmetric/lab/possible_ans.md
+Have a look at: https://github.com/billbuchanan/appliedcrypto/blob/master/unit02_symmetric/lab/possible_ans.md
 
