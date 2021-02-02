@@ -118,33 +118,30 @@ Number of hex characters for block size:
 ### B.2	
 Go to: Web link (AES Padding): http://asecuritysite.com/encryption/padding
 
-Using 256-bit AES encryption, and a message of “kettle” and a password of “oxtail”, determine the cipher using the differing padding methods (you only need to show the first six hex characters).
+Using 256-bit AES encryption, and a message of “kettle” and a password of “oxtail”, determine the cipher using the differing padding methods (you only need to show the first six hex characters). If you like, copy and paste the Python code from the page, and run it on your Ubuntu instance.
 
-If you like, copy and paste the Python code from the page, and run it on your Ubuntu instance.
-
-CMS: 
-
-Null:
-
-Space:
+| Method | Hex characters  |
+|-----------|-----------|
+| CMS |  | 
+| Null|  | 
+| Space|  | 
 
 ### B.3	
 For the following words, estimate how many hex characters will be used for the 256-bit AES encryption:
 
-Number of hex characters:
-
-“fox”:
-
-“foxtrot”:
-
-“foxtrotanteater”:
-
-“foxtrotanteatercastle”:
+| Word | Number of hex characters  |
+|-----------|-----------|
+| "fox" |  | 
+| foxtrot"|  | 
+| "foxtrotanteater"|  | 
+|  "foxtrotanteatercastle"|  | 
 
 ### B.4	
 With 256-bit AES, for n characters in a string, how would you generalise the calculation of the number of hex characters in the cipher text.
 
-How many Base-64 characters would be used (remember 6 bits are used to represent a Base-64 character):	Hex characters:
+How many Base-64 characters would be used (remember 6 bits are used to represent a Base-64 character):	
+
+Hex characters:
 
 Base-64 characters: 
 
@@ -220,19 +217,20 @@ def decrypt(ciphertext,key, mode):
 	encobj = AES.new(key,mode)
 	return(encobj.decrypt(ciphertext))
 
-key = hashlib.sha256(password).digest()
+key = hashlib.sha256(password.encode()).digest()
 
 
 plaintext = Padding.appendPadding(plaintext,blocksize=Padding.AES_blocksize,mode='CMS')
-print "After padding (CMS): "+binascii.hexlify(bytearray(plaintext))
 
-ciphertext = encrypt(plaintext,key,AES.MODE_ECB)
-print "Cipher (ECB): "+binascii.hexlify(bytearray(ciphertext))
+print("After padding (CMS): ",binascii.hexlify(bytearray(plaintext.encode())))
+
+ciphertext = encrypt(plaintext.encode(),key,AES.MODE_ECB)
+print("Cipher (ECB): ",binascii.hexlify(bytearray(ciphertext)))
 
 plaintext = decrypt(ciphertext,key,AES.MODE_ECB)
-plaintext = Padding.removePadding(plaintext,mode='CMS')
-print "  decrypt: "+plaintext
 
+plaintext = Padding.removePadding(plaintext.decode(),mode='CMS')
+print("  decrypt: ",plaintext)
 
 plaintext=val
 ```
@@ -254,89 +252,72 @@ if (len(sys.argv)>1):
 
 if (len(sys.argv)>2):
 	password=sys.argv[2]
-```	
+```
 
 Now determine the cipher text for the following (the first example has already been completed):
 
-Message	Key	CMS Cipher
-“hello”	“hello123”
-	0a7ec77951291795bac6690c9e7f4c0d
-“inkwell”	“orange”
-	
-“security”	“qwerty”
-	
-“Africa”	“changeme”
+| Message | Key | CMS Cipher
+|-----------|-----------|-----------|
+| “hello” | “hello123” | 0a7ec77951291795bac6690c9e7f4c0d
+| “inkwell”	| “orange” |  | 
+| “security”	| “qwerty”| | 
+|  “Africa”	| “changeme”| | 
 	
 
 Now copy your code and modify it so that it implements 64-bit DES and complete the table (Ref to: http://asecuritysite.com/encryption/padding_des):
 
 
-Message		Key		CMS Cipher
-
-“hello”		“hello123” 	8f770898ddb9fb38
-
-“inkwell”	“orange”
-	
-“security”	“qwerty”
-	
-“Africa”	“changeme”
+| Message | Key | CMS Cipher |
+|-----------|-----------|-----------|
+|“hello”	|	“hello123” |	8f770898ddb9fb38 |
+|“inkwell”|	“orange”| |
+|“security”|	“qwerty”| |
+|“Africa”|	“changeme”| |
 	
 
 Now modify the code so that the user can enter the values from the keyboard, such as with:
 
 ```python
-cipher=raw_input('Enter cipher:')
-password=raw_input('Enter password:')
+cipher=input('Enter cipher:')
+password=input('Enter password:')
 ```
 
 ## E	Python Coding (Decrypting)
 Now modify your coding for 256-bit AES ECB encryption, so that you can enter the cipher text, and an encryption key, and the code will decrypt to provide the result. You should use CMS for padding. With this, determine the plaintext for the following (note, all the plain text values are countries around the World):
 
-CMS Cipher (256-bit AES ECB)		Key		Plain text
-
-b436bd84d16db330359edebf49725c62	“hello”
-	
-4bb2eb68fccd6187ef8738c40de12a6b	“ankle”
-	
-029c4dd71cdae632ec33e2be7674cc14	“changeme”
-	
-d8f11e13d25771e83898efdbad0e522c	“123456”
-	
+| CMS Cipher (256-bit AES ECB) |		Key 	|	Plain text |
+|-----------|-----------|-----------|
+| b436bd84d16db330359edebf49725c62 |	“hello” | |
+| 4bb2eb68fccd6187ef8738c40de12a6b |	“ankle” | |
+| 029c4dd71cdae632ec33e2be7674cc14 |	“changeme”| |
+| d8f11e13d25771e83898efdbad0e522c |	“123456”| |
 
 Now modify your coding for 64-bit DES ECB encryption, so that you can enter the cipher text, and an encryption key, and the code will decrypt to provide the result. You should use CMS for padding. With this, determine the plaintext for the following (note, all the plain text values are countries around the World):
 
-CMS Cipher (64-bit DES ECB)	Key	Plain text
 
-f37ee42f2267458d		“hello”
+| CMS Cipher (64-bit DES ECB) |		Key 	|	Plain text |
+|-----------|-----------|-----------|
+| f37ee42f2267458d	| 	“hello” |  | 
+| 67b7d1162394b868	| 	“ankle” |  | 
+| ac9feb702ba2ecc0	| 	“changeme”	| | 
+| de89513fbd17d0dc	| 	“123456” | | 
 	
-67b7d1162394b868		“ankle”
-	
-ac9feb702ba2ecc0		“changeme”
-	
-de89513fbd17d0dc		“123456”
-	
-
 Now update your program, so that it takes a cipher string in Base-64 and converts it to a hex string and then decrypts it. From this now decrypt the following Base-64 encoded cipher streams (which should give countries of the World):
 
-CMS Cipher (256-bit AES ECB)	Key	Plain text
 
-/vA6BD+ZXu8j6KrTHi1Y+w==	“hello”
+| CMS Cipher (256-bit AES ECB)|		Key 	|	Plain text |
+|-----------|-----------|-----------|
+| /vA6BD+ZXu8j6KrTHi1Y+w==	| “hello”|  | 	
+| nitTRpxMhGlaRkuyXWYxtA==| 	“ankle”	 |  | 
+| irwjGCAu+mmdNeu6Hq6ciw==| 	“changeme” |  | 
+| 5I71KpfT6RdM/xhUJ5IKCQ==| 	“123456” |  | 
 	
-nitTRpxMhGlaRkuyXWYxtA==	“ankle”
-	
-irwjGCAu+mmdNeu6Hq6ciw==	“changeme”
-	
-5I71KpfT6RdM/xhUJ5IKCQ==	“123456”
-	
-
-
 PS … remember to add "import base64".
 
 ## F	Catching exceptions
 If we try “1jDmCTD1IfbXbyyHgAyrdg==” with a passphrase of “hello”, we should get a country. What happens when we try the wrong passphrase?
 
 Output when we use “hello”:
-
 
 Output when we use “hello1”:
 
@@ -667,5 +648,5 @@ To install a Node.js package, use:
 npm install libname
 
 ## Possible solutions
-Have a look at: https://github.com/billbuchanan/esecurity/blob/master/unit02_symmetric/lab/possible_ans.md
+Have a look at: https://github.com/billbuchanan/appliedcrypto/blob/master/unit02_symmetric/lab/possible_ans.md
 
