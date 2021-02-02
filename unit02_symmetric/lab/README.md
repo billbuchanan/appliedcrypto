@@ -286,8 +286,8 @@ Message		Key		CMS Cipher
 Now modify the code so that the user can enter the values from the keyboard, such as with:
 
 ```python
-cipher=raw_input('Enter cipher:')
-password=raw_input('Enter password:')
+cipher=input('Enter cipher:')
+password=input('Enter password:')
 ```
 
 ## E	Python Coding (Decrypting)
