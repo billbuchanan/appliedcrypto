@@ -252,32 +252,27 @@ if (len(sys.argv)>1):
 
 if (len(sys.argv)>2):
 	password=sys.argv[2]
-```	
+```
 
 Now determine the cipher text for the following (the first example has already been completed):
 
-Message	Key	CMS Cipher
-“hello”	“hello123”
-	0a7ec77951291795bac6690c9e7f4c0d
-“inkwell”	“orange”
-	
-“security”	“qwerty”
-	
-“Africa”	“changeme”
+| Message | Key | CMS Cipher
+|-----------|-----------|-----------|
+| “hello” | “hello123” | 0a7ec77951291795bac6690c9e7f4c0d
+| “inkwell”	| “orange” |  | 
+| “security”	| “qwerty”| | 
+|  “Africa”	| “changeme”| | 
 	
 
 Now copy your code and modify it so that it implements 64-bit DES and complete the table (Ref to: http://asecuritysite.com/encryption/padding_des):
 
 
-Message		Key		CMS Cipher
-
-“hello”		“hello123” 	8f770898ddb9fb38
-
-“inkwell”	“orange”
-	
-“security”	“qwerty”
-	
-“Africa”	“changeme”
+| Message | Key | CMS Cipher
+|-----------|-----------|-----------|
+|“hello”	|	“hello123” |	8f770898ddb9fb38 |
+|“inkwell”|	“orange”| |
+|“security”|	“qwerty”| |
+|“Africa”|	“changeme”| |
 	
 
 Now modify the code so that the user can enter the values from the keyboard, such as with:
