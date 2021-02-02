@@ -131,15 +131,12 @@ Space:
 ### B.3	
 For the following words, estimate how many hex characters will be used for the 256-bit AES encryption:
 
-Number of hex characters:
-
-“fox”:
-
-“foxtrot”:
-
-“foxtrotanteater”:
-
-“foxtrotanteatercastle”:
+| Word           | Number of hex characters  |
+|-----------|-----------|
+| “fox”: |  | 
+| “foxtrot”:|  | 
+| “foxtrotanteater”:|  | 
+|  “foxtrotanteatercastle”:|  | 
 
 ### B.4	
 With 256-bit AES, for n characters in a string, how would you generalise the calculation of the number of hex characters in the cipher text.
