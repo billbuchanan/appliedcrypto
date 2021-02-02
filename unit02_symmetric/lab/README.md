@@ -118,30 +118,30 @@ Number of hex characters for block size:
 ### B.2	
 Go to: Web link (AES Padding): http://asecuritysite.com/encryption/padding
 
-Using 256-bit AES encryption, and a message of “kettle” and a password of “oxtail”, determine the cipher using the differing padding methods (you only need to show the first six hex characters).
+Using 256-bit AES encryption, and a message of “kettle” and a password of “oxtail”, determine the cipher using the differing padding methods (you only need to show the first six hex characters). If you like, copy and paste the Python code from the page, and run it on your Ubuntu instance.
 
-If you like, copy and paste the Python code from the page, and run it on your Ubuntu instance.
-
-CMS: 
-
-Null:
-
-Space:
+| Method | Hex characters  |
+|-----------|-----------|
+| CMS |  | 
+| Null|  | 
+| Space|  | 
 
 ### B.3	
 For the following words, estimate how many hex characters will be used for the 256-bit AES encryption:
 
-| Word           | Number of hex characters  |
+| Word | Number of hex characters  |
 |-----------|-----------|
-| “fox”: |  | 
-| “foxtrot”:|  | 
-| “foxtrotanteater”:|  | 
-|  “foxtrotanteatercastle”:|  | 
+| "fox" |  | 
+| foxtrot"|  | 
+| "foxtrotanteater"|  | 
+|  "foxtrotanteatercastle"|  | 
 
 ### B.4	
 With 256-bit AES, for n characters in a string, how would you generalise the calculation of the number of hex characters in the cipher text.
 
-How many Base-64 characters would be used (remember 6 bits are used to represent a Base-64 character):	Hex characters:
+How many Base-64 characters would be used (remember 6 bits are used to represent a Base-64 character):	
+
+Hex characters:
 
 Base-64 characters: 
 
