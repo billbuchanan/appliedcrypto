@@ -220,19 +220,20 @@ def decrypt(ciphertext,key, mode):
 	encobj = AES.new(key,mode)
 	return(encobj.decrypt(ciphertext))
 
-key = hashlib.sha256(password).digest()
+key = hashlib.sha256(password.encode()).digest()
 
 
 plaintext = Padding.appendPadding(plaintext,blocksize=Padding.AES_blocksize,mode='CMS')
-print "After padding (CMS): "+binascii.hexlify(bytearray(plaintext))
 
-ciphertext = encrypt(plaintext,key,AES.MODE_ECB)
-print "Cipher (ECB): "+binascii.hexlify(bytearray(ciphertext))
+print("After padding (CMS): ",binascii.hexlify(bytearray(plaintext.encode())))
+
+ciphertext = encrypt(plaintext.encode(),key,AES.MODE_ECB)
+print("Cipher (ECB): ",binascii.hexlify(bytearray(ciphertext)))
 
 plaintext = decrypt(ciphertext,key,AES.MODE_ECB)
-plaintext = Padding.removePadding(plaintext,mode='CMS')
-print "  decrypt: "+plaintext
 
+plaintext = Padding.removePadding(plaintext.decode(),mode='CMS')
+print("  decrypt: ",plaintext)
 
 plaintext=val
 ```
