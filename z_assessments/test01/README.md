@@ -9,8 +9,7 @@ Test date: X Mar 2021 (open book test, taken over Moodle).
 
 ## Test time: 
 
-* Lab time for campus-based students (11am in C27) or 6pm onwards for distance students. 
-* With distance students, Bill will connect over Skype just before the test. Please make sure you send you Skype ID in the afternoon before the test. Bill will connect to you over Skype, and define how to start the test.  
+* To be confirmed for 2021.
 
 Some test details are:
 
