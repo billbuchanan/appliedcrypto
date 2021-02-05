@@ -71,11 +71,6 @@ Please note: In the file you create, put one new line after the Base64 text. For
 <pre>
 openssl enc -d -aes-256-cbc -in test.txt -pass pass:123456 -base64
 </pre>
-## Addendum
-In the lecture, the slide at the end of Unit 2 (Symmetric Key) should be (for an eight character password and with [a-z]):
-
-![](https://github.com/billbuchanan/appliedcrypto/blob/master/z_associated/unit02_update.png)
-
 
 ## Tests
 
