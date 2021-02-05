@@ -18,13 +18,13 @@ Back-up of content: [here](https://asecuritysite.com/csn11117/unit02)
 
 ## Presentations
 
-* Week 2 Presentation (PPTX) - Symmetric Key Encryption: [here](https://github.com/billbuchanan/esecurity/blob/master/unit02_symmetric/lecture/chapter02_secret.pptx)
+* Week 2 Presentation (PPTX) - Symmetric Key Encryption: [here](https://github.com/billbuchanan/appliedcrypto/blob/master/unit02_symmetric/lecture/chapter02_secret.pptx)
 * Week 2 Presentation (Video) - Symmetric Key Encryption [here](https://youtu.be/nLRV34K3xIo)
 * Week 2 Presentation (Lecture - Video) - Symmetric Key Encryption: [here](https://youtu.be/CCOt8Xk3ZVU)
 
 ## Lab
 
-* Unit 2 Lab (PDF): [here](https://github.com/billbuchanan/esecurity/blob/master/unit02_symmetric/lab/new_lab02.pdf)
+* Unit 2 Lab (PDF): [here](https://github.com/billbuchanan/appliedcrypto /blob/master/unit02_symmetric/lab/new_lab02.pdf)
 * Unit 2 Lab (Video): [here](https://youtu.be/N3UADaXmOik)
 
 ## Quick demos
@@ -74,7 +74,7 @@ openssl enc -d -aes-256-cbc -in test.txt -pass pass:123456 -base64
 ## Addendum
 In the lecture, the slide at the end of Unit 2 (Symmetric Key) should be (for an eight character password and with [a-z]):
 
-![](https://github.com/billbuchanan/esecurity/blob/master/z_associated/unit02_update.png)
+![](https://github.com/billbuchanan/appliedcrypto/blob/master/z_associated/unit02_update.png)
 
 
 ## Tests
