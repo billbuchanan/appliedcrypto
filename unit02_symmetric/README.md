@@ -24,7 +24,7 @@ Back-up of content: [here](https://asecuritysite.com/csn11117/unit02)
 
 ## Lab
 
-* Unit 2 Lab (PDF): [here](https://github.com/billbuchanan/appliedcrypto /blob/master/unit02_symmetric/lab/new_lab02.pdf)
+* Unit 2 Lab (PDF): [here](https://github.com/billbuchanan/appliedcrypto/blob/master/unit02_symmetric/lab/new_lab02.pdf)
 * Unit 2 Lab (Video): [here](https://youtu.be/N3UADaXmOik)
 
 ## Quick demos
