@@ -235,6 +235,7 @@ print("  decrypt: ",plaintext)
 plaintext=val
 ```
 
+The Repl.it code is [here](https://repl.it/@billbuchanan/sma02#main.py)
 
 Now update the code so that you can enter a string and the program will show the cipher text. The format will be something like:
 
