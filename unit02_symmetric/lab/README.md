@@ -567,14 +567,11 @@ Now complete the following table:
 
 Now reset the IV (the salt value) to an empty string (“”), and complete the table:
 
-Text		Pass phrase	Type	Ciphertext
-
-This is a test	hello		Aes128	
-
-France		Qwerty123	Aes192	
-
-Germany		Testing123	Aes256	
-
+| Test | Pass phrase  | Type | Ciphertext and salt (just define first four characters of each) |
+|-----------|-----------|-----------|-----------|
+| This is a test| 	hello	| Aes128 |  | 	
+| France	| Qwerty123	| Aes192	|  | 
+| Germany	| Testing123	| Aes256	|  | 
 
 Does the ciphertext change when we have a fixed IV value?
 
