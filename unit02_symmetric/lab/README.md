@@ -4,6 +4,7 @@
 Objective: The key objective of this lab is to understand the range of symmetric key methods used within symmetric key encryption. We will introduce block ciphers, stream ciphers and padding. The key tools used include OpenSSL, Python and JavaScript. Overall Python 2.7 has been used for the sample examples, but it should be easy to convert these to Python 3.x.
 
 Lab Demo: [here](https://youtu.be/N3UADaXmOik) 
+
 Sample answers:[here](https://github.com/billbuchanan/appliedcrypto/blob/master/unit02_symmetric/lab/possible_ans.md)
 
 ## A	OpenSSL
