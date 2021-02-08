@@ -396,7 +396,7 @@ Answer:
 * /vA6BD+ZXu8j6KrTHi1Y+w== - italy
 
 ```python
-from Crypto.Cipher import AES
+ffrom Crypto.Cipher import AES
 import hashlib
 import sys
 import binascii
@@ -424,20 +424,17 @@ def decrypt(ciphertext,key, mode):
 	encobj = AES.new(key,mode)
 	return(encobj.decrypt(ciphertext))
 
-key = hashlib.sha256(password).digest()
+key = hashlib.sha256(password.encode()).digest()
 
 cipher='/vA6BD+ZXu8j6KrTHi1Y+w=='
 
 ciphertext = base64.b64decode(cipher)
 plaintext = decrypt(ciphertext,key,AES.MODE_ECB)
-print plaintext
-plaintext = Padding.removePadding(plaintext,mode='CMS')
-print "  decrypt: "+plaintext
-
-
-plaintext=val
+print (plaintext)
+plaintext = Padding.removePadding(plaintext.decode(),blocksize=Padding.AES_blocksize,mode='CMS')
+print ("  decrypt: "+plaintext)
 ```
-
+A sample is [here](https://repl.it/@billbuchanan/ch02ans05#main.py).
 
 ## E.1
 Answers:
