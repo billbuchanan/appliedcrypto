@@ -492,11 +492,11 @@ var data = "This is a test";
 var password = "hello";
 var algorithm = "aes256"
 
-#const args = process.argv.slice(3);
+//const args = process.argv.slice(3);
 
-#data = args[0];
-#password = args[1];
-#algorithm = args[2];
+//data = args[0];
+//password = args[1];
+//algorithm = args[2];
 
 console.log("\nText:\t\t" + data);
 console.log("Password:\t" + password);
