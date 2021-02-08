@@ -560,25 +560,24 @@ def decrypt(ciphertext,key, mode):
 pw = ["hello","ankle","changeme","123456"]
 
 c='1jDmCTD1IfbXbyyHgAyrdg=='
+ciphertext = base64.b64decode(c)
+print ("Cipher (ECB): ",binascii.hexlify(ciphertext))
 
 for password in pw:
 
-	try:
-		key = hashlib.sha256(password).digest()
-		cipherhex = base64.b64decode(c).encode('hex')
-		ciphertext = binascii.unhexlify(cipherhex)
+  try:
+    key = hashlib.sha256(password.encode()).digest()
 
-		print "Cipher (ECB): "+binascii.hexlify(bytearray(ciphertext))
-
-		plaintext = decrypt(ciphertext,key,AES.MODE_ECB)
-		plaintext = Padding.removePadding(plaintext,mode='CMS')
-		print "  decrypt: "+plaintext
-		print "  Key found: "+password
-
-	except:	
-		print(".")
+  
+    plaintext = decrypt(ciphertext,key,AES.MODE_ECB)
+    
+    plaintext = Padding.removePadding(plaintext.decode(),blocksize=Padding.AES_blocksize,mode='CMS')
+    print ("  decrypt: ",plaintext)
+    print ("  Key found: ",password)
+  except:	
+    print(".")
  ```
-
+A sample is [here](https://repl.it/@billbuchanan/ch02ans08#main.py).
 
 ## G.1
 Answers:
