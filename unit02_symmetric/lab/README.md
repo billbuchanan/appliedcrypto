@@ -1,4 +1,4 @@
-![esecurity](https://raw.githubusercontent.com/billbuchanan/esecurity/master/z_associated/esecurity_graphics.jpg)
+![appliedcrypto](https://raw.githubusercontent.com/billbuchanan/appliedcrypto/master/z_associated/appliedcrypto_graphics.jpg)
 
 # Lab 2: Symmetric Key
 Objective: The key objective of this lab is to understand the range of symmetric key methods used within symmetric key encryption. We will introduce block ciphers, stream ciphers and padding. The key tools used include OpenSSL, Python and JavaScript. Overall Python 2.7 has been used for the sample examples, but it should be easy to convert these to Python 3.x.
@@ -633,9 +633,9 @@ The key things learnt:
 ## Notes
 The code can be downloaded from:
 
-git clone https://github.com/billbuchanan/esecurity
+git clone https://github.com/billbuchanan/appliedcrypto
 
-If you need to update the code, go into the esecurity folder, and run:
+If you need to update the code, go into the appliedcrypto folder, and run:
 
 git pull
 
