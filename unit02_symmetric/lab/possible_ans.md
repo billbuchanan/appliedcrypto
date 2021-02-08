@@ -473,7 +473,7 @@ def decrypt(ciphertext,key, mode):
 	encobj = AES.new(key,mode)
 	return(encobj.decrypt(ciphertext))
 
-key = hashlib.sha256(password).digest()
+key = hashlib.sha256(password.encode()).digest()
 
 
 ciphertext=binascii.unhexlify(cipher)
@@ -481,9 +481,12 @@ ciphertext=binascii.unhexlify(cipher)
 plaintext = decrypt(ciphertext,key,AES.MODE_ECB)
 print ('Cipher: '+ cipher)
 print ('Password: '+ password)
-plaintext = Padding.removePadding(plaintext,mode='CMS')
+
+plaintext = Padding.removePadding(plaintext.decode(),blocksize=Padding.AES_blocksize,mode='CMS')
+
 print ("  decrypt: "+plaintext)
 ```
+A sample is [here])(https://repl.it/@billbuchanan/ch02ans06#main.py).
 
 A sample run gives:
 <pre>
