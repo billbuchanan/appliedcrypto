@@ -285,22 +285,25 @@ def decrypt(ciphertext,key, mode):
 	encobj = AES.new(key,mode)
 	return(encobj.decrypt(ciphertext))
 
-key = hashlib.sha256(password).digest()
+key = hashlib.sha256(password.encode()).digest()
 
 
 plaintext = Padding.appendPadding(plaintext,blocksize=Padding.AES_blocksize,mode='CMS')
-print "After padding (CMS): "+binascii.hexlify(bytearray(plaintext))
+print ("After padding (CMS): ",binascii.hexlify(plaintext.encode()))
 
-ciphertext = encrypt(plaintext,key,AES.MODE_ECB)
-print "Cipher (ECB): "+binascii.hexlify(bytearray(ciphertext))
+ciphertext = encrypt(plaintext.encode(),key,AES.MODE_ECB)
+print ("Cipher (ECB): ",binascii.hexlify(ciphertext))
 
 plaintext = decrypt(ciphertext,key,AES.MODE_ECB)
-plaintext = Padding.removePadding(plaintext,mode='CMS')
-print "  decrypt: "+plaintext
+
+plaintext = Padding.removePadding(plaintext.decode(),blocksize=Padding.AES_blocksize,mode='CMS')
 
 
-plaintext=val
+print ("  decrypt: ",plaintext)
+
 ```
+A sample is [here](https://repl.it/@billbuchanan/ch02an03#main.py).
+
 A sample run is:
 <pre>
 napier@napier-virtual-machine:~$ python d1.py hello hello123
