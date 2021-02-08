@@ -134,6 +134,8 @@ And Padding with:
 pip install padding
 </pre>
 
+Note: The Padding library has not implemented the fully range of padding methods.
+
 ```python
 from Crypto.Cipher import AES
 import hashlib
@@ -154,59 +156,64 @@ def decrypt(ciphertext,key, mode):
 	encobj = AES.new(key,mode)
 	return(encobj.decrypt(ciphertext))
 
-key = hashlib.sha256(password).digest()
+key = hashlib.sha256(password.encode()).digest()
 
 
 plaintext = Padding.appendPadding(plaintext,blocksize=Padding.AES_blocksize,mode='CMS')
-print "After padding (CMS): "+binascii.hexlify(bytearray(plaintext))
 
-ciphertext = encrypt(plaintext,key,AES.MODE_ECB)
-print "Cipher (ECB): "+binascii.hexlify(bytearray(ciphertext))
+print ("After padding (CMS): ",binascii.hexlify(bytearray(plaintext.encode())))
+
+ciphertext = encrypt(plaintext.encode(),key,AES.MODE_ECB)
+print ("Cipher (ECB): ",binascii.hexlify(bytearray(ciphertext)))
 
 plaintext = decrypt(ciphertext,key,AES.MODE_ECB)
-plaintext = Padding.removePadding(plaintext,mode='CMS')
-print "  decrypt: "+plaintext
+plaintext = Padding.removePadding(plaintext.decode(),mode='CMS')
+print ("  decrypt: ",plaintext)
 
 
 plaintext=val
 
+### Other padding methods have not been implemented in the library
 
 plaintext = Padding.appendPadding(plaintext,blocksize=Padding.AES_blocksize,mode='ZeroLen')
-print "\nAfter padding (Bit): "+binascii.hexlify(bytearray(plaintext))
 
-ciphertext = encrypt(plaintext,key,AES.MODE_ECB)
-print "Cipher (ECB): "+binascii.hexlify(bytearray(ciphertext))
+print ("After padding (CMS): ",binascii.hexlify(bytearray(plaintext.encode())))
+
+ciphertext = encrypt(plaintext.encode(),key,AES.MODE_ECB)
+print ("Cipher (ECB): ",binascii.hexlify(bytearray(ciphertext)))
 
 plaintext = decrypt(ciphertext,key,AES.MODE_ECB)
-plaintext = Padding.removePadding(plaintext,blocksize=Padding.AES_blocksize,mode='ZeroLen')
-print "  decrypt: "+plaintext
-
+plaintext = Padding.removePadding(plaintext.decode(),mode='ZeroLen')
+print ("  decrypt: ",plaintext)
 
 plaintext=val
 
 plaintext = Padding.appendPadding(plaintext,blocksize=Padding.AES_blocksize,mode='Space')
-print "\nAfter padding (Null): "+binascii.hexlify(bytearray(plaintext))
 
-ciphertext = encrypt(plaintext,key,AES.MODE_ECB)
-print "Cipher (ECB): "+binascii.hexlify(bytearray(ciphertext))
+print ("After padding (CMS): ",binascii.hexlify(bytearray(plaintext.encode())))
+
+ciphertext = encrypt(plaintext.encode(),key,AES.MODE_ECB)
+print ("Cipher (ECB): ",binascii.hexlify(bytearray(ciphertext)))
 
 plaintext = decrypt(ciphertext,key,AES.MODE_ECB)
-plaintext = Padding.removePadding(plaintext,blocksize=Padding.AES_blocksize,mode='Space')
-print "  decrypt: "+plaintext
+plaintext = Padding.removePadding(plaintext.decode(),mode='Space')
+print ("  decrypt: ",plaintext)
 
 
 plaintext=val
 
 plaintext = Padding.appendPadding(plaintext,blocksize=Padding.AES_blocksize,mode='Random')
-print "\nAfter padding (Random): "+binascii.hexlify(bytearray(plaintext))
 
-ciphertext = encrypt(plaintext,key,AES.MODE_ECB)
-print "Cipher (ECB): "+binascii.hexlify(bytearray(ciphertext))
+print ("After padding (Random): ",binascii.hexlify(bytearray(plaintext.encode())))
+
+ciphertext = encrypt(plaintext.encode(),key,AES.MODE_ECB)
+print ("Cipher (ECB): ",binascii.hexlify(bytearray(ciphertext)))
 
 plaintext = decrypt(ciphertext,key,AES.MODE_ECB)
-plaintext = Padding.removePadding(plaintext,mode='Random')
-print "  decrypt: "+plaintext
+plaintext = Padding.removePadding(plaintext.decode(),mode='Random')
+print ("  decrypt: ",plaintext)
 ```
+An example is [here](https://repl.it/@billbuchanan/ch02ans01#main.py).
 
 ## C.2
 
