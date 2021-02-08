@@ -76,3 +76,7 @@ openssl enc -d -aes-256-cbc -in test.txt -pass pass:123456 -base64
 * Test (Symmetric Key Encryption): [here](https://asecuritysite.com/tests/tests?sortBy=cryptobook02)
 
 Note: There will be no multiple choice questions in the tests.
+
+## Sample answers
+
+If you want to peak at the sample answers, they are [here](https://github.com/billbuchanan/appliedcrypto/blob/master/unit02_symmetric/lab/possible_ans.md).
