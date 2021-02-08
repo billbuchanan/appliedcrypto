@@ -524,21 +524,19 @@ def decrypt(ciphertext,key, mode):
 	encobj = DES.new(key,mode)
 	return(encobj.decrypt(ciphertext))
 
-key = hashlib.sha256(password).digest()
+key = hashlib.sha256(password.encode()).digest()
 
 
 ciphertext=binascii.unhexlify("f37ee42f2267458d")
 
 plaintext = decrypt(ciphertext,key[:8],DES.MODE_ECB)
-print plaintext
+print (plaintext)
 
-plaintext = Padding.removePadding(plaintext,mode='CMS')
-print "  decrypt: "+plaintext
-
-
-plaintext=val
+plaintext = Padding.removePadding(plaintext.decode(),blocksize=Padding.AES_blocksize,mode='CMS')
+print ("  decrypt: "+plaintext)
 ```
 
+A sample is [here](https://repl.it/@billbuchanan/ch02ans07#main.py).
 
 ## F.1
 Plaintext: norway
