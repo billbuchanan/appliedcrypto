@@ -374,6 +374,8 @@ console.log("Decipher\t",chacha20.decrypt(key,
 nonce, ciphertext).toString());
 ```
 
+Repl.it code: [here](https://repl.it/@billbuchanan/chachalab#index.js)
+
 If we use a key of "qwerty", can you find the well-known fruits (in lower case) of the following ChaCha20 cipher streams:
 <pre>
 e47a2bfe646a
