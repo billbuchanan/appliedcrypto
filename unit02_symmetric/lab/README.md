@@ -331,7 +331,7 @@ Now catch the exception with an exception handler:
 ```python
 try:
 	plaintext = Padding.removePadding(plaintext,mode='CMS')
-	print "  decrypt: "+plaintext
+	print ("  decrypt: "+plaintext)
 except:
 	print("Error!")
 ```
