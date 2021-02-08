@@ -646,5 +646,5 @@ To install a Node.js package, use:
 npm install libname
 
 ## Possible solutions
-Have a look at: https://github.com/billbuchanan/appliedcrypto/blob/master/unit02_symmetric/lab/possible_ans.md
+Have a look [here](https://github.com/billbuchanan/appliedcrypto/blob/master/unit02_symmetric/lab/possible_ans.md)
 
