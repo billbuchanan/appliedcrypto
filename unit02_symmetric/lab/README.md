@@ -557,13 +557,11 @@ node h_01.js
 
 Now complete the following table:
 
-Text	Pass phrase	Type	Ciphertext and salt (just define first four characters of each)
-
-This is a test	hello	Aes128	
-
-France	Qwerty123	Aes192	
-
-Germany	Testing123	Aes256	
+| Test | Pass phrase  | Type | Ciphertext and salt (just define first four characters of each) |
+|-----------|-----------|-----------|-----------|
+| This is a test| 	hello	| Aes128 |  | 	
+| France	| Qwerty123	| Aes192	|  | 
+| Germany	| Testing123	| Aes256	|  | 
 
 
 
