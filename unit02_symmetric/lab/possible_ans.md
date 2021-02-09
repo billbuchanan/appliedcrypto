@@ -486,7 +486,7 @@ plaintext = Padding.removePadding(plaintext.decode(),blocksize=Padding.AES_block
 
 print ("  decrypt: "+plaintext)
 ```
-A sample is [here])(https://repl.it/@billbuchanan/ch02ans06#main.py).
+A sample is [here](https://repl.it/@billbuchanan/ch02ans06#main.py).
 
 A sample run gives:
 <pre>
