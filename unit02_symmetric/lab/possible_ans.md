@@ -538,6 +538,39 @@ print ("  decrypt: "+plaintext)
 
 A sample is [here](https://repl.it/@billbuchanan/ch02ans07#main.py).
 
+## E.3
+In this case we will convert from Base-64 into a byte array and then try to decrypt:
+
+```python
+from Crypto.Cipher import AES
+import hashlib
+import sys
+import binascii
+import Padding
+import base64
+
+def decrypt(ciphertext,key, mode):
+	encobj = AES.new(key,mode)
+	return(encobj.decrypt(ciphertext))
+
+password = "hello"
+
+c='1jDmCTD1IfbXbyyHgAyrdg=='
+ciphertext = base64.b64decode(c)
+print ("Cipher (ECB): ",binascii.hexlify(ciphertext))
+
+
+key = hashlib.sha256(password.encode()).digest()
+
+plaintext = decrypt(ciphertext,key,AES.MODE_ECB)
+    
+plaintext = Padding.removePadding(plaintext.decode(),blocksize=Padding.AES_blocksize,mode='CMS')
+print ("  decrypt: ",plaintext)
+print ("  Key found: ",password)
+```
+
+A sample is [here](https://repl.it/@billbuchanan/ch02sample01#main.py).
+
 ## F.1
 Plaintext: norway
 
