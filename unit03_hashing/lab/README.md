@@ -330,12 +330,12 @@ LM: FD-A9-5F-BE-CA-28-8D-44-AA-D3-B4-35-B5-14-04-EE
 NTLM: 06-6D-DF-D4-EF-0E-9C-D7-C2-56-FE-77-19-1E-F4-3C
 </pre>
 
-We can check these with a Python script:
+We can check these with a Python script [code](https://repl.it/@billbuchanan/ch03code01#main.py):
 ```python
 import passlib.hash;
 string="hello"
-print "LM Hash:"+passlib.hash.lmhash.encrypt(string)
-print "NT Hash:"+passlib.hash.nthash.encrypt(string)
+print ("LM Hash:"+passlib.hash.lmhash.encrypt(string))
+print ("NT Hash:"+passlib.hash.nthash.encrypt(string))
 ```
 
 which gives:
@@ -366,13 +366,13 @@ bill:$apr1$PkWj6gM4$XGWpADBVPyypjL/cL0XMc1
 $apr1$PkWj6gM4$XGWpADBVPyypjL/cL0XMc1
 </pre>
 
-We can also create a simple Python program with the passlib library, and add the same salt as the example above:
+We can also create a simple Python program with the passlib library, and add the same salt as the example above [code](https://repl.it/@billbuchanan/ch03code02#main.py):
 ```python
 import passlib.hash;
 
 salt="PkWj6gM4"
 string="hello"
-print "APR1:"+passlib.hash.apr_md5_crypt.encrypt(string, salt=salt)
+print ("APR1:"+passlib.hash.apr_md5_crypt.encrypt(string, salt=salt))
 ```
 
 We can created a simple Python program with the passlib library, and add the same salt as the example above:
@@ -401,14 +401,14 @@ While APR1 has a salted value, the SHA-1 hash does not have a salted value. It p
 bill:{SHA}qvTGHdzF6KLavt4PO0gs2a6pQ00=
 </pre>
 
-We can also generate salted passwords with crypt, and can use the Python script of:
+We can also generate salted passwords with crypt, and can use the Python script of [code](https://repl.it/@billbuchanan/ch03code03#main.py):
 ```python
 import passlib.hash;
 salt="8sFt66rZ"
 string="hello"
-print "SHA1:"+passlib.hash.sha1_crypt.encrypt(string, salt=salt)
-print "SHA256:"+passlib.hash.sha256_crypt.encrypt(string, salt=salt)
-print "SHA512:"+passlib.hash.sha512_crypt.encrypt(string, salt=salt)
+print ("SHA1:"+passlib.hash.sha1_crypt.encrypt(string, salt=salt))
+print ("SHA256:"+passlib.hash.sha256_crypt.encrypt(string, salt=salt))
+print ("SHA512:"+passlib.hash.sha512_crypt.encrypt(string, salt=salt))
 ```
 
 SHA-512 salts start with $6$ and are up to 16 chars long.
@@ -454,7 +454,7 @@ byte[] result = passwordDerive.GenerateDerivedKey(16,
 			ASCIIEncoding.UTF8.GetBytes(message), salt, 1000);
 ```
 
-which has a key length of 16 bytes (128 bits - dklen), uses a salt byte array, and 1000 iterations of the hash (Minterations). The resulting hash value will have 32 hexadecimal characters (16 bytes).
+which has a key length of 16 bytes (128 bits - dklen), uses a salt byte array, and 1000 iterations of the hash (Minterations). The resulting hash value will have 32 hexadecimal characters (16 bytes) [here](https://repl.it/@billbuchanan/ch03code04#main.py).
 
 Web link (PBKDF2): 	http://www.asecuritysite.com/encryption/PBKDF2
 
@@ -473,8 +473,9 @@ if (len(sys.argv)>1):
 if (len(sys.argv)>2):
 	salt=sys.argv[2]
 
-print "PBKDF2 (SHA1):"+passlib.hash.pbkdf2_sha1.encrypt(string, salt=salt)
-print "PBKDF2 (SHA256):"+passlib.hash.pbkdf2_sha256.encrypt(string, salt=salt)
+print ("PBKDF2 (SHA1):",passlib.hash.pbkdf2_sha1.encrypt(string, salt=salt.encode()))
+print ("PBKDF2 (SHA256):",passlib.hash.pbkdf2_sha256.encrypt(string, salt=salt.encode()))
+
 ```
 
 
@@ -515,7 +516,7 @@ You can see that Bcrypt is almost 15,000 times slower than MD5 (380,000,000 word
 
 where you can see that BCrypt over 3,000 times slower than LM hashes. So, although the main hashing methods are fast and efficient, this speed has a down side, in that they can be cracked easier. With Bcrypt the speed of cracking is considerably slowed down, with each iteration doubling the amount of time it takes to crack the hash with brute force. If we add one onto the number of rounds, we double the time taken for the hashing process. So, to go from 6 to 16 increase by over 1,000 (210) and from 6 to 26 increases by over 1 million (220).
 
-The following defines a Python script which calculates a whole range of hashes:
+The following defines a Python script which calculates a whole range of hashes [code](https://repl.it/@billbuchanan/ch03code05#main.py):
 
 ```python
 import hashlib;
@@ -525,20 +526,21 @@ salt="ZDzPE45C"
 string="password"
 salt2="1111111111111111111111"
 
-print "General Hashes"
-print "MD5:"+hashlib.md5(string).hexdigest()
-print "SHA1:"+hashlib.sha1(string).hexdigest()
-print "SHA256:"+hashlib.sha256(string).hexdigest()
-print "SHA512:"+hashlib.sha512(string).hexdigest()
+string=string.encode() # convert to bytes
+print ("General Hashes")
+print ("MD5:"+hashlib.md5(string).hexdigest())
+print ("SHA1:"+hashlib.sha1(string).hexdigest())
+print ("SHA256:"+hashlib.sha256(string).hexdigest())
+print ("SHA512:"+hashlib.sha512(string).hexdigest())
 
-print "UNIX hashes (with salt)"
-print "DES:"+passlib.hash.des_crypt.encrypt(string, salt=salt[:2])
-print "MD5:"+passlib.hash.md5_crypt.encrypt(string, salt=salt)
-print "Sun MD5:"+passlib.hash.sun_md5_crypt.encrypt(string, salt=salt)
-print "SHA1:"+passlib.hash.sha1_crypt.encrypt(string, salt=salt)
-print "SHA256:"+passlib.hash.sha256_crypt.encrypt(string, salt=salt)
-print "SHA512:"+passlib.hash.sha512_crypt.encrypt(string, salt=salt)
-print "Bcrypt:"+passlib.hash.bcrypt.encrypt(string, salt=salt2[:22])
+print ("UNIX hashes (with salt)")
+print ("DES:"+passlib.hash.des_crypt.encrypt(string, salt=salt[:2]))
+print ("MD5:"+passlib.hash.md5_crypt.encrypt(string, salt=salt))
+print ("Sun MD5:"+passlib.hash.sun_md5_crypt.encrypt(string, salt=salt))
+print ("SHA1:"+passlib.hash.sha1_crypt.encrypt(string, salt=salt))
+print ("SHA256:"+passlib.hash.sha256_crypt.encrypt(string, salt=salt))
+print ("SHA512:"+passlib.hash.sha512_crypt.encrypt(string, salt=salt))
+print ("Bcrypt:"+passlib.hash.bcrypt.encrypt(string, salt=salt2[:22]))
 ```
  
 Figure 1 Bcrypt
@@ -606,89 +608,66 @@ The key things learnt:
 * The core difference between the fast hashing methods (such as MD5 and SHA-1) and the slow ones (bcrypt and PBKDF2).
 
 ## L	Additional
-The following provides a hash most of the widely used hashing method. For this enter the code of:
+The following provides a hash most of the widely used hashing method. For this enter the code of [code](https://repl.it/@billbuchanan/htest#main.py):
 ```python
-import hashlib;
+# https://asecuritysite.com/encryption/hash
+
+
+import sys
+from hashlib import md5
 import passlib.hash;
-import sys;
+
+import bcrypt
+import hashlib;
+
+num = 30
+repeat_n=1
 
 
 salt="ZDzPE45C"
-string="password"
+string="the boy stood on the burning deck"
 salt2="1111111111111111111111"
 
 
-if (len(sys.argv)>1):
-	string=sys.argv[1]
 
-if (len(sys.argv)>2):
-	salt=sys.argv[2]
+import warnings
+warnings.filterwarnings("ignore", category=DeprecationWarning) 
 
-print "General Hashes"
-print "MD5:"+hashlib.md5(string).hexdigest()
-print "SHA1:"+hashlib.sha1(string).hexdigest()
-print "SHA256:"+hashlib.sha256(string).hexdigest()
-print "SHA512:"+hashlib.sha512(string).hexdigest()
+print ("Word: ",string)
+print ("Salt: ",salt)
 
-print "UNIX hashes (with salt)"
-print "DES:"+passlib.hash.des_crypt.encrypt(string, salt=salt[:2])
-print "MD5:"+passlib.hash.md5_crypt.encrypt(string, salt=salt)
-print "Sun MD5:"+passlib.hash.sun_md5_crypt.encrypt(string, salt=salt)
-print "SHA1:"+passlib.hash.sha1_crypt.encrypt(string, salt=salt)
-print "SHA256:"+passlib.hash.sha256_crypt.encrypt(string, salt=salt)
-print "SHA512:"+passlib.hash.sha512_crypt.encrypt(string, salt=salt)
 
-print "APR1:"+passlib.hash.apr_md5_crypt.encrypt(string, salt=salt)
-print "PHPASS:"+passlib.hash.phpass.encrypt(string, salt=salt)
-print "PBKDF2 (SHA1):"+passlib.hash.pbkdf2_sha1.encrypt(string, salt=salt)
-print "PBKDF2 (SHA256):"+passlib.hash.pbkdf2_sha256.encrypt(string, salt=salt)
-#print "PBKDF2 (SHA512):"+passlib.hash.pbkdf2_sha512.encrypt(string, salt=salt)
-#print "CTA PBKDF2:"+passlib.hash.cta_pbkdf2_sha1.encrypt(string, salt=salt)
-#print "DLITZ PBKDF2:"+passlib.hash.dlitz_pbkdf2_sha1.encrypt(string, salt=salt)
 
-print "MS Windows Hashes"
-print "LM Hash:"+passlib.hash.lmhash.encrypt(string)
-print "NT Hash:"+passlib.hash.nthash.encrypt(string)
-print "MS DCC:"+passlib.hash.msdcc.encrypt(string, salt)
-print "MS DCC2:"+passlib.hash.msdcc2.encrypt(string, salt)
-        
-#print "LDAP Hashes"
-#print "LDAP (MD5):"+passlib.hash.ldap_md5.encrypt(string)
-#print "LDAP (MD5 Salted):"+passlib.hash.ldap_salted_md5.encrypt(string, salt=salt)
-#print "LDAP (SHA):"+passlib.hash.ldap_sha1.encrypt(string)
-#print "LDAP (SHA1 Salted):"+passlib.hash.ldap_salted_sha1.encrypt(string, salt=salt)
-#print "LDAP (DES Crypt):"+passlib.hash.ldap_des_crypt.encrypt(string)
-#print "LDAP (BSDI Crypt):"+passlib.hash.ldap_bsdi_crypt.encrypt(string)
-#print "LDAP (MD5 Crypt):"+passlib.hash.ldap_md5_crypt.encrypt(string)
-#print "LDAP (Bcrypt):"+passlib.hash.ldap_bcrypt.encrypt(string)
-#print "LDAP (SHA1):"+passlib.hash.ldap_sha1_crypt.encrypt(string)
-#print "LDAP (SHA256):"+passlib.hash.ldap_sha256_crypt.encrypt(string)
-#print "LDAP (SHA512):"+passlib.hash.ldap_sha512_crypt.encrypt(string)
+print("\nHashes")
+print("SHA-1\t",hashlib.sha1(string.encode()).hexdigest())
+print("SHA-256\t",hashlib.sha256(string.encode()).hexdigest())
+print("SHA-512\t",hashlib.sha512(string.encode()).hexdigest())
 
-print "LDAP (Hex MD5):"+passlib.hash.ldap_hex_md5.encrypt(string)
-print "LDAP (Hex SHA1):"+passlib.hash.ldap_hex_sha1.encrypt(string)
-print "LDAP (At Lass):"+passlib.hash.atlassian_pbkdf2_sha1.encrypt(string)
-print "LDAP (FSHP):"+passlib.hash.fshp.encrypt(string)
-        
-print "Database Hashes"
-print "MS SQL 2000:"+passlib.hash.mssql2000.encrypt(string)
-print "MS SQL 2000:"+passlib.hash.mssql2005.encrypt(string)
-print "MS SQL 2000:"+passlib.hash.mysql323.encrypt(string)
-print "MySQL:"+passlib.hash.mysql41.encrypt(string)
-print "Postgres (MD5):"+passlib.hash.postgres_md5.encrypt(string, user=salt)
-print "Oracle 10:"+passlib.hash.oracle10.encrypt(string, user=salt)
-print "Oracle 11:"+passlib.hash.oracle11.encrypt(string)
-        
-print "Other Known Hashes"
-print "Cisco PIX:"+passlib.hash.cisco_pix.encrypt(string, user=salt)
-print "Cisco Type 7:"+passlib.hash.cisco_type7.encrypt(string)
-print "Dyango DES:"+passlib.hash.django_des_crypt.encrypt(string, salt=salt)
-print "Dyango MD5:"+passlib.hash.django_salted_md5.encrypt(string, salt=salt[:2])
-print "Dyango SHA1:"+passlib.hash.django_salted_sha1.encrypt(string, salt=salt)
-print "Dyango Bcrypt:"+passlib.hash.django_bcrypt.encrypt(string, salt=salt2[:22])
-print "Dyango PBKDF2 SHA1:"+passlib.hash.django_pbkdf2_sha1.encrypt(string, salt=salt)
-print "Dyango PBKDF2 SHA1:"+passlib.hash.django_pbkdf2_sha256.encrypt(string, salt=salt)
-print "Bcrypt:"+passlib.hash.bcrypt.encrypt(string, salt=salt2[:22])
+print("MD-5:\t\t\t", md5(string.encode()).hexdigest())
+print("DES:\t\t\t",  passlib.hash.des_crypt.encrypt(string.encode(), salt=salt[:2]))
+
+print("Bcrypt:\t\t\t", bcrypt.kdf(string.encode(),salt=salt.encode(),desired_key_bytes=32,rounds=100 ).hex())
+
+print("APR1:\t\t\t",  passlib.hash.apr_md5_crypt.encrypt(string.encode(), salt=salt))
+
+print("PBKDF2 (SHA1):\t\t",  passlib.hash.pbkdf2_sha1.encrypt(string.encode(),rounds=5, salt=salt.encode()))
+print("PBKDF2 (SHA-256):\t", passlib.hash.pbkdf2_sha256.encrypt(string,rounds=5, salt=salt.encode()))
+
+print("LM Hash:\t\t",  passlib.hash.lmhash.encrypt(string.encode()))
+print("NT Hash:\t\t",  passlib.hash.nthash.encrypt(string.encode()))
+print("MS DCC:\t\t\t",  passlib.hash.msdcc.encrypt(string.encode(), salt))
+
+print("LDAP (MD5):\t\t", passlib.hash.ldap_hex_md5.encrypt(string.encode()))
+print("LDAP (SHA1):\t\t",  passlib.hash.ldap_hex_sha1.encrypt(string.encode()))
+
+print("MS SQL 2000:\t\t",  passlib.hash.mssql2000.encrypt(string.encode()))
+print("MySQL:\t\t\t",  passlib.hash.mysql41.encrypt(string.encode()))
+print("Oracle 10:\t\t",  passlib.hash.oracle10.encrypt(string.encode(), user=salt))
+print("Postgres (MD5):\t\t", passlib.hash.postgres_md5.encrypt(string.encode(), user=salt))
+print("Cisco PIX:\t\t",  passlib.hash.cisco_pix.encrypt(string[:16].encode(), user=salt))
+print("Cisco Type 7:\t\t",  passlib.hash.cisco_type7.encrypt(string.encode()))
+
+
 ```
 
 
