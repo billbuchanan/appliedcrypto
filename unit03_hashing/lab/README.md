@@ -372,7 +372,7 @@ import passlib.hash;
 
 salt="PkWj6gM4"
 string="hello"
-print ("APR1:"+passlib.hash.apr_md5_crypt.encrypt(string, salt=salt))
+print ("APR1:"+passlib.hash.apr_md5_crypt.hash(string, salt=salt))
 ```
 
 We can created a simple Python program with the passlib library, and add the same salt as the example above:
