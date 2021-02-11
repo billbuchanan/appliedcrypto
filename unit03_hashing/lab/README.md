@@ -334,8 +334,8 @@ We can check these with a Python script [code](https://repl.it/@billbuchanan/ch0
 ```python
 import passlib.hash;
 string="hello"
-print ("LM Hash:"+passlib.hash.lmhash.encrypt(string))
-print ("NT Hash:"+passlib.hash.nthash.encrypt(string))
+print ("LM Hash:"+passlib.hash.lmhash.hash(string))
+print ("NT Hash:"+passlib.hash.nthash.hash(string))
 ```
 
 which gives:
