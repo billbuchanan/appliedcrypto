@@ -32,6 +32,7 @@ The key concepts are: MD2. MD4. MD5. SHA-1. Salting. Collisions. Murmur and FNV.
 * Test (Hash Encryption): [here](https://asecuritysite.com/tests/tests?sortBy=cryptobook03)
 
 ## Sample Exam Questions
+<b>Note: There is no need to look at these questions just now. They are here to give you an idea of the test of exam question that might be asked</b>
 
 The following are some sample questions for hashing:
 
