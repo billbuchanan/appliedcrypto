@@ -1023,20 +1023,20 @@ salt="ZDzPE45C"
 string="hello"
 salt2="1111111111111111111111"
 
-print "General Hashes"
-print "MD5:"+hashlib.md5(string).hexdigest()
-print "SHA1:"+hashlib.sha1(string).hexdigest()
-print "SHA256:"+hashlib.sha256(string).hexdigest()
-print "SHA512:"+hashlib.sha512(string).hexdigest()
+print ("General Hashes")
+print ("MD5:"+hashlib.md5(string.encode()).hexdigest())
+print ("SHA1:"+hashlib.sha1(string.encode()).hexdigest())
+print ("SHA256:"+hashlib.sha256(string.encode()).hexdigest())
+print ("SHA512:"+hashlib.sha512(string.encode()).hexdigest())
 
-print "UNIX hashes (with salt)"
-print "DES:"+passlib.hash.des_crypt.encrypt(string, salt=salt[:2])
-print "MD5:"+passlib.hash.md5_crypt.encrypt(string, salt=salt)
-print "Sun MD5:"+passlib.hash.sun_md5_crypt.encrypt(string, salt=salt)
-print "SHA1:"+passlib.hash.sha1_crypt.encrypt(string, salt=salt)
-print "SHA256:"+passlib.hash.sha256_crypt.encrypt(string, salt=salt)
-print "SHA512:"+passlib.hash.sha512_crypt.encrypt(string, salt=salt)
-print "Bcrypt:"+passlib.hash.bcrypt.encrypt(string, salt=salt2[:22])
+print ("UNIX hashes (with salt)")
+print ("DES:"+passlib.hash.des_crypt.hash(string, salt=salt[:2]))
+print ("MD5:"+passlib.hash.md5_crypt.hash(string, salt=salt))
+print ("Sun MD5:"+passlib.hash.sun_md5_crypt.hash(string, salt=salt))
+print ("SHA1:"+passlib.hash.sha1_crypt.hash(string, salt=salt))
+print ("SHA256:"+passlib.hash.sha256_crypt.hash(string, salt=salt))
+print ("SHA512:"+passlib.hash.sha512_crypt.hash(string, salt=salt))
+print ("Bcrypt:"+passlib.hash.bcrypt.hash(string, salt=salt2[:22]))
 napier@napier-virtual-machine:~/steg/python/lsb$ python bc.py
 General Hashes
 MD5:5d41402abc4b2a76b9719d911017c592
@@ -1053,6 +1053,7 @@ SHA512:$6$rounds=656000$ZDzPE45C$6VWOiufRnOnxxetIEuLTZiM709Z3SBuNxhCf0Y0N4MUOgST
 Bcrypt:$2b$12$111111111111111111111u/oq5MIbCQah3/a.C6KTM0d7mD3wwZw.
 </pre>
 
+Sample code: [here](https://repl.it/@billbuchanan/cha03ans05#main.py)
 ## L.3
 <pre>
 $ hashcat -m 0 bfield.hash rockyou.txt 
