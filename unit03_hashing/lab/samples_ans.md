@@ -932,11 +932,11 @@ import passlib.hash;
 
 salt="PkWj6gM4"
 string="changeme"
-print "APR1:"+passlib.hash.apr_md5_crypt.encrypt(string, salt=salt)
+print ("APR1:"+passlib.hash.apr_md5_crypt.hash(string, salt=salt))
 string="123456"
-print "APR1:"+passlib.hash.apr_md5_crypt.encrypt(string, salt=salt)
+print ("APR1:"+passlib.hash.apr_md5_crypt.hash(string, salt=salt))
 string="password"
-print "APR1:"+passlib.hash.apr_md5_crypt.encrypt(string, salt=salt)
+print ("APR1:"+passlib.hash.apr_md5_crypt.hash(string, salt=salt))
 
 $ <strong>python apr1.py </strong>
 APR1:$apr1$PkWj6gM4$V2w1yci/N1HCLzcqo3jiZ/
@@ -944,6 +944,7 @@ APR1:$apr1$PkWj6gM4$opHu7xKPBmSPWdVO8vidC/
 APR1:$apr1$PkWj6gM4$OupRScHgsxe5lQj4.azPy.
 </pre>
 
+Sample code: [here](https://repl.it/@billbuchanan/chap03ans01#main.py)
 ## F.1
 Answers for "changeme":
 <pre>
@@ -957,15 +958,16 @@ $ cat sha1.py
 import passlib.hash;
 salt="8sFt66rZ"
 string="changeme"
-print "SHA1:"+passlib.hash.sha1_crypt.encrypt(string, salt=salt)
-print "SHA256:"+passlib.hash.sha256_crypt.encrypt(string, salt=salt)
-print "SHA512:"+passlib.hash.sha512_crypt.encrypt(string, salt=salt)
+print ("SHA1:"+passlib.hash.sha1_crypt.hash(string, salt=salt))
+print ("SHA256:"+passlib.hash.sha256_crypt.hash(string, salt=salt))
+print ("SHA512:"+passlib.hash.sha512_crypt.hash(string, salt=salt))
 $ python sha1.py
 SHA1:$sha1$480000$8sFt66rZ$dNfLzeD4O48TgFqDKd0zBYc4SJ5a
 SHA256:$5$rounds=535000$8sFt66rZ$yNCVBp7NMi3UNzMEIoGoGnQZ.HMGaUETwiQNCBi/cl5
 SHA512:$6$rounds=656000$8sFt66rZ$B/.Msj2UuS3qH.Qxsy.RL82oni6MV75LZ8olN6eCw6.LSHCCcJ4IGnzdX9Qv299whMbpz4rR9e7A9Ab0L3ZA0/
 </pre>
 
+Sample code: [here](https://repl.it/@billbuchanan/chap03ans02#main.py)
 ## G.1
 Answers:
 <pre>
