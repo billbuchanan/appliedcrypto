@@ -649,8 +649,8 @@ print("Bcrypt:\t\t\t", bcrypt.kdf(string.encode(),salt=salt.encode(),desired_key
 
 print("APR1:\t\t\t",  passlib.hash.apr_md5_crypt.encrypt(string.encode(), salt=salt))
 
-print("PBKDF2 (SHA1):\t\t",  passlib.hash.pbkdf2_sha1.encrypt(string.encode(),rounds=5, salt=salt.encode()))
-print("PBKDF2 (SHA-256):\t", passlib.hash.pbkdf2_sha256.encrypt(string,rounds=5, salt=salt.encode()))
+print("PBKDF2 (SHA1):\t\t",  passlib.hash.pbkdf2_sha1.hash(string.encode(),rounds=5, salt=salt.encode()))
+print("PBKDF2 (SHA-256):\t", passlib.hash.pbkdf2_sha256.hash(string,rounds=5, salt=salt.encode()))
 
 print("LM Hash:\t\t",  passlib.hash.lmhash.encrypt(string.encode()))
 print("NT Hash:\t\t",  passlib.hash.nthash.encrypt(string.encode()))
