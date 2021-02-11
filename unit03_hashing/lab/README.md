@@ -334,8 +334,8 @@ We can check these with a Python script [code](https://repl.it/@billbuchanan/ch0
 ```python
 import passlib.hash;
 string="hello"
-print ("LM Hash:"+passlib.hash.lmhash.encrypt(string))
-print ("NT Hash:"+passlib.hash.nthash.encrypt(string))
+print ("LM Hash:"+passlib.hash.lmhash.hash(string))
+print ("NT Hash:"+passlib.hash.nthash.hash(string))
 ```
 
 which gives:
@@ -372,7 +372,7 @@ import passlib.hash;
 
 salt="PkWj6gM4"
 string="hello"
-print ("APR1:"+passlib.hash.apr_md5_crypt.encrypt(string, salt=salt))
+print ("APR1:"+passlib.hash.apr_md5_crypt.hash(string, salt=salt))
 ```
 
 We can created a simple Python program with the passlib library, and add the same salt as the example above:
@@ -406,9 +406,9 @@ We can also generate salted passwords with crypt, and can use the Python script 
 import passlib.hash;
 salt="8sFt66rZ"
 string="hello"
-print ("SHA1:"+passlib.hash.sha1_crypt.encrypt(string, salt=salt))
-print ("SHA256:"+passlib.hash.sha256_crypt.encrypt(string, salt=salt))
-print ("SHA512:"+passlib.hash.sha512_crypt.encrypt(string, salt=salt))
+print ("SHA1:"+passlib.hash.sha1_crypt.hash(string, salt=salt))
+print ("SHA256:"+passlib.hash.sha256_crypt.hash(string, salt=salt))
+print ("SHA512:"+passlib.hash.sha512_crypt.hash(string, salt=salt))
 ```
 
 SHA-512 salts start with $6$ and are up to 16 chars long.
@@ -459,7 +459,6 @@ which has a key length of 16 bytes (128 bits - dklen), uses a salt byte array, a
 Web link (PBKDF2): 	http://www.asecuritysite.com/encryption/PBKDF2
 
 ```python
-import hashlib;
 import passlib.hash;
 import sys;
 
@@ -473,8 +472,8 @@ if (len(sys.argv)>1):
 if (len(sys.argv)>2):
 	salt=sys.argv[2]
 
-print ("PBKDF2 (SHA1):",passlib.hash.pbkdf2_sha1.encrypt(string, salt=salt.encode()))
-print ("PBKDF2 (SHA256):",passlib.hash.pbkdf2_sha256.encrypt(string, salt=salt.encode()))
+print ("PBKDF2 (SHA1):",passlib.hash.pbkdf2_sha1.hash(string, salt=salt.encode()))
+print ("PBKDF2 (SHA256):",passlib.hash.pbkdf2_sha256.hash(string, salt=salt.encode()))
 
 ```
 
@@ -519,30 +518,63 @@ where you can see that BCrypt over 3,000 times slower than LM hashes. So, althou
 The following defines a Python script which calculates a whole range of hashes [code](https://repl.it/@billbuchanan/ch03code05#main.py):
 
 ```python
-import hashlib;
+# https://asecuritysite.com/encryption/hash
+
+
+import sys
+from hashlib import md5
 import passlib.hash;
 
+import bcrypt
+import hashlib;
+
+num = 30
+repeat_n=1
+
+
 salt="ZDzPE45C"
-string="password"
+string="the boy stood on the burning deck"
 salt2="1111111111111111111111"
 
-string=string.encode() # convert to bytes
-print ("General Hashes")
-print ("MD5:"+hashlib.md5(string).hexdigest())
-print ("SHA1:"+hashlib.sha1(string).hexdigest())
-print ("SHA256:"+hashlib.sha256(string).hexdigest())
-print ("SHA512:"+hashlib.sha512(string).hexdigest())
 
-print ("UNIX hashes (with salt)")
-print ("DES:"+passlib.hash.des_crypt.encrypt(string, salt=salt[:2]))
-print ("MD5:"+passlib.hash.md5_crypt.encrypt(string, salt=salt))
-print ("Sun MD5:"+passlib.hash.sun_md5_crypt.encrypt(string, salt=salt))
-print ("SHA1:"+passlib.hash.sha1_crypt.encrypt(string, salt=salt))
-print ("SHA256:"+passlib.hash.sha256_crypt.encrypt(string, salt=salt))
-print ("SHA512:"+passlib.hash.sha512_crypt.encrypt(string, salt=salt))
-print ("Bcrypt:"+passlib.hash.bcrypt.encrypt(string, salt=salt2[:22]))
+
+import warnings
+warnings.filterwarnings("ignore", category=DeprecationWarning) 
+
+print ("Word: ",string)
+print ("Salt: ",salt)
+
+
+
+print("\nHashes")
+print("SHA-1\t",hashlib.sha1(string.encode()).hexdigest())
+print("SHA-256\t",hashlib.sha256(string.encode()).hexdigest())
+print("SHA-512\t",hashlib.sha512(string.encode()).hexdigest())
+
+print("MD-5:\t\t\t", md5(string.encode()).hexdigest())
+print("DES:\t\t\t",  passlib.hash.des_crypt.hash(string.encode(), salt=salt[:2]))
+
+print("Bcrypt:\t\t\t", bcrypt.kdf(string.encode(),salt=salt.encode(),desired_key_bytes=32,rounds=100 ).hex())
+
+print("APR1:\t\t\t",  passlib.hash.apr_md5_crypt.hash(string.encode(), salt=salt))
+
+print("PBKDF2 (SHA1):\t\t",  passlib.hash.pbkdf2_sha1.hash(string.encode(),rounds=5, salt=salt.encode()))
+print("PBKDF2 (SHA-256):\t", passlib.hash.pbkdf2_sha256.hash(string,rounds=5, salt=salt.encode()))
+
+print("LM Hash:\t\t",  passlib.hash.lmhash.hash(string.encode()))
+print("NT Hash:\t\t",  passlib.hash.nthash.hash(string.encode()))
+print("MS DCC:\t\t\t",  passlib.hash.msdcc.hash(string.encode(), salt))
+
+print("LDAP (MD5):\t\t", passlib.hash.ldap_hex_md5.hash(string.encode()))
+print("LDAP (SHA1):\t\t",  passlib.hash.ldap_hex_sha1.hash(string.encode()))
+
+print("MS SQL 2000:\t\t",  passlib.hash.mssql2000.hash(string.encode()))
+print("MySQL:\t\t\t",  passlib.hash.mysql41.hash(string.encode()))
+print("Oracle 10:\t\t",  passlib.hash.oracle10.hash(string.encode(), user=salt))
+print("Postgres (MD5):\t\t", passlib.hash.postgres_md5.hash(string.encode(), user=salt))
+print("Cisco PIX:\t\t",  passlib.hash.cisco_pix.hash(string[:16].encode(), user=salt))
+print("Cisco Type 7:\t\t",  passlib.hash.cisco_type7.hash(string.encode()))
 ```
- 
 Figure 1 Bcrypt
 
 ### H.1	
@@ -650,8 +682,8 @@ print("Bcrypt:\t\t\t", bcrypt.kdf(string.encode(),salt=salt.encode(),desired_key
 
 print("APR1:\t\t\t",  passlib.hash.apr_md5_crypt.encrypt(string.encode(), salt=salt))
 
-print("PBKDF2 (SHA1):\t\t",  passlib.hash.pbkdf2_sha1.encrypt(string.encode(),rounds=5, salt=salt.encode()))
-print("PBKDF2 (SHA-256):\t", passlib.hash.pbkdf2_sha256.encrypt(string,rounds=5, salt=salt.encode()))
+print("PBKDF2 (SHA1):\t\t",  passlib.hash.pbkdf2_sha1.hash(string.encode(),rounds=5, salt=salt.encode()))
+print("PBKDF2 (SHA-256):\t", passlib.hash.pbkdf2_sha256.hash(string,rounds=5, salt=salt.encode()))
 
 print("LM Hash:\t\t",  passlib.hash.lmhash.encrypt(string.encode()))
 print("NT Hash:\t\t",  passlib.hash.nthash.encrypt(string.encode()))
