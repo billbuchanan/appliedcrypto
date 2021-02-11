@@ -33,7 +33,8 @@ Back-up of content: [here](https://asecuritysite.com/csn11117/unit02)
 * Why EDE in 3DES?: [here](https://www.youtube.com/watch?v=ttayDxqfQkA)
 
 ## Sample exam questions
-**Note: There is no need to look at these questions just now. They are here to give you an idea of the test of exam question that might be asked **
+
+** Note: There is no need to look at these questions just now. They are here to give you an idea of the test of exam question that might be asked **
 
 The following are sample exam questions for symmetric key:
 
