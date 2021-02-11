@@ -984,10 +984,8 @@ A sample run is:
 <pre>
 $ nano pb.py
 $ cat pb.py 
-import hashlib;
 import passlib.hash;
 import sys;
-
 
 salt="ZDzPE45C"
 string="password"
@@ -998,8 +996,8 @@ if (len(sys.argv)>1):
 if (len(sys.argv)>2):
 	salt=sys.argv[2]
 
-print "PBKDF2 (SHA1):"+passlib.hash.pbkdf2_sha1.encrypt(string, salt=salt)
-print "PBKDF2 (SHA256):"+passlib.hash.pbkdf2_sha256.encrypt(string, salt=salt)
+print ("PBKDF2 (SHA1):"+passlib.hash.pbkdf2_sha1.hash(string, salt=salt.encode()))
+print ("PBKDF2 (SHA256):"+passlib.hash.pbkdf2_sha256.hash(string, salt=salt.encode()))
 $ python pb.py changeme ZDzPE45C
 PBKDF2 (SHA1):$pbkdf2$131000$WkR6UEU0NUM$qS7S53GV52Ha3Qq1SUna.XlrS1U
 PBKDF2 (SHA256):$pbkdf2-sha256$29000$WkR6UEU0NUM$gWsN0JM2s94YGo0W9On0Mz6yFvRMCFRE1Ms4dXIpCE4
@@ -1010,6 +1008,8 @@ $ python pb.py password ZDzPE45C
 PBKDF2 (SHA1):$pbkdf2$131000$WkR6UEU0NUM$.L1L.AVXTBSsc0FuHRQz4PNMVXc
 PBKDF2 (SHA256):$pbkdf2-sha256$29000$WkR6UEU0NUM$pd1VbFkOA/VwbhJZhJ.25kHPsKVXika2XsuKYoudcug
 </pre>
+
+Sample code: [here](https://repl.it/@billbuchanan/cha03ans03#main.py)
 
 ## H.1
 A sample run:
