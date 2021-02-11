@@ -533,13 +533,13 @@ print ("SHA256:"+hashlib.sha256(string).hexdigest())
 print ("SHA512:"+hashlib.sha512(string).hexdigest())
 
 print ("UNIX hashes (with salt)")
-print ("DES:"+passlib.hash.des_crypt.encrypt(string, salt=salt[:2]))
-print ("MD5:"+passlib.hash.md5_crypt.encrypt(string, salt=salt))
-print ("Sun MD5:"+passlib.hash.sun_md5_crypt.encrypt(string, salt=salt))
-print ("SHA1:"+passlib.hash.sha1_crypt.encrypt(string, salt=salt))
-print ("SHA256:"+passlib.hash.sha256_crypt.encrypt(string, salt=salt))
-print ("SHA512:"+passlib.hash.sha512_crypt.encrypt(string, salt=salt))
-print ("Bcrypt:"+passlib.hash.bcrypt.encrypt(string, salt=salt2[:22]))
+print ("DES:"+passlib.hash.des_crypt.hash(string, salt=salt[:2]))
+print ("MD5:"+passlib.hash.md5_crypt.hash(string, salt=salt))
+print ("Sun MD5:"+passlib.hash.sun_md5_crypt.hash(string, salt=salt))
+print ("SHA1:"+passlib.hash.sha1_crypt.hash(string, salt=salt))
+print ("SHA256:"+passlib.hash.sha256_crypt.hash(string, salt=salt))
+print ("SHA512:"+passlib.hash.sha512_crypt.hash(string, salt=salt))
+print ("Bcrypt:"+passlib.hash.bcrypt.hash(string, salt=salt2[:22]))
 ```
  
 Figure 1 Bcrypt
