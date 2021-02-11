@@ -406,9 +406,9 @@ We can also generate salted passwords with crypt, and can use the Python script 
 import passlib.hash;
 salt="8sFt66rZ"
 string="hello"
-print ("SHA1:"+passlib.hash.sha1_crypt.encrypt(string, salt=salt))
-print ("SHA256:"+passlib.hash.sha256_crypt.encrypt(string, salt=salt))
-print ("SHA512:"+passlib.hash.sha512_crypt.encrypt(string, salt=salt))
+print ("SHA1:"+passlib.hash.sha1_crypt.hash(string, salt=salt))
+print ("SHA256:"+passlib.hash.sha256_crypt.hash(string, salt=salt))
+print ("SHA512:"+passlib.hash.sha512_crypt.hash(string, salt=salt))
 ```
 
 SHA-512 salts start with $6$ and are up to 16 chars long.
