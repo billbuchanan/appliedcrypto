@@ -783,5 +783,6 @@ The download of the hashes and wordlist is likely to be zipped with 7-zip. Here'
 <pre>
 sudo apt-get install 7zip-full
 7z e bfield.hash.7z
-</pre?
+7z e rockyou.txt.bz2
+</pre>
 
