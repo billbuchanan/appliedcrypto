@@ -758,7 +758,7 @@ For the following identify the hash methods used:
 
 
 ## L.2	
-It is known that a user has used a password of “passXord”, where X is an unknown character or number. Can crack the following hashes based on a filter:
+It is known that a user has used a password of “passXord”, where X is an unknown character or number. Can crack the following hashes using Hashcat and a filter:
 <pre>
 5fa8051ada600a097bd0922d7a085b94734684c4e070b24a02cf43d24d6eedbe
 a6f63a5fb10b3bba180a79f2fc565b1db2101040ce71ea80692d671857fe2117
