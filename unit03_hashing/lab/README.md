@@ -772,11 +772,16 @@ Number of tests:
 ## L.3	
 Download the bfield.hash password hash, and using the rockyou.txt list, determine the  first 10 passwords in the hashed file. An example command might be:
 <pre>
-hashcat -m 0 bfield.hash /usr/share/wordlists/rockyou.txt
+hashcat -m 0 bfield.hash rockyou.txt
 </pre>
 
 First 10 passwords from bfield.hash: 
 
 
 
+The download of the hashes and wordlist is likely to be zipped with 7-zip. Here's some commands you might use:
+<pre>
+sudo apt-get install 7zip-full
+7z e bfield.hash.7z
+</pre?
 
