@@ -38,7 +38,7 @@ The following are some sample questions for hashing:
 
 * Outline the importance of storing the salt value with the hashed value when storing hashed passwords.
 * Bob is using a password to generate a 128-bit encryption key. Explain why the key space is unlikely to be 2<sup>128</sup>, and why key entropy could be used to measure the equivalent key size.
-  * Where would I find this info? This is related to key enthropy [here](https://asecuritysite.com//encryption/en), and try and understand how key enthopy relates to the strengh of the encryption.
+  * Where would I find this info? This is related to key entropy [here](https://asecuritysite.com//encryption/en), and try and understand how key entropy relates to the strength of the encryption.
 * Bob has just produced a key pair, in a Base-64 format, and now wants to send this to Alice. What advice would you give him on sending the key pair to Alice?
   * Where would I find this info? Have a think about the certificate which is distributed. You can observe it here.
 * Bob sends an encrypted message to Alice, and also sends his digital certificate to Alice to prove his identity. How does Alice prove that it is Bob who sent the message?
