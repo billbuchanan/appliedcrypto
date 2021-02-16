@@ -582,7 +582,7 @@ Figure 1 Bcrypt
 ### H.1	
 Create the hash for the word “hello” for the different methods (you only have to give the first six hex characters for the hash):
 
-Also note the number hex characters that the hashed value uses:
+
 
 MD5:
 
@@ -593,6 +593,8 @@ SHA256:
 SHA512:
 
 DES:
+
+Also note the number hex characters that the hashed value uses:
 
 MD5:
 
