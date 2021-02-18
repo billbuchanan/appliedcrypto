@@ -268,7 +268,33 @@ What is the ECC method that you have used?
 
 
 
-If you want to see an example of ECC, try here: https://asecuritysite.com/encryption/ecc 
+### C.4	
+First we need to generate a private key with:
+
+```
+openssl ecparam -list_curves 
+```
+
+Outline three curves supported:
+
+### C.5	
+
+Let’s select two other curves:
+```
+openssl ecparam -name secp128r1 -genkey -out priv.pem
+openssl ecparam -in priv.pem -text -param_enc explicit -noout
+```
+
+and:
+
+```
+openssl ecparam -name secp521r1 -genkey -out priv.pem
+openssl ecparam -in priv.pem -text -param_enc explicit -noout
+```
+
+How does secp128k1, secp256k1 and secp512r1 different in the parameters used? Perhaps identify the length of the prime number used, and the size of the base point (G).
+
+If you want to see an example of ECC, try [here](https://asecuritysite.com/encryption/ecc) 
 
 ## D	Elliptic Curve Encryption
 ### D.1	
