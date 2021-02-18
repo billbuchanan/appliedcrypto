@@ -358,21 +358,22 @@ msg="Hello"
 type = 1
 cur=NIST192p
 
+
 sk = SigningKey.generate(curve=cur) 
 
 vk = sk.get_verifying_key()
 
-signature = sk.sign(msg)
+signature = sk.sign(msg.encode())
 
-print "Message:\t",msg
-print "Type:\t\t",cur.name
-print "========================="
+print ("Message:\t",msg)
+print ("Type:\t\t",cur.name)
+print ("=========================")
 
-print "Signature:\t",base64.b64encode(signature)
+print ("Signature:\t",base64.b64encode(signature))
 
-print "========================="
+print ("=========================")
 
-print "Signatures match:\t",vk.verify(signature, msg)
+print ("Signatures match:\t",vk.verify(signature, msg.encode()))
 ```
 
 What are the signatures (you only need to note the first four characters) for a message of “Bob”, for the curves of NIST192p, NIST521p and SECP256k1:
