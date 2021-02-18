@@ -558,7 +558,9 @@ https://asecuritysite.com/encryption/openpgp
 ### F.3	
 An important element in data loss prevention is encrypted emails. In this part of the lab we will use an open source standard: PGP.  
 
-1	Create a key pair with (RSA and 2,048-bit keys):
+
+#### 1. Create a key pair with (RSA and 2,048-bit keys):
+
 <pre>
 gpg --gen-key
 </pre>
@@ -578,8 +580,7 @@ How is the randomness generated?
 
 Outline the contents of your key file:
 
-### 2	
-Now send your lab partner your public key in the contents of an email, and ask them to import it onto their key ring (if you are doing this on your own, create another set of keys to simulate another user, or use Bill’s public key – which is defined at http://asecuritysite.com/public.txt and send the email to him):
+#### 2. Now send your lab partner your public key in the contents of an email, and ask them to import it onto their key ring (if you are doing this on your own, create another set of keys to simulate another user, or use Bill’s public key – which is defined at http://asecuritysite.com/public.txt and send the email to him):
 <pre>
 gpg --import theirpublickey.key
 </pre>
@@ -592,8 +593,8 @@ Which keys are stored on your key ring and what details do they have:
 
 
 
-### 3	
-Create a text file, and save it. Next encrypt the file with their public key:
+
+#### 3. Create a text file, and save it. Next encrypt the file with their public key:
 <pre>
 gpg -e -a -u "Your Name" -r "Your Lab Partner Name" hello.txt
 </pre>
@@ -610,8 +611,7 @@ What does the –u option do:
 Which file does it produce and outline the format of its contents:
 
 
-### 4	
-Send your encrypted file in an email to your lab partner, and get one back from them.
+#### 4. Send your encrypted file in an email to your lab partner, and get one back from them.
 
 Now create a file (such as myfile.asc) and decrypt the email using the public key received from them with:
 <pre>
@@ -620,8 +620,7 @@ gpg –d myfile.asc > myfile.txt
 
 Can you decrypt the message:
 
-### 5	
-Next using this public key file, send Bill (w.buchanan@napier.ac.uk) a question (http://asecuritysite.com/public.txt):
+#### 5. Next using this public key file, send Bill (w.buchanan@napier.ac.uk) a question (http://asecuritysite.com/public.txt):
 
 <pre>
 -----BEGIN PGP PUBLIC KEY BLOCK-----
@@ -682,70 +681,15 @@ nucbcNB98DkLlND905oV
 
 Did you receive a reply:
 
-### 6	
-Next send your public key to Bill (w.buchanan@napier.ac.uk), and ask for an encrypted message from him.
+#### 6. Next send your public key to Bill (w.buchanan@napier.ac.uk), and ask for an encrypted message from him.
 	
-## G	TrueCrypt
-
-No	Description	Result
-1	Go to your Kali instance (User: root, Password: toor). Now Create a new volume and use an encrypted file container (use tc_yourname) with a Standard TrueCrypt volume.
-
-When you get to the Encryption Options, run the benchmark tests and outline the results:
-
- 	
-CPU (Mean)
-
-AES:
-AES-Twofish:
-AES-Two-Seperent
-Serpent -AES
-Serpent:
-Serpent-Twofish-AES
-Twofish:
-Twofish-Serpent:
-
-Which is the fastest:
-
-Which is the slowest:
-
-2	Select AES and RIPMD-160 and create a 100MB file. Finally select your password and use FAT for the file system.
-	What does the random pool generation do, and what does it use to generate the random key?
-
-
-
-3	Now mount the file as a drive.
-
-	Can you view the drive on the file viewer and from the console? [Yes][No]
-4	Create some files your TrueCrypt drive and save them.
-
-	Without giving them the password, can they read the file?
-
-With the password, can they read the files?
-
-
-
-The following files have the passwords of “Ankle123”, “foxtrot”, “napier123”, “password” or “napier”. Determine the properties of the files defined in the table:
-
-File
-		Size	Encryption type	Key size	Files/folders on disk	Hidden partition (y/n)	Hash method
-http://asecuritysite.com/tctest01.zip
-
-					
-http://asecuritysite.com/tctest02.zip
-
-					
-http://asecuritysite.com/tctest03.zip	
-					
-
-Now with truecrack see if you can determine the password on the volumes. Which TrueCrypt volumes can truecrack?
-
-H	Reflective statements
-1.	In ECC, we use a 256-bit private key. This is used to generate the key for signing Bitcoin transactions. Do you think that a 256-bit key is largest enough? If we use a cracker what performs 1 Tera keys per second, will someone be able to determine our private key?
 
 
 
 
-## I GitHub Keys
+
+## G GitHub Keys
+
 ### I.1
 On your VM, go into the ~/.ssh folder. Now generate your SSH keys:
 
@@ -777,12 +721,17 @@ If this doesn’t work, try the https connection that is defined on GitHub.
 
 
 
-## J	What I should have learnt from this lab?
+## H	What I should have learnt from this lab?
 The key things learnt:
 
 * The basics of the RSA method.
 * The process of generating RSA and Elliptic Curve key pairs.
 * To illustrate how the private key is used to sign data, and then using the public key to verify the signature.
+
+A reflective statement:
+
+* In ECC, we use a 256-bit private key. This is used to generate the key for signing Bitcoin transactions. Do you think that a 256-bit key is largest enough? If we use a cracker what performs 1 Tera keys per second, will someone be able to determine our private key?
+
 ## Additional
 The following is code which performs RSA key generation, and the encryption and decryption of a message (https://asecuritysite.com/encryption/rsa_example):
 
