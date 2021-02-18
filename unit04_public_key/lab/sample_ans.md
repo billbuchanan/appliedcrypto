@@ -31,7 +31,7 @@ print ("Message:",message)
 ```
 The output is:
 ```
-Python is your friend!
+Python is your friend
 ```
 
 A sample is [here](https://repl.it/@billbuchanan/rsalab10#main.py)
