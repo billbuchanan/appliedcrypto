@@ -183,42 +183,39 @@ View the output key. What does the header and footer of the file identify?
 ### B.6	
 
 Now create a file named “myfile.txt” and put a message into it. Next encrypt it with your public key:
-<pre>
+
+
+```
 openssl rsautl -encrypt -inkey public.pem -pubin -in myfile.txt -out file.bin	
-</pre>
+```
+
 
 ### B.7	
 And then decrypt with your private key:
 
-openssl rsautl -decrypt -inkey private.pem -in file.bin -out decrypted.txt	What are the contents of decrypted.txt
+```
+openssl rsautl -decrypt -inkey private.pem -in file.bin -out decrypted.txt
+```
 
-On your VM, go into the ~/.ssh folder. Now generate your SSH keys:
+What are the contents of decrypted.txt?
 
-<pre>
-ssh-keygen -t rsa -C "your email address"
-</pre>
+### B.8
+What can you observe between these two commands for differing output formats:
 
-The public key should look like this:
-<pre>
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDLrriuNYTyWuC1IW7H6yea3hMV+rm029m2f6IddtlImHrOXjNwYyt4Elkkc7AzOy899C3gpx0kJK45k/CLbPnrHvkLvtQ0AbzWEQpOKxI+tW06PcqJNmTB8ITRLqIFQ++ZanjHWMw2Odew/514y1dQ8dccCOuzeGhL2Lq9dtfhSxx+1cBLcyoSh/lQcs1HpXtpwU8JMxWJl409RQOVn3gOusp/P/0R8mz/RWkmsFsyDRLgQK+xtQxbpbodpnz5lIOPWn5LnT0si7eHmL3WikTyg+QLZ3D3m44NCeNb+bOJbfaQ2ZB+lv8C3OxylxSp2sxzPZMbrZWqGSLPjgDiFIBL w.buchanan@napier.ac.uk
-</pre>
+```
+openssl rsautl -encrypt -inkey public.pem -pubin -in myfile.txt -out file.bin
 
-View the private key. Outline its format?
+cat file.bin
+```
+and:
+```
+openssl rsautl -encrypt -inkey public.pem -pubin -in myfile.txt -out file.bin -hexdump
+
+cat file.bin
+```
 
 
 
-On your Ubuntu instance setup your new keys for ssh:
-
-<pre>
-ssh-add ~/.ssh/id_git
-</pre>
-
-Now create a Github account and upload your public key to Github (select Settings-> New SSH key or Add SSH key).  Create a new repository on your GitHub site, and add a new file to it. Next go to your Ubuntu instance and see if you can clone of a new directory:
-<pre>
-git clone ssh://git@github.com/**user/repository name**.git
-</pre>
-
-If this doesn’t work, try the https connection that is defined on GitHub.
 
 ## C	OpenSSL (ECC)
 Elliptic Curve Cryptography (ECC) is now used extensively within public key encryption, including with Bitcoin, Ethereum, Tor, and many IoT applications. In this part of the lab we will use OpenSSL to create a key pair. For this we generate a random 256-bit private key (priv), and then generate a public key point (priv multiplied by G), using a generator (G), and which is a generator point on the selected elliptic curve.
@@ -839,3 +836,33 @@ CoZf0lNZQS/X2avLEiwtNtEvUbLGpBDgbvnNotoYspjqpg==
 </pre>
 
 
+
+
+
+On your VM, go into the ~/.ssh folder. Now generate your SSH keys:
+
+<pre>
+ssh-keygen -t rsa -C "your email address"
+</pre>
+
+The public key should look like this:
+<pre>
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDLrriuNYTyWuC1IW7H6yea3hMV+rm029m2f6IddtlImHrOXjNwYyt4Elkkc7AzOy899C3gpx0kJK45k/CLbPnrHvkLvtQ0AbzWEQpOKxI+tW06PcqJNmTB8ITRLqIFQ++ZanjHWMw2Odew/514y1dQ8dccCOuzeGhL2Lq9dtfhSxx+1cBLcyoSh/lQcs1HpXtpwU8JMxWJl409RQOVn3gOusp/P/0R8mz/RWkmsFsyDRLgQK+xtQxbpbodpnz5lIOPWn5LnT0si7eHmL3WikTyg+QLZ3D3m44NCeNb+bOJbfaQ2ZB+lv8C3OxylxSp2sxzPZMbrZWqGSLPjgDiFIBL w.buchanan@napier.ac.uk
+</pre>
+
+View the private key. Outline its format?
+
+
+
+On your Ubuntu instance setup your new keys for ssh:
+
+<pre>
+ssh-add ~/.ssh/id_git
+</pre>
+
+Now create a Github account and upload your public key to Github (select Settings-> New SSH key or Add SSH key).  Create a new repository on your GitHub site, and add a new file to it. Next go to your Ubuntu instance and see if you can clone of a new directory:
+<pre>
+git clone ssh://git@github.com/**user/repository name**.git
+</pre>
+
+If this doesn’t work, try the https connection that is defined on GitHub.
