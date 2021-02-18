@@ -433,20 +433,24 @@ Did you get the value of your message back (M=5)? If not, you have made a mistak
 Now run the following code and prove that the decrypted cipher is the same as the message: 
 
 ```python
+import libnum
+
 p=11
 q=3
 N=p*q
 PHI=(p-1)*(q-1)
 e=3
-for d in range(1,N):
-        if ((e*d % PHI)==1): break
-print e,N
-print d,N
+
+d= libnum.invmod(e,PHI)
+
+print (e,N)
+print (d,N)
 M=4
+print ("\nMessage:",M)
 cipher = M**e % N
-print cipher
+print ("Cipher:",cipher)
 message = cipher**d % N
-print message
+print ("Message:",message)
 ```
 
 
