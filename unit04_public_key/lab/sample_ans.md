@@ -250,6 +250,175 @@ How many bit and bytes does your public key have (Note the 04 is not part of the
 
 What is the ECC method that you have used? **secp256k1**
 
+## C.4
+The curves are:
+
+```
+% openssl ecparam -list_curves
+  secp112r1 : SECG/WTLS curve over a 112 bit prime field
+  secp112r2 : SECG curve over a 112 bit prime field
+  secp128r1 : SECG curve over a 128 bit prime field
+  secp128r2 : SECG curve over a 128 bit prime field
+  secp160k1 : SECG curve over a 160 bit prime field
+  secp160r1 : SECG curve over a 160 bit prime field
+  secp160r2 : SECG/WTLS curve over a 160 bit prime field
+  secp192k1 : SECG curve over a 192 bit prime field
+  secp224k1 : SECG curve over a 224 bit prime field
+  secp224r1 : NIST/SECG curve over a 224 bit prime field
+  secp256k1 : SECG curve over a 256 bit prime field
+  secp384r1 : NIST/SECG curve over a 384 bit prime field
+  secp521r1 : NIST/SECG curve over a 521 bit prime field
+  prime192v1: NIST/X9.62/SECG curve over a 192 bit prime field
+  prime192v2: X9.62 curve over a 192 bit prime field
+  prime192v3: X9.62 curve over a 192 bit prime field
+  prime239v1: X9.62 curve over a 239 bit prime field
+  prime239v2: X9.62 curve over a 239 bit prime field
+  prime239v3: X9.62 curve over a 239 bit prime field
+  prime256v1: X9.62/SECG curve over a 256 bit prime field
+  sect113r1 : SECG curve over a 113 bit binary field
+  sect113r2 : SECG curve over a 113 bit binary field
+  sect131r1 : SECG/WTLS curve over a 131 bit binary field
+  sect131r2 : SECG curve over a 131 bit binary field
+  sect163k1 : NIST/SECG/WTLS curve over a 163 bit binary field
+  sect163r1 : SECG curve over a 163 bit binary field
+  sect163r2 : NIST/SECG curve over a 163 bit binary field
+  sect193r1 : SECG curve over a 193 bit binary field
+  sect193r2 : SECG curve over a 193 bit binary field
+  sect233k1 : NIST/SECG/WTLS curve over a 233 bit binary field
+  sect233r1 : NIST/SECG/WTLS curve over a 233 bit binary field
+  sect239k1 : SECG curve over a 239 bit binary field
+  sect283k1 : NIST/SECG curve over a 283 bit binary field
+  sect283r1 : NIST/SECG curve over a 283 bit binary field
+  sect409k1 : NIST/SECG curve over a 409 bit binary field
+  sect409r1 : NIST/SECG curve over a 409 bit binary field
+  sect571k1 : NIST/SECG curve over a 571 bit binary field
+  sect571r1 : NIST/SECG curve over a 571 bit binary field
+  c2pnb163v1: X9.62 curve over a 163 bit binary field
+  c2pnb163v2: X9.62 curve over a 163 bit binary field
+  c2pnb163v3: X9.62 curve over a 163 bit binary field
+  c2pnb176v1: X9.62 curve over a 176 bit binary field
+  c2tnb191v1: X9.62 curve over a 191 bit binary field
+  c2tnb191v2: X9.62 curve over a 191 bit binary field
+  c2tnb191v3: X9.62 curve over a 191 bit binary field
+  c2pnb208w1: X9.62 curve over a 208 bit binary field
+  c2tnb239v1: X9.62 curve over a 239 bit binary field
+  c2tnb239v2: X9.62 curve over a 239 bit binary field
+  c2tnb239v3: X9.62 curve over a 239 bit binary field
+  c2pnb272w1: X9.62 curve over a 272 bit binary field
+  c2pnb304w1: X9.62 curve over a 304 bit binary field
+  c2tnb359v1: X9.62 curve over a 359 bit binary field
+  c2pnb368w1: X9.62 curve over a 368 bit binary field
+  c2tnb431r1: X9.62 curve over a 431 bit binary field
+  wap-wsg-idm-ecid-wtls1: WTLS curve over a 113 bit binary field
+  wap-wsg-idm-ecid-wtls3: NIST/SECG/WTLS curve over a 163 bit binary field
+  wap-wsg-idm-ecid-wtls4: SECG curve over a 113 bit binary field
+  wap-wsg-idm-ecid-wtls5: X9.62 curve over a 163 bit binary field
+  wap-wsg-idm-ecid-wtls6: SECG/WTLS curve over a 112 bit prime field
+  wap-wsg-idm-ecid-wtls7: SECG/WTLS curve over a 160 bit prime field
+  wap-wsg-idm-ecid-wtls8: WTLS curve over a 112 bit prime field
+  wap-wsg-idm-ecid-wtls9: WTLS curve over a 160 bit prime field
+  wap-wsg-idm-ecid-wtls10: NIST/SECG/WTLS curve over a 233 bit binary field
+  wap-wsg-idm-ecid-wtls11: NIST/SECG/WTLS curve over a 233 bit binary field
+  wap-wsg-idm-ecid-wtls12: WTLS curve over a 224 bit prime field
+  Oakley-EC2N-3: 
+	IPSec/IKE/Oakley curve #3 over a 155 bit binary field.
+	Not suitable for ECDSA.
+	Questionable extension field!
+  Oakley-EC2N-4: 
+	IPSec/IKE/Oakley curve #4 over a 185 bit binary field.
+	Not suitable for ECDSA.
+	Questionable extension field!
+  brainpoolP160r1: RFC 5639 curve over a 160 bit prime field
+  brainpoolP160t1: RFC 5639 curve over a 160 bit prime field
+  brainpoolP192r1: RFC 5639 curve over a 192 bit prime field
+  brainpoolP192t1: RFC 5639 curve over a 192 bit prime field
+  brainpoolP224r1: RFC 5639 curve over a 224 bit prime field
+  brainpoolP224t1: RFC 5639 curve over a 224 bit prime field
+  brainpoolP256r1: RFC 5639 curve over a 256 bit prime field
+  brainpoolP256t1: RFC 5639 curve over a 256 bit prime field
+  brainpoolP320r1: RFC 5639 curve over a 320 bit prime field
+  brainpoolP320t1: RFC 5639 curve over a 320 bit prime field
+  brainpoolP384r1: RFC 5639 curve over a 384 bit prime field
+  brainpoolP384t1: RFC 5639 curve over a 384 bit prime field
+  brainpoolP512r1: RFC 5639 curve over a 512 bit prime field
+  brainpoolP512t1: RFC 5639 curve over a 512 bit prime field
+  SM2       : SM2 curve over a 256 bit prime field
+```
+The commands are:
+
+```
+% openssl ecparam -name secp128r1 -genkey -out priv.pem
+% openssl ecparam -in priv.pem -text -param_enc explicit -noout
+Field Type: prime-field
+Prime:
+    00:ff:ff:ff:fd:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:
+    ff:ff
+A:   
+    00:ff:ff:ff:fd:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:
+    ff:fc
+B:   
+    00:e8:75:79:c1:10:79:f4:3d:d8:24:99:3c:2c:ee:
+    5e:d3
+Generator (uncompressed):
+    04:16:1f:f7:52:8b:89:9b:2d:0c:28:60:7c:a5:2c:
+    5b:86:cf:5a:c8:39:5b:af:eb:13:c0:2d:a2:92:dd:
+    ed:7a:83
+Order: 
+    00:ff:ff:ff:fe:00:00:00:00:75:a3:0d:1b:90:38:
+    a1:15
+Cofactor:  1 (0x1)
+Seed:
+    00:0e:0d:4d:69:6e:67:68:75:61:51:75:0c:c0:3a:
+    44:73:d0:36:79
+```
+For the prime number we have 16 bytes (128 bits).
+
+```
+% openssl ecparam -name secp521r1 -genkey -out priv.pem
+% openssl ecparam -in priv.pem -text -param_enc explicit -noout
+
+Field Type: prime-field
+Prime:
+    01:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:
+    ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:
+    ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:
+    ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:
+    ff:ff:ff:ff:ff:ff
+A:   
+    01:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:
+    ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:
+    ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:
+    ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:
+    ff:ff:ff:ff:ff:fc
+B:   
+    51:95:3e:b9:61:8e:1c:9a:1f:92:9a:21:a0:b6:85:
+    40:ee:a2:da:72:5b:99:b3:15:f3:b8:b4:89:91:8e:
+    f1:09:e1:56:19:39:51:ec:7e:93:7b:16:52:c0:bd:
+    3b:b1:bf:07:35:73:df:88:3d:2c:34:f1:ef:45:1f:
+    d4:6b:50:3f:00
+Generator (uncompressed):
+    04:00:c6:85:8e:06:b7:04:04:e9:cd:9e:3e:cb:66:
+    23:95:b4:42:9c:64:81:39:05:3f:b5:21:f8:28:af:
+    60:6b:4d:3d:ba:a1:4b:5e:77:ef:e7:59:28:fe:1d:
+    c1:27:a2:ff:a8:de:33:48:b3:c1:85:6a:42:9b:f9:
+    7e:7e:31:c2:e5:bd:66:01:18:39:29:6a:78:9a:3b:
+    c0:04:5c:8a:5f:b4:2c:7d:1b:d9:98:f5:44:49:57:
+    9b:44:68:17:af:bd:17:27:3e:66:2c:97:ee:72:99:
+    5e:f4:26:40:c5:50:b9:01:3f:ad:07:61:35:3c:70:
+    86:a2:72:c2:40:88:be:94:76:9f:d1:66:50
+Order: 
+    01:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:
+    ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:
+    ff:ff:ff:fa:51:86:87:83:bf:2f:96:6b:7f:cc:01:
+    48:f7:09:a5:d0:3b:b5:c9:b8:89:9c:47:ae:bb:6f:
+    b7:1e:91:38:64:09
+Cofactor:  1 (0x1)
+Seed:
+    d0:9e:88:00:29:1c:b8:53:96:cc:67:17:39:32:84:
+    aa:a0:da:64:ba
+```
+For the prime number we have 65 bytes + 1 bit (521 bits).
+
 # ECC Encryption
 ## D.1
 ```python
