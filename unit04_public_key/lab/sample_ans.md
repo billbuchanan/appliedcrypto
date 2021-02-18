@@ -11,97 +11,32 @@ sub  2048R/6F6AA48C 2015-03-01
 ## A.2
 The code used is:
 ```python
+# https://asecuritysite.com/encryption/rsa_example
 from Crypto.PublicKey import RSA
-from Crypto.Util import asn1
-from base64 import b64decode
+from Crypto.Cipher import PKCS1_OAEP
+import base64
 
-msg="Pob7AQZZSml618nMwTpx3V74N45x/rTimUQeTl0yHq8F0dsekZgOT385Jls1HUzWCx6ZRFPFMJ1RNYR2Yh7AkQtFLVx9lYDfb/Q+SkinBIBX59ER3/fDhrVKxIN4S6h2QmMSRblh4KdVhyY6cOxu+g48Jh7TkQ2Ig93/nCpAnYQ="
-privatekey = 'MIICXAIBAAKBgQCwgjkeoyCXm9v6VBnUi5ihQ2knkdxGDL3GXLIUU43/froeqk7q9mtxT4AnPAaDX3f2r4STZYYiqXGsHCUBZcI90dvZf6YiEM5OY2jgsmqBjf2Xkp/8HgN/XDw/wD2+zebYGLLYtd2u3GXx9edqJ8kQcU9LaMH+ficFQyfq9UwTjQIDAQABAoGAD7L1a6Ess+9b6G70gTANWkKJpshVZDGb63mxKRepaJEX8sRJEqLqOYDNsC+pkKO8IsfHreh4vrp9bsZuECrB1OHSjwDB0S/fm3KEWbsaaXDUAu0dQg/JBMXAKzeATreoIYJItYgwzrJ++fuquKabAZumvOnWJyBIs2z103kDz2ECQQDnn3JpHirmgVdf81yBbAJaXBXNIPzOcCth1zwFAs4EvrE35n2HvUQuRhy3ahUKXsKX/bGvWzmC2O6kbLTFEygVAkEAwxXZnPkaAY2vuoUCN5NbLZgegrAtmU+U2woa5A0fx6uXmShqxo1iDxEC71FbNIgHBg5srsUyDj3OsloLmDVjmQJAIy7qLyOA+sCc6BtMavBgLx+bxCwFmsoZHOSX3l79smTRAJ/HY64RREIsLIQ1q/yW7IWBzxQ5WTHgliNZFjKBvQJBAL3t/vCJwRz0Ebs5FaB/8UwhhsrbtXlGdnkOjIGsmV0vHSf6poHqUiay/DV88pvhN11ZG8zHpeUhnaQccJ9ekzkCQDHHG9LYCOqTgsyYms//cW4sv2nuOE1UezTjUFeqOlsgO+WN96b/M5gnv45/Z3xZxzJ4HOCJ/NRwxNOtEUkw+zY='
+binPrivKey = "-----BEGIN RSA PRIVATE KEY-----\nMIICXgIBAAKBgQDoIhiWs15X/6xiLAVcBzpgvnuvMzHBJk58wOWrdfyEAcTY10oG\n+6auNFGqQHYHbfKaZlEi4prAoe01S/R6jpx8ZqJUN0WKNn5G9nmjJha9Pag28ftD\nrsT+4LktaQrxdNdrusP+qI0NiYbNBH6qvCrK0aGiucextehnuoqgDcqmRwIDAQAB\nAoGAZCaJu0MJ2ieJxRU+/rRzoFeuXylUNwQC6toCfNY7quxkdDV2T8r038Xc0fpb\nsdrix3CLYuSnZaK3B76MbO/oXQVBjDQZ7jVQ5K41nVCEZOtRDBeX5Ue6CBs4iNmC\n+QyWx+u4OZPURq61YG7D+F1aWRvczdEZgKHPXl/+s5pIvAkCQQDw4V6px/+DJuZV\n5Eg20OZe0m9Lvaq+G9UX2xTA2AUuH8Z79e+SCus6fMVl+Sf/W3y3uXp8B662bXhz\nyheH67aDAkEA9rQrvmFj65n/D6eH4JAT4OP/+icQNgLYDW+u1Y+MdmD6A0YjehW3\nsuT9JH0rvEBET959kP0xCx+iFEjl81tl7QJBAMcp4GZK2eXrxOjhnh/Mq51dKu6Z\n/NHBG3jlCIzGT8oqNaeK2jGLW6D5RxGgZ8TINR+HeVGR3JAzhTNftgMJDtcCQQC3\nIqReXVmZaeXnrwu07f9zsI0zG5BzJ8VOpBt7OWah8fdmOsjXNgv55vbsAWdYBbUw\nPQ+lc+7WPRNKT5sz/iM5AkEAi9Is+fgNy4q68nxPl1rBQUV3Bg3S7k7oCJ4+ju4W\nNXCCvRjQhpNVhlor7y4FC2p3thje9xox6QiwNr/5siyccw==\n-----END RSA PRIVATE KEY-----"
 
-keyDER = b64decode(privatekey)
-keys = RSA.importKey(keyDER)
+ciphertext=base64.b64decode("uW6FQth0pKaWc3haoqxbjIA7q2rF+G0Kx3z9ZDPZGU3NmBfzpD9ByU1ZBtbgKC8ATVZzwj15AeteOnbjO3EHQC4A5Nu0xKTWpqpngYRGGmzMGtblW3wBlNQYovDsRUGt+cJK7RD0PKn6PMNqK5EQKCD6394K/gasQ9zA6fKn3f0=")
 
-dmsg = keys.decrypt(b64decode(msg))
-print dmsg
+privKeyObj = RSA.importKey(binPrivKey)
+cipher = PKCS1_OAEP.new(privKeyObj)
+message = cipher.decrypt(ciphertext)
+
+
+print
+print ("====Decrypted===")
+print ("Message:",message)
 ```
 The output is:
-<pre>
-Congrats! The flag is nothing_is_impossible
-</pre>
+```
+Python is your friend
+```
 
-## A.3
-<pre>
-napieraccount@ubuntu:~/.ssh$ cd ~/.ssh
-napieraccount@ubuntu:~/.ssh$ ssh-keygen -t rsa -C "w.buchanan@napier.ac.uk"
-Generating public/private rsa key pair.
-Enter file in which to save the key (/home/napaccount/.ssh/id_rsa): 
-/home/napaccount/.ssh/id_rsa already exists.
-Overwrite (y/n)? 
-napieraccount@ubuntu:~/.ssh$ cat id_rsa
------BEGIN RSA PRIVATE KEY-----
-Proc-Type: 4,ENCRYPTED
-DEK-Info: AES-128-CBC,231906D9476629A1F38BF98A15E72E03
+A sample is [here](https://repl.it/@billbuchanan/rsalab10#main.py)
 
-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
------END RSA PRIVATE KEY-----
-napieraccount@ubuntu:~/.ssh$ ls
-id_rsa  id_rsa.pub  known_hosts
-napieraccount@ubuntu:~/.ssh$ cat id_rsa.pub
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCjH32w6ZwaLvaFS2ngOdsc7LVvYiqMKg+z42lwX8Hs58N69gjnPFzrHDPr/BnoIGOEkAGUQxbbUJwLXPiy7X682e6S235+Gh3jSW/xKuGbF9Zq+a/gESZ7t4ReBNweg90Baz24438Zodr6wA7AUdQSO9H1qdb7r4gNN5lvr1zMRhitfZW4UtTF/kXyE5KIDicU2zOFwCJ+AmeuBJGx3NI3YX03JWloZqB2y8zRsBNJ8A8BpeszN95p75Xni1AiHLCXM2HdW87mbdD/lsdrgUTYpMco7srcybeI/1ukbbOsPG6tDbEz3o0KFHgvDWc/XfFG/9I/8mOK1pcQRLj9bYRFHd2O4qdKgSTwtw/PDFAQ+pvCjIzylQp/sTCYI/6KvEEiHxWrY10jF+LDe4CDrmxSFxbgXYIjVMFAwCb0fyxud8V4filZwyFAoeSJWW2lHIFiEJpshQhRvu2zlM1vZHBVmKdVtBBVhq5vJ69SKfMgA2Ms7DRhLoqeqcMmzM+egDBEfvW50w6TeAsB3zoocAkPAdaLmORMGLFS1J/KIeme2LpEryC5FaG8/gziM7RsqjrAcQ/ipeIb+fNYT6POX5z/KVM6x7VcdkV0vr/k+Zkb9qeVcsIlBUAQIAfz24wOQCYZ6UnB9va88JWnjVSgwxeL5KmqgHDelFt50LgXrN/KOw== w.buchanan@napier.ac.uk
-</pre>
 
-For the RSA private key, protecting it with 128-bit AES, CBC, and the salt used is "231906D9476629A1F38BF98A15E72E03":
-<pre>
-AES-128-CBC,231906D9476629A1F38BF98A15E72E03
-</pre>
 
 # OpenSSL RSA
 ## B.1
@@ -315,6 +250,175 @@ How many bit and bytes does your public key have (Note the 04 is not part of the
 
 What is the ECC method that you have used? **secp256k1**
 
+## C.4
+The curves are:
+
+```
+% openssl ecparam -list_curves
+  secp112r1 : SECG/WTLS curve over a 112 bit prime field
+  secp112r2 : SECG curve over a 112 bit prime field
+  secp128r1 : SECG curve over a 128 bit prime field
+  secp128r2 : SECG curve over a 128 bit prime field
+  secp160k1 : SECG curve over a 160 bit prime field
+  secp160r1 : SECG curve over a 160 bit prime field
+  secp160r2 : SECG/WTLS curve over a 160 bit prime field
+  secp192k1 : SECG curve over a 192 bit prime field
+  secp224k1 : SECG curve over a 224 bit prime field
+  secp224r1 : NIST/SECG curve over a 224 bit prime field
+  secp256k1 : SECG curve over a 256 bit prime field
+  secp384r1 : NIST/SECG curve over a 384 bit prime field
+  secp521r1 : NIST/SECG curve over a 521 bit prime field
+  prime192v1: NIST/X9.62/SECG curve over a 192 bit prime field
+  prime192v2: X9.62 curve over a 192 bit prime field
+  prime192v3: X9.62 curve over a 192 bit prime field
+  prime239v1: X9.62 curve over a 239 bit prime field
+  prime239v2: X9.62 curve over a 239 bit prime field
+  prime239v3: X9.62 curve over a 239 bit prime field
+  prime256v1: X9.62/SECG curve over a 256 bit prime field
+  sect113r1 : SECG curve over a 113 bit binary field
+  sect113r2 : SECG curve over a 113 bit binary field
+  sect131r1 : SECG/WTLS curve over a 131 bit binary field
+  sect131r2 : SECG curve over a 131 bit binary field
+  sect163k1 : NIST/SECG/WTLS curve over a 163 bit binary field
+  sect163r1 : SECG curve over a 163 bit binary field
+  sect163r2 : NIST/SECG curve over a 163 bit binary field
+  sect193r1 : SECG curve over a 193 bit binary field
+  sect193r2 : SECG curve over a 193 bit binary field
+  sect233k1 : NIST/SECG/WTLS curve over a 233 bit binary field
+  sect233r1 : NIST/SECG/WTLS curve over a 233 bit binary field
+  sect239k1 : SECG curve over a 239 bit binary field
+  sect283k1 : NIST/SECG curve over a 283 bit binary field
+  sect283r1 : NIST/SECG curve over a 283 bit binary field
+  sect409k1 : NIST/SECG curve over a 409 bit binary field
+  sect409r1 : NIST/SECG curve over a 409 bit binary field
+  sect571k1 : NIST/SECG curve over a 571 bit binary field
+  sect571r1 : NIST/SECG curve over a 571 bit binary field
+  c2pnb163v1: X9.62 curve over a 163 bit binary field
+  c2pnb163v2: X9.62 curve over a 163 bit binary field
+  c2pnb163v3: X9.62 curve over a 163 bit binary field
+  c2pnb176v1: X9.62 curve over a 176 bit binary field
+  c2tnb191v1: X9.62 curve over a 191 bit binary field
+  c2tnb191v2: X9.62 curve over a 191 bit binary field
+  c2tnb191v3: X9.62 curve over a 191 bit binary field
+  c2pnb208w1: X9.62 curve over a 208 bit binary field
+  c2tnb239v1: X9.62 curve over a 239 bit binary field
+  c2tnb239v2: X9.62 curve over a 239 bit binary field
+  c2tnb239v3: X9.62 curve over a 239 bit binary field
+  c2pnb272w1: X9.62 curve over a 272 bit binary field
+  c2pnb304w1: X9.62 curve over a 304 bit binary field
+  c2tnb359v1: X9.62 curve over a 359 bit binary field
+  c2pnb368w1: X9.62 curve over a 368 bit binary field
+  c2tnb431r1: X9.62 curve over a 431 bit binary field
+  wap-wsg-idm-ecid-wtls1: WTLS curve over a 113 bit binary field
+  wap-wsg-idm-ecid-wtls3: NIST/SECG/WTLS curve over a 163 bit binary field
+  wap-wsg-idm-ecid-wtls4: SECG curve over a 113 bit binary field
+  wap-wsg-idm-ecid-wtls5: X9.62 curve over a 163 bit binary field
+  wap-wsg-idm-ecid-wtls6: SECG/WTLS curve over a 112 bit prime field
+  wap-wsg-idm-ecid-wtls7: SECG/WTLS curve over a 160 bit prime field
+  wap-wsg-idm-ecid-wtls8: WTLS curve over a 112 bit prime field
+  wap-wsg-idm-ecid-wtls9: WTLS curve over a 160 bit prime field
+  wap-wsg-idm-ecid-wtls10: NIST/SECG/WTLS curve over a 233 bit binary field
+  wap-wsg-idm-ecid-wtls11: NIST/SECG/WTLS curve over a 233 bit binary field
+  wap-wsg-idm-ecid-wtls12: WTLS curve over a 224 bit prime field
+  Oakley-EC2N-3: 
+	IPSec/IKE/Oakley curve #3 over a 155 bit binary field.
+	Not suitable for ECDSA.
+	Questionable extension field!
+  Oakley-EC2N-4: 
+	IPSec/IKE/Oakley curve #4 over a 185 bit binary field.
+	Not suitable for ECDSA.
+	Questionable extension field!
+  brainpoolP160r1: RFC 5639 curve over a 160 bit prime field
+  brainpoolP160t1: RFC 5639 curve over a 160 bit prime field
+  brainpoolP192r1: RFC 5639 curve over a 192 bit prime field
+  brainpoolP192t1: RFC 5639 curve over a 192 bit prime field
+  brainpoolP224r1: RFC 5639 curve over a 224 bit prime field
+  brainpoolP224t1: RFC 5639 curve over a 224 bit prime field
+  brainpoolP256r1: RFC 5639 curve over a 256 bit prime field
+  brainpoolP256t1: RFC 5639 curve over a 256 bit prime field
+  brainpoolP320r1: RFC 5639 curve over a 320 bit prime field
+  brainpoolP320t1: RFC 5639 curve over a 320 bit prime field
+  brainpoolP384r1: RFC 5639 curve over a 384 bit prime field
+  brainpoolP384t1: RFC 5639 curve over a 384 bit prime field
+  brainpoolP512r1: RFC 5639 curve over a 512 bit prime field
+  brainpoolP512t1: RFC 5639 curve over a 512 bit prime field
+  SM2       : SM2 curve over a 256 bit prime field
+```
+The commands are:
+
+```
+% openssl ecparam -name secp128r1 -genkey -out priv.pem
+% openssl ecparam -in priv.pem -text -param_enc explicit -noout
+Field Type: prime-field
+Prime:
+    00:ff:ff:ff:fd:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:
+    ff:ff
+A:   
+    00:ff:ff:ff:fd:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:
+    ff:fc
+B:   
+    00:e8:75:79:c1:10:79:f4:3d:d8:24:99:3c:2c:ee:
+    5e:d3
+Generator (uncompressed):
+    04:16:1f:f7:52:8b:89:9b:2d:0c:28:60:7c:a5:2c:
+    5b:86:cf:5a:c8:39:5b:af:eb:13:c0:2d:a2:92:dd:
+    ed:7a:83
+Order: 
+    00:ff:ff:ff:fe:00:00:00:00:75:a3:0d:1b:90:38:
+    a1:15
+Cofactor:  1 (0x1)
+Seed:
+    00:0e:0d:4d:69:6e:67:68:75:61:51:75:0c:c0:3a:
+    44:73:d0:36:79
+```
+For the prime number we have 16 bytes (128 bits).
+
+```
+% openssl ecparam -name secp521r1 -genkey -out priv.pem
+% openssl ecparam -in priv.pem -text -param_enc explicit -noout
+
+Field Type: prime-field
+Prime:
+    01:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:
+    ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:
+    ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:
+    ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:
+    ff:ff:ff:ff:ff:ff
+A:   
+    01:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:
+    ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:
+    ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:
+    ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:
+    ff:ff:ff:ff:ff:fc
+B:   
+    51:95:3e:b9:61:8e:1c:9a:1f:92:9a:21:a0:b6:85:
+    40:ee:a2:da:72:5b:99:b3:15:f3:b8:b4:89:91:8e:
+    f1:09:e1:56:19:39:51:ec:7e:93:7b:16:52:c0:bd:
+    3b:b1:bf:07:35:73:df:88:3d:2c:34:f1:ef:45:1f:
+    d4:6b:50:3f:00
+Generator (uncompressed):
+    04:00:c6:85:8e:06:b7:04:04:e9:cd:9e:3e:cb:66:
+    23:95:b4:42:9c:64:81:39:05:3f:b5:21:f8:28:af:
+    60:6b:4d:3d:ba:a1:4b:5e:77:ef:e7:59:28:fe:1d:
+    c1:27:a2:ff:a8:de:33:48:b3:c1:85:6a:42:9b:f9:
+    7e:7e:31:c2:e5:bd:66:01:18:39:29:6a:78:9a:3b:
+    c0:04:5c:8a:5f:b4:2c:7d:1b:d9:98:f5:44:49:57:
+    9b:44:68:17:af:bd:17:27:3e:66:2c:97:ee:72:99:
+    5e:f4:26:40:c5:50:b9:01:3f:ad:07:61:35:3c:70:
+    86:a2:72:c2:40:88:be:94:76:9f:d1:66:50
+Order: 
+    01:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:
+    ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:ff:
+    ff:ff:ff:fa:51:86:87:83:bf:2f:96:6b:7f:cc:01:
+    48:f7:09:a5:d0:3b:b5:c9:b8:89:9c:47:ae:bb:6f:
+    b7:1e:91:38:64:09
+Cofactor:  1 (0x1)
+Seed:
+    d0:9e:88:00:29:1c:b8:53:96:cc:67:17:39:32:84:
+    aa:a0:da:64:ba
+```
+For the prime number we have 65 bytes + 1 bit (521 bits).
+
 # ECC Encryption
 ## D.1
 ```python
@@ -430,6 +534,15 @@ Sample:
 >>> 7009636621105341733056641551350073875772161289792261672243040042003271353299512989*1004924081107519375914073833480034561474534624800691686376057520755477027 
 7044152640361902500168576401792350494310726185372977704588682647070501920385795486653093710793158373161949147824992313215786223524754692116109993477603703L
 </pre>
+
+## E.3
+
+```
+b'-----BEGIN RSA PRIVATE KEY-----\nMIIEowIBAAKCAQEA0GOWzvm7NnW27wAHzmfsJA4pC6vJT5Cgjt5qoIfCZHPvoz7z\n8cdoYPY3N9Z7rCB8a2ev3SBePTs8kBjw32BpvXgNNKtlYHnNi4A5Nuo+kdNqq15V\n+Mz0pX4otPz7Gl+lFHSZSQuDYp0GlCrLP9xzYbtFPwvCZcYBVDQSSjT3LOJx5JQZ\np9HlzLFR7Q8t7mXt7/wn8ynnlvU9UrBHFPhkAfX1UQmcIghbKVNErfTNTwc6blk/\nmVUvDITh2LOwel5ML+tAjRBfvz+OlyYoY45dlvgzeRAzeLJRtW4d2qXEGj27mlOF\nFd45H5z0CqaVf4GtA+0MBwrlSSFxJKDZi0Og2QIDAQABAoIBACAtnfjEOkLnZsHo\nD3cxYpbnXYeGVXXE9O4AF+ya72BYlgKaCCGSXk1JUm8mXlQkHgztvAvEDEPzP4pW\nt5cenvqurNywXLKgNvuZZ1GnVoBpFNnKctxnivLPv38XE2UtVg3fEAO7VI89L79g\nY6CEV4gaBVAow4djTbWQEYTw7HwQYhZadFqj+XorBZCpcUvtBOTMICySN21QsJhM\nwbTJ/Ai4I4IWZxF3k6Ycdfx7OWtZBY2MJI/IhRTjellmlnDb8k1G1CD7T4ikOt5u\nNRNCrmBxH2Q8xCK2IYLHpzUOhvatfGBvgkK8ffmJ0DidwS4VM0pUUQXLFtT4RFL7\n9wZP69sCgYEA4Z+8aVLFLkFhFqZ+cVYF48VD+8XOX8cKK9KOUJZPGgzEUD3maP6u\nciTlzEDMcZ/A/9tI5Kt+emBlnD2ujAV5qJDcRdCNiC279Yn3j0+kly9cGnFGSi83\nq+SY+RrFeDzlJzeozo/5uPcE7BRUeQaY7RLFjIUKT/M6xggRQfiXxssCgYEA7HHX\nIq0D8cUNsvnKChMLVnZus+kyqu6N0ntqEkg/RAu6o2/4hjQgtx5jSklQqr+IhHxl\nrK1/j73C0HV372TBruklP03Y6PcmcSEFcaytu9GwHJ81H2F2UyOyXWroEPFssHM2\nwXHvdiLSt6v3KETbAQ9BPcrP7y8tb/cipHrfXmsCgYEAvZe7/IlIFnFsA1uO/u/5\nbQfT89qpa8RW4LJDUqar+8jkokURvALfVh15WOTOp2BGDvoWy8jsNCuS1vLiHNlw\n/NwVrTjt5ZQA0PjJpYyYU07Bx5qOJUJ+NpyWiyUa8MnDCex0lndXsj0ozrTaswR/\nNyBCDq2xF7PdHJGk5tnduHcCgYBpEt4MJt8N3ggMdTz35SawscjYYtWFaKXV18p3\nfWvADYZPgz7qRNgVCIgPRy1188/zMGTuq9t4QVgF024NELWRyUIoM6wlO0/2Djqh\nHZ/HS5P75DRzUZiHseFd6lhezysB7vFyXfOQiEEkJmObnZ3FhsXzc+Gb5VdH3oei\nmIgTKQKBgC4ke2M+CrK3dlmL03j/SYK8VsXfyiUSvzGW4FKNHqqvx7bRX0Ao7qK/\nuFHL9mNTDVFN4nypBZpPC0mzddGjbomXvi4SBXYAfZ4AuhuoNroyewupxbHcJG8j\n5KhZKXGaM/GKRR3Z4fayjRPBNoUC17YqxhZx2GviWoVoLBP6n7Fi\n-----END RSA PRIVATE KEY-----'
+b'-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0GOWzvm7NnW27wAHzmfs\nJA4pC6vJT5Cgjt5qoIfCZHPvoz7z8cdoYPY3N9Z7rCB8a2ev3SBePTs8kBjw32Bp\nvXgNNKtlYHnNi4A5Nuo+kdNqq15V+Mz0pX4otPz7Gl+lFHSZSQuDYp0GlCrLP9xz\nYbtFPwvCZcYBVDQSSjT3LOJx5JQZp9HlzLFR7Q8t7mXt7/wn8ynnlvU9UrBHFPhk\nAfX1UQmcIghbKVNErfTNTwc6blk/mVUvDITh2LOwel5ML+tAjRBfvz+OlyYoY45d\nlvgzeRAzeLJRtW4d2qXEGj27mlOFFd45H5z0CqaVf4GtA+0MBwrlSSFxJKDZi0Og\n2QIDAQAB\n-----END PUBLIC KEY-----'
+```
+The code is [here](https://repl.it/@billbuchanan/rsaq2#main.py).
+
 # GPG
 ## F.1
 <pre>
@@ -722,6 +835,82 @@ jdZRufTH7FLzanmWOcqtvrtLK4mt3Jia4z0RZayxMQMziuyojpIHzCTwhgULvnRn
 jxmzUYpa+R/isGJpoum0JVGpMeZnN6w5R0mDyUX6RjjdoyuSyuR/iW0=
 =Ul23
 -----END PGP PRIVATE KEY BLOCK-----
+```
+
+
+## I.1
+<pre>
+napieraccount@ubuntu:~/.ssh$ cd ~/.ssh
+napieraccount@ubuntu:~/.ssh$ ssh-keygen -t rsa -C "w.buchanan@napier.ac.uk"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/napaccount/.ssh/id_rsa): 
+/home/napaccount/.ssh/id_rsa already exists.
+Overwrite (y/n)? 
+napieraccount@ubuntu:~/.ssh$ cat id_rsa
+-----BEGIN RSA PRIVATE KEY-----
+Proc-Type: 4,ENCRYPTED
+DEK-Info: AES-128-CBC,231906D9476629A1F38BF98A15E72E03
+
+cWII6N99LmTwoD43g4eNQHt2cK5SDUjkbbkZccK/4lcSEpUB7lcxBr7irgZavrre
+Mnydi+uTqzP4s+0vt5N/DxwmUT8kShgdfS5s5mx1obSXp9byHKcNSqY5rKggTsNQ
+P6O17nPW+dOoZ0A1luNYsqjk5dh33M84rbRP8UydEZgJdvXOw+4C1fNHIs1/e7tN
+tnEg4xT9uY1KRQmTeshdwlnjLDpcFz6bxRB7ppxg9GNKhaax9ZkQwH+kKo9IdeV3
+J+YKG51n9gWhe/5PLyxrejHsO1DAWB0W+tKAiuSKF+H3v1H2DMhO8lm7qWryeuMg
+IhiV29qkzJfgB6fH+aTQhmubxsuZ1Lgzb3/gc/TNRDR2vFE8yXvATZBvS82zNYgT
+4K9Z3Okewl5UMAiKlbv0+2l/vBzk7zCKflCRY+7K9osuY6LdIgJCq5woPvrVi4QE
+YJpVGcqjT2FDLXWIIz6TJH0fO8LRqkAf/oPezM4JSbTWgUnIyU5Oxs97avrnK1fU
+Vc9rN7aI8u3XNxMGs3kFJ5VrOdJS5ZoXqMB6tkT0ASXLlP365mKV1hx78ypgOSQJ
+1BelOnfnSoPHErsBqAJ6ddt2ZqTkES8V9HomjtB4uVJvKSgnw3nzdBGCge5PU425
+mhNOrhTagQhf5wfiuuSu0rW6YKCTdCzyjCCiTiNYBIB1AzIkstbmSsiHNXZxYtLF
+Hk2psg3ze1Yjbdksu2GKh9Pu28qObBkZGnhLE8IK0rlHXcIHkbx1gZgomYl88lxL
++Tap5Izl5o9M8p1OlFP2V6qsIWRl2mw/Wl3iJZVXwFcul8oieffaI+TOJNTwLRyA
+rzIkx681DlhhJfRIWaohX5nO6To9mFIEwpaEHnzitqiIIOlrDKbwxyL8Kas8bDBy
+UlGCeOIxGMFJ1v7fcK8Q8fQJ13+ZEfwZiFlwdIxx8/ZFf+pUKZ7oqwOUO/WppAP2
+wlcYk0BkeuVnIPqsv7TOlHBoLBij0/9CVAwtpCtvTUsQFZZyxwNeupk0mUIt86HX
+sZ6yybTX7FVXWFxiaD74RJk64hvNYvIR8oDF8DBN/waFoiBV/iukxU4qvpPwOxLe
+ilYLr/xXhVmUmfGSnVpPYtBYKMNyC5CW65CE4sqDb5bZbL/0K6QJgm+Bh1ZCQg7F
+Q0b7odhOsBmRKZZSkpYHVjvP0ylOdET3GAqvYHjr4Mz+BaMaK26QjbpffxKJDDoY
+q1pUXJnfxkP2XUPrMGxAhpguAvLl+WkVse4Gz3+mJsrdSQ8P75Ezg1Y6SruDRGcz
+HEpbV4qF+nuWqSFsb8N3NYmpFSJUZlRkYoY3bKqqDInvnUcoQSbh7AFWxJFmqe7U
+W3KfGxr/i+r5dUTWGl5JYaWL+uzBTciNG0tIlEaGNWXJA+HFZC0QuTqCyHKP4d/N
+iuJqUIwxQqxTL5kUOAEBHu0a8Ma2T9xVbt0gtoghmfPUYdgoZxIE7yte5yuJaOaO
+YmFxvqfTNBGwhDATeIifBSgENyzlGC/6Bigp3J/vhcSiB4qXZNbJ2LlQ6aNzYEa5
+phz7zK0u5JzTpSDZF4c5N40moSeAa94xr0Q4J7TQI763k10Yxl14xcdlwfnNnZmE
+tZhoE9GMpeT2F8sIdIUFevx1R0+o5VWIlXgHJDDYJSV2jAxeIOfFBNUsURlHriMh
+iYMTGLFnyzYi9jP7HWzBf/UQtvob1Ik3nJmYDuqDPf1U5xqS6byghuGYu3oNILPK
+OeAMvYHF9vWB8erxUhoXF4oE9hkLWLehsjiQ8kh1gZaa7wQ190o2aAhB6ysLDGie
+IMzeIDQ1hEGrDKf7Qmc7WYBxsq5MFrkL4kEKE+WOmWt5RnRyjp/zx1JRbl3xf0eA
+7pWkk4r+xe9gLTPM2zRn5XXotn2eqaI/0Hij3MvUZG4Ca1Xp6+C0wKwWlhn5otXe
+ce7Ds/Wmwnk0vZre/eqJYQlDHyVgm9ca+wjgaNMEC5mo0AYb0gZgMRNs4fGndXFj
+a5XoaXwG/F35Xy68Q7CW8HBNwNuEqwCzBV/3R2AlTmGjawLxbvjCjdau3lWdYpMa
+/Br4RcmZkPwy425ZWTz7dsATpN+DUM2d4rRaGfOiPczmnq1TTPuj3zNkmOqB+dVp
+sCWd8J73cmGvATgjjaCDkAAWqRCNG+qzgd1Qsd1grUADAR3kL0qd53rIOaiVtnyB
+PRIZrRF48F+ozHCBtLpER3rXSApZ7kBHaynNAH+TEZOoTSGu6zGANL445QtANs/x
+oUEjN/M4qUr37k9pU9X0HLUBH8iR5ZmXa/K+pvVJDcZCwa6SdUfg9ZVR7xwuVtxP
+h1ZF9DVwjxQFmlmsXLTukGhWU//yZY630gVrx7HEJMS+AxSgamHxGIcJ7k7dugo8
+Q9rDHuuGDzGDoN5cuqwvmiea8MvVAXE7JgLkAo4RZ6Gk1r4O1xeEYV10te+sVhaG
+ZV8rT8LX/oTtH9PcpAI5FU350c55Qsq1M54CyNVlkP70dFGZ1m1MLxTYeN/8FZ0G
+K7rYEwaO+PeRcp7VOJLWQXrqPwWQUt01qlhxzxvIjFRnhjLKOvR9kD3X/u1mYX2t
+M8N+sT2LN95HFJWX75nUExFlyyZqByNaccSc7BXrW6g9YkgVMkWFB0Nu1KaWECQp
+KciWjT6ZZTHzRNq1mC7syFBEToHcrVxqqbXowBwmLS0DMSJ9KgNcmAcPIim3PShe
+cHZlbm+sI1kin74gu80Yrbj4Ivvw1jZqkgcdKNWPj4APLqDxFhO5FXkF6fsI+lb+
+5pCpFdKmCGyTyFpD72O6LcIP8Z3qy6qqO1oAIr4E6ONPNCpbR3pUPGzpu7b6biBs
+kihBqe1ufNKYkfBWGF7S6Sxtwt6XK6gBV4/lHb5o3N6KJiKRwgKOcB/GEvqf+2AF
+jVHeRGFlFg0KzvAQzAj3IXYiv130pAB5OYFM+ap76A1b2hohVscumiazz2CLTbiL
+r7A0kPepEuoY6ZCo76iqZ6gvlYJl8W5ctgQganoNlN6/iWI4n6bFgLG4swysc2Lh
+ndX6f5OFo7mYPi8oBlQVI19PUeKJdrMFww1j8NvS3ZbR0qRA2K7iysA+NwJ5qTDT
+u6a7YQPrH3R/YPKHf4xbtPsp9NQLBcFncyuXFFbxUBLO9MJ6GWVN++UtkwCRxr0T
+-----END RSA PRIVATE KEY-----
+napieraccount@ubuntu:~/.ssh$ ls
+id_rsa  id_rsa.pub  known_hosts
+napieraccount@ubuntu:~/.ssh$ cat id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCjH32w6ZwaLvaFS2ngOdsc7LVvYiqMKg+z42lwX8Hs58N69gjnPFzrHDPr/BnoIGOEkAGUQxbbUJwLXPiy7X682e6S235+Gh3jSW/xKuGbF9Zq+a/gESZ7t4ReBNweg90Baz24438Zodr6wA7AUdQSO9H1qdb7r4gNN5lvr1zMRhitfZW4UtTF/kXyE5KIDicU2zOFwCJ+AmeuBJGx3NI3YX03JWloZqB2y8zRsBNJ8A8BpeszN95p75Xni1AiHLCXM2HdW87mbdD/lsdrgUTYpMco7srcybeI/1ukbbOsPG6tDbEz3o0KFHgvDWc/XfFG/9I/8mOK1pcQRLj9bYRFHd2O4qdKgSTwtw/PDFAQ+pvCjIzylQp/sTCYI/6KvEEiHxWrY10jF+LDe4CDrmxSFxbgXYIjVMFAwCb0fyxud8V4filZwyFAoeSJWW2lHIFiEJpshQhRvu2zlM1vZHBVmKdVtBBVhq5vJ69SKfMgA2Ms7DRhLoqeqcMmzM+egDBEfvW50w6TeAsB3zoocAkPAdaLmORMGLFS1J/KIeme2LpEryC5FaG8/gziM7RsqjrAcQ/ipeIb+fNYT6POX5z/KVM6x7VcdkV0vr/k+Zkb9qeVcsIlBUAQIAfz24wOQCYZ6UnB9va88JWnjVSgwxeL5KmqgHDelFt50LgXrN/KOw== w.buchanan@napier.ac.uk
+</pre>
+
+For the RSA private key, protecting it with 128-bit AES, CBC, and the salt used is "231906D9476629A1F38BF98A15E72E03":
+<pre>
+AES-128-CBC,231906D9476629A1F38BF98A15E72E03
+</pre>
 
 </pre>
 

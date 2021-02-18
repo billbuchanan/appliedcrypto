@@ -11,7 +11,7 @@ Note: If you are using Python 3, instead of "pip install pycrypto" you can insta
 ### A.1	
 
 The following defines a public key that is used with PGP email encryption:
-<pre>
+```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Version: GnuPG v2
 
@@ -43,7 +43,7 @@ ssAIbCaBlQkzfbPvrMzdTIP+AXg6++K9SnO9N/FRPYzjUSEmpRp+ox31WymvczcU
 RmyUquF+/zNnSBVgtY1rzwaYi05XfuxG0WHVHPTtRyJ5pF4HSqiuvk6Z/4z3bw==
 =ZrP+
 -----END PGP PUBLIC KEY BLOCK-----
-</pre>
+```
 
 Using the following Web page, determine the owner of the key, and the ID on the key:
 
@@ -62,33 +62,40 @@ By searching on-line, what is an ASCII Armored Message?
 
 ### A.2	
 Bob has a private RSA key of:
-<pre>
-MIICXAIBAAKBgQCwgjkeoyCXm9v6VBnUi5ihQ2knkdxGDL3GXLIUU43/froeqk7q9mtxT4AnPAaDX3f2r4STZYYiqXGsHCUBZcI90dvZf6YiEM5OY2jgsmqBjf2Xkp/8HgN/XDw/wD2+zebYGLLYtd2u3GXx9edqJ8kQcU9LaMH+ficFQyfq9UwTjQIDAQABAoGAD7L1a6Ess+9b6G70gTANWkKJpshVZDGb63mxKRepaJEX8sRJEqLqOYDNsC+pkKO8IsfHreh4vrp9bsZuECrB1OHSjwDB0S/fm3KEWbsaaXDUAu0dQg/JBMXAKzeATreoIYJItYgwzrJ++fuquKabAZumvOnWJyBIs2z103kDz2ECQQDnn3JpHirmgVdf81yBbAJaXBXNIPzOcCth1zwFAs4EvrE35n2HvUQuRhy3ahUKXsKX/bGvWzmC2O6kbLTFEygVAkEAwxXZnPkaAY2vuoUCN5NbLZgegrAtmU+U2woa5A0fx6uXmShqxo1iDxEC71FbNIgHBg5srsUyDj3OsloLmDVjmQJAIy7qLyOA+sCc6BtMavBgLx+bxCwFmsoZHOSX3l79smTRAJ/HY64RREIsLIQ1q/yW7IWBzxQ5WTHgliNZFjKBvQJBAL3t/vCJwRz0Ebs5FaB/8UwhhsrbtXlGdnkOjIGsmV0vHSf6poHqUiay/DV88pvhN11ZG8zHpeUhnaQccJ9ekzkCQDHHG9LYCOqTgsyYms//cW4sv2nuOE1UezTjUFeqOlsgO+WN96b/M5gnv45/Z3xZxzJ4HOCJ/NRwxNOtEUkw+zY=
-</pre>
+```
+-----BEGIN RSA PRIVATE KEY-----\nMIICXgIBAAKBgQDoIhiWs15X/6xiLAVcBzpgvnuvMzHBJk58wOWrdfyEAcTY10oG\n+6auNFGqQHYHbfKaZlEi4prAoe01S/R6jpx8ZqJUN0WKNn5G9nmjJha9Pag28ftD\nrsT+4LktaQrxdNdrusP+qI0NiYbNBH6qvCrK0aGiucextehnuoqgDcqmRwIDAQAB\nAoGAZCaJu0MJ2ieJxRU+/rRzoFeuXylUNwQC6toCfNY7quxkdDV2T8r038Xc0fpb\nsdrix3CLYuSnZaK3B76MbO/oXQVBjDQZ7jVQ5K41nVCEZOtRDBeX5Ue6CBs4iNmC\n+QyWx+u4OZPURq61YG7D+F1aWRvczdEZgKHPXl/+s5pIvAkCQQDw4V6px/+DJuZV\n5Eg20OZe0m9Lvaq+G9UX2xTA2AUuH8Z79e+SCus6fMVl+Sf/W3y3uXp8B662bXhz\nyheH67aDAkEA9rQrvmFj65n/D6eH4JAT4OP/+icQNgLYDW+u1Y+MdmD6A0YjehW3\nsuT9JH0rvEBET959kP0xCx+iFEjl81tl7QJBAMcp4GZK2eXrxOjhnh/Mq51dKu6Z\n/NHBG3jlCIzGT8oqNaeK2jGLW6D5RxGgZ8TINR+HeVGR3JAzhTNftgMJDtcCQQC3\nIqReXVmZaeXnrwu07f9zsI0zG5BzJ8VOpBt7OWah8fdmOsjXNgv55vbsAWdYBbUw\nPQ+lc+7WPRNKT5sz/iM5AkEAi9Is+fgNy4q68nxPl1rBQUV3Bg3S7k7oCJ4+ju4W\nNXCCvRjQhpNVhlor7y4FC2p3thje9xox6QiwNr/5siyccw==\n-----END RSA PRIVATE KEY-----
+```
 
 And receives a ciphertext message of:
 
-Pob7AQZZSml618nMwTpx3V74N45x/rTimUQeTl0yHq8F0dsekZgOT385Jls1HUzWCx6ZRFPFMJ1RNYR2Yh7AkQtFLVx9lYDfb/Q+SkinBIBX59ER3/fDhrVKxIN4S6h2QmMSRblh4KdVhyY6cOxu+g48Jh7TkQ2Ig93/nCpAnYQ=
+```
+uW6FQth0pKaWc3haoqxbjIA7q2rF+G0Kx3z9ZDPZGU3NmBfzpD9ByU1ZBtbgKC8ATVZzwj15AeteOnbjO3EHQC4A5Nu0xKTWpqpngYRGGmzMGtblW3wBlNQYovDsRUGt+cJK7RD0PKn6PMNqK5EQKCD6394K/gasQ9zA6fKn3f0=
+```
 
 Using the following code:
 
 ```python
+# https://asecuritysite.com/encryption/rsa_example
 from Crypto.PublicKey import RSA
-from Crypto.Util import asn1
-from base64 import b64decode
+from Crypto.Cipher import PKCS1_OAEP
+import base64
 
-msg="Pob7AQZZSml618nMwTpx3V74N45x/rTimUQeTl0yHq8F0dsekZgOT385Jls1HUzWCx6ZRFPFMJ1RNYR2Yh7AkQtFLVx9lYDfb/Q+SkinBIBX59ER3/fDhrVKxIN4S6h2QmMSRblh4KdVhyY6cOxu+g48Jh7TkQ2Ig93/nCpAnYQ="
-privatekey = 'MIICXAIBAAKBgQCwgjkeoyCXm9v6VBnUi5ihQ2knkdxGDL3GXLIUU43/froeqk7q9mtxT4AnPAaDX3f2r4STZYYiqXGsHCUBZcI90dvZf6YiEM5OY2jgsmqBjf2Xkp/8HgN/XDw/wD2+zebYGLLYtd2u3GXx9edqJ8kQcU9LaMH+ficFQyfq9UwTjQIDAQABAoGAD7L1a6Ess+9b6G70gTANWkKJpshVZDGb63mxKRepaJEX8sRJEqLqOYDNsC+pkKO8IsfHreh4vrp9bsZuECrB1OHSjwDB0S/fm3KEWbsaaXDUAu0dQg/JBMXAKzeATreoIYJItYgwzrJ++fuquKabAZumvOnWJyBIs2z103kDz2ECQQDnn3JpHirmgVdf81yBbAJaXBXNIPzOcCth1zwFAs4EvrE35n2HvUQuRhy3ahUKXsKX/bGvWzmC2O6kbLTFEygVAkEAwxXZnPkaAY2vuoUCN5NbLZgegrAtmU+U2woa5A0fx6uXmShqxo1iDxEC71FbNIgHBg5srsUyDj3OsloLmDVjmQJAIy7qLyOA+sCc6BtMavBgLx+bxCwFmsoZHOSX3l79smTRAJ/HY64RREIsLIQ1q/yW7IWBzxQ5WTHgliNZFjKBvQJBAL3t/vCJwRz0Ebs5FaB/8UwhhsrbtXlGdnkOjIGsmV0vHSf6poHqUiay/DV88pvhN11ZG8zHpeUhnaQccJ9ekzkCQDHHG9LYCOqTgsyYms//cW4sv2nuOE1UezTjUFeqOlsgO+WN96b/M5gnv45/Z3xZxzJ4HOCJ/NRwxNOtEUkw+zY='
+binPrivKey = "-----BEGIN RSA PRIVATE KEY-----\nMIICXgIBAAKBgQDoIhiWs15X/6xiLAVcBzpgvnuvMzHBJk58wOWrdfyEAcTY10oG\n+6auNFGqQHYHbfKaZlEi4prAoe01S/R6jpx8ZqJUN0WKNn5G9nmjJha9Pag28ftD\nrsT+4LktaQrxdNdrusP+qI0NiYbNBH6qvCrK0aGiucextehnuoqgDcqmRwIDAQAB\nAoGAZCaJu0MJ2ieJxRU+/rRzoFeuXylUNwQC6toCfNY7quxkdDV2T8r038Xc0fpb\nsdrix3CLYuSnZaK3B76MbO/oXQVBjDQZ7jVQ5K41nVCEZOtRDBeX5Ue6CBs4iNmC\n+QyWx+u4OZPURq61YG7D+F1aWRvczdEZgKHPXl/+s5pIvAkCQQDw4V6px/+DJuZV\n5Eg20OZe0m9Lvaq+G9UX2xTA2AUuH8Z79e+SCus6fMVl+Sf/W3y3uXp8B662bXhz\nyheH67aDAkEA9rQrvmFj65n/D6eH4JAT4OP/+icQNgLYDW+u1Y+MdmD6A0YjehW3\nsuT9JH0rvEBET959kP0xCx+iFEjl81tl7QJBAMcp4GZK2eXrxOjhnh/Mq51dKu6Z\n/NHBG3jlCIzGT8oqNaeK2jGLW6D5RxGgZ8TINR+HeVGR3JAzhTNftgMJDtcCQQC3\nIqReXVmZaeXnrwu07f9zsI0zG5BzJ8VOpBt7OWah8fdmOsjXNgv55vbsAWdYBbUw\nPQ+lc+7WPRNKT5sz/iM5AkEAi9Is+fgNy4q68nxPl1rBQUV3Bg3S7k7oCJ4+ju4W\nNXCCvRjQhpNVhlor7y4FC2p3thje9xox6QiwNr/5siyccw==\n-----END RSA PRIVATE KEY-----"
 
-keyDER = b64decode(privatekey)
-keys = RSA.importKey(keyDER)
+ciphertext=base64.b64decode("uW6FQth0pKaWc3haoqxbjIA7q2rF+G0Kx3z9ZDPZGU3NmBfzpD9ByU1ZBtbgKC8ATVZzwj15AeteOnbjO3EHQC4A5Nu0xKTWpqpngYRGGmzMGtblW3wBlNQYovDsRUGt+cJK7RD0PKn6PMNqK5EQKCD6394K/gasQ9zA6fKn3f0=")
 
-dmsg = keys.decrypt(b64decode(msg))
-print dmsg
+privKeyObj = RSA.importKey(binPrivKey)
+cipher = PKCS1_OAEP.new(privKeyObj)
+message = cipher.decrypt(ciphertext)
+
+print
+print ("====Decrypted===")
+print ("Message:",message)
 ```
 
 
 What is the plaintext message that Bob has been sent?
+
 
 
 
@@ -100,10 +107,10 @@ We will use OpenSSL to perform the following:
 ### B.1	
 
 First we need to generate a key pair with:
-<pre>
-openssl genrsa -out private.pem 1024	
-</pre>		
 
+```
+openssl genrsa -out private.pem 1024	
+```
 
 This file contains both the public and the private key.
 
@@ -122,9 +129,9 @@ How long did it take to generate a 1,024 bit key?
 
 Use the following command to view the keys:
 
-<pre>
+```
  cat private.pem 
-</pre>
+```
 
 ### B.2	
 Use following command to view the output file:
@@ -176,42 +183,39 @@ View the output key. What does the header and footer of the file identify?
 ### B.6	
 
 Now create a file named “myfile.txt” and put a message into it. Next encrypt it with your public key:
-<pre>
+
+
+```
 openssl rsautl -encrypt -inkey public.pem -pubin -in myfile.txt -out file.bin	
-</pre>
+```
+
 
 ### B.7	
 And then decrypt with your private key:
 
-openssl rsautl -decrypt -inkey private.pem -in file.bin -out decrypted.txt	What are the contents of decrypted.txt
+```
+openssl rsautl -decrypt -inkey private.pem -in file.bin -out decrypted.txt
+```
 
-On your VM, go into the ~/.ssh folder. Now generate your SSH keys:
+What are the contents of decrypted.txt?
 
-<pre>
-ssh-keygen -t rsa -C "your email address"
-</pre>
+### B.8
+What can you observe between these two commands for differing output formats:
 
-The public key should look like this:
-<pre>
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDLrriuNYTyWuC1IW7H6yea3hMV+rm029m2f6IddtlImHrOXjNwYyt4Elkkc7AzOy899C3gpx0kJK45k/CLbPnrHvkLvtQ0AbzWEQpOKxI+tW06PcqJNmTB8ITRLqIFQ++ZanjHWMw2Odew/514y1dQ8dccCOuzeGhL2Lq9dtfhSxx+1cBLcyoSh/lQcs1HpXtpwU8JMxWJl409RQOVn3gOusp/P/0R8mz/RWkmsFsyDRLgQK+xtQxbpbodpnz5lIOPWn5LnT0si7eHmL3WikTyg+QLZ3D3m44NCeNb+bOJbfaQ2ZB+lv8C3OxylxSp2sxzPZMbrZWqGSLPjgDiFIBL w.buchanan@napier.ac.uk
-</pre>
+```
+openssl rsautl -encrypt -inkey public.pem -pubin -in myfile.txt -out file.bin
 
-View the private key. Outline its format?
+cat file.bin
+```
+and:
+```
+openssl rsautl -encrypt -inkey public.pem -pubin -in myfile.txt -out file.bin -hexdump
+
+cat file.bin
+```
 
 
 
-On your Ubuntu instance setup your new keys for ssh:
-
-<pre>
-ssh-add ~/.ssh/id_git
-</pre>
-
-Now create a Github account and upload your public key to Github (select Settings-> New SSH key or Add SSH key).  Create a new repository on your GitHub site, and add a new file to it. Next go to your Ubuntu instance and see if you can clone of a new directory:
-<pre>
-git clone ssh://git@github.com/**user/repository name**.git
-</pre>
-
-If this doesn’t work, try the https connection that is defined on GitHub.
 
 ## C	OpenSSL (ECC)
 Elliptic Curve Cryptography (ECC) is now used extensively within public key encryption, including with Bitcoin, Ethereum, Tor, and many IoT applications. In this part of the lab we will use OpenSSL to create a key pair. For this we generate a random 256-bit private key (priv), and then generate a public key point (priv multiplied by G), using a generator (G), and which is a generator point on the selected elliptic curve.
@@ -264,7 +268,33 @@ What is the ECC method that you have used?
 
 
 
-If you want to see an example of ECC, try here: https://asecuritysite.com/encryption/ecc 
+### C.4	
+First we need to generate a private key with:
+
+```
+openssl ecparam -list_curves 
+```
+
+Outline three curves supported:
+
+### C.5	
+
+Let’s select two other curves:
+```
+openssl ecparam -name secp128r1 -genkey -out priv.pem
+openssl ecparam -in priv.pem -text -param_enc explicit -noout
+```
+
+and:
+
+```
+openssl ecparam -name secp521r1 -genkey -out priv.pem
+openssl ecparam -in priv.pem -text -param_enc explicit -noout
+```
+
+How does secp128k1, secp256k1 and secp512r1 different in the parameters used? Perhaps identify the length of the prime number used, and the size of the base point (G).
+
+If you want to see an example of ECC, try [here](https://asecuritysite.com/encryption/ecc) 
 
 ## D	Elliptic Curve Encryption
 ### D.1	
@@ -284,36 +314,25 @@ test="Test123"
 alice = pyelliptic.ECC() 
 bob = pyelliptic.ECC()
 
-print "++++Keys++++"
-print "Bob's private key: "+bob.get_privkey().encode('hex')
-print "Bob's public key: "+bob.get_pubkey().encode('hex')
+print ("++++Keys++++")
+print ("Bob's private key: ",bob.get_privkey().hex())
+print ("Bob's public key: ",bob.get_pubkey().hex())
 
-print
-print "Alice's private key: "+alice.get_privkey().encode('hex')
-print "Alice's public key: "+alice.get_pubkey().encode('hex')
+print()
+print ("Alice's private key: ",alice.get_privkey().hex())
+print ("Alice's public key: ",alice.get_pubkey().hex())
 
 
 ciphertext = alice.encrypt(test, bob.get_pubkey())
 
-print "\n++++Encryption++++"
+print ("\n++++Encryption++++")
 
-print "Cipher: "+ciphertext.encode('hex')
+print ("Cipher: "+ciphertext.hex())
 
-print "Decrypt: "+bob.decrypt(ciphertext)
-
-signature = bob.sign("Alice")
-
-print 
-print "Bob verified: "+ str(pyelliptic.ECC(pubkey=bob.get_pubkey()).verify
-(signature, "Alice"))
+print ("Decrypt: "+bob.decrypt(ciphertext))
 ```
 
 For a message of “Hello. Alice”, what is the ciphertext sent (just include the first four characters):
-
-
-
-How is the signature used in this example?
-
 
 
 
@@ -339,21 +358,22 @@ msg="Hello"
 type = 1
 cur=NIST192p
 
+
 sk = SigningKey.generate(curve=cur) 
 
 vk = sk.get_verifying_key()
 
-signature = sk.sign(msg)
+signature = sk.sign(msg.encode())
 
-print "Message:\t",msg
-print "Type:\t\t",cur.name
-print "========================="
+print ("Message:\t",msg)
+print ("Type:\t\t",cur.name)
+print ("=========================")
 
-print "Signature:\t",base64.b64encode(signature)
+print ("Signature:\t",base64.b64encode(signature))
 
-print "========================="
+print ("=========================")
 
-print "Signatures match:\t",vk.verify(signature, msg)
+print ("Signatures match:\t",vk.verify(signature, msg.encode()))
 ```
 
 What are the signatures (you only need to note the first four characters) for a message of “Bob”, for the curves of NIST192p, NIST521p and SECP256k1:
@@ -413,20 +433,24 @@ Did you get the value of your message back (M=5)? If not, you have made a mistak
 Now run the following code and prove that the decrypted cipher is the same as the message: 
 
 ```python
+import libnum
+
 p=11
 q=3
 N=p*q
 PHI=(p-1)*(q-1)
 e=3
-for d in range(1,N):
-        if ((e*d % PHI)==1): break
-print e,N
-print d,N
+
+d= libnum.invmod(e,PHI)
+
+print (e,N)
+print (d,N)
 M=4
+print ("\nMessage:",M)
 cipher = M**e % N
-print cipher
+print ("Cipher:",cipher)
 message = cipher**d % N
-print message
+print ("Message:",message)
 ```
 
 
@@ -465,8 +489,8 @@ key = RSA.generate(2048)
 binPrivKey = key.exportKey('PEM')
 binPubKey =  key.publickey().exportKey('PEM')
 
-print binPrivKey
-print binPubKey
+print (binPrivKey)
+print (binPubKey)
 ```
 
 
@@ -534,7 +558,9 @@ https://asecuritysite.com/encryption/openpgp
 ### F.3	
 An important element in data loss prevention is encrypted emails. In this part of the lab we will use an open source standard: PGP.  
 
-1	Create a key pair with (RSA and 2,048-bit keys):
+
+#### 1. Create a key pair with (RSA and 2,048-bit keys):
+
 <pre>
 gpg --gen-key
 </pre>
@@ -554,8 +580,7 @@ How is the randomness generated?
 
 Outline the contents of your key file:
 
-### 2	
-Now send your lab partner your public key in the contents of an email, and ask them to import it onto their key ring (if you are doing this on your own, create another set of keys to simulate another user, or use Bill’s public key – which is defined at http://asecuritysite.com/public.txt and send the email to him):
+#### 2. Now send your lab partner your public key in the contents of an email, and ask them to import it onto their key ring (if you are doing this on your own, create another set of keys to simulate another user, or use Bill’s public key – which is defined at http://asecuritysite.com/public.txt and send the email to him):
 <pre>
 gpg --import theirpublickey.key
 </pre>
@@ -568,8 +593,8 @@ Which keys are stored on your key ring and what details do they have:
 
 
 
-### 3	
-Create a text file, and save it. Next encrypt the file with their public key:
+
+#### 3. Create a text file, and save it. Next encrypt the file with their public key:
 <pre>
 gpg -e -a -u "Your Name" -r "Your Lab Partner Name" hello.txt
 </pre>
@@ -586,8 +611,7 @@ What does the –u option do:
 Which file does it produce and outline the format of its contents:
 
 
-### 4	
-Send your encrypted file in an email to your lab partner, and get one back from them.
+#### 4. Send your encrypted file in an email to your lab partner, and get one back from them.
 
 Now create a file (such as myfile.asc) and decrypt the email using the public key received from them with:
 <pre>
@@ -596,8 +620,7 @@ gpg –d myfile.asc > myfile.txt
 
 Can you decrypt the message:
 
-### 5	
-Next using this public key file, send Bill (w.buchanan@napier.ac.uk) a question (http://asecuritysite.com/public.txt):
+#### 5. Next using this public key file, send Bill (w.buchanan@napier.ac.uk) a question (http://asecuritysite.com/public.txt):
 
 <pre>
 -----BEGIN PGP PUBLIC KEY BLOCK-----
@@ -658,77 +681,57 @@ nucbcNB98DkLlND905oV
 
 Did you receive a reply:
 
-### 6	
-Next send your public key to Bill (w.buchanan@napier.ac.uk), and ask for an encrypted message from him.
+#### 6. Next send your public key to Bill (w.buchanan@napier.ac.uk), and ask for an encrypted message from him.
 	
-## G	TrueCrypt
-
-No	Description	Result
-1	Go to your Kali instance (User: root, Password: toor). Now Create a new volume and use an encrypted file container (use tc_yourname) with a Standard TrueCrypt volume.
-
-When you get to the Encryption Options, run the benchmark tests and outline the results:
-
- 	
-CPU (Mean)
-
-AES:
-AES-Twofish:
-AES-Two-Seperent
-Serpent -AES
-Serpent:
-Serpent-Twofish-AES
-Twofish:
-Twofish-Serpent:
-
-Which is the fastest:
-
-Which is the slowest:
-
-2	Select AES and RIPMD-160 and create a 100MB file. Finally select your password and use FAT for the file system.
-	What does the random pool generation do, and what does it use to generate the random key?
-
-
-
-3	Now mount the file as a drive.
-
-	Can you view the drive on the file viewer and from the console? [Yes][No]
-4	Create some files your TrueCrypt drive and save them.
-
-	Without giving them the password, can they read the file?
-
-With the password, can they read the files?
-
-
-
-The following files have the passwords of “Ankle123”, “foxtrot”, “napier123”, “password” or “napier”. Determine the properties of the files defined in the table:
-
-File
-		Size	Encryption type	Key size	Files/folders on disk	Hidden partition (y/n)	Hash method
-http://asecuritysite.com/tctest01.zip
-
-					
-http://asecuritysite.com/tctest02.zip
-
-					
-http://asecuritysite.com/tctest03.zip	
-					
-
-Now with truecrack see if you can determine the password on the volumes. Which TrueCrypt volumes can truecrack?
-
-H	Reflective statements
-1.	In ECC, we use a 256-bit private key. This is used to generate the key for signing Bitcoin transactions. Do you think that a 256-bit key is largest enough? If we use a cracker what performs 1 Tera keys per second, will someone be able to determine our private key?
 
 
 
 
 
+## G GitHub Keys
 
-## I	What I should have learnt from this lab?
+### I.1
+On your VM, go into the ~/.ssh folder. Now generate your SSH keys:
+
+```
+ssh-keygen -t rsa -C "your email address"
+```
+
+The public key should look like this:
+
+```
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDLrriuNYTyWuC1IW7H6yea3hMV+rm029m2f6IddtlImHrOXjNwYyt4Elkkc7AzOy899C3gpx0kJK45k/CLbPnrHvkLvtQ0AbzWEQpOKxI+tW06PcqJNmTB8ITRLqIFQ++ZanjHWMw2Odew/514y1dQ8dccCOuzeGhL2Lq9dtfhSxx+1cBLcyoSh/lQcs1HpXtpwU8JMxWJl409RQOVn3gOusp/P/0R8mz/RWkmsFsyDRLgQK+xtQxbpbodpnz5lIOPWn5LnT0si7eHmL3WikTyg+QLZ3D3m44NCeNb+bOJbfaQ2ZB+lv8C3OxylxSp2sxzPZMbrZWqGSLPjgDiFIBL w.buchanan@napier.ac.uk
+```
+
+View the private key. What is the DEK-Info part, and how would it be used to protect the key, and what information does it contain?
+
+
+On your Ubuntu instance setup your new keys for ssh:
+
+```
+ssh-add ~/.ssh/id_git
+```
+
+Now create a Github account and upload your public key to Github (select Settings-> New SSH key or Add SSH key).  Create a new repository on your GitHub site, and add a new file to it. Next go to your Ubuntu instance and see if you can clone of a new directory:
+
+git clone ssh://git@github.com/<user>/<repository name>.git
+
+If this doesn’t work, try the https connection that is defined on GitHub.
+
+
+
+
+## H	What I should have learnt from this lab?
 The key things learnt:
 
 * The basics of the RSA method.
 * The process of generating RSA and Elliptic Curve key pairs.
 * To illustrate how the private key is used to sign data, and then using the public key to verify the signature.
+
+A reflective statement:
+
+* In ECC, we use a 256-bit private key. This is used to generate the key for signing Bitcoin transactions. Do you think that a 256-bit key is largest enough? If we use a cracker what performs 1 Tera keys per second, will someone be able to determine our private key?
+
 ## Additional
 The following is code which performs RSA key generation, and the encryption and decryption of a message (https://asecuritysite.com/encryption/rsa_example):
 
@@ -802,3 +805,33 @@ CoZf0lNZQS/X2avLEiwtNtEvUbLGpBDgbvnNotoYspjqpg==
 </pre>
 
 
+
+
+
+On your VM, go into the ~/.ssh folder. Now generate your SSH keys:
+
+<pre>
+ssh-keygen -t rsa -C "your email address"
+</pre>
+
+The public key should look like this:
+<pre>
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDLrriuNYTyWuC1IW7H6yea3hMV+rm029m2f6IddtlImHrOXjNwYyt4Elkkc7AzOy899C3gpx0kJK45k/CLbPnrHvkLvtQ0AbzWEQpOKxI+tW06PcqJNmTB8ITRLqIFQ++ZanjHWMw2Odew/514y1dQ8dccCOuzeGhL2Lq9dtfhSxx+1cBLcyoSh/lQcs1HpXtpwU8JMxWJl409RQOVn3gOusp/P/0R8mz/RWkmsFsyDRLgQK+xtQxbpbodpnz5lIOPWn5LnT0si7eHmL3WikTyg+QLZ3D3m44NCeNb+bOJbfaQ2ZB+lv8C3OxylxSp2sxzPZMbrZWqGSLPjgDiFIBL w.buchanan@napier.ac.uk
+</pre>
+
+View the private key. Outline its format?
+
+
+
+On your Ubuntu instance setup your new keys for ssh:
+
+<pre>
+ssh-add ~/.ssh/id_git
+</pre>
+
+Now create a Github account and upload your public key to Github (select Settings-> New SSH key or Add SSH key).  Create a new repository on your GitHub site, and add a new file to it. Next go to your Ubuntu instance and see if you can clone of a new directory:
+<pre>
+git clone ssh://git@github.com/**user/repository name**.git
+</pre>
+
+If this doesn’t work, try the https connection that is defined on GitHub.
