@@ -100,16 +100,17 @@ What is the plaintext message that Bob has been sent?
 
 
 
+
 ## B	OpenSSL (RSA)
 We will use OpenSSL to perform the following:
 
 ### B.1	
 
 First we need to generate a key pair with:
-<pre>
-openssl genrsa -out private.pem 1024	
-</pre>		
 
+```
+openssl genrsa -out private.pem 1024	
+```
 
 This file contains both the public and the private key.
 
@@ -128,9 +129,9 @@ How long did it take to generate a 1,024 bit key?
 
 Use the following command to view the keys:
 
-<pre>
+```
  cat private.pem 
-</pre>
+```
 
 ### B.2	
 Use following command to view the output file:
@@ -727,9 +728,39 @@ H	Reflective statements
 
 
 
+## I GitHub Keys
+### I.1
+On your VM, go into the ~/.ssh folder. Now generate your SSH keys:
+
+```
+ssh-keygen -t rsa -C "your email address"
+```
+
+The public key should look like this:
+
+```
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDLrriuNYTyWuC1IW7H6yea3hMV+rm029m2f6IddtlImHrOXjNwYyt4Elkkc7AzOy899C3gpx0kJK45k/CLbPnrHvkLvtQ0AbzWEQpOKxI+tW06PcqJNmTB8ITRLqIFQ++ZanjHWMw2Odew/514y1dQ8dccCOuzeGhL2Lq9dtfhSxx+1cBLcyoSh/lQcs1HpXtpwU8JMxWJl409RQOVn3gOusp/P/0R8mz/RWkmsFsyDRLgQK+xtQxbpbodpnz5lIOPWn5LnT0si7eHmL3WikTyg+QLZ3D3m44NCeNb+bOJbfaQ2ZB+lv8C3OxylxSp2sxzPZMbrZWqGSLPjgDiFIBL w.buchanan@napier.ac.uk
+```
+
+View the private key. What is the DEK-Info part, and how would it be used to protect the key, and what information does it contain?
 
 
-## I	What I should have learnt from this lab?
+On your Ubuntu instance setup your new keys for ssh:
+
+```
+ssh-add ~/.ssh/id_git
+```
+
+Now create a Github account and upload your public key to Github (select Settings-> New SSH key or Add SSH key).  Create a new repository on your GitHub site, and add a new file to it. Next go to your Ubuntu instance and see if you can clone of a new directory:
+
+git clone ssh://git@github.com/<user>/<repository name>.git
+
+If this doesn’t work, try the https connection that is defined on GitHub.
+
+
+
+
+## J	What I should have learnt from this lab?
 The key things learnt:
 
 * The basics of the RSA method.
