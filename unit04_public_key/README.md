@@ -1,6 +1,6 @@
 ![esecurity](https://raw.githubusercontent.com/billbuchanan/esecurity/master/z_associated/esecurity_graphics.jpg)
 
-# e-Security Unit 4: Public Key
+# Unit 4: Public Key
 
 The key concepts are: Basics, RSA, Elliptic Curve and ElGamal.
 
