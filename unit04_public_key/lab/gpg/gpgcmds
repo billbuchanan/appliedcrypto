@@ -1,0 +1,4 @@
+gpg --import otherkey.key
+gpg --list-keys
+gpg -e -a -u "Bill Buchanan" -r "Fred Smith" hello.txt
+gpg -d myfile.asc > myfile.txt
