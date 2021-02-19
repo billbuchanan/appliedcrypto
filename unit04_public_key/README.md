@@ -1,6 +1,6 @@
 ![esecurity](https://raw.githubusercontent.com/billbuchanan/esecurity/master/z_associated/esecurity_graphics.jpg)
 
-# e-Security Unit 4: Public Key
+# Unit 4: Public Key
 
 The key concepts are: Basics, RSA, Elliptic Curve and ElGamal.
 
@@ -17,14 +17,14 @@ The key concepts are: Basics, RSA, Elliptic Curve and ElGamal.
 
 ## Presentations
 
-* Week 4 Presentation (PDF) - Public Key Encryption: [here](https://github.com/billbuchanan/esecurity/blob/master/unit04_public_key/lecture/chapter04_public_msc.pdf).
+* Week 4 Presentation (PDF) - Public Key Encryption: [here](https://github.com/billbuchanan/appliedcrypto/blob/master/unit04_public_key/lecture/chapter04_public_msc.pdf).
 * Week 4 Presentation (video) - Public Key Encryption: [here](https://youtu.be/QEYqkxuzoTg).
 * Week 4 Presentation (lecture video - 8 Feb 2020) - Public Key Encryption: [here](https://www.youtube.com/watch?v=PEdCHWdE3zk).
 
 ## Lab
 
-* Week 4 Lab (PDF): [here](https://github.com/billbuchanan/esecurity/blob/master/unit04_public_key/lab/new_lab04.pdf)
-* Week 4 Lab (Demo): [here](https://youtu.be/6T9bFA2nl3c)
+* Unit 4 Lab (PDF): [here](https://github.com/billbuchanan/appliedcrypto/blob/master/unit04_public_key/lab/new_lab04.pdf)
+* Unit 4 Lab (Demo): [here](https://youtu.be/6T9bFA2nl3c)
 
 ## Public key challenge
 
@@ -101,7 +101,7 @@ ECC Keygen: [here](https://asecuritysite.com/encryption/ecc_keygen).
 
 * Introduction to RSA: [here](https://www.youtube.com/watch?v=pHES8eNor6k)
 * Introduction to Elliptic Curve: [here](https://youtu.be/_CwIWk6XDmg)
-* Picking the Generator Value (G): [here](https://www.youtube.com/watch?v=-TjSuch3VGU)
+* Picking the Generator Value (g): [here](https://www.youtube.com/watch?v=-TjSuch3VGU)
 
 ## Answers
 Don't peek [here](https://repl.it/@billbuchanan/rsaq1).
