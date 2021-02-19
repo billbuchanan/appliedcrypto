@@ -394,7 +394,41 @@ What do you observe from the different hash signatures from the elliptic curve m
 
 
 ## E	RSA
-### E.1	We will follow a basic RSA process. If you are struggling here, have a look at the following page:
+### E.1 
+A simple RSA program to encrypt and decrypt with RSA is given next. Prove its operation:
+```
+
+import rsa
+(bob_pub, bob_priv) = rsa.newkeys(512)
+
+msg='Here is my message'
+ciphertext = rsa.encrypt(msg.encode(), bob_pub)
+message = rsa.decrypt(ciphertext, bob_priv)
+print(message.decode('utf8'))
+```
+
+Now add the lines following lines after the creation of the keys:
+
+```
+print (bob_pub)
+print (bob_priv)
+```
+
+
+Can you identify what each of the elements of the public key (e,N), the private key (d,N), and the two prime number (p and q) are (if the numbers are long, just add the first few numbers of the value):
+
+
+
+
+When you identity the two prime numbers (p and q), with Python, can you prove that when they are multiplied together they result in the modulus value (N):
+
+Proven Yes/No
+
+
+
+
+### E.2	
+We will follow a basic RSA process. If you are struggling here, have a look at the following page:
 
 https://asecuritysite.com/encryption/rsa
 
@@ -466,10 +500,10 @@ https://asecuritysite.com/encryption/inversemod
 
 Using the code, can you determine the following:
 
-<pre>
+```
 Inverse of 53 (mod 120) = 
 Inverse of 65537 (mod 1034776851837418226012406113933120080) = 
-</pre>
+```
 
 Using this code, can you now create an RSA program where the user enters the values of p, q, and e, and the program determines (e,N) and (d,N)?
 
@@ -507,7 +541,7 @@ print(message.decode('utf8'))
 ## F	PGP
 ### F.1	
 The following is a PGP key pair. Using https://asecuritysite.com/encryption/pgp, can you determine the owner of the keys:
-<pre>
+```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Version: OpenPGP.js v4.4.5
 Comment: https://openpgpjs.org
@@ -549,7 +583,7 @@ BgH/cP12s3xCwxtVt+Zds8NdqysDO6yve2ha7cc+Vl8AP+YKqFT9IkMZJW/a
 qV+0VXeqyyru86F+xfrEKHdbAlqzMA==
 =5NaF
 -----END PGP PRIVATE KEY BLOCK-----
-</pre>
+```
 
 ### F.2	
 Using the code at the following link, generate a key:
@@ -566,13 +600,13 @@ gpg --gen-key
 </pre>
 
 Now export your public key using the form of:
-<pre>
+```
 gpg --export -a "Your name" > mypub.key
-</pre>
+```
 Now export your private key using the form of:
-<pre>
+```
 gpg --export-secret-key -a "Your name" > mypriv.key
-</pre>	
+```
 
 How is the randomness generated?
 
@@ -581,23 +615,24 @@ How is the randomness generated?
 Outline the contents of your key file:
 
 #### 2. Now send your lab partner your public key in the contents of an email, and ask them to import it onto their key ring (if you are doing this on your own, create another set of keys to simulate another user, or use Bill’s public key – which is defined at http://asecuritysite.com/public.txt and send the email to him):
-<pre>
+```
 gpg --import theirpublickey.key
-</pre>
+```
 
 Now list your keys with:
-<pre>
+```
 gpg --list-keys
-</pre>
+```
+
 Which keys are stored on your key ring and what details do they have:
 
 
 
 
 #### 3. Create a text file, and save it. Next encrypt the file with their public key:
-<pre>
+```
 gpg -e -a -u "Your Name" -r "Your Lab Partner Name" hello.txt
-</pre>
+```
 
 What does the –a option do:
 
@@ -614,18 +649,18 @@ Which file does it produce and outline the format of its contents:
 #### 4. Send your encrypted file in an email to your lab partner, and get one back from them.
 
 Now create a file (such as myfile.asc) and decrypt the email using the public key received from them with:
-<pre>
+```
 gpg –d myfile.asc > myfile.txt
-</pre>
+```
 
 Can you decrypt the message:
 
 #### 5. Next using this public key file, send Bill (w.buchanan@napier.ac.uk) a question (http://asecuritysite.com/public.txt):
 
-<pre>
+```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
-xsFNBGAtkzYBEACkIejC2VRgZQ9uWwDlgdwtzNb6zQ3TPk6hU604XB+8eYAhM8q7
+mQINBGAtkzYBEACkIejC2VRgZQ9uWwDlgdwtzNb6zQ3TPk6hU604XB+8eYAhM8q7
 +u19vbnKQfT+asaunJO6VGdTAyUwJqYAnQAguAMOJpYcMVfLFdFkxmJ/WHssxtZN
 Y5Y0uJ8w5jQhPhBTN0CIFBgcM95gUxADbIDZoxhL8PcCz7C/d9a1AItZLg/QWkXp
 k0sQdvM+ki3kCoa7cVF499NgXNmkdUIdbFxR/l6nhMO0y8ZC5rc1GVTVKeKmFjZ5
@@ -636,7 +671,7 @@ Um+PFd3h6nPSXq/7f69y3Wdlda4WeJSXXk2MUzVdlOlQIJxtyt4z/o2zi0cYqgP6
 ZBLu9T8rhJY447sTiZx/8eDCdhGLtkMkqS8vxxpbonRKaog1hJ0cYKO13QmsudSp
 n/23cO7gdIWMzGxYW5MFiHmNLo/9vCWbQPhM07Z+lunTlZIHVDGbjpfeNuJKU+uZ
 NtUhec+rOcf+Fl2Wh8PTOy0J13sEgJLf8w4SOlPR8wWkEuu0uC26fm1MRQARAQAB
-zSdCaWxsIEJ1Y2hhbmFuIDxCLkJ1Y2hhbmFuQG5hcGllci5hYy51az7CwZQEEwEI
+tCdCaWxsIEJ1Y2hhbmFuIDxCLkJ1Y2hhbmFuQG5hcGllci5hYy51az6JAlQEEwEI
 AD4WIQSIFvygLS/JJTJT9vZIquNsqTrj2AUCYC2TNgIbAwUJB4YfZgULCQgHAgYV
 CgkICwIEFgIDAQIeAQIXgAAKCRBIquNsqTrj2OOcD/9lHTOC37vjGZuccLzmkm1s
 buMxf/AkGdzSSAukCSHp1YzZCl/PA/9oIPyPIs3Sn4JdsqLr8/aOPKMZouFZ5fk7
@@ -649,7 +684,7 @@ qdKJ0kdW8DpS/kQXY4s0S8FMHANzTzw0E0HtU0zU2OiDpYXYHhSJEVtKEAFab7Bb
 MooEoOHnKfO6Eh79448GigyLjacnWadpETTs+sgyH0kIrT8G3FsNWaUWfvzZp7J6
 /YyOkM/xQ7rfwBww1i5t0bSqo7terXWmf/N5LGpfZnQ1yrkeDFljsz+oeu4n3eAJ
 X6QV1ZfY48wSc6iAfh3thMebpCw6OCoeY8JLwt2JzXKtbYuONMP41dofQhVap1z6
-Eq9NAKPFRYgBtUC0IWiHH87BTQRgLZM2ARAAsfxQeEZirG6H6zhKSlPRhnVqUIQA
+Eq9NAKPFRYgBtUC0IWiHH7kCDQRgLZM2ARAAsfxQeEZirG6H6zhKSlPRhnVqUIQA
 F5LSnCaIdjPxVtO1y6GESwT3vkRcNqEaCSFh4cMKeLZjYPWAuqriKVmPBvp8TBQa
 YTLcBZRBBCYeqVYdklDDChW8xcrWzIYs5vHOhnHklEZGsnGkpV8zScJIG3iKqINp
 5i3SjnUKBooDR0dKHcv3mA3BHm6HBR9EqVMoTq42ssPypOtB3jHFPB9mxzIHOCrc
@@ -660,7 +695,7 @@ HIjjk02RER9R4Wk0PdLxQlb7r5zwNOIM5mz7202BunB0e4qLbpH2tp9zLxrUxc8r
 XqvSmTRv6NE95gPvagWORVnIe96Ag6kRA/ifstZQEldlB7LLWetpmDLj+wcdXMur
 qHiPUJxg9vdZ939P/1AXM2iSLYp76VR0NR3WnavOwv8xLkGn0sYXBOKOMh8AGvUT
 oAjFGfCIAlAw7ZcXyfbtgpmBnVCcQKu7Ft7x/L5Wh5XCeHJa4eih09I4d248yDr+
-rB4ZBqbjh/b1IX0AEQEAAcLBfAQYAQgAJhYhBIgW/KAtL8klMlP29kiq42ypOuPY
+rB4ZBqbjh/b1IX0AEQEAAYkCPAQYAQgAJhYhBIgW/KAtL8klMlP29kiq42ypOuPY
 BQJgLZM2AhsMBQkHhh9mAAoJEEiq42ypOuPYUHQP/0tDfIRQtpfepxMweq04Kw7Q
 BvEL5VVKpx5aTSq4aEU8LBFbs+DJjzkFq69YXfVlHGlt1+I5B+Aglmv+Qy/v/eo7
 dNwtPQ0uVSd8vqNIjB0QxBZ2Sx86zMbxifRno/hetQK3dXdxJO7L7KBDBX/4W8wl
@@ -673,18 +708,15 @@ cDsx8KpdKAuqi/uq5NPooCTmx2UN3qZC9dX1vBAxSggIt29Xg0EQyW8FW7cL/C2I
 SN5Ngz5QUKuN0BeOnqRoPaBdFrTTnW7uXsl4LXpP23rfpisKVtEfiXb13322SByX
 gTAYItr3IsyMEYriggMBpjqKaE3TxdwxETxHh9ktvj5aITWHWkq7corz/hR+POnF
 nucbcNB98DkLlND905oV
-=N69r
------END PGP PUBLIC KEY BLOCK-----
-	
-</pre>
+=XVeB
+-----END PGP PUBLIC KEY BLOCK-----	
+```
 
 
 Did you receive a reply:
 
 #### 6. Next send your public key to Bill (w.buchanan@napier.ac.uk), and ask for an encrypted message from him.
 	
-
-
 
 
 
@@ -738,7 +770,6 @@ The following is code which performs RSA key generation, and the encryption and 
 ```python
 from Crypto.PublicKey import RSA
 from Crypto.Util import asn1
-from base64 import b64decode
 from base64 import b64encode
 from Crypto.Cipher import PKCS1_OAEP
 import sys
@@ -754,84 +785,57 @@ binPrivKey = key.exportKey('PEM')
 binPubKey =  key.publickey().exportKey('PEM')
 
 print
-print "====Private key==="
-print binPrivKey
+print ("====Private key===")
+print (binPrivKey)
 print
-print "====Public key==="
-print binPubKey
+print ("====Public key===")
+print (binPubKey)
 
 privKeyObj = RSA.importKey(binPrivKey)
 pubKeyObj =  RSA.importKey(binPubKey)
 
 
 cipher = PKCS1_OAEP.new(pubKeyObj)
-ciphertext = cipher.encrypt(msg)
+ciphertext = cipher.encrypt(msg.encode())
 
 print
-print "====Ciphertext==="
-print b64encode(ciphertext)
+print ("====Ciphertext===")
+print (b64encode(ciphertext))
 
 cipher = PKCS1_OAEP.new(privKeyObj)
 message = cipher.decrypt(ciphertext)
 
 
 print
-print "====Decrypted==="
-print "Message:",message
+print ("====Decrypted===")
+print ("Message:",message)
 ```
 
-Can you decrypt this:
-<pre>
-FipV/rvWDyUareWl4g9pneIbkvMaeulqSJk55M1VkiEsCRrDLq2fee8g2oGrwxx2j6KH+VafnLfn+QFByIKDQKy+GoJQ3B5bD8QSzPpoumJhdSILcOdHNSzTseuMAM1CSBawbddL2KmpW2zmeiNTrYeA+T6xE9JdgOFrZ0UrtKw=
-</pre>
+The code is [here](https://repl.it/@billbuchanan/rsanewcode#main.py). Can you decrypt this:
+
+```
+fIVuuWFLVANs9MjatXbIbtH7/n0dBpDirXKi82jZovXS/krxy43cP0J9jlNz4dqxLgdiqtRe1AcymX06JUo1SrcqDEh3lQxoU1KUvV7jG9GE3pSxHq4dQlcWdHz95b9go6QYbe/5S/uJgolR+S9qaDE8tXYysP8FeXIPd0dXxHo=
+```
 
 The private key is:
-<pre>
+
+```
 -----BEGIN RSA PRIVATE KEY-----
-MIICXgIBAAKBgQCqRucTX4+UBgKxGUV5TB3A1hZnUwazkLlsUdBbM4hXoO+n3O7v
-jk1UfhItDrVgkl3Mla7CMpyIadlOhSzn8jcvGdNY/Xc+rV7BLfR8FeatOIXGqV+G
-d3vDXQtsxCDRnjXGNHfWZCypHn1vqVDulB2q/xTyWcKgC61Vj8mMiHXcAQIDAQAB
-AoGAA7ZYA1jqAG6N6hG3xtU2ynJG1F0MoFpfY7hegOtQTAv6+mXoSUC8K6nNkgq0
-2Zrw5vm8cNXTPWyEi4Z+9bxjusU8B3P2s8w+3t7NN0vDM18hiQL2loS0s7HLlGzb
-IgkBclJS6b+B8qF2YtOoLaPrWke2uV0TPZGRVLBGAkCw4YECQQDFhZNqWWTFgpzn
-/qrVYvw6dtn92CmUBT+8pxgaEUEBF41jAOyR4y97pvM85zeJ1Kcj7VhW0cNyBzEN
-ItCNme1dAkEA3LBoaCjJnEXwhAJ8OJ0S52RT7T+3LI+rdPKNomZW0vZZ+F/SvY7A
-+vOIGQaUenvK1PRhbefJraBvVN+d009a9QJBAJWwLxGPgYD1BPgD1W81PrUH0RhA
-svHMMItFjkxi+wJa2PlIf//nTdrFoNxs1XgMwkXF3wacnSNTM+cilS5akrkCQQCa
-ol02BsZl4rfJt/gUrzMMwcbw6YFPDwhDtKU7ktvpjEa0e2gt/HYKIVROvMaTIGSa
-XPZbzVsKdu0rmlh7NRJ1AkEAttA2r5H88nqH/9akdE9Gi7oO5Yvd8CM2Nqp5Am9g
-CoZf0lNZQS/X2avLEiwtNtEvUbLGpBDgbvnNotoYspjqpg==
+MIICXQIBAAKBgQCfQfirYVXgzT90v6SqgeID7q/WK1XaVTNGVFolDUOcrXl/egRG
+4iag5tiTbrMYCQ8CSTYn7q0U4AmBXihlbWDqf6MMk6OEoDxdWZTiG1MmQ1wZikFE
+s7sYSog/poYleCeYW8kVzHNWnt9IuQWekIg6ZHkwp4NE/aW8HxvEwYRqCQIDAQAB
+AoGAE6rkiFmxbt06GHNwZQQ8QssP2Q2qARgjiGxzY38DWg6MYiNR8uUL6zQHDBIQ
+OQgpW9lpwD24D0tpsRnNOFVtMeafcxmykX+qHGtNeKJuTtqSm2eTI6gNbC8iosGT
+XJEPM8tc/dfZ2sDobLfi0alWFOzWo8vKaLnnAdMHoZ8mDo8CQQDCMx08JVlTW1zl
++4UTEnyyYmIezw5ORfMqPtN1LpQ4ptYnHNMVJPWcpRwBYZfHlPOPtuVwo6gzv82G
+QpgQsd4PAkEA0fA8e8R6JbeUR1HxsqWeCnPz3Ahq5Ya5WA6HyJQml9aDVqKDDp2L
+3AcqsvFEKJ/T34r31so2yW6hj2yFBnzOZwJBAIqanrgJ1CpJYBGJJd6J6FQNIgjp
+MUWuaTJyqsvNFd8lPF2oFgPWYDKQKV/W/tRkvD2LhVCSjf95WsADkbMAsAMCQAHo
+wWQOwV2eccbERAJv5yQJMeqKWQ6FTyIx36I/VqqC1Obwy2hSnnb9ybGe6BPGgFLE
+HMTjSeRDEU0Qm5UXhXkCQQCPlZJqlgksBN/TULHC4RgsXIx+oFylBrkiFamYsuEt
+Kn52h41pX7FI5TXcqIDPw+uqAu50JnwDR0dLYY6fvIce
 -----END RSA PRIVATE KEY-----
-</pre>
+```
 
 
 
-
-
-On your VM, go into the ~/.ssh folder. Now generate your SSH keys:
-
-<pre>
-ssh-keygen -t rsa -C "your email address"
-</pre>
-
-The public key should look like this:
-<pre>
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDLrriuNYTyWuC1IW7H6yea3hMV+rm029m2f6IddtlImHrOXjNwYyt4Elkkc7AzOy899C3gpx0kJK45k/CLbPnrHvkLvtQ0AbzWEQpOKxI+tW06PcqJNmTB8ITRLqIFQ++ZanjHWMw2Odew/514y1dQ8dccCOuzeGhL2Lq9dtfhSxx+1cBLcyoSh/lQcs1HpXtpwU8JMxWJl409RQOVn3gOusp/P/0R8mz/RWkmsFsyDRLgQK+xtQxbpbodpnz5lIOPWn5LnT0si7eHmL3WikTyg+QLZ3D3m44NCeNb+bOJbfaQ2ZB+lv8C3OxylxSp2sxzPZMbrZWqGSLPjgDiFIBL w.buchanan@napier.ac.uk
-</pre>
-
-View the private key. Outline its format?
-
-
-
-On your Ubuntu instance setup your new keys for ssh:
-
-<pre>
-ssh-add ~/.ssh/id_git
-</pre>
-
-Now create a Github account and upload your public key to Github (select Settings-> New SSH key or Add SSH key).  Create a new repository on your GitHub site, and add a new file to it. Next go to your Ubuntu instance and see if you can clone of a new directory:
-<pre>
-git clone ssh://git@github.com/**user/repository name**.git
-</pre>
-
-If this doesn’t work, try the https connection that is defined on GitHub.
