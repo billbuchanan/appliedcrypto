@@ -23,8 +23,8 @@ The key concepts are: Basics, RSA, Elliptic Curve and ElGamal.
 
 ## Lab
 
-* Week 4 Lab (PDF): [here](https://github.com/billbuchanan/appliedcrypto/blob/master/unit04_public_key/lab/new_lab04.pdf)
-* Week 4 Lab (Demo): [here](https://youtu.be/6T9bFA2nl3c)
+* Unit 4 Lab (PDF): [here](https://github.com/billbuchanan/appliedcrypto/blob/master/unit04_public_key/lab/new_lab04.pdf)
+* Unit 4 Lab (Demo): [here](https://youtu.be/6T9bFA2nl3c)
 
 ## Public key challenge
 
