@@ -101,7 +101,7 @@ ECC Keygen: [here](https://asecuritysite.com/encryption/ecc_keygen).
 
 * Introduction to RSA: [here](https://www.youtube.com/watch?v=pHES8eNor6k)
 * Introduction to Elliptic Curve: [here](https://youtu.be/_CwIWk6XDmg)
-* Picking the Generator Value (G): [here](https://www.youtube.com/watch?v=-TjSuch3VGU)
+* Picking the Generator Value (g): [here](https://www.youtube.com/watch?v=-TjSuch3VGU)
 
 ## Answers
 Don't peek [here](https://repl.it/@billbuchanan/rsaq1).
