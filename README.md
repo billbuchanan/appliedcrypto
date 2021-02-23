@@ -92,31 +92,31 @@ The VM for the module can be downloaded [here](https://1drv.ms/u/s!AtLuQYeqHsJlj
 </tr>
 <tr>
     <td bgcolor="#990000" class="table1"><strong>11</strong></td>
-    <td bgcolor="#990000" class="table1"><strong>23 Apr 2021 </strong></td>
+    <td bgcolor="#990000" class="table1"><strong>2 Apr 2021 </strong></td>
     <td>Blockchain <a href="https://asecuritysite.com/esecurity/unit08">Unit</a></td>
     <td>Lab [<a href="https://asecuritysite.com/public/new_lab08_linux.pdf" target="_blank">Link</a>]</td>
 </tr>
                                 <tr>
     <td bgcolor="#990000" class="table1"><strong>12</strong></td>
-    <td bgcolor="#990000" class="table1"><strong>30 Apr 2021 </strong></td>
+    <td bgcolor="#990000" class="table1"><strong>23 Apr 2021 </strong></td>
     <td>Future Cryptography <a href="https://asecuritysite.com/esecurity/unit09">Unit</a></td>
     <td>Lab [<a href="https://asecuritysite.com/public/new_lab09.pdf" target="_blank">Link</a>]</td>
 </tr>
                                 <tr>
                                     <td bgcolor="#990000" class="table1"><strong>13</strong></td>
-                                    <td bgcolor="#990000" class="table1"><strong>7 May 2021 </strong></td>
+                                    <td bgcolor="#990000" class="table1"><strong>30 April 2021 </strong></td>
                                     <td>Tokens, Authorization and Docker <a href="https://asecuritysite.com/esecurity/unit10">Unit</a></td>
                                     <td>Lab [<a href="https://asecuritysite.com/public/unit10_tokens.pdf" target="_blank">Link</a>]</td>
                                 </tr>
                                 <tr>
                                     <td bgcolor="#990000" class="table1"><strong>14</strong></td>
-                                    <td bgcolor="#990000" class="table1"><strong>14 May 2021 </strong></td>
+                                    <td bgcolor="#990000" class="table1"><strong>7 May 2021 </strong></td>
                                     <td>Trusted Hosts <a href="https://asecuritysite.com//esecurity/unit11">Unit</a></td>
                                     <td></td>
                                 </tr>
    <tr>
                                     <td bgcolor="#990000" class="table1"><strong>15</strong></td>
-                                    <td bgcolor="#990000" class="table1"><strong>21 May 2021 </strong></td>
+                                    <td bgcolor="#990000" class="table1"><strong>14 May 2021 </strong></td>
                                     <td>Coursework Hand-in [<a href="https://asecuritysite.com//esecurity/cw" target="_blank">Draft</a>]</td>
                                     <td></td>
                                 </tr>
