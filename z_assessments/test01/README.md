@@ -5,7 +5,7 @@ There will be four main questions in the exam: Symmetric Key (Unit 2), Hashing (
 
 A PDF version of the questions is [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/2020_fake_exam_questions.pdf) and a fake example paper is [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/fake_exam_paper.md).
 
-Test date: X Mar 2021 (open book test, taken over Moodle). 
+Test date: 19 Mar 2021 (open book test, taken over Moodle). 
 
 ## Test time: 
 
