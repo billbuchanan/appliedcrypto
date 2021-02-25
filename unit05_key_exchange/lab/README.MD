@@ -396,29 +396,29 @@ def pad(s):
 
 rnd = random.randint(1,2**128)
 
-keyA= hashlib.md5(str(rnd)).digest()
+keyA= hashlib.md5(str(rnd).encode()).digest()
 
 rnd = random.randint(1,2**128)
 
-keyB= hashlib.md5(str(rnd)).digest()
+keyB= hashlib.md5(str(rnd).encode()).digest()
  
-print 'Long-term Key Alice=',binascii.hexlify(keyA)
-print 'Long-term Key Bob=',binascii.hexlify(keyB)
+print ('Long-term Key Alice=',binascii.hexlify(keyA))
+print ('Long-term Key Bob=',binascii.hexlify(keyB))
 
 rnd = random.randint(1,2**128)
-keySession= hashlib.md5(str(rnd)).hexdigest()
+keySession= str(hashlib.md5(str(rnd).encode()).hexdigest())
 
-ya = encrypt(keySession,keyA,AES.MODE_ECB)
-yb = encrypt(keySession,keyB,AES.MODE_ECB)
+ya = encrypt(keySession.encode(),keyA,AES.MODE_ECB)
+yb = encrypt(keySession.encode(),keyB,AES.MODE_ECB)
 
-print "Encrypted key sent to Alice:",binascii.hexlify(ya)
-print "Encrypted key sent to Bob:",binascii.hexlify(yb)
+print ("Encrypted key sent to Alice:",binascii.hexlify(ya))
+print ("Encrypted key sent to Bob:",binascii.hexlify(yb))
 
 decipherA = decrypt(ya,keyA,AES.MODE_ECB)
 decipherB = decrypt(yb,keyB,AES.MODE_ECB)
 
-print "Session key:",decipherA
-print "Session key:",decipherB
+print ("Session key:",decipherA)
+print ("Session key:",decipherB)
 ```
  
 Web link (Simple KDC): https://asecuritysite.com/encryption/kdc01
