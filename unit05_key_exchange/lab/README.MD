@@ -178,26 +178,23 @@ What happens to this sequence if we use g=3?
 We can determine the values of g which will work for a given prime number with the following:
 ```python
 import sys
-import random
 
 p=11
 
 def getG(p):
 
   for x in range (1,p):
-	rand = x
-	exp=1
-	next = rand % p
+	  rand = x
+	  exp=1
+	  next = rand % p
 
-	while (next <> 1 ):
-		next = (next*rand) % p
-		exp = exp+1
-		
+	  while (next != 1 ):
+		  next = (next*rand) % p
+		  exp = exp+1
+	  if (exp==p-1):
+	    print (rand)
 
-	if (exp==p-1):
-		print rand
-
-print getG(p)
+print (getG(p))
 ```
 
 Run the program and determine the possible g values for these prime numbers:
@@ -218,7 +215,6 @@ On the Internet, find a large prime number, and determine the values of g that a
 We can write a Python program to implement this key exchange. Enter and run the following program:
 ```python
 import random
-import base64
 import hashlib
 import sys
 
@@ -232,25 +228,25 @@ b=random.randint(10,20)
 A = (g**a) % p
 B = (g**b) % p
 
-print 'g: ',g,' (a shared value), n: ',p, ' (a prime number)'
+print ('g: ',g,' (a shared value), n: ',p, ' (a prime number)')
 
-print '\nAlice calculates:'
-print 'a (Alice random): ',a
-print 'Alice value (A): ',A,' (g^a) mod p'
+print ('\nAlice calculates:')
+print ('a (Alice random): ',a)
+print ('Alice value (A): ',A,' (g^a) mod p')
 
-print '\nBob calculates:'
-print 'b (Bob random): ',b
-print 'Bob value (B): ',B,' (g^b) mod p'
+print ('\nBob calculates:')
+print ('b (Bob random): ',b)
+print ('Bob value (B): ',B,' (g^b) mod p')
 
-print '\nAlice calculates:'
+print ('\nAlice calculates:')
 keyA=(B**a) % p
-print 'Key: ',keyA,' (B^a) mod p'
-print 'Key: ',hashlib.sha256(str(keyA)).hexdigest()
+print ('Key: ',keyA,' (B^a) mod p')
+print ('Key: ',hashlib.sha256(str(keyA).encode()).hexdigest())
 
-print '\nBob calculates:'
+print ('\nBob calculates:')
 keyB=(A**b) % p
-print 'Key: ',keyB,' (A^b) mod p'
-print 'Key: ',hashlib.sha256(str(keyB)).hexdigest()
+print ('Key: ',keyB,' (A^b) mod p')
+print ('Key: ',hashlib.sha256(str(keyB).encode()).hexdigest())
 ```
 
 Pick three different values for g and p, and make sure that the Diffie Hellman key exchange works.
