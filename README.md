@@ -82,7 +82,7 @@ The VM for the module can be downloaded [here](https://1drv.ms/u/s!AtLuQYeqHsJlj
   <tr>
     <td bgcolor="#990000" class="table1"><strong>9</strong></td>
     <td bgcolor="#990000" class="table1"><strong>19 Mar 2021</strong></td>
-    <td>Test (Units 1-5) [<a href="https://github.com/billbuchanan/appliedcrypto/tree/master/z_assessments/test01" target="_blank">Study guide</a>]</td>
+    <td>Test (Units 1-5) 40% of overall mark [<a href="https://github.com/billbuchanan/appliedcrypto/tree/master/z_assessments/test01" target="_blank">Study guide</a>]</td>
 </tr>
                         <tr>
     <td bgcolor="#990000" class="table1"><strong>10</strong></td>
@@ -117,7 +117,7 @@ The VM for the module can be downloaded [here](https://1drv.ms/u/s!AtLuQYeqHsJlj
    <tr>
                                     <td bgcolor="#990000" class="table1"><strong>15</strong></td>
                                     <td bgcolor="#990000" class="table1"><strong>14 May 2021 </strong></td>
-                                    <td>Coursework Hand-in [<a href="https://asecuritysite.com//esecurity/cw" target="_blank">Draft</a>]</td>
+                                    <td>Coursework Hand-in - 60% of overall mark [<a href="https://asecuritysite.com//esecurity/cw" target="_blank">Draft</a>]</td>
                                     <td></td>
                                 </tr>
 
