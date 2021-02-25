@@ -138,19 +138,20 @@ ElGamal and Diffie Hellman use discrete logarithms. This involves a generator va
 
 g=2, p=11
 
-x	g<sup>x</sup> (mod p)
-1	2
-2	4
-3	
-4	
-5	
-6	
-7	
-8	
-9	
-10	
-11	
-12	
+x | g<sup>x</sup> (mod p)
+------------ | -------------
+1|	2
+2|	4
+3|	
+4|	
+5|	
+6|	
+7|	
+8|	
+9|	
+10|	
+11|	
+12|	
 
 Note: In Python you can implement this as:
 
@@ -158,7 +159,7 @@ Note: In Python you can implement this as:
 g=2
 p=11
 x=3
-print g**x % p
+print (g**x % p)
 ```
 
 
