@@ -533,10 +533,11 @@ A simple RSA program to encrypt and decrypt with RSA is given next. Prove its op
 ```python
 import rsa
 (bob_pub, bob_priv) = rsa.newkeys(512)
-ciphertext = rsa.encrypt('Here is my message', bob_pub)
+ciphertext = rsa.encrypt('Here is my message'.encode(), bob_pub)
 message = rsa.decrypt(ciphertext, bob_priv)
 print(message.decode('utf8'))
 ```
+A sample [here](https://repl.it/@billbuchanan/rsanew01#main.py)
 
 ## F	PGP
 ### F.1	
