@@ -325,24 +325,165 @@ Web link (ECDH):  https://asecuritysite.com/encryption/curve
 
 and confirm that Bob and Alice will always get the same shared key.
 ```python
-from os import urandom
-from eccsnacks.curve25519 import scalarmult, scalarmult_base
+import os
 import binascii
+from x25519 import base_point_mult,multscalar,bytes_to_int,int_to_bytes
 
-a = urandom(32)
-a_pub = scalarmult_base(a)
 
-b = urandom(32)
-b_pub = scalarmult_base(b)
+a = os.urandom(32)
+b = os.urandom(32)
+# a = int_to_bytes(10,32) # just for testing a=10 (32 bytes - 256 bits)
+# b = int_to_bytes(12,32) # just for testing b=12 (32 bytes - 256 bits)
 
-k_ab = scalarmult(a, b_pub)
-k_ba = scalarmult(b, a_pub)
+print (f"\n\nBob private (b):\t{bytes_to_int(b)}")
+print (f"Alice private (a): \t{bytes_to_int(a)}")
 
-print "Bob public: ",binascii.hexlify(b_pub)
-print "Alice public: ",binascii.hexlify(a_pub)
-print "Bob shared: ",binascii.hexlify(k_ba)
-print "Alice shared: ",binascii.hexlify(k_ab)
+
+
+# Traditional ECDH: 
+a_pub = base_point_mult(a)
+b_pub = base_point_mult(b)
+
+print ("\n\nBob public (bG):\t",binascii.hexlify(b_pub.encode()))
+
+print ("Alice public (aG):\t",binascii.hexlify(a_pub.encode()))
+
+k_a = multscalar(a, b_pub) # a (bG)
+k_b = multscalar(b, a_pub) # b (aG)
+
+
+print ("\n\nBob shared (b)aG:\t",binascii.hexlify(k_b.encode()))
+print ("Alice shared (a)bG:\t",binascii.hexlify(k_a.encode()))
 ```
+The code to implement Curve 25519 for key exchange (X25519) is:
+
+```python
+P = 2 ** 255 - 19
+A24 = 121665
+def bytes_to_int(bytes):
+
+    result = 0
+    
+    for b in bytes:
+        result = result * 256 + int(b)
+    
+    return result
+
+
+def int_to_bytes(value, length):
+    result = []
+    for i in range(0, length):
+        result.append(value >> (i * 8) & 0xff)
+    
+    return result
+
+def cswap(swap, x_2, x_3):
+    dummy = swap * ((x_2 - x_3) % P)
+    x_2 = x_2 - dummy
+    x_2 %= P
+    x_3 = x_3 + dummy
+    x_3 %= P
+    return (x_2, x_3)
+
+# Based on https://tools.ietf.org/html/rfc7748
+def X25519(k, u):
+    x_1 = u
+    x_2 = 1
+    z_2 = 0
+    x_3 = u
+    z_3 = 1
+    swap = 0
+
+    for t in reversed(range(255)):
+        k_t = (k >> t) & 1
+        swap ^= k_t
+        x_2, x_3 = cswap(swap, x_2, x_3)
+        z_2, z_3 = cswap(swap, z_2, z_3)
+        swap = k_t
+
+        A = x_2 + z_2
+        A %= P
+
+        AA = A * A
+        AA %= P
+
+        B = x_2 - z_2
+        B %= P
+
+        BB = B * B
+        BB %= P
+
+        E = AA - BB
+        E %= P
+
+        C = x_3 + z_3
+        C %= P
+
+        D = x_3 - z_3
+        D %= P
+
+        DA = D * A
+        DA %= P
+
+        CB = C * B
+        CB %= P
+
+        x_3 = ((DA + CB) % P)**2
+        x_3 %= P
+
+        z_3 = x_1 * (((DA - CB) % P)**2) % P
+        z_3 %= P
+
+        x_2 = AA * BB
+        x_2 %= P
+
+        z_2 = E * ((AA + (A24 * E) % P) % P)
+        z_2 %= P
+
+    x_2, x_3 = cswap(swap, x_2, x_3)
+    z_2, z_3 = cswap(swap, z_2, z_3)
+
+    return (x_2 * pow(z_2, P - 2, P)) % P
+
+def decodeScalar25519(k):
+  k_list = [(b) for b in k]
+  k_list[0] &= 248
+  k_list[31] &= 127
+  k_list[31] |= 64
+  return decodeLittleEndian(k_list)
+
+def decodeLittleEndian(b):
+    return sum([b[i] << 8*i for i in range( 32 )])
+
+def unpack2(s):
+    if len(s) != 32:
+        raise ValueError('Invalid Curve25519 scalar (len=%d)' % len(s))
+    t = sum((ord(s[i]) ) << (8 * i) for i in range(31))
+    t += (((ord(s[31]) ) & 0x7f) << 248)
+    return t    
+
+def pack(n):
+    return ''.join([chr((n >> (8 * i)) & 255) for i in range(32)])
+
+def clamp(n):
+    n &= ~7
+    n &= ~(128 << 8 * 31)
+    n |= 64 << 8 * 31
+    return n
+
+# Return nP
+def multscalar(n, p):
+    n = clamp(decodeScalar25519(n))
+    p = unpack2(p)
+    return pack(X25519(n, p))
+
+# Start at x=9. Find point n times x-point
+def base_point_mult(n):
+    n = clamp(decodeScalar25519(n))
+    return pack(X25519(n, 9))
+```
+A sample of this is [here](https://repl.it/@billbuchanan/simpleecdh).
+
 
 Do Bob and Alice end up with the same key?
 
@@ -361,7 +502,8 @@ Estimate the time it would take her to discover the key if she can try one billi
 
 How would you modify that program so that it was more secure?
 
-
+### D.2
+We used Curve 25519 in D.1. Can you modify the code so that it uses secp256k1? The code for secp256k1 is defined in the secp256k1.py file [here](https://asecuritysite.com/encryption/python_secp256k1ecdh2). 
 
 ## E	Simple Key Distribution Centre (KDC)
 Rather than using key exchange, we can setup a KDC, and where Bob and Alice can have long-term keys. These can be used to generate a session key for them to use.  Enter the following Python program, and prove its operation:
