@@ -62,15 +62,16 @@ Do they match: [Yes] [No]
 
 ### B.1	
 Generate 768-bit Diffie-Hellman parameters:
-<pre>
+```
 openssl dhparam -out dhparams.pem 768 -text
-</pre>
+```
 
 View your key with:
 
-<pre>
+```
 cat dhparams.pem	
-</pre>
+```
+
 What is the value of g:
 
 How many bits does the prime number have?
