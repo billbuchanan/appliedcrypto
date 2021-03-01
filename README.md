@@ -4,29 +4,12 @@
 
 ## Outline details
 
-Some of the associated material will be hosted on this site [here](https://asecuritysite.com/csn11131)
-
-
-
-This repository contains the code and labs for the module. Open up your Ubuntu instance, and downloaded from:
-<pre>
+Some of the associated material will be hosted on this site [here](https://asecuritysite.com/csn11131). This repository contains the code and labs for the module. Open up your Ubuntu instance, and downloaded from:
+```
 git clone https://github.com/billbuchanan/appliedcrypto.git
-</pre>
+```
 
-If you need to update the code, go into the appliedcrypto folder, and run:
-
-<pre>
-git pull
-</pre>
-
-Make your own VM:
-* sudo apt install python3-pip
-* pip3 install pycrytodome
-* pip3 install padding
-* pip3 install libnum
-* pip3 install passlib
-
-The VM for the module can be downloaded [here](https://1drv.ms/u/s!AtLuQYeqHsJljfBbjVakRcSGIsQ3GA?e=DgvMbM)
+**The assessments are [here](https://github.com/billbuchanan/appliedcrypto/tree/main/z_assessments/coursework)**. Also, the VM for the module can be downloaded [here](https://1drv.ms/u/s!AtLuQYeqHsJljfBbjVakRcSGIsQ3GA?e=DgvMbM).
 
 ## Draft Timetable
 <p>The following is the draft timetable:</p>
