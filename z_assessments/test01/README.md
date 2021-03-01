@@ -1,15 +1,11 @@
 ![esecurity](https://raw.githubusercontent.com/billbuchanan/esecurity/master/z_associated/esecurity_graphics.jpg)
 
 # Test 1
-There will be four main questions in the exam: Symmetric Key (Unit 2), Hashing (Unit 3), Public Key (Unit 4), and Key Exchange (Unit 5). An outline is [here](https://www.youtube.com/watch?v=Oj3T2UO1WDw&feature=emb_title), and some learning outcomes are [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/learning_outcomes.md).
+There will be four main questions in the exam: Symmetric Key (Unit 2), Hashing (Unit 3), Public Key (Unit 4), and Key Exchange (Unit 5). An outline is [here](https://www.youtube.com/watch?v=Oj3T2UO1WDw&feature=emb_title), and some learning outcomes are [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/learning_outcomes.md). A PDF version of the questions is [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/2020_fake_exam_questions.pdf) and a fake example paper is [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/fake_exam_paper.md).
 
-A PDF version of the questions is [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/2020_fake_exam_questions.pdf) and a fake example paper is [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/fake_exam_paper.md).
+**Test date:** 19 Mar 2021 (open book test, taken over Moodle). 
 
-Test date: 19 Mar 2021 (open book test, taken over Moodle). 
-
-## Test time: 
-
-* To be confirmed for 2021.
+** Test time: ** To be confirmed, but likely to be late afternoon.
 
 Some test details are:
 
