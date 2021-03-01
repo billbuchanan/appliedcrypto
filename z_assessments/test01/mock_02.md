@@ -1,7 +1,7 @@
 ![esecurity](https://raw.githubusercontent.com/billbuchanan/esecurity/master/z_associated/esecurity_graphics.jpg)
 
 # Assessments
-The test will have short answer/essay questions. Here is a tutorial for the test and to test your knowledge an MCQ test is [here]. Make sure you can complete the following test examples. Any questions, ask Bill?
+Here  are few short test question. 
 
 ## Q1. Diffie-Hellman
 
