@@ -23,6 +23,6 @@ Students should:
 1. Understands how the private key is used to check the identity of the sender, and how public key is used to preserve the privacy of the message.
 1. Explain how the e and d values are determined within the RSA method. Where would I find this info? There are some examples [here](https://asecuritysite.com/log/rsa_examples.pdf).
 
-Remember to review sample paper [here](https://github.com/billbuchanan/esecurity/blob/master/z_assessments/test01/fake_exam_paper.md) for some sample questions.
+Remember to review sample paper [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/fake_exam_paper.md) for some sample questions.
 
 A table you might use is provided [here](https://asecuritysite.com/public/table.pdf).
