@@ -3,7 +3,7 @@
 # Applied Cryptography and Trust Module 
 
 ## Outline details
-The assessments are [here](https://github.com/billbuchanan/appliedcrypto/tree/main/z_assessments/coursework). This repository contains the code and labs for the module. Open up your Ubuntu instance, and downloaded from:
+The assessments are [here](https://github.com/billbuchanan/appliedcrypto/tree/main/z_assessments). This repository contains the code and labs for the module. Open up your Ubuntu instance, and downloaded from:
 ```
 git clone https://github.com/billbuchanan/appliedcrypto.git
 ```
