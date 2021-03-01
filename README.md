@@ -117,7 +117,7 @@ The VM for the module can be downloaded [here](https://1drv.ms/u/s!AtLuQYeqHsJlj
    <tr>
                                     <td bgcolor="#990000" class="table1"><strong>15</strong></td>
                                     <td bgcolor="#990000" class="table1"><strong>14 May 2021 </strong></td>
-                                    <td>Coursework Hand-in - 60% of overall mark [<a href="https://asecuritysite.com//appliedcrypto/cw" target="_blank">Draft</a>]</td>
+                                    <td>Coursework Hand-in - 60% of overall mark [<a href="https://github.com/billbuchanan/appliedcrypto/tree/main/z_assessments/coursework" target="_blank">Draft</a>]</td>
                                     <td></td>
                                 </tr>
                                       
