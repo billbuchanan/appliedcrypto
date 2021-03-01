@@ -1,15 +1,72 @@
 ![esecurity](https://raw.githubusercontent.com/billbuchanan/esecurity/master/z_associated/esecurity_graphics.jpg)
 
 # Assessments
-The module has two core learning outcomes:
+The test will have short answer/essay questions. Here is a tutorial for the test and to test your knowledge an MCQ test is [here]. Make sure you can complete the following test examples. Any questions, ask Bill?
 
-* LO1: Explain and demonstrate a critical understanding of specific cryptographic algorithms and cryptosystems.
-* LO2: Implement, critically analyse and evaluate fundamental areas related to state-of-the-art cryptography related area, including current literature, practical implementation and evaluation.
+Q1. Diffie-Hellman
 
-The first test accounts for 40% of the overall grant, and the coursework accounts for 60%. The assessments are:
+1. If G=857, N=1831, x=5, and y=20. What is the shared key?
 
-* Test 1 [here](https://github.com/billbuchanan/appliedcrypto/tree/master/z_assessments/test01).
-* C/W [here](https://github.com/billbuchanan/appliedcrypto/tree/master/z_assessments/coursework).
+Q2. Key Entropy
 
-<!-- The lecture from Week 6 on the coursework is [here](https://www.youtube.com/watch?v=ltqJfNxF3ew&feature=youtu.be). -->
+2. If we have a 64-bit key, but only use 1000 phrases. What is the key entropy?
+
+Q3. Key Cracking
+
+3. If it takes 1ns to test an encryption key. How long will it take to crack a 32-bit key?
+
+Q4. Public key
+
+4. Outline how Bob uses one of Alice's key to send her a secret message.
+
+Q5. Public key generation
+
+5. With RSA, Bob selects two prime numbers of: p=5, q=11. What are the encryption and decryption keys? For a message of 4, prove that the decrypted value is the same of the message.
+
+Q6. Encoding
+
+6. What is the Base-64 encoding for "help"?
+
+Q7. Salting
+
+7. On a Linux system, which tools can be used to crack the hashed password, and how are they used?
+
+Answers
+Q1
+
+A=(857^5) mod 1831 = 1135
+B=(857^20) mod 1831 = 1213
+Key = 1213^5 mod 1831 = 1626
+
+Q2
+
+Key entropy = log (phases) / log (2) 
+>Key entropy = log (1000) / log (2) = 9.97 bits
+
+Q.3.
+
+Max time to crack = 1e-9 x 2^32
+Max time to crack = 4.3 seconds
+
+Q.5.
+
+N=p x q = 5 x 11 = 55
+
+PHI = (p-1)(q-1) = 40
+Pick e for now factors of PHI (2, 4, 8 ... etc). So let's pick 3.
+(3 x d) mod 40 = 1
+d = 27
+
+encryption key [55,3]
+encryption key [55,27]
+
+Message = 4
+Encrypt: Cipher = 4^3 mod 55 = 9
+Decrypt: Decoded = 9^27 mod 55 = 4
+
+Q6.
+
+help -> 01101000 01100101 01101100 01110000 
+help -> 011101 000110 010101 110011 011101 00 
+help ->  a     G        V      s      c    A  ==
 
