@@ -87,32 +87,32 @@ The VM for the module can be downloaded [here](https://1drv.ms/u/s!AtLuQYeqHsJlj
                         <tr>
     <td bgcolor="#990000" class="table1"><strong>10</strong></td>
     <td bgcolor="#990000" class="table1"><strong>26 Mar 2021</strong></td>
-    <td>Tunnelling <a href="hhttps://github.com/billbuchanan/appliedcrypto/tree/master/unit07_tunnelling">Unit</a></td>
+    <td>Tunnelling <a href="https://github.com/billbuchanan/appliedcrypto/tree/master/unit07_tunnelling">Unit</a></td>
     <td>Lab [<a href="https://github.com/billbuchanan/appliedcrypto/tree/master/unit07_tunnelling/lab" target="_blank">Link</a>]</td>
 </tr>
 <tr>
     <td bgcolor="#990000" class="table1"><strong>11</strong></td>
     <td bgcolor="#990000" class="table1"><strong>2 Apr 2021 </strong></td>
-    <td>Blockchain <a href="https://asecuritysite.com/appliedcrypto/unit08">Unit</a></td>
-    <td>Lab [<a href="https://asecuritysite.com/public/new_lab08_linux.pdf" target="_blank">Link</a>]</td>
+    <td>Blockchain <a href="https://github.com/billbuchanan/appliedcrypto/tree/master/unit08_blockchain">Unit</a></td>
+    <td>Lab</td>
 </tr>
                                 <tr>
     <td bgcolor="#990000" class="table1"><strong>12</strong></td>
     <td bgcolor="#990000" class="table1"><strong>23 Apr 2021 </strong></td>
-    <td>Future Cryptography <a href="https://asecuritysite.com/appliedcrypto/unit09">Unit</a></td>
-    <td>Lab [<a href="https://asecuritysite.com/public/new_lab09.pdf" target="_blank">Link</a>]</td>
+    <td>Future Cryptography <a href="https://github.com/billbuchanan/appliedcrypto/tree/master/unit08_blockchain">Unit</a></td>
+    <td>Lab</td>
 </tr>
                                 <tr>
                                     <td bgcolor="#990000" class="table1"><strong>13</strong></td>
                                     <td bgcolor="#990000" class="table1"><strong>30 April 2021 </strong></td>
-                                    <td>Tokens, Authorization and Docker <a href="https://asecuritysite.com/appliedcrypto/unit10">Unit</a></td>
-                                    <td>Lab [<a href="https://asecuritysite.com/public/unit10_tokens.pdf" target="_blank">Link</a>]</td>
+                                    <td>Tokens, Authorization and Docker <a href="https://github.com/billbuchanan/appliedcrypto/tree/master/unit11_host">Unit</a></td>
+                                    <td>Lab</td>
                                 </tr>
                                 <tr>
                                     <td bgcolor="#990000" class="table1"><strong>14</strong></td>
                                     <td bgcolor="#990000" class="table1"><strong>7 May 2021 </strong></td>
-                                    <td>Trusted Hosts <a href="https://asecuritysite.com//appliedcrypto/unit11">Unit</a></td>
-                                    <td></td>
+                                    <td>Trusted Hosts <a href="https://github.com/billbuchanan/appliedcrypto/tree/master/unit10_services">Unit</a></td>
+                                    <td>Lab</td>
                                 </tr>
    <tr>
                                     <td bgcolor="#990000" class="table1"><strong>15</strong></td>
@@ -120,6 +120,8 @@ The VM for the module can be downloaded [here](https://1drv.ms/u/s!AtLuQYeqHsJlj
                                     <td>Coursework Hand-in - 60% of overall mark [<a href="https://asecuritysite.com//appliedcrypto/cw" target="_blank">Draft</a>]</td>
                                     <td></td>
                                 </tr>
+                                      
+                                      
 
 
 </table>
