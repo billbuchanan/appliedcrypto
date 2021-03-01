@@ -50,4 +50,4 @@ The following are sample questions for key exchange:
 
 ## Any questions?
 
-Slackspace: esecurity2020.slack.com
+We are on Teams. Ask Bill [here](https://teams.microsoft.com/l/team/19%3ae4651d3846ed4a02ab6284eba8a37836%40thread.tacv2/conversations?groupId=d5c028ee-0450-4370-a9c5-48014fce2ca6&tenantId=99e0dc58-9c4b-4820-8617-04c386c254c6).
