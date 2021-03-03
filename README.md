@@ -49,17 +49,18 @@ Some of the associated material will be hosted on this site [here](https://asecu
     <td>Key Exchange <a href="https://github.com/billbuchanan/appliedcrypto/tree/master/unit05_key_exchange">Unit</a></td>
     <td>Lab [<a href="https://github.com/billbuchanan/appliedcrypto/tree/master/unit05_key_exchange/lab" target="_blank">Link</a>]</td>
 </tr>
-                <tr>
+
+<tr>
     <td bgcolor="#990000" class="table1"><strong>7</strong></td>
-    <td bgcolor="#990000" class="table1"><strong>5 Mar 2021</strong></td>
-    <td>Guest lecture</td>
-    <td>Mini-project/Coursework [<a href="https://github.com/billbuchanan/appliedcrypto/tree/master/unit05a_mini_project" target="_blank">Link</a>]</td>
-</tr>
-                    <tr>
-    <td bgcolor="#990000" class="table1"><strong>8</strong></td>
-    <td bgcolor="#990000" class="table1"><strong>12 Mar 2021 </strong></td>
+    <td bgcolor="#990000" class="table1"><strong>5 Mar 2021 </strong></td>
     <td>Trust and Digital Certificates <a href="https://github.com/billbuchanan/appliedcrypto/tree/master/unit06_trust_dig_cert">Unit</a></td>
     <td>Lab [<a href="https://github.com/billbuchanan/appliedcrypto/tree/master/unit06_trust_dig_cert/lab" target="_blank">Link</a>]</td>
+</tr>
+                <tr>
+    <td bgcolor="#990000" class="table1"><strong>8</strong></td>
+    <td bgcolor="#990000" class="table1"><strong>12 Mar 2021</strong></td>
+    <td>Revision lecture and Test 1</td>
+    <td>Mini-project/Coursework [<a href="https://github.com/billbuchanan/appliedcrypto/tree/master/unit05a_mini_project" target="_blank">Link</a>]</td>
 </tr>
   <tr>
     <td bgcolor="#990000" class="table1"><strong>9</strong></td>
