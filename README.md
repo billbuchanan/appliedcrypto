@@ -59,7 +59,7 @@ Some of the associated material will be hosted on this site [here](https://asecu
                 <tr>
     <td bgcolor="#990000" class="table1"><strong>8</strong></td>
     <td bgcolor="#990000" class="table1"><strong>12 Mar 2021</strong></td>
-    <td>Revision lecture and Test 1</td>
+    <td>Revision lecture and Test 1/Coursework Discussion</td>
     <td>Mini-project/Coursework [<a href="https://github.com/billbuchanan/appliedcrypto/tree/master/unit05a_mini_project" target="_blank">Link</a>]</td>
 </tr>
   <tr>
