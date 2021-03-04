@@ -451,7 +451,7 @@ Digital certificates are often protected with a simple password. With this we ca
 
 https://asecuritysite.com/cert_crack.zip
 
-Now for fred.pfx, crack the password with the following code:
+Now for bill01.pfx and fred.pfx, crack the password with the following code:
 
 ```python
 import OpenSSL 
@@ -459,6 +459,7 @@ from cryptography import x509
 from cryptography.hazmat.backends import default_backend
 
 str="fred.pfx"
+
 passwords=["ankle","battery","password","bill","apple","apples","orange"]
 
 for password in passwords:
@@ -466,7 +467,7 @@ for password in passwords:
 		pfx = open(str, 'rb').read()
 		
 		p12 = OpenSSL.crypto.load_pkcs12(pfx, password)
-		print "Found: ",password
+		print ("Found: ",password)
 
 
 		privkey=OpenSSL.crypto.dump_privatekey(OpenSSL.crypto.FILETYPE_PEM, p12.get_privatekey())
@@ -476,17 +477,17 @@ for password in passwords:
 		cert = x509.load_pem_x509_certificate(cert, default_backend())
 
 
-		print " Issuer: ",cert.issuer
-		print " Subect: ",cert.subject
-		print " Serial number: ",cert.serial_number
-		print " Hash: ",cert.signature_hash_algorithm.name
-		print privkey
-		print certificate
+		print (" Issuer: ",cert.issuer)
+		print (" Subect: ",cert.subject)
+		print (" Serial number: ",cert.serial_number)
+		print (" Hash: ",cert.signature_hash_algorithm.name)
+		print (privkey)
+
 
 
 	except:
 
-		print "Not working: ",password
+		print ("Not working: ",password)
 ```
 
 What is the password?
