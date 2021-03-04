@@ -125,4 +125,9 @@ Key algorithm: RSA
 Key size: 2048
 ```
 
+## F.1
+Ans: orange
+
+Code [here](https://repl.it/@billbuchanan/digcertcrack#main.py)
+
 
