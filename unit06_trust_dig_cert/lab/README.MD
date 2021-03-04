@@ -466,7 +466,7 @@ for password in passwords:
 	try:
 		pfx = open(str, 'rb').read()
 		
-		p12 = OpenSSL.crypto.load_pkcs12(pfx, password)
+		p12 = OpenSSL.crypto.load_pkcs12(pfx, password.encode())
 		print ("Found: ",password)
 
 
