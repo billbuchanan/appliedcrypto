@@ -110,5 +110,19 @@ Who is the issuer on the certificate?
 DigiCert Cloud Services CA-1
 </pre>
 
+## B.7
+Running code [here](https://repl.it/@billbuchanan/csr#pyproject.toml):
+
+```
+{b'C': b'UK', b'ST': b'None', b'L': b'Edinburgh', b'O': b'My Little Corp', b'OU': b'MLC', b'CN': b'MLC.none'}
+Common name: MLC.none
+Organisation: My Little Corp
+Organisational unit: MLC
+City/locality: Edinburgh
+State/province: None
+Country: UK
+Key algorithm: RSA
+Key size: 2048
+```
 
 
