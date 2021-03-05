@@ -210,17 +210,17 @@ key = req.get_pubkey()
 key_type = 'RSA' if key.type() == OpenSSL.crypto.TYPE_RSA else 'DSA'
 subject = req.get_subject()
 components = dict(subject.get_components())
-print "Key algorithm:", key_type
-print "Key size:", key.bits()
-print "Common name:", components['CN']
-print "Organisation:", components['O']
-print "Organisational unit", components['OU']
-print "City/locality:", components['L']
-print "State/province:", components['ST']
-print "Country:", components['C']
+print ("Key algorithm:", key_type)
+print ("Key size:", key.bits())
+print ("Common name:", components['CN'])
+print ("Organisation:", components['O'])
+print ("Organisational unit", components['OU'])
+print ("City/locality:", components['L'])
+print ("State/province:", components['ST'])
+print ("Country:", components['C'])
 ```
 
-Web link (CSR): https://asecuritysite.com/encryption/csr
+Web link (CSR): [here](https://asecuritysite.com/encryption/csr)
 
 ### D.8	
 Now check the signing on these certificate requests:
@@ -286,11 +286,6 @@ Q0uA0aVog3f5iJxCa3Hp5gxbJQ6zV6kJ0TEsuaaOhEko9sdpCoPOnRBm2i/XRD2D
 
 * What are the details on the requests?
 
-
-
-
-
-
 ## C	Elliptic Curve Key Creation
 Elliptic curve key pairs are increasing used within corporate Web sites. 
 
@@ -315,8 +310,7 @@ Now view the details with:
 openssl ecparam -in secp256k1.pem -text -param_enc explicit -noout
 ```
 
-What are the details of the key?
-
+* What are the details of the key?
 
 
 Now we can create our key pair:
