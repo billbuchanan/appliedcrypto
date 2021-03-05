@@ -12,40 +12,33 @@ From:
 
 Web link (Digital Certificate): http://asecuritysite.com/encryption/digitalcert
 
-Open up Certificate 1 and identify the following:	Serial number:
+Open up Certificate 1 and identify the following:	
 
-Effective date:
-
-Name:
-
-Issuer:
-
-What is CN used for:
-
-What is ON used for:
-
-What is O used for:
-
-What is L used for:
+* Serial number:
+* Effective date:
+* Name:
+* Issuer:
+* What is CN used for:
+* What is ON used for:
+* What is O used for:
+* What is L used for:
 
 
 
 ### A.2	
 Now open-up the ZIP file for the certificate, and view the CER file.
 
-What other information can you gain from the certificate:
-
-What is the size of the public key:
-
-Which hashing method has been used:
-
-Is the certificate trusted on your system: [Yes][No]
+* What other information can you gain from the certificate:
+* What is the size of the public key:
+* Which hashing method has been used:
+* Is the certificate trusted on your system: [Yes][No]
 
 ### A.3	
 Make a connection to the www.live.com Web site:
-<pre>
+
+```
 openssl s_client -connect www.live.com:443
-</pre>
+```
 
 Can you identity the certificate chain?
 
