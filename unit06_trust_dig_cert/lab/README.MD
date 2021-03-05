@@ -413,11 +413,9 @@ for password in passwords:
 		print ("Not working: ",password)
 ```
 
-What is the password?
-
-
-* The files bill01.pfx, bill02.pfx … bill18.pfx have a password which are fruits. Can you determine the fruits used:
-* The files country01.pfx, country02.pfx ... country06.pfx have a password which are countries. Can you determine the countries used:
+* What is the password?
+* The files bill01.pfx, bill02.pfx ... bill18.pfx have a password which are **fruits**. Can you determine the fruits used?
+* The files country01.pfx, country02.pfx ... country06.pfx have a password which are **countries** of the world. Can you determine the countries used?
 
 ## G	Setting up a certificate on a Web site
 ### G.1	
