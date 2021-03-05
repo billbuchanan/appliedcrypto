@@ -91,14 +91,11 @@ Which the certificates in A.2, for Example 2 to Example 6. Complete the followin
 
 |Cert|	Organisation (Issued to)|	Date range when valid|	Size of public key|	Issuer|	Root CA	Hash method|	Is it trusted?|
 | ----| --- | ---| ---| ---| ---| ---| 
-| 2 | ||||||	
-						
-3  | ||||||							
-4 | ||||||							
-5 | ||||||							
-6 | ||||||	
-
-						
+| 2 | ||||||							
+|3  | ||||||							
+|4 | ||||||							
+|5 | ||||||							
+|6 | ||||||							
 
 ### A.6	
 Now download the DER files from:
