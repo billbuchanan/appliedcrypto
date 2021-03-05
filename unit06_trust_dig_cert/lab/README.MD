@@ -356,7 +356,7 @@ We have a root certificate authority of My Global Corp, which is based in Washin
 
 ### E.1	We will now view some PFX certificate files, and which are protected with a password:
 
-Web link (Digital Certificates): [here(]http://asecuritysite.com/encryption/digitalcert2)
+Web link (Digital Certificates): [here](http://asecuritysite.com/encryption/digitalcert2)
 
 * For Certificate 1, can you open it in the Web browser with an incorrect password:
 * Now enter “apples” as a password, and record some of the key details of the certificate:
