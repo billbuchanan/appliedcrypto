@@ -2,15 +2,17 @@
 
 # Lab 6: Trust and Digital Certificates
 
-Objective: Digital certificates are used to define a trust infrastructure within PKI (Public Key Infrastructure). A certificate can hold a key pair, while a distributable certificate will only contain the public key. In this lab we will read-in digital certificates and analyse them.
+Objective: Digital certificates are used to define a trust infrastructure within PKI (Public Key Infrastructure). A certificate can hold a key pair, while a distributable certificate will only contain the public key. In this lab we will read-in digital certificates and analyse them. A lab demo is [here](https://youtu.be/-uNQFv0GTZc).
 
 
 ## A	Introduction
 
 ### A.1	
-From:
+From this web link (Digital Certificate): 
 
-Web link (Digital Certificate): http://asecuritysite.com/encryption/digitalcert
+```
+http://asecuritysite.com/encryption/digitalcert
+```
 
 Open up Certificate 1 and identify the following:	
 
