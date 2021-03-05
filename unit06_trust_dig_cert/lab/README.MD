@@ -50,7 +50,7 @@ Who is the issuer on the certificate?
 
 Google moved in July 2018 to mark sites as being insecure if they did not have a match between their digital certificate and the site. A scan, at the time, on health and social care sites from the following page showed problems in digital certificates:
 
-[link](https://bit.ly/2EkUvX0)
+[Health care sites going offline](https://bit.ly/2EkUvX0)
 
 * Outline three sites that still have problems with their digital certificate, and the reason for the problem (you perhaps should try Chrome to assess):
 * Pick two sites that you feel are not setup properly for their digital certificate, and then run a scan from SSLLabs (www.ssllabs.com). Identify the problems that they have with their digital certificate:
