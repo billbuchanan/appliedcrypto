@@ -56,9 +56,8 @@ Who is the issuer on the certificate?
 ### A.4	
 
 Google moved in July 2018 to mark sites as being insecure if they did not have a match between their digital certificate and the site. A scan, at the time, on health and social care sites from the following page showed problems in digital certificates:
-<pre>
-https://bit.ly/2EkUvX0
-</pre>
+
+[link](https://bit.ly/2EkUvX0)
 
 Outline three sites that still have problems with their digital certificate, and the reason for the problem (you perhaps should try Chrome to assess):
 
@@ -103,15 +102,15 @@ Now download the DER files from:
 Web link (Digital Certificate): http://asecuritysite.com/der.zip
 
 Now use openssl to read the certificates:
-<pre>
+
+```
 openssl x509 -inform der -in [certname] -noout -text
-</pre>
+```
+
 ## B	Creating certificates
 
 Now we will create our own self-signed certificates.
 
-
-No	Description	Result
 
 ### B.1	
 Create your own certificate from:
@@ -130,14 +129,16 @@ We have a root certificate authority of My Global Corp, which is based in Washin
 
 ### B.2	
 Create your RSA key pair with:
-<pre>
+
+```
 openssl genrsa -out ca.key 2048
-</pre>
+```
 
 Next create a self-signed root CA certificate ca.crt for My Global Corp:
-<pre>
+
+```
 openssl req -new -x509 -days 1826 -key ca.key -out ca.crt
-</pre>
+```
 
 
 	
@@ -166,19 +167,23 @@ Who has it been issued to:
 
 ### B.4	
 Next we will create a subordinate CA (My Little Corp), and which will be used for the signing of the certificate. First, generate the key:
-<pre>
+
+```
 openssl genrsa -out ia.key 2048
-</pre>
+```
 
 Next we will request a certificate for our newly created subordinate CA:
-<pre>
+
+```
 openssl req -new -key ia.key -out ia.csr
-</pre>
+```
 
 We can then create a certificate from the subordinate CA certificate and signed by the root CA.
-<pre>
+
+```
 openssl x509 -req -days 730 -in ia.csr -CA ca.crt -CAkey ca.key -set_serial 01 -out ia.crt
-</pre>
+```
+
 View the newly created certificate.
 
 When does it expire:
@@ -197,9 +202,10 @@ Check the serial number for the root certificate. What is its serial number:
 
 ### B.5	
 If we want to use this certificate to digitally sign files and verify the signatures, we need to convert it to a PKCS12 file:
-<pre>
+
+```
 openssl pkcs12 -export -out ia.p12 -inkey ia.key -in ia.crt -chain -CAfile ca.crt
-</pre>
+```
 
 Can you view ia.p12 in a text edit?
 
@@ -207,13 +213,16 @@ Can you view ia.p12 in a text edit?
 
 ### B.6	
 The crt format is in encoded in binary. If we want to export to a Base64 format, we can use DER:
-<pre>
+
+```
 openssl x509 -inform pem -outform pem -in ca.crt -out ca.cer
-</pre>
+```
+
 and for My Little Corp:
-<pre>
+```
 openssl x509 -inform pem -outform pem -in ia.crt -out ia.cer
-</pre>
+```
+
 View each of the output files in a text editor (ca.cer and then ia.cer). What can you observe from the format:
 
 
@@ -266,7 +275,7 @@ Web link (CSR): https://asecuritysite.com/encryption/csr
 
 ### D.8	
 Now check the signing on these certificate requests:
-<pre>
+```
 -----BEGIN NEW CERTIFICATE REQUEST-----
 MIICyTCCAbECAQAwajELMAkGA1UEBhMCVUsxDTALBgNVBAgTBE5vbmUxEjAQBgNV
 BAcTCUVkaW5idXJnaDEXMBUGA1UEChMOTXkgTGl0dGxlIENvcnAxDDAKBgNVBAsT
@@ -284,8 +293,10 @@ k1b4DqOvInWLOs+yuWT7YYtWdr2TNKPpcBqbzCYzrWL6UaUN7LYFpNn4BbqXRgVw
 iMAnUh9fvLMe7oreYfTaevXT/506Sj9WvQFXTcLtRhs+M30q22/wUK0ZZ8APjpwf
 rQMegvzXXEIO3xEGrBi5/wXJxsawRLcM3ZSGPu/Ws950oM5Ahn8K8HBdKubQ
 -----END NEW CERTIFICATE REQUEST-----
-</pre>
-<pre>
+```
+and:
+
+```
 -----BEGIN NEW CERTIFICATE REQUEST-----
 MIIDPzCCAqgCAQAwZDELMAkGA1UEBhMCQ04xCzAJBgNVBAgTAmJqMQswCQYDVQQH
 EwJiajERMA8GA1UEChMIbXhjei5uZXQxETAPBgNVBAsTCG14Y3oubmV0MRUwEwYD
@@ -306,8 +317,10 @@ AAAAAAAAAAAAAAAAAAAAADANBgkqhkiG9w0BAQUFAAOBgQBIKHVhHb9FZdVLV4VZ
 wUFYNlMqJh1m7ITVvzhjdnx7EzCKkBXSxEom4mwbvSNvzqOKAWsDE0gvHQ9aCSby
 NFBQQMoW94LqrG/kuIQtjwVdZA==
 -----END NEW CERTIFICATE REQUEST-----
-</pre>
-<pre>
+```
+and:
+
+```
 -----BEGIN CERTIFICATE REQUEST-----
 MIIByjCCATMCAQAwgYkxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlh
 MRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRMwEQYDVQQKEwpHb29nbGUgSW5jMR8w
@@ -320,7 +333,7 @@ cIWPhqaQhsJuzZbvAdGA80BLxdMCAwEAAaAAMA0GCSqGSIb3DQEBBQUAA4GBAIhl
 Q0uA0aVog3f5iJxCa3Hp5gxbJQ6zV6kJ0TEsuaaOhEko9sdpCoPOnRBm2i/XRD2D
 6iNh8f8z0ShGsFqjDgFHyF3o+lUyj+UC6H1QW7bn
 -----END CERTIFICATE REQUEST-----
-</pre>
+```
 
 What are the details on the requests?
 
@@ -333,9 +346,10 @@ What are the details on the requests?
 Elliptic curve key pairs are increasing used within corporate Web sites. 
 
 In Openssl we can view the curves with the ecparam option:
-<pre>
+
+```
 openssl ecparam -list_curves
-</pre>
+```
 
 Outline some of the curve names:
 
@@ -348,31 +362,37 @@ By performing an Internet search, which are the most popular curves (and where a
 
 
 We can create our elliptic parameter file with:
-<pre>
+```
 openssl ecparam -name secp256k1 -out secp256k1.pem
-</pre>
+```
+
 Now view the details with:
-<pre>
+
+```
 openssl ecparam -in secp256k1.pem -text -param_enc explicit -noout
-</pre>
+```
+
 What are the details of the key?
 
 
 
 Now we can create our key pair:
-<pre>
+
+```
 openssl ecparam -in secp256k1.pem -genkey -noout -out mykey.pem
-</pre>
+```
 
 Now we will encrypt your key pair (and add a password), and convert it into a format which is ready to be converted into a digital certificate:
-<pre>
+
+```
 openssl ec -aes-128-cbc -in mykey.pem -out enckey.pem
-</pre>
+```
 
 Finally we will convert into a DER format, so that we can import the keys into a system:
-<pre>
+
+```
 openssl ec -in enckey.pem -outform DER -out enckey.der
-</pre>
+```
 
 Examine each of the files created and outline what they contain:
 
@@ -412,7 +432,7 @@ We have a root certificate authority of My Global Corp, which is based in Washin
 
 ### E.1	We will now view some PFX certificate files, and which are protected with a password:
 
-Web link (Digital Certificates): http://asecuritysite.com/encryption/digitalcert2
+Web link (Digital Certificates): [here(]http://asecuritysite.com/encryption/digitalcert2)
 
 For Certificate 1, can you open it in the Web browser with an incorrect password:
 
@@ -439,7 +459,7 @@ If successful, outline some of the details of the certificates:
 ## F	Cracking Certificates
 Digital certificates are often protected with a simple password. With this we can use a Python program to try various passwords on the certificate, and if it does not create an exception, then we have found the required password. First download the following pfx files:
 
-https://asecuritysite.com/cert_crack.zip
+[here](https://asecuritysite.com/cert_crack.zip)
 
 Now for bill01.pfx and fred.pfx, crack the password with the following code:
 
@@ -486,14 +506,12 @@ What is the password?
 The files bill01.pfx, bill02.pfx … bill18.pfx have a password which are fruits. Can you determine the fruits used:
 
 
-The files country01.pfx, country02.pfx … country06.pfx have a password which are countries. Can you determine the countries used:
-
-
+The files country01.pfx, country02.pfx ... country06.pfx have a password which are countries. Can you determine the countries used:
 
 ## G	Setting up a certificate on a Web site
 ### G.1	
 Now we will enable HTTPs on an Apache Web Server, and install a digital certificate. Execute the following commands:
-<pre>
+```
 sudo a2enmod ssl
 service apache2 restart
 openssl genrsa -out ca.key 2048
@@ -503,7 +521,7 @@ sudo mkdir /etc/apache2/ssl
 sudo cp ca.crt ca.key ca.csr /etc/apache2/ssl/
 sudo nano /etc/apache2/sites-enabled/000-default.conf
 sudo /etc/init.d/apache2 restart
-</pre>
+```
 
 HTTPs should now be enabled with a self-signed certificate. If you try https://localhost, you will have to add an exception to view the page, as we are using a self-signed certificate:
 
