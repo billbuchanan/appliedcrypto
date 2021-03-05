@@ -52,31 +52,10 @@ Google moved in July 2018 to mark sites as being insecure if they did not have a
 
 [link](https://bit.ly/2EkUvX0)
 
-Outline three sites that still have problems with their digital certificate, and the reason for the problem (you perhaps should try Chrome to assess):
-
-
-
-
-
-
-
-Pick two sites that you feel are not setup properly for their digital certificate, and then run a scan from SSLLabs (www.ssllabs.com). Identify the problems that they have with their digital certificate:
-
-
-
-
-
-What are their SSLLabs rating?
-
-
-
-Can you find a site with an “T” rating?
-
- 
-
-
-
-
+* Outline three sites that still have problems with their digital certificate, and the reason for the problem (you perhaps should try Chrome to assess):
+* Pick two sites that you feel are not setup properly for their digital certificate, and then run a scan from SSLLabs (www.ssllabs.com). Identify the problems that they have with their digital certificate:
+* What are their SSLLabs rating?
+* Can you find a site with an “T” rating?
 
 ### A.5	
 Which the certificates in A.2, for Example 2 to Example 6. Complete the following table:
@@ -110,12 +89,10 @@ Create your own certificate from:
 
 Web link (Create Certificate): http://asecuritysite.com/encryption/createcert
 
-Add in your own details.	View the certificate, and verify some of the details on the certificate.
+Add in your own details.	
 
-
-Can you view the DER file?
-
-
+* View the certificate, and verify some of the details on the certificate.
+* Can you view the DER file?
 
 We have a root certificate authority of My Global Corp, which is based in Washington, US, and the administrator is admin@myglobalcorp.com and we are going to issue a certificate to My Little Corp, which is based in Glasgow, UK, and the administrator is admin@mylittlecorp.com.
 
@@ -135,28 +112,17 @@ openssl req -new -x509 -days 1826 -key ca.key -out ca.crt
 
 
 	
-How many years will the certificate be valid for?
-
-
-Which details have you entered:
-
-
-
-
+* How many years will the certificate be valid for?
+* Which details have you entered:
 
 ### B.3	
 Next go to Places, and from your Home folder, open up ca.crt and view the details of the certificate.
 
-Which Key Algorithm has been used:
-
-Which hashing methods have been used:
-
-When does the certificate expire:
-
-Who is it verified by:
-
-Who has it been issued to:
-
+* Which Key Algorithm has been used:
+* Which hashing methods have been used:
+* When does the certificate expire:
+* Who is it verified by:
+* Who has it been issued to:
 
 ### B.4	
 Next we will create a subordinate CA (My Little Corp), and which will be used for the signing of the certificate. First, generate the key:
@@ -177,21 +143,14 @@ We can then create a certificate from the subordinate CA certificate and signed 
 openssl x509 -req -days 730 -in ia.csr -CA ca.crt -CAkey ca.key -set_serial 01 -out ia.crt
 ```
 
-View the newly created certificate.
-
-When does it expire:
-	
-Who is the subject of the certificate:
-
-Which is their country:
-
-Who signed the certificate:
-
-Which is their country:
-
-What is the serial number of the certificate:
-
-Check the serial number for the root certificate. What is its serial number:
+* View the newly created certificate.
+* When does it expire:
+* Who is the subject of the certificate:
+* Which is their country:
+* Who signed the certificate:
+* Which is their country:
+* What is the serial number of the certificate:
+* Check the serial number for the root certificate. What is its serial number:
 
 ### B.5	
 If we want to use this certificate to digitally sign files and verify the signatures, we need to convert it to a PKCS12 file:
@@ -200,7 +159,7 @@ If we want to use this certificate to digitally sign files and verify the signat
 openssl pkcs12 -export -out ia.p12 -inkey ia.key -in ia.crt -chain -CAfile ca.crt
 ```
 
-Can you view ia.p12 in a text edit?
+* Can you view ia.p12 in a text edit?
 
 
 
@@ -216,11 +175,8 @@ and for My Little Corp:
 openssl x509 -inform pem -outform pem -in ia.crt -out ia.cer
 ```
 
-View each of the output files in a text editor (ca.cer and then ia.cer). What can you observe from the format:
-
-
-
-Which are the standard headers and footers used:
+* View each of the output files in a text editor (ca.cer and then ia.cer). What can you observe from the format:
+* Which are the standard headers and footers on the file used:
 
 
 
@@ -328,7 +284,7 @@ Q0uA0aVog3f5iJxCa3Hp5gxbJQ6zV6kJ0TEsuaaOhEko9sdpCoPOnRBm2i/XRD2D
 -----END CERTIFICATE REQUEST-----
 ```
 
-What are the details on the requests?
+* What are the details on the requests?
 
 
 
@@ -344,14 +300,8 @@ In Openssl we can view the curves with the ecparam option:
 openssl ecparam -list_curves
 ```
 
-Outline some of the curve names:
-
-
-
-
-By performing an Internet search, which are the most popular curves (and where are they used)?
-
-
+* Outline some of the curve names:
+* By performing an Internet search, which are the most popular curves (and where are they used)?
 
 
 We can create our elliptic parameter file with:
@@ -387,37 +337,18 @@ Finally we will convert into a DER format, so that we can import the keys into a
 openssl ec -in enckey.pem -outform DER -out enckey.der
 ```
 
-Examine each of the files created and outline what they contain:
-
-
-
-
-Now pick another elliptic curve type and perform the same operations as above. Which type did you use?
-
-
-
-Outline the commands used:
-
-
-
-
-
-
-If you want to create a non-encrypted version (PFX), which command would you use:
-
-
+* Examine each of the files created and outline what they contain:
+* Now pick another elliptic curve type and perform the same operations as above. Which type did you use?
+* Outline the commands used:
+* If you want to create a non-encrypted version (PFX), which command would you use:
 
 
 
 Go to www.cloudflare.com and examine the digital certificate on the site.
 
-What is the public key method used?
-
-
-What is the size of the public key?
-
-
-What is the curve type used?
+* What is the public key method used?
+* What is the size of the public key?
+* What is the curve type used?
 
 ## E	PFX files
 We have a root certificate authority of My Global Corp, which is based in Washington, US, and the administrator is admin@myglobalcorp.com and we are going to issue a certificate to My Little Corp, which is based in Glasgow, UK, and the administrator is admin@mylittlecorp.com.
@@ -427,24 +358,17 @@ We have a root certificate authority of My Global Corp, which is based in Washin
 
 Web link (Digital Certificates): [here(]http://asecuritysite.com/encryption/digitalcert2)
 
-For Certificate 1, can you open it in the Web browser with an incorrect password:
-
-
-Now enter “apples” as a password, and record some of the key details of the certificate:
-
-
-Now repeat for Certificate 2:
-
+* For Certificate 1, can you open it in the Web browser with an incorrect password:
+* Now enter “apples” as a password, and record some of the key details of the certificate:
+* Now repeat for Certificate 2:
 
 
 ### E.2	
 Now with the PFX files (contained in the ZIP files from the Web site), try and import them onto your computer. Try to enter an incorrect password first and observe the message.
 
 
-Was the import successful?
-
-
-If successful, outline some of the details of the certificates:
+* Was the import successful?
+* If successful, outline some of the details of the certificates:
 
 
 
@@ -496,10 +420,8 @@ for password in passwords:
 What is the password?
 
 
-The files bill01.pfx, bill02.pfx … bill18.pfx have a password which are fruits. Can you determine the fruits used:
-
-
-The files country01.pfx, country02.pfx ... country06.pfx have a password which are countries. Can you determine the countries used:
+* The files bill01.pfx, bill02.pfx … bill18.pfx have a password which are fruits. Can you determine the fruits used:
+* The files country01.pfx, country02.pfx ... country06.pfx have a password which are countries. Can you determine the countries used:
 
 ## G	Setting up a certificate on a Web site
 ### G.1	
