@@ -14,7 +14,7 @@ You are requested to investigate, build a prototype, and evaluate one of the fol
 * **Key Distribution Centres**. The complexity of handling keys is an increasing challenge for many companies. Within a KDC, we can implement methods which will generate encryption keys for users. This topic will involve investigating possible methods that could be used.
 * **Blockchain integration**. Many applications are moving towards storing data on a blockchain and in using smart contracts. This area will investigate new areas of improving the security and/or performance of blockchain related methods.
 * **Tokenization**. There is a vast increase in the usage of tokens to either protect sensitive details or provide one-time access. This area will allow you to investigate different tokenization methods, such as using Ferrnet tokens or some of the security weaknesses of OAuth 2.
-* **IPFS (Interplanetary File System**. This breaks files into chunks and then distributes them around the world and where we can integrate version control on files. Overall it has advances in reducing latency, improving resilance, and avoiding censorship.
+* **IPFS (Interplanetary File System)**. This breaks files into chunks and then distributes them around the world and where we can integrate version control on files. Overall it has advances in reducing latency, improving resilance, and avoiding censorship.
 
 There are many different methods involved in each of these areas, so while your literature review might have a relatively wide scope, you might want to focus in on one or more methods for your implementation and evaluation. You may also pick another related area, but this would have to be approved by your tutor.
 
