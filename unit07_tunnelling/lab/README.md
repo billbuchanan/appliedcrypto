@@ -69,7 +69,6 @@ BBC,bbc.co.uk
 Next enter the following code and run it: 
 
 ```python
-# Code from https://github.com/TrullJ/ssllabs/blob/master/ssllabsscanner.py
 import requests
 import time
 import sys
@@ -130,19 +129,19 @@ def newScan(host, publish='off', startNew='on', all='done', ignoreMismatch='on')
 
 
 import csv
+print ("Scanning")
 with open('sites.csv') as csvfile:
-	reader = csv.DictReader(csvfile)
-	for row in reader:
-
-		url = row['site'].strip()
-
-		a = newScan(url)
-		with open("out3.txt", "a") as myfile:
-    			myfile.write(str(row['web'])+"\n"+str(a)+"\n\n\n")
-			print row['web']
+  reader = csv.DictReader(csvfile)
+  for row in reader:
+    url = row['site'].strip()
+    print ("Scanning...",url)
+    a = newScan(url)
+    with open("out3.txt", "a") as myfile:
+      myfile.write(str(row['web'])+"\n"+str(a)+"\n\n\n")
+      print (row['web'])
 ```      
 
-Note that it will can take a few minutes to perform a single scan. By reading the out3.txt file, outline your findings:
+Note that it will can take a few minutes to perform a single scan. By reading the out3.txt file, outline your findings [Replit](https://replit.com/@billbuchanan/ssllab#main.py):
 
 
 Site name:				Site rating:
