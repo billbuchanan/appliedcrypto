@@ -5,7 +5,7 @@ There will be four main questions in the exam: Symmetric Key (Unit 2), Hashing (
 
 **Test date:** 19 Mar 2021 (open book test, taken over Moodle). 
 
-** Test time: ** To be confirmed, but likely to be late afternoon.
+** Test time: ** To be confirmed, but likely to be late afternoon. Two times: 3-4:30pm. 5-6:30pm.
 
 Some test details are:
 
