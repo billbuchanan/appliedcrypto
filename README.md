@@ -77,7 +77,7 @@ Some of the associated material will be hosted on this site [here](https://asecu
     <td bgcolor="#990000" class="table1"><strong>11</strong></td>
     <td bgcolor="#990000" class="table1"><strong>2 Apr 2021 </strong></td>
     <td></td>
-    <td>Lab</td>
+    <td>Guest talk (Len Adleman)</td>
 </tr>
 
 <tr>
