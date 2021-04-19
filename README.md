@@ -87,17 +87,19 @@ Some of the associated material will be hosted on this site [here](https://asecu
     <td>Lab</td>
 </tr>
                                 <tr>
-    <td bgcolor="#990000" class="table1"><strong>12</strong></td>
+    <td bgcolor="#990000" class="table1"><strong>13</strong></td>
     <td bgcolor="#990000" class="table1"><strong>30 Apr 2021 </strong></td>
     <td>Future Cryptography <a href="https://github.com/billbuchanan/appliedcrypto/tree/master/unit08_blockchain">Unit</a></td>
     <td>Lab</td>
 </tr>
+<!--
                                 <tr>
                                     <td bgcolor="#990000" class="table1"><strong>13</strong></td>
                                     <td bgcolor="#990000" class="table1"><strong>30 April 2021 </strong></td>
                                     <td>Tokens, Authorization and Docker <a href="https://github.com/billbuchanan/appliedcrypto/tree/master/unit11_host">Unit</a></td>
                                     <td>Lab</td>
                                 </tr>
+-->
                                 <tr>
                                     <td bgcolor="#990000" class="table1"><strong>14</strong></td>
                                     <td bgcolor="#990000" class="table1"><strong>7 May 2021 </strong></td>
