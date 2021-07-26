@@ -3,9 +3,9 @@
 # Test 1
 There will be four main questions in the exam: Symmetric Key (Unit 2), Hashing (Unit 3), Public Key (Unit 4), and Key Exchange (Unit 5). An outline is [here](https://www.youtube.com/watch?v=Oj3T2UO1WDw&feature=emb_title), and some learning outcomes are [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/learning_outcomes.md). A PDF version of the questions is [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/2021_fake_exam_questions.pdf) and a fake example paper is [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/fake_exam_paper.md).
 
-**Test date:** 19 Mar 2021 (open book test, taken over Moodle). 
+**Test date:** 30 July 2021 (open book test, taken over Moodle). 
 
-** Test time: ** To be confirmed, but likely to be late afternoon. Two times: 3-4:30pm. 5-6:30pm.
+** Test time: ** 3:30pm.
 
 Some test details are:
 
