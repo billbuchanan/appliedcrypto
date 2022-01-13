@@ -20,10 +20,10 @@ Some of the associated material will be hosted on this site [here](https://asecu
 | 4  | 11 Feb 2021  | Hashing and MAC                                | Lab                     |
 | 5  | 18 Feb 2021  | Asymmetric (Public) Key                        | Lab                     |
 | 6  | 25 Feb 2021  | Key Exchange                                   | Lab                     |
-| 7  | 4 Mar 2021   | Trust and Digital Certificates                 | Lab                    |
+| 7  | 4 Mar 2021   | Digital Signatures and Certificates                 | Lab                    |
 | 8  | 11 Mar 2021  | Revision lecture and Test 1/Coursework   | Mini-project/Coursework |
 | 9  | 18 Mar 2021  | Test (Units 1-5) 40% of overall mark |                                |
-| 10 | 25 Mar 2021  | Tunnelling Unit                                    | Lab                      |
+| 10 | 25 Mar 2021  | Tunnelling                                     | Lab                      |
 | 11 | 1 Apr 2021   |                                                    | Guest talk       |
 | 12 | 8 Apr 2021   | Blockchain                                     | Lab                            |
 | 13 | 29 Apr 2021  | Future Cryptography                            | Lab                            |
