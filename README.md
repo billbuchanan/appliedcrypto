@@ -13,7 +13,6 @@ Some of the associated material will be hosted on this site [here](https://asecu
 ## Draft Timetable
 <p>The following is the draft timetable:</p>
 
-|----|--------------|----------------------------------------------------|--------------------------------|
 | No | Date         | Subject                                            | Lab                            |
 |----|--------------|----------------------------------------------------|--------------------------------|
 | 2  | 28 Jan 2021  | Ciphers and Fundamentals [Unit](https://github.com/billbuchanan/appliedcrypto/tree/master/unit01_cipher_fundamentals)                      | [Lab](ttps://github.com/billbuchanan/appliedcrypto/blob/master/unit01_cipher_fundamentals/lab/new_lab01.pdf) [Demo] (https://www.youtube.com/watch?v=v6H7lHblKes)         |
@@ -30,7 +29,6 @@ Some of the associated material will be hosted on this site [here](https://asecu
 | 13 | 29 Apr 2021  | Future Cryptography Unit                           | Lab                            |
 | 14 | 6 May 2021   |                                                    | Lab                            |
 | 15 | 13 May 2021  | Coursework Hand-in - 60% of overall mark [Draft]   |                                |
-|----|--------------|----------------------------------------------------|--------------------------------|
 
 
 
