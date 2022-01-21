@@ -11,7 +11,7 @@ git clone https://github.com/billbuchanan/appliedcrypto.git
 Some of the associated material will be hosted on this site [here](https://asecuritysite.com/csn11131). Also, the VM for the module can be downloaded [here](https://1drv.ms/u/s!AtLuQYeqHsJljfBbjVakRcSGIsQ3GA?e=DgvMbM).
 
 ## Draft Timetable
-<p>The following is the draft timetable:</p>
+The following is the draft timetable:
 
 | No | Date         | Subject                                            | Lab                            |
 |----|--------------|----------------------------------------------------|--------------------------------|
@@ -24,9 +24,9 @@ Some of the associated material will be hosted on this site [here](https://asecu
 | 8  | 11 Mar 2021  | Revision lecture and Test 1/Coursework   | Mini-project/Coursework |
 | 9  | 18 Mar 2021  | Test (Units 1-5) 40% of overall mark |                                |
 | 10 | 25 Mar 2021  | Tunnelling                                     | Lab                      |
-| 11 | 1 Apr 2021   |                                                    | Guest talk       |
-| 12 | 8 Apr 2021   | Blockchain                                     | Lab                            |
-| 13 | 29 Apr 2021  | Future Cryptography                            | Lab                            |
+| 11 | 1 Apr 2021   | Blockchain                                                | Lab      |
+| 12 | 8 Apr 2021   | Future Cryptography                                    | Lab                            |
+| 13 | 29 Apr 2021  |                            | Lab                            |
 | 14 | 6 May 2021   |                                                    | Lab                            |
 | 15 | 13 May 2021  | Coursework Hand-in - 60% of overall mark    |                                |
 
