@@ -17,7 +17,7 @@ The key concepts involved in this unit are:
 
 ## Presentations
 
-* Week 2 Presentation (PDF) - Symmetric Key Encryption: [here](https://github.com/billbuchanan/appliedcrypto/blob/master/unit01_cipher_fundamentals/lecture/chapter01_ciphers_fundamentals.pdf)
-* Week 2 Presentation (Video) - Symmetric Key Encryption [here](https://www.youtube.com/watch?v=zqmjUpJNcJA)
-* Week 2 Presentation (Lecture - Video) - Symmetric Key Encryption: [here](https://www.youtube.com/watch?v=3hkRjzl8B8w). Recorded on Friday 24 Jan 2020.
+* Unit 2 Presentation (PDF) - Symmetric Key Encryption: [here](https://github.com/billbuchanan/appliedcrypto/blob/master/unit01_cipher_fundamentals/lecture/chapter01_ciphers_fundamentals.pdf)
+* Unit 2 Presentation (Video) - Symmetric Key Encryption [here](https://www.youtube.com/watch?v=zqmjUpJNcJA)
+<!-- * Unit 2 Presentation (Lecture - Video) - Symmetric Key Encryption: [here](https://www.youtube.com/watch?v=3hkRjzl8B8w).  -->
 
