@@ -7,7 +7,7 @@ Objective: The key objective of this lab is to be introduced to some of the fund
 Go to **vsoc.napier.ac.uk** and find your folder. Run your Ubuntu instance [demo](https://youtu.be/v6H7lHblKes). Lab demo:  (Note that you will be using Ubuntu, while the demo shows Kali). A demo of the lab is [here](https://www.youtube.com/watch?v=v6H7lHblKes).
 
 ## Introduction
-Note: Some of the code in this example uses Python 2.7. If you are using Python 3, remember and put parenthesis around the print statement string, such as print (hex(val)).
+Note: Most of the examples are in Python 3. If there are Python 2 examples, remember and put parenthesis around the print statement string, such as print (hex(val)).
 
 ### A.1	Is prime?
 Using: http://asecuritysite.com/Encryption/testprime
