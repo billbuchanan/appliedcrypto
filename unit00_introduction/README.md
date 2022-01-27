@@ -23,6 +23,11 @@ An introduction video is here:
 
 [![](http://img.youtube.com/vi/uU0bRRUojZ8/0.jpg)](http://www.youtube.com/watch?v=uU0bRRUojZ8 "")
 
+and a Doodle:
+
+
+[![](http://img.youtube.com/vi/wguYYvXA2T4/0.jpg)](http://www.youtube.com/watch?v=wguYYvXA2T4 "")
+
 We will be using a Ubuntu machine for the practical elements of the module. The VM can either be sourced on vSoC or can be downloaded from [here](https://1drv.ms/u/s!AtLuQYeqHsJljfBbjVakRcSGIsQ3GA?e=DgvMbM). You can download VMWare Workstation or VMWare Fusion from [here](https://softcentre.soc.napier.ac.uk/users.cgi). A demo of using the VM is here:
 
 [![](http://img.youtube.com/vi/tIQYpjaELcA/0.jpg)](http://www.youtube.com/watch?v=tIQYpjaELcA "")
