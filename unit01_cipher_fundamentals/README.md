@@ -32,7 +32,8 @@ The key concepts are:
 
 * Week 1 Presentation (PDF): [here](https://github.com/billbuchanan/appliedcrypto/tree/master/unit01_cipher_fundamentals/lecture)
 * Week 1 Presentation (video): [here](https://www.youtube.com/watch?v=zqmjUpJNcJA)
-* Week 1 Class Lecture (video): [here](https://youtu.be/3hkRjzl8B8w)
+* Week 1 Doodle (video): [here](https://www.youtube.com/watch?v=_sgU_d9tUcE)
+<!-- * Week 1 Class Lecture (video): [here](https://youtu.be/3hkRjzl8B8w) -->
 
 ## Lab
 
