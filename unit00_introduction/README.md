@@ -35,22 +35,24 @@ We will be using a Ubuntu machine for the practical elements of the module. The 
 ## Draft Timetable
 The following is the draft timetable:
 
+
 | No | Date         | Subject                                            | Lab                            |
 |----|--------------|----------------------------------------------------|--------------------------------|
-| 2  | 28 Jan 2021  | Ciphers and Fundamentals [Unit](https://github.com/billbuchanan/appliedcrypto/tree/master/unit01_cipher_fundamentals)                      | [Lab](ttps://github.com/billbuchanan/appliedcrypto/blob/master/unit01_cipher_fundamentals/lab/new_lab01.pdf) [Demo](https://www.youtube.com/watch?v=v6H7lHblKes)         |
-| 3  | 4 Feb 2021   | Symmetric Key                                  | Lab        |
-| 4  | 11 Feb 2021  | Hashing and MAC                                | Lab                     |
-| 5  | 18 Feb 2021  | Asymmetric (Public) Key                        | Lab                     |
-| 6  | 25 Feb 2021  | Key Exchange                                   | Lab                     |
-| 7  | 4 Mar 2021   | Digital Signatures and Certificates                 | Lab                    |
-| 8  | 11 Mar 2021  | Revision lecture and Test 1/Coursework   | Mini-project/Coursework |
-| 9  | 18 Mar 2021  | Test (Units 1-5) 40% of overall mark |                                |
-| 10 | 25 Mar 2021  | Tunnelling                                     | Lab                      |
-| 11 | 1 Apr 2021   | Blockchain                                                | Lab      |
-| 12 | 8 Apr 2021   | Future Cryptography                                    | Lab                            |
-| 13 | 29 Apr 2021  |                            | Lab                            |
-| 14 | 6 May 2021   |                                                    | Lab                            |
-| 15 | 13 May 2021  | Coursework Hand-in - 60% of overall mark    |                                |
+| 2  | 28 Jan 2022  | Ciphers and Fundamentals [Unit](https://github.com/billbuchanan/appliedcrypto/tree/master/unit01_cipher_fundamentals)                      | [Lab](ttps://github.com/billbuchanan/appliedcrypto/blob/master/unit01_cipher_fundamentals/lab/new_lab01.pdf) [Demo](https://www.youtube.com/watch?v=v6H7lHblKes)         |
+| 3  | 4 Feb 2022   | Symmetric Key                                  | Lab        |
+| 4  | 11 Feb 2022  | Hashing and MAC                                | Lab                     |
+| 5  | 18 Feb 2022  | Asymmetric (Public) Key                        | Lab                     |
+| 6  | 25 Feb 2022  | Key Exchange                                   | Lab                     |
+| 7  | 4 Mar 2022   | Digital Signatures and Certificates                 | Lab                    |
+| 8  | 11 Mar 2022  | Revision lecture and Test 1/Coursework   | Mini-project/Coursework |
+| 9  | 18 Mar 2022  | Test (Units 1-5) 40% of overall mark |                                |
+| 10 | 25 Mar 2022  | Tunnelling                                     | Lab                      |
+| 11 | 1 Apr 2022   | Blockchain                                                | Lab      |
+| 12 | 8 Apr 2022   | Future Cryptography                                    | Lab                            |
+| 13 | 29 Apr 2022  |                            | Lab                            |
+| 14 | 6 May 2022   |                                                    | Lab                            |
+| 15 | 13 May 2022  | Coursework Hand-in - 60% of overall mark    |                                |
+
 
 Any questions, contact us on Teams?
 
