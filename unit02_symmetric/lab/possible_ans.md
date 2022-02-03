@@ -1,5 +1,71 @@
+## A.1 
+openssl list-cipher-commands
 
+openssl version
 
+openssl prime –hex 1111
+
+openssl enc -aes-256-cbc -in myfile.txt -out encrypted.bin
+
+openssl enc -aes-256-cbc -in myfile.txt -out encrypted.bin –base64
+
+openssl enc -d -aes-256-cbc -in encrypted.bin -pass pass:napier -base64
+
+## D1
+```python
+from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes 
+from cryptography.hazmat.primitives import padding
+
+import hashlib
+import sys
+import binascii
+
+val='hello'
+password='hello'
+
+plaintext=val
+
+def encrypt(plaintext,key, mode):
+    method=algorithms.AES(key)
+    cipher = Cipher(method, mode)
+    encryptor = cipher.encryptor()
+    ct = encryptor.update(plaintext) + encryptor.finalize()
+    return(ct)
+
+def decrypt(ciphertext,key, mode):
+    method=algorithms.AES(key)
+    cipher = Cipher(method, mode)
+    decryptor = cipher.decryptor()
+    pl = decryptor.update(ciphertext) + decryptor.finalize()
+    return(pl)
+
+def pad(data,size=128):
+    padder = padding.PKCS7(size).padder()
+    padded_data = padder.update(data)
+    padded_data += padder.finalize()
+    return(padded_data)
+
+def unpad(data,size=128):
+    padder = padding.PKCS7(size).unpadder()
+    unpadded_data = padder.update(data)
+    unpadded_data += padder.finalize()
+    return(unpadded_data)
+
+key = hashlib.sha256(password.encode()).digest()
+
+plaintext=pad(plaintext.encode())
+
+print("After padding (CMS): ",binascii.hexlify(bytearray(plaintext)))
+
+ciphertext = encrypt(plaintext,key,modes.ECB())
+print("Cipher (ECB): ",binascii.hexlify(bytearray(ciphertext)))
+
+plaintext = decrypt(ciphertext,key,modes.ECB())
+
+plaintext = unpad(plaintext)
+print("  decrypt: ",plaintext.decode())
+
+```
 
 
 ## D2
@@ -57,77 +123,41 @@ plaintext = decrypt(ciphertext,key,modes.ECB())
 
 plaintext = unpad(plaintext)
 print("  decrypt: ",plaintext.decode())
-
 ```
 A sample is [here](https://replit.com/@billbuchanan/des2#main.py).
 
 A sample run is:
 
 ```
-napier@napier-virtual-machine:~$ python d1.py hello hello123
-After padding (CMS): 68656c6c6f0b0b0b0b0b0b0b0b0b0b0b
-Cipher (ECB): 0a7ec77951291795bac6690c9e7f4c0d
-  decrypt: hello
-napier@napier-virtual-machine:~$ python d1.py inkwell orange
-After padding (CMS): 696e6b77656c6c090909090909090909
-Cipher (ECB): 484299ceec1ad83b1ce848b0a9733c8d
-  decrypt: inkwell
-napier@napier-virtual-machine:~$ python d1.py security qwerty
-After padding (CMS): 73656375726974790808080808080808
-Cipher (ECB): 6be35165e2c9a624de4f401692fe7161
-  decrypt: security
-napier@napier-virtual-machine:~$ python d1.py Africa changme
-After padding (CMS): 4166726963610a0a0a0a0a0a0a0a0a0a
-Cipher (ECB): ab453ac52cd3b1a61b35d6e85e4568f8
-  decrypt: Africa
+$ python d1.py hello hello123
+Before padding:  hello
+Passphrase:  hello123
+After padding (CMS):  b'68656c6c6f030303'
+Cipher (ECB):  b'4cd924baf0c9ac60'
+  decrypt:  hello
+$ python padding_des2.py inkwell orange
+Before padding:  inkwell
+Passphrase:  orange
+After padding (CMS):  b'696e6b77656c6c01'
+Cipher (ECB):  b'9e0971175e4dfd5a'
+  decrypt:  inkwell
+$ python d1.py security qwerty
+Before padding:  security
+Passphrase:  qwerty
+After padding (CMS):  b'73656375726974790808080808080808'
+Cipher (ECB):  b'c043b5bba3191fd888223899ba2bcbea'
+  decrypt:  security
+$ python d1.py Africa changme
+Before padding:  Africa
+Passphrase:  changeme
+After padding (CMS):  b'4166726963610202'
+Cipher (ECB):  b'b2a350deec0b0718'
+  decrypt:  Africa
 ```
 
 
 
-## D.3
-Answer:
-* /vA6BD+ZXu8j6KrTHi1Y+w== - italy
 
-```python
-ffrom Crypto.Cipher import AES
-import hashlib
-import sys
-import binascii
-import Padding
-import base64
-
-val='fox'
-password='hello'
-cipher=''
-
-import sys
-
-if (len(sys.argv)>1):
-	cipher=(sys.argv[1])
-if (len(sys.argv)>2):
-	password=(sys.argv[2])
-
-plaintext=val
-
-def encrypt(plaintext,key, mode):
-	encobj = AES.new(key,mode)
-	return(encobj.encrypt(plaintext))
-
-def decrypt(ciphertext,key, mode):
-	encobj = AES.new(key,mode)
-	return(encobj.decrypt(ciphertext))
-
-key = hashlib.sha256(password.encode()).digest()
-
-cipher='/vA6BD+ZXu8j6KrTHi1Y+w=='
-
-ciphertext = base64.b64decode(cipher)
-plaintext = decrypt(ciphertext,key,AES.MODE_ECB)
-print (plaintext)
-plaintext = Padding.removePadding(plaintext.decode(),blocksize=Padding.AES_blocksize,mode='CMS')
-print ("  decrypt: "+plaintext)
-```
-A sample is [here](https://repl.it/@billbuchanan/ch02ans05#main.py).
 
 ## E.1
 Answers:
@@ -207,72 +237,130 @@ Answers:
 DES uses a 64-bit key, of which we have use 56 bits for the actual key. We thus need to truncate our SHA-256 generated key, down to a 64-bit key. We can do that in Python with [:8]. A possible solution for E.2:
 
 ```python
-from Crypto.Cipher import DES
+from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes 
+from cryptography.hazmat.primitives import padding
+from cryptography.hazmat.backends import default_backend
+import sys
 import hashlib
-import sys
 import binascii
-import Padding
 
-val='fox'
+val='hello'
 password='hello'
-cipher=''
 
-import sys
+plaintext=val
 
 def encrypt(plaintext,key, mode):
-	encobj = DES.new(key,mode)
-	return(encobj.encrypt(plaintext))
+    method=algorithms.TripleDES(key)
+    cipher = Cipher(method,mode, default_backend())
+    encryptor = cipher.encryptor()
+    ct = encryptor.update(plaintext) + encryptor.finalize()
+    return(ct)
 
 def decrypt(ciphertext,key, mode):
-	encobj = DES.new(key,mode)
-	return(encobj.decrypt(ciphertext))
+    method=algorithms.TripleDES(key)
+    cipher = Cipher(method, mode, default_backend())
+    decryptor = cipher.decryptor()
+    pl = decryptor.update(ciphertext) + decryptor.finalize()
+    return(pl)
 
-key = hashlib.sha256(password.encode()).digest()
+def pad(data,size=64):
+    padder = padding.PKCS7(size).padder()
+    padded_data = padder.update(data)
+    padded_data += padder.finalize()
+    return(padded_data)
+
+def unpad(data,size=64):
+    padder = padding.PKCS7(size).unpadder()
+    unpadded_data = padder.update(data)
+    unpadded_data += padder.finalize()
+    return(unpadded_data)
 
 
-ciphertext=binascii.unhexlify("f37ee42f2267458d")
 
-plaintext = decrypt(ciphertext,key[:8],DES.MODE_ECB)
-print (plaintext)
+if (len(sys.argv)>1):
+    plaintext=str(sys.argv[1])
+if (len(sys.argv)>2):
+    password=str(sys.argv[2])
+  
 
-plaintext = Padding.removePadding(plaintext.decode(),blocksize=Padding.AES_blocksize,mode='CMS')
-print ("  decrypt: "+plaintext)
+
+print("Before padding: ",plaintext)
+print("Passphrase: ",password)
+  
+key = hashlib.sha256(password.encode()).digest()[:16]
+
+
+
+plaintext=pad(plaintext.encode())
+
+ciphertext=binascii.unhexlify("0b8bd1e345e7bbf0")
+print("Cipher (ECB): ",binascii.hexlify(bytearray(ciphertext)))
+
+plaintext = decrypt(ciphertext,key,modes.ECB())
+
+plaintext = unpad(plaintext)
+print("  decrypt: ",plaintext.decode())
 ```
 
-A sample is [here](https://repl.it/@billbuchanan/ch02ans07#main.py).
+A sample is [here](https://replit.com/@billbuchanan/desdec#main.py).
 
 ## E.3
 In this case we will convert from Base-64 into a byte array and then try to decrypt:
 
+Answer:
+* /vA6BD+ZXu8j6KrTHi1Y+w== - italy
+
 ```python
-from Crypto.Cipher import AES
+from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes 
+from cryptography.hazmat.primitives import padding
+from cryptography.hazmat.backends import default_backend
+
 import hashlib
-import sys
 import binascii
-import Padding
 import base64
 
+password='hello'
+
+
+def encrypt(plaintext,key, mode):
+    method=algorithms.AES(key)
+    cipher = Cipher(method,mode, default_backend())
+    encryptor = cipher.encryptor()
+    ct = encryptor.update(plaintext) + encryptor.finalize()
+    return(ct)
+
 def decrypt(ciphertext,key, mode):
-	encobj = AES.new(key,mode)
-	return(encobj.decrypt(ciphertext))
+    method=algorithms.AES(key)
+    cipher = Cipher(method, mode, default_backend())
+    decryptor = cipher.decryptor()
+    pl = decryptor.update(ciphertext) + decryptor.finalize()
+    return(pl)
 
-password = "hello"
+def pad(data,size=128):
+    padder = padding.PKCS7(size).padder()
+    padded_data = padder.update(data)
+    padded_data += padder.finalize()
+    return(padded_data)
 
-c='1jDmCTD1IfbXbyyHgAyrdg=='
-ciphertext = base64.b64decode(c)
-print ("Cipher (ECB): ",binascii.hexlify(ciphertext))
-
+def unpad(data,size=128):
+    padder = padding.PKCS7(size).unpadder()
+    unpadded_data = padder.update(data)
+    unpadded_data += padder.finalize()
+    return(unpadded_data)
 
 key = hashlib.sha256(password.encode()).digest()
 
-plaintext = decrypt(ciphertext,key,AES.MODE_ECB)
-    
-plaintext = Padding.removePadding(plaintext.decode(),blocksize=Padding.AES_blocksize,mode='CMS')
-print ("  decrypt: ",plaintext)
-print ("  Key found: ",password)
-```
 
-A sample is [here](https://repl.it/@billbuchanan/ch02sample01#main.py).
+cipher='/vA6BD+ZXu8j6KrTHi1Y+w=='
+ciphertext = base64.b64decode(cipher)
+print("Cipher (ECB): ",binascii.hexlify(bytearray(ciphertext)))
+
+plaintext = decrypt(ciphertext,key,modes.ECB())
+
+plaintext = unpad(plaintext)
+print("  decrypt: ",plaintext.decode())
+```
+A sample is [here](https://repl.it/@billbuchanan/ch02ans05#main.py).
 
 ## F.1
 Plaintext: norway
@@ -282,18 +370,33 @@ Key: changeme
 A sample code is:
 
 ```python
-from Crypto.Cipher import AES
+from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes 
+from cryptography.hazmat.primitives import padding
+from cryptography.hazmat.backends import default_backend
+
 import hashlib
-import sys
-import binascii
-import Padding
 import base64
+import binascii
+
+password='hello'
+cipher='b436bd84d16db330359edebf49725c62'
+pw = ["hello","ankle","changeme","123456"]
+
 
 def decrypt(ciphertext,key, mode):
-	encobj = AES.new(key,mode)
-	return(encobj.decrypt(ciphertext))
+    method=algorithms.AES(key)
+    cipher = Cipher(method, mode, default_backend())
+    decryptor = cipher.decryptor()
+    pl = decryptor.update(ciphertext) + decryptor.finalize()
+    return(pl)
 
-pw = ["hello","ankle","changeme","123456"]
+
+def unpad(data,size=128):
+    padder = padding.PKCS7(size).unpadder()
+    unpadded_data = padder.update(data)
+    unpadded_data += padder.finalize()
+    return(unpadded_data)
+
 
 c='1jDmCTD1IfbXbyyHgAyrdg=='
 ciphertext = base64.b64decode(c)
@@ -304,16 +407,15 @@ for password in pw:
   try:
     key = hashlib.sha256(password.encode()).digest()
 
-  
-    plaintext = decrypt(ciphertext,key,AES.MODE_ECB)
+    plaintext = decrypt(ciphertext,key,modes.ECB())
     
-    plaintext = Padding.removePadding(plaintext.decode(),blocksize=Padding.AES_blocksize,mode='CMS')
+    plaintext = unpad(plaintext)
     print ("  decrypt: ",plaintext)
     print ("  Key found: ",password)
   except:	
     print(".")
  ```
-A sample is [here](https://repl.it/@billbuchanan/ch02ans08#main.py).
+A sample is [here](https://replit.com/@billbuchanan/aescrack01#main.py).
 
 ## G.1
 Answers:
