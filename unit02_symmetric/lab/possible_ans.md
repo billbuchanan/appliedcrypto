@@ -1,4 +1,10 @@
 ## A.1 
+openssl list-cipher-commands
+openssl version
+openssl prime –hex 1111
+openssl enc -aes-256-cbc -in myfile.txt -out encrypted.bin
+openssl enc -aes-256-cbc -in myfile.txt -out encrypted.bin –base64
+openssl enc -d -aes-256-cbc -in encrypted.bin -pass pass:napier -base64
 
 
 
@@ -96,43 +102,54 @@ Answer:
 * /vA6BD+ZXu8j6KrTHi1Y+w== - italy
 
 ```python
-ffrom Crypto.Cipher import AES
+from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes 
+from cryptography.hazmat.primitives import padding
+from cryptography.hazmat.backends import default_backend
+
 import hashlib
-import sys
 import binascii
-import Padding
 import base64
 
-val='fox'
 password='hello'
-cipher=''
 
-import sys
-
-if (len(sys.argv)>1):
-	cipher=(sys.argv[1])
-if (len(sys.argv)>2):
-	password=(sys.argv[2])
-
-plaintext=val
 
 def encrypt(plaintext,key, mode):
-	encobj = AES.new(key,mode)
-	return(encobj.encrypt(plaintext))
+    method=algorithms.AES(key)
+    cipher = Cipher(method,mode, default_backend())
+    encryptor = cipher.encryptor()
+    ct = encryptor.update(plaintext) + encryptor.finalize()
+    return(ct)
 
 def decrypt(ciphertext,key, mode):
-	encobj = AES.new(key,mode)
-	return(encobj.decrypt(ciphertext))
+    method=algorithms.AES(key)
+    cipher = Cipher(method, mode, default_backend())
+    decryptor = cipher.decryptor()
+    pl = decryptor.update(ciphertext) + decryptor.finalize()
+    return(pl)
+
+def pad(data,size=128):
+    padder = padding.PKCS7(size).padder()
+    padded_data = padder.update(data)
+    padded_data += padder.finalize()
+    return(padded_data)
+
+def unpad(data,size=128):
+    padder = padding.PKCS7(size).unpadder()
+    unpadded_data = padder.update(data)
+    unpadded_data += padder.finalize()
+    return(unpadded_data)
 
 key = hashlib.sha256(password.encode()).digest()
 
-cipher='/vA6BD+ZXu8j6KrTHi1Y+w=='
 
+cipher='/vA6BD+ZXu8j6KrTHi1Y+w=='
 ciphertext = base64.b64decode(cipher)
-plaintext = decrypt(ciphertext,key,AES.MODE_ECB)
-print (plaintext)
-plaintext = Padding.removePadding(plaintext.decode(),blocksize=Padding.AES_blocksize,mode='CMS')
-print ("  decrypt: "+plaintext)
+print("Cipher (ECB): ",binascii.hexlify(bytearray(ciphertext)))
+
+plaintext = decrypt(ciphertext,key,modes.ECB())
+
+plaintext = unpad(plaintext)
+print("  decrypt: ",plaintext.decode())
 ```
 A sample is [here](https://repl.it/@billbuchanan/ch02ans05#main.py).
 
