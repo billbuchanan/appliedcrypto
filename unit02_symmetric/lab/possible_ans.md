@@ -62,7 +62,8 @@ print("  decrypt: ",plaintext.decode())
 A sample is [here](https://replit.com/@billbuchanan/des2#main.py).
 
 A sample run is:
-<pre>
+
+```
 napier@napier-virtual-machine:~$ python d1.py hello hello123
 After padding (CMS): 68656c6c6f0b0b0b0b0b0b0b0b0b0b0b
 Cipher (ECB): 0a7ec77951291795bac6690c9e7f4c0d
@@ -79,74 +80,9 @@ napier@napier-virtual-machine:~$ python d1.py Africa changme
 After padding (CMS): 4166726963610a0a0a0a0a0a0a0a0a0a
 Cipher (ECB): ab453ac52cd3b1a61b35d6e85e4568f8
   decrypt: Africa
-</pre>
-
-## D.2
-Sample code is:
-```python
-from Crypto.Cipher import DES
-import hashlib
-import sys
-import binascii
-import Padding
-
-val='hello'
-password='hello'
-
-if (len(sys.argv)>1):
-	val=sys.argv[1]
-
-if (len(sys.argv)>2):
-	password=sys.argv[2]
-
-plaintext=val
-
-def encrypt(plaintext,key, mode):
-	encobj = DES.new(key,mode)
-	return(encobj.encrypt(plaintext))
-
-def decrypt(ciphertext,key, mode):
-	encobj = DES.new(key,mode)
-	return(encobj.decrypt(ciphertext))
-
-key = hashlib.sha256(password.encode()).digest()
-
-
-plaintext = Padding.appendPadding(plaintext,blocksize=Padding.DES_blocksize,mode='CMS')
-print ("After padding (CMS): ",binascii.hexlify(plaintext.encode()))
-
-ciphertext = encrypt(plaintext.encode(),key[:8],DES.MODE_ECB)
-
-print ("Cipher (ECB): ",binascii.hexlify(ciphertext))
-
-plaintext = decrypt(ciphertext,key[:8],DES.MODE_ECB)
-
-plaintext = Padding.removePadding(plaintext.decode(),blocksize=Padding.DES_blocksize,mode='CMS')
-
-print ("  decrypt: ",plaintext)
 ```
-A sample is [here](https://repl.it/@billbuchanan/ch02ans04#main.py).
 
-A sample run is:
 
-<pre>
-napier@napier-virtual-machine:~$ python d2.py hello hello123
-After padding (CMS): 68656c6c6f030303
-Cipher (ECB): 8f770898ddb9fb38
-  decrypt: hello
-napier@napier-virtual-machine:~$ python d2.py inkwell orange
-After padding (CMS): 696e6b77656c6c01
-Cipher (ECB): 1086a73ab5273254
-  decrypt: inkwell
-napier@napier-virtual-machine:~$ python d2.py security qwerty
-After padding (CMS): 73656375726974790808080808080808
-Cipher (ECB): d19c86b3fc7e924f148652c183caa922
-  decrypt: security
-napier@napier-virtual-machine:~$ python d2.py Africa changeme
-After padding (CMS): 4166726963610202
-Cipher (ECB): 6e11929fe6a3c081
-  decrypt: Africa
-</pre>
 
 ## D.3
 Answer:
