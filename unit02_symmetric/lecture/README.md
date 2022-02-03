@@ -16,7 +16,8 @@ The key concepts involved in this unit are:
 
 * Week 2 Presentation (PDF) - Symmetric Key Encryption: [here](https://asecuritysite.com/public/chapter02_secret.pdf)
 * Week 2 Presentation (Video) - Symmetric Key Encryption [here](https://youtu.be/nLRV34K3xIo)
-* Week 2 Presentation (Lecture - Video) - Symmetric Key Encryption: [here](https://youtu.be/CCOt8Xk3ZVU). Recorded on Friday 24 Jan 2020.
+* Week 2 Doodle (Video) - Symmetric Key Encryption [here](https://youtu.be/FAjEn-u-qfA)
+<!-- * Week 2 Presentation (Lecture - Video) - Symmetric Key Encryption: [here](https://youtu.be/CCOt8Xk3ZVU). Recorded on Friday 24 Jan 2020. -->
 
 
 ## Videos
