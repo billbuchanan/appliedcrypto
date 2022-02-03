@@ -57,29 +57,36 @@ plaintext = decrypt(ciphertext,key,modes.ECB())
 
 plaintext = unpad(plaintext)
 print("  decrypt: ",plaintext.decode())
-
 ```
 A sample is [here](https://replit.com/@billbuchanan/des2#main.py).
 
 A sample run is:
 
 ```
-napier@napier-virtual-machine:~$ python d1.py hello hello123
-After padding (CMS): 68656c6c6f0b0b0b0b0b0b0b0b0b0b0b
-Cipher (ECB): 0a7ec77951291795bac6690c9e7f4c0d
-  decrypt: hello
-napier@napier-virtual-machine:~$ python d1.py inkwell orange
-After padding (CMS): 696e6b77656c6c090909090909090909
-Cipher (ECB): 484299ceec1ad83b1ce848b0a9733c8d
-  decrypt: inkwell
-napier@napier-virtual-machine:~$ python d1.py security qwerty
-After padding (CMS): 73656375726974790808080808080808
-Cipher (ECB): 6be35165e2c9a624de4f401692fe7161
-  decrypt: security
-napier@napier-virtual-machine:~$ python d1.py Africa changme
-After padding (CMS): 4166726963610a0a0a0a0a0a0a0a0a0a
-Cipher (ECB): ab453ac52cd3b1a61b35d6e85e4568f8
-  decrypt: Africa
+$ python d1.py hello hello123
+Before padding:  hello
+Passphrase:  hello123
+After padding (CMS):  b'68656c6c6f030303'
+Cipher (ECB):  b'4cd924baf0c9ac60'
+  decrypt:  hello
+$ python padding_des2.py inkwell orange
+Before padding:  inkwell
+Passphrase:  orange
+After padding (CMS):  b'696e6b77656c6c01'
+Cipher (ECB):  b'9e0971175e4dfd5a'
+  decrypt:  inkwell
+$ python d1.py security qwerty
+Before padding:  security
+Passphrase:  qwerty
+After padding (CMS):  b'73656375726974790808080808080808'
+Cipher (ECB):  b'c043b5bba3191fd888223899ba2bcbea'
+  decrypt:  security
+$ python d1.py Africa changme
+Before padding:  Africa
+Passphrase:  changeme
+After padding (CMS):  b'4166726963610202'
+Cipher (ECB):  b'b2a350deec0b0718'
+  decrypt:  Africa
 ```
 
 
