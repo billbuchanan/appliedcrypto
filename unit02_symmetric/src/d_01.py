@@ -1,35 +1,56 @@
-from Crypto.Cipher import AES
+from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes 
+from cryptography.hazmat.primitives import padding
+from cryptography.hazmat.backends import default_backend
+
 import hashlib
 import sys
 import binascii
-import Padding
 
 val='hello'
-password='hello'
+password='hello123'
 
 plaintext=val
 
 def encrypt(plaintext,key, mode):
-	encobj = AES.new(key,mode)
-	return(encobj.encrypt(plaintext))
+    method=algorithms.AES(key)
+    cipher = Cipher(method,mode, default_backend())
+    encryptor = cipher.encryptor()
+    ct = encryptor.update(plaintext) + encryptor.finalize()
+    return(ct)
 
 def decrypt(ciphertext,key, mode):
-	encobj = AES.new(key,mode)
-	return(encobj.decrypt(ciphertext))
+    method=algorithms.AES(key)
+    cipher = Cipher(method, mode, default_backend())
+    decryptor = cipher.decryptor()
+    pl = decryptor.update(ciphertext) + decryptor.finalize()
+    return(pl)
+
+def pad(data,size=128):
+    padder = padding.PKCS7(size).padder()
+    padded_data = padder.update(data)
+    padded_data += padder.finalize()
+    return(padded_data)
+
+def unpad(data,size=128):
+    padder = padding.PKCS7(size).unpadder()
+    unpadded_data = padder.update(data)
+    unpadded_data += padder.finalize()
+    return(unpadded_data)
 
 key = hashlib.sha256(password.encode()).digest()
 
+print("Before padding: ",plaintext)
 
-plaintext = Padding.appendPadding(plaintext,blocksize=Padding.AES_blocksize,mode='CMS')
+plaintext=pad(plaintext.encode())
 
-print("After padding (CMS): ",binascii.hexlify(bytearray(plaintext.encode())))
+print("After padding (CMS): ",binascii.hexlify(bytearray(plaintext)))
 
-ciphertext = encrypt(plaintext.encode(),key,AES.MODE_ECB)
+ciphertext = encrypt(plaintext,key,modes.ECB())
 print("Cipher (ECB): ",binascii.hexlify(bytearray(ciphertext)))
 
-plaintext = decrypt(ciphertext,key,AES.MODE_ECB)
+plaintext = decrypt(ciphertext,key,modes.ECB())
 
-plaintext = Padding.removePadding(plaintext.decode(),mode='CMS')
-print("  decrypt: ",plaintext)
+plaintext = unpad(plaintext)
+print("  decrypt: ",plaintext.decode())
 
-plaintext=val
+
