@@ -370,18 +370,33 @@ Key: changeme
 A sample code is:
 
 ```python
-from Crypto.Cipher import AES
+from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes 
+from cryptography.hazmat.primitives import padding
+from cryptography.hazmat.backends import default_backend
+
 import hashlib
-import sys
-import binascii
-import Padding
 import base64
+import binascii
+
+password='hello'
+cipher='b436bd84d16db330359edebf49725c62'
+pw = ["hello","ankle","changeme","123456"]
+
 
 def decrypt(ciphertext,key, mode):
-	encobj = AES.new(key,mode)
-	return(encobj.decrypt(ciphertext))
+    method=algorithms.AES(key)
+    cipher = Cipher(method, mode, default_backend())
+    decryptor = cipher.decryptor()
+    pl = decryptor.update(ciphertext) + decryptor.finalize()
+    return(pl)
 
-pw = ["hello","ankle","changeme","123456"]
+
+def unpad(data,size=128):
+    padder = padding.PKCS7(size).unpadder()
+    unpadded_data = padder.update(data)
+    unpadded_data += padder.finalize()
+    return(unpadded_data)
+
 
 c='1jDmCTD1IfbXbyyHgAyrdg=='
 ciphertext = base64.b64decode(c)
@@ -392,16 +407,15 @@ for password in pw:
   try:
     key = hashlib.sha256(password.encode()).digest()
 
-  
-    plaintext = decrypt(ciphertext,key,AES.MODE_ECB)
+    plaintext = decrypt(ciphertext,key,modes.ECB())
     
-    plaintext = Padding.removePadding(plaintext.decode(),blocksize=Padding.AES_blocksize,mode='CMS')
+    plaintext = unpad(plaintext)
     print ("  decrypt: ",plaintext)
     print ("  Key found: ",password)
   except:	
     print(".")
  ```
-A sample is [here](https://repl.it/@billbuchanan/ch02ans08#main.py).
+A sample is [here](https://replit.com/@billbuchanan/aescrack01#main.py).
 
 ## G.1
 Answers:
