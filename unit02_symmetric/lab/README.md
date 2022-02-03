@@ -202,26 +202,27 @@ The code should be:
 ```python
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes 
 from cryptography.hazmat.primitives import padding
+from cryptography.hazmat.backends import default_backend
 
 import hashlib
 import sys
 import binascii
 
 val='hello'
-password='hello'
+password='hello123'
 
 plaintext=val
 
 def encrypt(plaintext,key, mode):
     method=algorithms.AES(key)
-    cipher = Cipher(method, mode)
+    cipher = Cipher(method,mode, default_backend())
     encryptor = cipher.encryptor()
     ct = encryptor.update(plaintext) + encryptor.finalize()
     return(ct)
 
 def decrypt(ciphertext,key, mode):
     method=algorithms.AES(key)
-    cipher = Cipher(method, mode)
+    cipher = Cipher(method, mode, default_backend())
     decryptor = cipher.decryptor()
     pl = decryptor.update(ciphertext) + decryptor.finalize()
     return(pl)
@@ -240,6 +241,8 @@ def unpad(data,size=128):
 
 key = hashlib.sha256(password.encode()).digest()
 
+print("Before padding: ",plaintext)
+
 plaintext=pad(plaintext.encode())
 
 print("After padding (CMS): ",binascii.hexlify(bytearray(plaintext)))
@@ -251,6 +254,8 @@ plaintext = decrypt(ciphertext,key,modes.ECB())
 
 plaintext = unpad(plaintext)
 print("  decrypt: ",plaintext.decode())
+
+
 ```
 
 The Repl.it code is [here](https://repl.it/@billbuchanan/aes01#main.py)
