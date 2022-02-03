@@ -237,39 +237,72 @@ Answers:
 DES uses a 64-bit key, of which we have use 56 bits for the actual key. We thus need to truncate our SHA-256 generated key, down to a 64-bit key. We can do that in Python with [:8]. A possible solution for E.2:
 
 ```python
-from Crypto.Cipher import DES
+from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes 
+from cryptography.hazmat.primitives import padding
+from cryptography.hazmat.backends import default_backend
+import sys
 import hashlib
-import sys
 import binascii
-import Padding
 
-val='fox'
+val='hello'
 password='hello'
-cipher=''
 
-import sys
+plaintext=val
 
 def encrypt(plaintext,key, mode):
-	encobj = DES.new(key,mode)
-	return(encobj.encrypt(plaintext))
+    method=algorithms.TripleDES(key)
+    cipher = Cipher(method,mode, default_backend())
+    encryptor = cipher.encryptor()
+    ct = encryptor.update(plaintext) + encryptor.finalize()
+    return(ct)
 
 def decrypt(ciphertext,key, mode):
-	encobj = DES.new(key,mode)
-	return(encobj.decrypt(ciphertext))
+    method=algorithms.TripleDES(key)
+    cipher = Cipher(method, mode, default_backend())
+    decryptor = cipher.decryptor()
+    pl = decryptor.update(ciphertext) + decryptor.finalize()
+    return(pl)
 
-key = hashlib.sha256(password.encode()).digest()
+def pad(data,size=64):
+    padder = padding.PKCS7(size).padder()
+    padded_data = padder.update(data)
+    padded_data += padder.finalize()
+    return(padded_data)
+
+def unpad(data,size=64):
+    padder = padding.PKCS7(size).unpadder()
+    unpadded_data = padder.update(data)
+    unpadded_data += padder.finalize()
+    return(unpadded_data)
 
 
-ciphertext=binascii.unhexlify("f37ee42f2267458d")
 
-plaintext = decrypt(ciphertext,key[:8],DES.MODE_ECB)
-print (plaintext)
+if (len(sys.argv)>1):
+    plaintext=str(sys.argv[1])
+if (len(sys.argv)>2):
+    password=str(sys.argv[2])
+  
 
-plaintext = Padding.removePadding(plaintext.decode(),blocksize=Padding.AES_blocksize,mode='CMS')
-print ("  decrypt: "+plaintext)
+
+print("Before padding: ",plaintext)
+print("Passphrase: ",password)
+  
+key = hashlib.sha256(password.encode()).digest()[:16]
+
+
+
+plaintext=pad(plaintext.encode())
+
+ciphertext=binascii.unhexlify("0b8bd1e345e7bbf0")
+print("Cipher (ECB): ",binascii.hexlify(bytearray(ciphertext)))
+
+plaintext = decrypt(ciphertext,key,modes.ECB())
+
+plaintext = unpad(plaintext)
+print("  decrypt: ",plaintext.decode())
 ```
 
-A sample is [here](https://repl.it/@billbuchanan/ch02ans07#main.py).
+A sample is [here](https://replit.com/@billbuchanan/desdec#main.py).
 
 ## E.3
 In this case we will convert from Base-64 into a byte array and then try to decrypt:
