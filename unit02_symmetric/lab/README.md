@@ -375,38 +375,50 @@ The Chacha20 cipher is a stream cipher which uses a 256-bit key and a 64-bit non
 
 ### G.1	We can use node.js to implement ChaCha20:
 
-```javascript
-var chacha20 = require("chacha20");
-var crypto = require('crypto');
+```Python
+from cryptography.hazmat.primitives import hashes
+from cryptography.hazmat.primitives.ciphers.aead import ChaCha20Poly1305
+import sys
+import binascii
+from cryptography.hazmat.backends import default_backend
 
-var keyname="test";
-var plaintext = "testing";
 
-var args = process.argv;
-if (args.length>2) plaintext=args[2];
-if (args.length>3) keyname=args[3];
+msg = "edinburgh"
+key = "qwerty"
 
-var key = crypto.createHash('sha256').update(keyname).digest();
+if (len(sys.argv)>1):
+	msg=str(sys.argv[1])
 
-var nonce = new Buffer.alloc(8);
-nonce.fill(0);
+if (len(sys.argv)>2):
+	key=str(sys.argv[2])
 
-console.log( key);
+print ("Data:\t",msg)
+print ("Key:\t",key)
 
-var ciphertext = chacha20.encrypt(key, nonce, new Buffer.from(plaintext));
-console.log("Ciphertext:\t",ciphertext.toString("hex"));
-console.log("Decipher\t",chacha20.decrypt(key, 
-nonce, ciphertext).toString());
+digest = hashes.Hash(hashes.SHA256(),default_backend())
+digest.update(key.encode())
+k=digest.finalize()
+
+chacha = ChaCha20Poly1305(k)
+nonce = '\0\0\0\0\0\0\0\0\0\0\0\0'
+add=''
+cipher = chacha.encrypt(nonce.encode(), msg.encode(), add.encode())
+rtn=chacha.decrypt(nonce.encode(), cipher, add.encode())
+
+print ("\nKey:\t",binascii.b2a_hex(key.encode()).decode())
+print ("Nonce:\t",binascii.b2a_hex(nonce.encode()).decode())
+print ("\nCipher:\t",binascii.b2a_hex(cipher).decode())
+print ("Decrypted:\t",rtn.decode())
 ```
 
-Repl.it code: [here](https://repl.it/@billbuchanan/chachalab#index.js)
+Repl.it code: [here](https://replit.com/@billbuchanan/chacha03#main.py)
 
 If we use a key of "qwerty", can you find the well-known fruits (in lower case) of the following ChaCha20 cipher streams:
-<pre>
+```
 e47a2bfe646a
 ea783afc66
 e96924f16d6e
-</pre>
+```
 
 What are the fruits?
 
