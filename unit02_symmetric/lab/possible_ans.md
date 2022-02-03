@@ -190,54 +190,64 @@ Answers:
 Possible solution for E.1:
 
 ```python
-from Crypto.Cipher import AES
+from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes 
+from cryptography.hazmat.primitives import padding
+from cryptography.hazmat.backends import default_backend
+
 import hashlib
 import sys
 import binascii
-import Padding
 
-val='fox'
 password='hello'
 cipher='b436bd84d16db330359edebf49725c62'
 
-import sys
-
-if (len(sys.argv)>1):
-	cipher=(sys.argv[1])
-if (len(sys.argv)>2):
-	password=(sys.argv[2])
-
-plaintext=val
 
 def encrypt(plaintext,key, mode):
-	encobj = AES.new(key,mode)
-	return(encobj.encrypt(plaintext))
+    method=algorithms.AES(key)
+    cipher = Cipher(method,mode, default_backend())
+    encryptor = cipher.encryptor()
+    ct = encryptor.update(plaintext) + encryptor.finalize()
+    return(ct)
 
 def decrypt(ciphertext,key, mode):
-	encobj = AES.new(key,mode)
-	return(encobj.decrypt(ciphertext))
+    method=algorithms.AES(key)
+    cipher = Cipher(method, mode, default_backend())
+    decryptor = cipher.decryptor()
+    pl = decryptor.update(ciphertext) + decryptor.finalize()
+    return(pl)
+
+def pad(data,size=128):
+    padder = padding.PKCS7(size).padder()
+    padded_data = padder.update(data)
+    padded_data += padder.finalize()
+    return(padded_data)
+
+def unpad(data,size=128):
+    padder = padding.PKCS7(size).unpadder()
+    unpadded_data = padder.update(data)
+    unpadded_data += padder.finalize()
+    return(unpadded_data)
 
 key = hashlib.sha256(password.encode()).digest()
 
 
-ciphertext=binascii.unhexlify(cipher)
+ciphertext = binascii.unhexlify(cipher)
+print("Cipher (ECB): ",binascii.hexlify(bytearray(ciphertext)))
 
-plaintext = decrypt(ciphertext,key,AES.MODE_ECB)
-print ('Cipher: '+ cipher)
-print ('Password: '+ password)
+plaintext = decrypt(ciphertext,key,modes.ECB())
 
-plaintext = Padding.removePadding(plaintext.decode(),blocksize=Padding.AES_blocksize,mode='CMS')
-
-print ("  decrypt: "+plaintext)
+plaintext = unpad(plaintext)
+print("  decrypt: ",plaintext.decode())
 ```
-A sample is [here](https://repl.it/@billbuchanan/ch02ans06#main.py).
+A sample is [here](https://replit.com/@billbuchanan/ansaes01#main.py).
 
 A sample run gives:
-<pre>
+
+```
 Cipher: b436bd84d16db330359edebf49725c62
 Password: hello
   decrypt: germany
- </pre>
+```
 ## E.2
 Answers:
 * germany
