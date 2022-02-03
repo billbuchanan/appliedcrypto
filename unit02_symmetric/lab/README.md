@@ -444,39 +444,54 @@ How many bits will the salt use? You may have to look at the node.js documentati
 
 
 ### G.2	
-RC4 is a standard stream cipher and can be used for light-weight cryptography. It can have a variable key size. The following is a node.js implementation:
+RC4 is a standard stream cipher and can be used for light-weight cryptography. It can have a variable key size. The following is a Python implementation:
 
-```javascript
-// RC4
-
-var crypto = require('crypto');
-
-var keyname="test";
-var plaintext = "testing";
-
-var args = process.argv;
-if (args.length>2) plaintext=args[2];
-if (args.length>3) keyname=args[3];
-
-var key = crypto.createHash('sha256').update(keyname).digest();
-
-var cipher = crypto.createCipheriv('rc4', key,'' );
-var ciphertext = cipher.update( plaintext, 'utf8', 'hex');
-console.log("Ciphertext:\t",ciphertext);
+```Python
+from cryptography.hazmat.primitives import hashes
+from cryptography.hazmat.primitives.ciphers import Cipher, algorithms
+import sys
+import binascii
+from cryptography.hazmat.backends import default_backend
 
 
-var decipher = crypto.createDecipheriv('rc4', key,'' );
-var text = decipher.update( ciphertext, 'hex','utf8');
-console.log("Decipher:\t",text);
+msg = "edinburgh"
+key = "qwerty"
+
+if (len(sys.argv)>1):
+	msg=str(sys.argv[1])
+
+if (len(sys.argv)>2):
+	key=str(sys.argv[2])
+
+print ("Data:\t",msg)
+print ("Key:\t",key)
+
+digest = hashes.Hash(hashes.SHA256(),default_backend())
+digest.update(key.encode())
+k=digest.finalize()
+
+algorithm = algorithms.ARC4(k)
+cipher = Cipher(algorithm, mode=None, backend=default_backend())
+encryptor = cipher.encryptor()
+ct = encryptor.update(msg.encode())
+pt = cipher.decryptor()
+pt=pt.update(ct)
+
+
+
+print ("\nKey:\t",binascii.b2a_hex(key.encode()).decode())
+
+print ("\nCipher:\t",binascii.b2a_hex(ct).decode())
+print ("Decrypted:\t",pt.decode())
 ```
 
 For a password of "napier", find out the fruits used for these RC4 cipher streams:
 
-<pre>
+```
 8d1cc8bdf6da
 911adbb2e6dda57cdaad
 8907deba
-</pre>
+```
 
 What are the fruits?
 
