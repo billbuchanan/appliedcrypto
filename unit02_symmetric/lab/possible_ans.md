@@ -1,146 +1,69 @@
 
 
-##  Q1
-You may need to install "Crypto" with:
-<pre>
-pip install pycrypto
-</pre>
-And Padding with:
-<pre>
-pip install padding
-</pre>
 
-Note: The Padding library has not implemented the fully range of padding methods.
 
+## D2
 ```python
-from Crypto.Cipher import AES
+from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes 
+from cryptography.hazmat.primitives import padding
+from cryptography.hazmat.backends import default_backend
+
 import hashlib
-import sys
 import binascii
-import Padding
 
 val='hello'
-password='hello'
+password='hello123'
 
 plaintext=val
 
 def encrypt(plaintext,key, mode):
-	encobj = AES.new(key,mode)
-	return(encobj.encrypt(plaintext))
+    method=algorithms.TripleDES(key)
+    cipher = Cipher(method,mode, default_backend())
+    encryptor = cipher.encryptor()
+    ct = encryptor.update(plaintext) + encryptor.finalize()
+    return(ct)
 
 def decrypt(ciphertext,key, mode):
-	encobj = AES.new(key,mode)
-	return(encobj.decrypt(ciphertext))
+    method=algorithms.TripleDES(key)
+    cipher = Cipher(method, mode, default_backend())
+    decryptor = cipher.decryptor()
+    pl = decryptor.update(ciphertext) + decryptor.finalize()
+    return(pl)
 
-key = hashlib.sha256(password.encode()).digest()
+def pad(data,size=64):
+    padder = padding.PKCS7(size).padder()
+    padded_data = padder.update(data)
+    padded_data += padder.finalize()
+    return(padded_data)
 
+def unpad(data,size=64):
+    padder = padding.PKCS7(size).unpadder()
+    unpadded_data = padder.update(data)
+    unpadded_data += padder.finalize()
+    return(unpadded_data)
 
-plaintext = Padding.appendPadding(plaintext,blocksize=Padding.AES_blocksize,mode='CMS')
+key = hashlib.sha256(password.encode()).digest()[:16]
 
-print ("After padding (CMS): ",binascii.hexlify(bytearray(plaintext.encode())))
+print("Before padding: ",plaintext)
 
-ciphertext = encrypt(plaintext.encode(),key,AES.MODE_ECB)
-print ("Cipher (ECB): ",binascii.hexlify(bytearray(ciphertext)))
+plaintext=pad(plaintext.encode())
 
-plaintext = decrypt(ciphertext,key,AES.MODE_ECB)
-plaintext = Padding.removePadding(plaintext.decode(),mode='CMS')
-print ("  decrypt: ",plaintext)
+print("After padding (CMS): ",binascii.hexlify(bytearray(plaintext)))
 
+ciphertext = encrypt(plaintext,key,modes.ECB())
+print("Cipher (ECB): ",binascii.hexlify(bytearray(ciphertext)))
 
-plaintext=val
+plaintext = decrypt(ciphertext,key,modes.ECB())
 
-### Other padding methods have not been implemented in the library
-
-plaintext = Padding.appendPadding(plaintext,blocksize=Padding.AES_blocksize,mode='ZeroLen')
-
-print ("After padding (CMS): ",binascii.hexlify(bytearray(plaintext.encode())))
-
-ciphertext = encrypt(plaintext.encode(),key,AES.MODE_ECB)
-print ("Cipher (ECB): ",binascii.hexlify(bytearray(ciphertext)))
-
-plaintext = decrypt(ciphertext,key,AES.MODE_ECB)
-plaintext = Padding.removePadding(plaintext.decode(),mode='ZeroLen')
-print ("  decrypt: ",plaintext)
-
-plaintext=val
-
-plaintext = Padding.appendPadding(plaintext,blocksize=Padding.AES_blocksize,mode='Space')
-
-print ("After padding (CMS): ",binascii.hexlify(bytearray(plaintext.encode())))
-
-ciphertext = encrypt(plaintext.encode(),key,AES.MODE_ECB)
-print ("Cipher (ECB): ",binascii.hexlify(bytearray(ciphertext)))
-
-plaintext = decrypt(ciphertext,key,AES.MODE_ECB)
-plaintext = Padding.removePadding(plaintext.decode(),mode='Space')
-print ("  decrypt: ",plaintext)
-
-
-plaintext=val
-
-plaintext = Padding.appendPadding(plaintext,blocksize=Padding.AES_blocksize,mode='Random')
-
-print ("After padding (Random): ",binascii.hexlify(bytearray(plaintext.encode())))
-
-ciphertext = encrypt(plaintext.encode(),key,AES.MODE_ECB)
-print ("Cipher (ECB): ",binascii.hexlify(bytearray(ciphertext)))
-
-plaintext = decrypt(ciphertext,key,AES.MODE_ECB)
-plaintext = Padding.removePadding(plaintext.decode(),mode='Random')
-print ("  decrypt: ",plaintext)
-```
-An example is [here](https://repl.it/@billbuchanan/ch02ans01#main.py).
-
-
-
-## Q2
-```python
-from Crypto.Cipher import AES
-import hashlib
-import sys
-import binascii
-import Padding
-
-val='hello'
-password='hello'
-
-if (len(sys.argv)>1):
-	val=sys.argv[1]
-
-if (len(sys.argv)>2):
-	password=sys.argv[2]
-
-plaintext=val
-
-def encrypt(plaintext,key, mode):
-	encobj = AES.new(key,mode)
-	return(encobj.encrypt(plaintext))
-
-def decrypt(ciphertext,key, mode):
-	encobj = AES.new(key,mode)
-	return(encobj.decrypt(ciphertext))
-
-key = hashlib.sha256(password.encode()).digest()
-
-
-plaintext = Padding.appendPadding(plaintext,blocksize=Padding.AES_blocksize,mode='CMS')
-print ("After padding (CMS): ",binascii.hexlify(plaintext.encode()))
-
-ciphertext = encrypt(plaintext.encode(),key,AES.MODE_ECB)
-print ("Cipher (ECB): ",binascii.hexlify(ciphertext))
-
-plaintext = decrypt(ciphertext,key,AES.MODE_ECB)
-
-plaintext = Padding.removePadding(plaintext.decode(),blocksize=Padding.AES_blocksize,mode='CMS')
-
-
-print ("  decrypt: ",plaintext)
+plaintext = unpad(plaintext)
+print("  decrypt: ",plaintext.decode())
 
 ```
-A sample is [here](https://repl.it/@billbuchanan/ch02an03#main.py).
+A sample is [here](https://replit.com/@billbuchanan/des2#main.py).
 
 A sample run is:
-<pre>
+
+```
 napier@napier-virtual-machine:~$ python d1.py hello hello123
 After padding (CMS): 68656c6c6f0b0b0b0b0b0b0b0b0b0b0b
 Cipher (ECB): 0a7ec77951291795bac6690c9e7f4c0d
@@ -157,74 +80,9 @@ napier@napier-virtual-machine:~$ python d1.py Africa changme
 After padding (CMS): 4166726963610a0a0a0a0a0a0a0a0a0a
 Cipher (ECB): ab453ac52cd3b1a61b35d6e85e4568f8
   decrypt: Africa
-</pre>
-
-## D.2
-Sample code is:
-```python
-from Crypto.Cipher import DES
-import hashlib
-import sys
-import binascii
-import Padding
-
-val='hello'
-password='hello'
-
-if (len(sys.argv)>1):
-	val=sys.argv[1]
-
-if (len(sys.argv)>2):
-	password=sys.argv[2]
-
-plaintext=val
-
-def encrypt(plaintext,key, mode):
-	encobj = DES.new(key,mode)
-	return(encobj.encrypt(plaintext))
-
-def decrypt(ciphertext,key, mode):
-	encobj = DES.new(key,mode)
-	return(encobj.decrypt(ciphertext))
-
-key = hashlib.sha256(password.encode()).digest()
-
-
-plaintext = Padding.appendPadding(plaintext,blocksize=Padding.DES_blocksize,mode='CMS')
-print ("After padding (CMS): ",binascii.hexlify(plaintext.encode()))
-
-ciphertext = encrypt(plaintext.encode(),key[:8],DES.MODE_ECB)
-
-print ("Cipher (ECB): ",binascii.hexlify(ciphertext))
-
-plaintext = decrypt(ciphertext,key[:8],DES.MODE_ECB)
-
-plaintext = Padding.removePadding(plaintext.decode(),blocksize=Padding.DES_blocksize,mode='CMS')
-
-print ("  decrypt: ",plaintext)
 ```
-A sample is [here](https://repl.it/@billbuchanan/ch02ans04#main.py).
 
-A sample run is:
 
-<pre>
-napier@napier-virtual-machine:~$ python d2.py hello hello123
-After padding (CMS): 68656c6c6f030303
-Cipher (ECB): 8f770898ddb9fb38
-  decrypt: hello
-napier@napier-virtual-machine:~$ python d2.py inkwell orange
-After padding (CMS): 696e6b77656c6c01
-Cipher (ECB): 1086a73ab5273254
-  decrypt: inkwell
-napier@napier-virtual-machine:~$ python d2.py security qwerty
-After padding (CMS): 73656375726974790808080808080808
-Cipher (ECB): d19c86b3fc7e924f148652c183caa922
-  decrypt: security
-napier@napier-virtual-machine:~$ python d2.py Africa changeme
-After padding (CMS): 4166726963610202
-Cipher (ECB): 6e11929fe6a3c081
-  decrypt: Africa
-</pre>
 
 ## D.3
 Answer:
@@ -281,54 +139,64 @@ Answers:
 Possible solution for E.1:
 
 ```python
-from Crypto.Cipher import AES
+from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes 
+from cryptography.hazmat.primitives import padding
+from cryptography.hazmat.backends import default_backend
+
 import hashlib
 import sys
 import binascii
-import Padding
 
-val='fox'
 password='hello'
 cipher='b436bd84d16db330359edebf49725c62'
 
-import sys
-
-if (len(sys.argv)>1):
-	cipher=(sys.argv[1])
-if (len(sys.argv)>2):
-	password=(sys.argv[2])
-
-plaintext=val
 
 def encrypt(plaintext,key, mode):
-	encobj = AES.new(key,mode)
-	return(encobj.encrypt(plaintext))
+    method=algorithms.AES(key)
+    cipher = Cipher(method,mode, default_backend())
+    encryptor = cipher.encryptor()
+    ct = encryptor.update(plaintext) + encryptor.finalize()
+    return(ct)
 
 def decrypt(ciphertext,key, mode):
-	encobj = AES.new(key,mode)
-	return(encobj.decrypt(ciphertext))
+    method=algorithms.AES(key)
+    cipher = Cipher(method, mode, default_backend())
+    decryptor = cipher.decryptor()
+    pl = decryptor.update(ciphertext) + decryptor.finalize()
+    return(pl)
+
+def pad(data,size=128):
+    padder = padding.PKCS7(size).padder()
+    padded_data = padder.update(data)
+    padded_data += padder.finalize()
+    return(padded_data)
+
+def unpad(data,size=128):
+    padder = padding.PKCS7(size).unpadder()
+    unpadded_data = padder.update(data)
+    unpadded_data += padder.finalize()
+    return(unpadded_data)
 
 key = hashlib.sha256(password.encode()).digest()
 
 
-ciphertext=binascii.unhexlify(cipher)
+ciphertext = binascii.unhexlify(cipher)
+print("Cipher (ECB): ",binascii.hexlify(bytearray(ciphertext)))
 
-plaintext = decrypt(ciphertext,key,AES.MODE_ECB)
-print ('Cipher: '+ cipher)
-print ('Password: '+ password)
+plaintext = decrypt(ciphertext,key,modes.ECB())
 
-plaintext = Padding.removePadding(plaintext.decode(),blocksize=Padding.AES_blocksize,mode='CMS')
-
-print ("  decrypt: "+plaintext)
+plaintext = unpad(plaintext)
+print("  decrypt: ",plaintext.decode())
 ```
-A sample is [here](https://repl.it/@billbuchanan/ch02ans06#main.py).
+A sample is [here](https://replit.com/@billbuchanan/ansaes01#main.py).
 
 A sample run gives:
-<pre>
+
+```
 Cipher: b436bd84d16db330359edebf49725c62
 Password: hello
   decrypt: germany
- </pre>
+```
 ## E.2
 Answers:
 * germany
