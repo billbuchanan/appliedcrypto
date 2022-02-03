@@ -200,11 +200,12 @@ Web link (Cipher code): http://asecuritysite.com/cipher01.zip
 The code should be:
 
 ```python
-from Crypto.Cipher import AES
+from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes 
+from cryptography.hazmat.primitives import padding
+
 import hashlib
 import sys
 import binascii
-import Padding
 
 val='hello'
 password='hello'
@@ -212,32 +213,47 @@ password='hello'
 plaintext=val
 
 def encrypt(plaintext,key, mode):
-	encobj = AES.new(key,mode)
-	return(encobj.encrypt(plaintext))
+    method=algorithms.AES(key)
+    cipher = Cipher(method, mode)
+    encryptor = cipher.encryptor()
+    ct = encryptor.update(plaintext) + encryptor.finalize()
+    return(ct)
 
 def decrypt(ciphertext,key, mode):
-	encobj = AES.new(key,mode)
-	return(encobj.decrypt(ciphertext))
+    method=algorithms.AES(key)
+    cipher = Cipher(method, mode)
+    decryptor = cipher.decryptor()
+    pl = decryptor.update(ciphertext) + decryptor.finalize()
+    return(pl)
+
+def pad(data,size=128):
+    padder = padding.PKCS7(size).padder()
+    padded_data = padder.update(data)
+    padded_data += padder.finalize()
+    return(padded_data)
+
+def unpad(data,size=128):
+    padder = padding.PKCS7(size).unpadder()
+    unpadded_data = padder.update(data)
+    unpadded_data += padder.finalize()
+    return(unpadded_data)
 
 key = hashlib.sha256(password.encode()).digest()
 
+plaintext=pad(plaintext.encode())
 
-plaintext = Padding.appendPadding(plaintext,blocksize=Padding.AES_blocksize,mode='CMS')
+print("After padding (CMS): ",binascii.hexlify(bytearray(plaintext)))
 
-print("After padding (CMS): ",binascii.hexlify(bytearray(plaintext.encode())))
-
-ciphertext = encrypt(plaintext.encode(),key,AES.MODE_ECB)
+ciphertext = encrypt(plaintext,key,modes.ECB())
 print("Cipher (ECB): ",binascii.hexlify(bytearray(ciphertext)))
 
-plaintext = decrypt(ciphertext,key,AES.MODE_ECB)
+plaintext = decrypt(ciphertext,key,modes.ECB())
 
-plaintext = Padding.removePadding(plaintext.decode(),mode='CMS')
-print("  decrypt: ",plaintext)
-
-plaintext=val
+plaintext = unpad(plaintext)
+print("  decrypt: ",plaintext.decode())
 ```
 
-The Repl.it code is [here](https://repl.it/@billbuchanan/sma02#main.py)
+The Repl.it code is [here](https://repl.it/@billbuchanan/aes01#main.py)
 
 Now update the code so that you can enter a string and the program will show the cipher text. The format will be something like:
 
