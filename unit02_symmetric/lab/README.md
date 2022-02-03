@@ -200,44 +200,65 @@ Web link (Cipher code): http://asecuritysite.com/cipher01.zip
 The code should be:
 
 ```python
-from Crypto.Cipher import AES
+from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes 
+from cryptography.hazmat.primitives import padding
+from cryptography.hazmat.backends import default_backend
+
 import hashlib
 import sys
 import binascii
-import Padding
 
 val='hello'
-password='hello'
+password='hello123'
 
 plaintext=val
 
 def encrypt(plaintext,key, mode):
-	encobj = AES.new(key,mode)
-	return(encobj.encrypt(plaintext))
+    method=algorithms.AES(key)
+    cipher = Cipher(method,mode, default_backend())
+    encryptor = cipher.encryptor()
+    ct = encryptor.update(plaintext) + encryptor.finalize()
+    return(ct)
 
 def decrypt(ciphertext,key, mode):
-	encobj = AES.new(key,mode)
-	return(encobj.decrypt(ciphertext))
+    method=algorithms.AES(key)
+    cipher = Cipher(method, mode, default_backend())
+    decryptor = cipher.decryptor()
+    pl = decryptor.update(ciphertext) + decryptor.finalize()
+    return(pl)
+
+def pad(data,size=128):
+    padder = padding.PKCS7(size).padder()
+    padded_data = padder.update(data)
+    padded_data += padder.finalize()
+    return(padded_data)
+
+def unpad(data,size=128):
+    padder = padding.PKCS7(size).unpadder()
+    unpadded_data = padder.update(data)
+    unpadded_data += padder.finalize()
+    return(unpadded_data)
 
 key = hashlib.sha256(password.encode()).digest()
 
+print("Before padding: ",plaintext)
 
-plaintext = Padding.appendPadding(plaintext,blocksize=Padding.AES_blocksize,mode='CMS')
+plaintext=pad(plaintext.encode())
 
-print("After padding (CMS): ",binascii.hexlify(bytearray(plaintext.encode())))
+print("After padding (CMS): ",binascii.hexlify(bytearray(plaintext)))
 
-ciphertext = encrypt(plaintext.encode(),key,AES.MODE_ECB)
+ciphertext = encrypt(plaintext,key,modes.ECB())
 print("Cipher (ECB): ",binascii.hexlify(bytearray(ciphertext)))
 
-plaintext = decrypt(ciphertext,key,AES.MODE_ECB)
+plaintext = decrypt(ciphertext,key,modes.ECB())
 
-plaintext = Padding.removePadding(plaintext.decode(),mode='CMS')
-print("  decrypt: ",plaintext)
+plaintext = unpad(plaintext)
+print("  decrypt: ",plaintext.decode())
 
-plaintext=val
+
 ```
 
-The Repl.it code is [here](https://repl.it/@billbuchanan/sma02#main.py)
+The Repl.it code is [here](https://repl.it/@billbuchanan/aes01#main.py)
 
 Now update the code so that you can enter a string and the program will show the cipher text. The format will be something like:
 
@@ -330,8 +351,9 @@ Now catch the exception with an exception handler:
 
 ```python
 try:
-	plaintext = Padding.removePadding(plaintext,mode='CMS')
-	print ("  decrypt: "+plaintext)
+	plaintext = decrypt(ciphertext,key,modes.ECB())
+
+	plaintext = unpad(plaintext)
 except:
 	print("Error!")
 ```
@@ -353,38 +375,50 @@ The Chacha20 cipher is a stream cipher which uses a 256-bit key and a 64-bit non
 
 ### G.1	We can use node.js to implement ChaCha20:
 
-```javascript
-var chacha20 = require("chacha20");
-var crypto = require('crypto');
+```Python
+from cryptography.hazmat.primitives import hashes
+from cryptography.hazmat.primitives.ciphers.aead import ChaCha20Poly1305
+import sys
+import binascii
+from cryptography.hazmat.backends import default_backend
 
-var keyname="test";
-var plaintext = "testing";
 
-var args = process.argv;
-if (args.length>2) plaintext=args[2];
-if (args.length>3) keyname=args[3];
+msg = "edinburgh"
+key = "qwerty"
 
-var key = crypto.createHash('sha256').update(keyname).digest();
+if (len(sys.argv)>1):
+	msg=str(sys.argv[1])
 
-var nonce = new Buffer.alloc(8);
-nonce.fill(0);
+if (len(sys.argv)>2):
+	key=str(sys.argv[2])
 
-console.log( key);
+print ("Data:\t",msg)
+print ("Key:\t",key)
 
-var ciphertext = chacha20.encrypt(key, nonce, new Buffer.from(plaintext));
-console.log("Ciphertext:\t",ciphertext.toString("hex"));
-console.log("Decipher\t",chacha20.decrypt(key, 
-nonce, ciphertext).toString());
+digest = hashes.Hash(hashes.SHA256(),default_backend())
+digest.update(key.encode())
+k=digest.finalize()
+
+chacha = ChaCha20Poly1305(k)
+nonce = '\0\0\0\0\0\0\0\0\0\0\0\0'
+add=''
+cipher = chacha.encrypt(nonce.encode(), msg.encode(), add.encode())
+rtn=chacha.decrypt(nonce.encode(), cipher, add.encode())
+
+print ("\nKey:\t",binascii.b2a_hex(key.encode()).decode())
+print ("Nonce:\t",binascii.b2a_hex(nonce.encode()).decode())
+print ("\nCipher:\t",binascii.b2a_hex(cipher).decode())
+print ("Decrypted:\t",rtn.decode())
 ```
 
-Repl.it code: [here](https://repl.it/@billbuchanan/chachalab#index.js)
+Repl.it code: [here](https://replit.com/@billbuchanan/chacha03#main.py)
 
 If we use a key of "qwerty", can you find the well-known fruits (in lower case) of the following ChaCha20 cipher streams:
-<pre>
+```
 e47a2bfe646a
 ea783afc66
 e96924f16d6e
-</pre>
+```
 
 What are the fruits?
 
@@ -410,39 +444,54 @@ How many bits will the salt use? You may have to look at the node.js documentati
 
 
 ### G.2	
-RC4 is a standard stream cipher and can be used for light-weight cryptography. It can have a variable key size. The following is a node.js implementation:
+RC4 is a standard stream cipher and can be used for light-weight cryptography. It can have a variable key size. The following is a Python implementation:
 
-```javascript
-// RC4
-
-var crypto = require('crypto');
-
-var keyname="test";
-var plaintext = "testing";
-
-var args = process.argv;
-if (args.length>2) plaintext=args[2];
-if (args.length>3) keyname=args[3];
-
-var key = crypto.createHash('sha256').update(keyname).digest();
-
-var cipher = crypto.createCipheriv('rc4', key,'' );
-var ciphertext = cipher.update( plaintext, 'utf8', 'hex');
-console.log("Ciphertext:\t",ciphertext);
+```Python
+from cryptography.hazmat.primitives import hashes
+from cryptography.hazmat.primitives.ciphers import Cipher, algorithms
+import sys
+import binascii
+from cryptography.hazmat.backends import default_backend
 
 
-var decipher = crypto.createDecipheriv('rc4', key,'' );
-var text = decipher.update( ciphertext, 'hex','utf8');
-console.log("Decipher:\t",text);
+msg = "edinburgh"
+key = "qwerty"
+
+if (len(sys.argv)>1):
+	msg=str(sys.argv[1])
+
+if (len(sys.argv)>2):
+	key=str(sys.argv[2])
+
+print ("Data:\t",msg)
+print ("Key:\t",key)
+
+digest = hashes.Hash(hashes.SHA256(),default_backend())
+digest.update(key.encode())
+k=digest.finalize()
+
+algorithm = algorithms.ARC4(k)
+cipher = Cipher(algorithm, mode=None, backend=default_backend())
+encryptor = cipher.encryptor()
+ct = encryptor.update(msg.encode())
+pt = cipher.decryptor()
+pt=pt.update(ct)
+
+
+
+print ("\nKey:\t",binascii.b2a_hex(key.encode()).decode())
+
+print ("\nCipher:\t",binascii.b2a_hex(ct).decode())
+print ("Decrypted:\t",pt.decode())
 ```
 
-For a password of "napier", find out the fruits used for these RC4 cipher streams:
+The Replit source is [here](https://replit.com/@billbuchanan/rc401#main.py). For a password of "napier", find out the fruits used for these RC4 cipher streams:
 
-<pre>
+```
 8d1cc8bdf6da
 911adbb2e6dda57cdaad
 8907deba
-</pre>
+```
 
 What are the fruits?
 
