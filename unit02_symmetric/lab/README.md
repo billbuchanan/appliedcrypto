@@ -485,7 +485,7 @@ print ("\nCipher:\t",binascii.b2a_hex(ct).decode())
 print ("Decrypted:\t",pt.decode())
 ```
 
-For a password of "napier", find out the fruits used for these RC4 cipher streams:
+The Replit source is [here](https://replit.com/@billbuchanan/rc401#main.py). For a password of "napier", find out the fruits used for these RC4 cipher streams:
 
 ```
 8d1cc8bdf6da
