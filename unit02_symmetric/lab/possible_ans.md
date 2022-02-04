@@ -34,6 +34,8 @@ Encrypt the file using blowfish:
 If you used ***napier*** as the password, you can decrypt the file using:
 
      openssl enc -d -blowfish -in encrypted.bin -pass pass:napier -base64 
+     
+**NOTE:** if you get an empty output, ensure that you have added a super secret message in the *myfile.txt* and execute again the previous commands.
 
 ## D Python Coding (Encrypting)
 ### D.1
