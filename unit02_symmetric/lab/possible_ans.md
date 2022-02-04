@@ -12,6 +12,7 @@ openssl enc -aes-256-cbc -in myfile.txt -out encrypted.bin –base64
 openssl enc -d -aes-256-cbc -in encrypted.bin -pass pass:napier -base64
 
 ## D Python Coding (Encrypting)
+## D.1
 ```python
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes 
 from cryptography.hazmat.primitives import padding
@@ -68,7 +69,7 @@ print("  decrypt: ",plaintext.decode())
 ```
 
 
-## D2
+## D.2
 ```python
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes 
 from cryptography.hazmat.primitives import padding
