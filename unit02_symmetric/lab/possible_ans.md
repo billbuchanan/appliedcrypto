@@ -1,5 +1,5 @@
 ## A OpenSSL
-### A.1 - A.6
+### A.1 - A.7
 
 A.1) 
 
@@ -21,7 +21,19 @@ A.4)
 
 A.6)
 
+If you used ***napier*** as the password, you can decrypt the file using:
+
      openssl enc -d -aes-256-cbc -in encrypted.bin -pass pass:napier -base64
+
+A.7)
+
+Encrypt the file using blowfish:
+
+     openssl enc -d -blowfish -in myfile.txt -out encrypted.bin -base64
+     
+If you used ***napier*** as the password, you can decrypt the file using:
+
+     openssl enc -d -blowfish -in encrypted.bin -pass pass:napier -base64 
 
 ## D Python Coding (Encrypting)
 ### D.1
