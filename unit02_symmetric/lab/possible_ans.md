@@ -1,7 +1,7 @@
 ## A OpenSSL
 ### A.1 - A.6
 
-A.1) openssl list-cipher-commands
+A.1) openssl list -cipher-commands
 
 A.2) openssl version
 
