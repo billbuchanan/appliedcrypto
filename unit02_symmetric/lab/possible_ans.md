@@ -17,7 +17,7 @@ A.3)
 
 A.4)
 
-     openssl enc -aes-256-cbc -in myfile.txt -out encrypted.bin –base64
+     openssl enc -aes-256-cbc -in myfile.txt -out encrypted.bin -base64
 
 A.6)
 
