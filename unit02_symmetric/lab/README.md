@@ -15,7 +15,7 @@ OpenSSL is a standard tool that we used in encryption. It supports many of the s
 
 Using: 
 
-* openssl list-cipher-commands
+* openssl list -cipher-commands
 * openssl version
 
 Outline five encryption methods that are supported:
