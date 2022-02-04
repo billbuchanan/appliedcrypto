@@ -47,6 +47,8 @@ openssl enc -aes-256-cbc -in myfile.txt -out encrypted.bin
 
 and enter your password.
 
+(Ignore potential ***WARNING*** messages)
+
 Use the following command to view the output file:
 
 <pre>
