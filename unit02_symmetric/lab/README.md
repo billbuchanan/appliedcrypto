@@ -260,7 +260,7 @@ print("  decrypt: ",plaintext.decode())
 
 ```
 
-The Repl.it code is [here](https://repl.it/@billbuchanan/aes01#main.py)
+The Repl.it code is [here](https://repl.it/@billbuchanan/aes01#main.py). If you prefer, you can create an account in repl.it and fork this code example to modify it online.
 
 Now update the code so that you can enter a string and the program will show the cipher text. The format will be something like:
 
