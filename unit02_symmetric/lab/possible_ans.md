@@ -5,6 +5,7 @@ A.1)
 
      openssl list -cipher-commands
 
+
      openssl version
 
 A.2) 
