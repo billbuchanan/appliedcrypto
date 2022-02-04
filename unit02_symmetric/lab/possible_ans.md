@@ -1,4 +1,6 @@
-## A.1 - A.7
+## A OpenSSL
+### A.1 - A.6
+
 openssl list-cipher-commands
 
 openssl version
@@ -13,6 +15,7 @@ openssl enc -d -aes-256-cbc -in encrypted.bin -pass pass:napier -base64
 
 ## D Python Coding (Encrypting)
 ### D.1
+
 ```python
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes 
 from cryptography.hazmat.primitives import padding
@@ -159,8 +162,8 @@ Cipher (ECB):  b'b2a350deec0b0718'
 
 
 
-
-## E.1
+## E Python Coding (Decrypting)
+### E.1
 Answers:
 * germany
 * france
@@ -228,7 +231,7 @@ Cipher: b436bd84d16db330359edebf49725c62
 Password: hello
   decrypt: germany
 ```
-## E.2
+### E.2
 Answers:
 * germany
 * france
@@ -305,7 +308,7 @@ print("  decrypt: ",plaintext.decode())
 
 A sample is [here](https://replit.com/@billbuchanan/desdec#main.py).
 
-## E.3
+### E.3
 In this case we will convert from Base-64 into a byte array and then try to decrypt:
 
 Answer:
@@ -363,7 +366,8 @@ print("  decrypt: ",plaintext.decode())
 ```
 A sample is [here](https://repl.it/@billbuchanan/ch02ans05#main.py).
 
-## F.1
+## F Catching exceptions
+### F.1
 Plaintext: norway
 
 Key: changeme
@@ -418,7 +422,8 @@ for password in pw:
  ```
 A sample is [here](https://replit.com/@billbuchanan/aescrack01#main.py).
 
-## G.1
+## G Stream Ciphers
+### G.1
 Answers:
 * e47a2bfe646a - orange
 * ea783afc66 - apple
@@ -478,7 +483,8 @@ $ <b>node fruit.js</b>
 Ciphertext:	 e96924f16d6e
 Decipher	 banana
 </pre>
-## G.2
+
+### G.2
 Answers:
 * 8d1cc8bdf6da - orange
 * 911adbb2e6dda57cdaad - strawberry
