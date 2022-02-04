@@ -2,7 +2,6 @@
 ### A.1 - A.6
 
 A.1) openssl list -cipher-commands
-
      openssl version
 
 A.2) ``openssl prime –hex 1111``
