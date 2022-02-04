@@ -1,17 +1,17 @@
 ## A OpenSSL
 ### A.1 - A.6
 
-openssl list-cipher-commands
+A.1) openssl list-cipher-commands
 
-openssl version
+A.2) openssl version
 
-openssl prime –hex 1111
+A.3) openssl prime –hex 1111
 
-openssl enc -aes-256-cbc -in myfile.txt -out encrypted.bin
+A.4) openssl enc -aes-256-cbc -in myfile.txt -out encrypted.bin
 
-openssl enc -aes-256-cbc -in myfile.txt -out encrypted.bin –base64
+A.5) openssl enc -aes-256-cbc -in myfile.txt -out encrypted.bin –base64
 
-openssl enc -d -aes-256-cbc -in encrypted.bin -pass pass:napier -base64
+A.6) openssl enc -d -aes-256-cbc -in encrypted.bin -pass pass:napier -base64
 
 ## D Python Coding (Encrypting)
 ### D.1
