@@ -29,7 +29,7 @@ A.7)
 
 Encrypt the file using blowfish:
 
-     openssl enc -d -blowfish -in myfile.txt -out encrypted.bin -base64
+     openssl enc -blowfish -in myfile.txt -out encrypted.bin -base64
      
 If you used ***napier*** as the password, you can decrypt the file using:
 
