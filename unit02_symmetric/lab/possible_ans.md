@@ -1,4 +1,4 @@
-## A.1 
+## A.1 - A.7
 openssl list-cipher-commands
 
 openssl version
@@ -11,7 +11,7 @@ openssl enc -aes-256-cbc -in myfile.txt -out encrypted.bin –base64
 
 openssl enc -d -aes-256-cbc -in encrypted.bin -pass pass:napier -base64
 
-## D1
+## D Python Coding (Encrypting)
 ```python
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes 
 from cryptography.hazmat.primitives import padding
