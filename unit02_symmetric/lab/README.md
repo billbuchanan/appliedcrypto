@@ -5,7 +5,7 @@ Objective: The key objective of this lab is to understand the range of symmetric
 
 Lab Demo: [here](https://youtu.be/N3UADaXmOik) 
 
-Sample answers:[here](https://github.com/billbuchanan/appliedcrypto/blob/master/unit02_symmetric/lab/possible_ans.md)
+Sample answers: [here](https://github.com/billbuchanan/appliedcrypto/blob/master/unit02_symmetric/lab/possible_ans.md)
 
 ## A	OpenSSL
 OpenSSL is a standard tool that we used in encryption. It supports many of the standard symmetric key methods, including AES, 3DES and ChaCha20.
