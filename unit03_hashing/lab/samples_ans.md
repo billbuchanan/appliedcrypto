@@ -1054,7 +1054,7 @@ Bcrypt:$2b$12$111111111111111111111u/oq5MIbCQah3/a.C6KTM0d7mD3wwZw.
 </pre>
 
 Sample code: [here](https://repl.it/@billbuchanan/cha03ans05#main.py)
-## L.3
+## K.3
 <pre>
 $ hashcat -m 0 bfield.hash rockyou.txt 
 hashcat (v5.1.0-42-g471a8cc) starting...
