@@ -348,7 +348,7 @@ which gives:
 LM Hash:fda95fbeca288d44aad3b435b51404ee
 NT Hash:066ddfd4ef0e9cd7c256fe77191ef43c
 
-Web link (LM Hash):	http://asecuritysite.com/encryption/lmhash
+Web link (LM Hash):	[here](https://asecuritysite.com/hash/lmhash)
 
  
 ### D.1	
@@ -386,7 +386,7 @@ We can created a simple Python program with the passlib library, and add the sam
 APR1:$apr1$PkWj6gM4$XGWpADBVPyypjL/cL0XMc1
 ```
 
-Refer to: http://asecuritysite.com/encryption/apr1
+Refer to: [here](http://asecuritysite.com/hash/apr1)
 
 ### E.1	
 Create a Python script to create the APR1 hash for the following:
@@ -462,7 +462,7 @@ byte[] result = passwordDerive.GenerateDerivedKey(16,
 
 which has a key length of 16 bytes (128 bits - dklen), uses a salt byte array, and 1000 iterations of the hash (Minterations). The resulting hash value will have 32 hexadecimal characters (16 bytes) [here](https://repl.it/@billbuchanan/ch03code04#main.py).
 
-Web link (PBKDF2): 	http://www.asecuritysite.com/encryption/PBKDF2
+Web link (PBKDF2): 	[here](http://www.asecuritysite.com/hash/PBKDF2)
 
 ```python
 import passlib.hash;
@@ -524,7 +524,7 @@ where you can see that BCrypt over 3,000 times slower than LM hashes. So, althou
 The following defines a Python script which calculates a whole range of hashes [code](https://repl.it/@billbuchanan/ch03code05#main.py):
 
 ```python
-# https://asecuritysite.com/encryption/hash
+# https://asecuritysite.com/hash/hash
 
 
 import sys
