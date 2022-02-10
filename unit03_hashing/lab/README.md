@@ -6,6 +6,7 @@ Objective: The key objective of this lab is to understand the range of hashing m
 Open up your Ubuntu instance within vsoc.napier.ac.uk and conduct this lab.
 
 Demo: [here](https://youtu.be/rnTLr6iUbf0)
+
 Sample answers: [here](https://github.com/billbuchanan/appliedcrypto/blob/main/unit03_hashing/lab/samples_ans.md)
 
 If required, you can check the hashing methods here: https://asecuritysite.com/encryption/js10 
