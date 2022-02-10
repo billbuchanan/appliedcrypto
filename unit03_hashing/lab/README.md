@@ -7,8 +7,6 @@ Open up your Ubuntu instance within vsoc.napier.ac.uk and conduct this lab.
 
 Demo: [here](https://youtu.be/rnTLr6iUbf0)
 
-Sample answers: [here](https://github.com/billbuchanan/appliedcrypto/blob/main/unit03_hashing/lab/samples_ans.md)
-
 If required, you can check the hashing methods here: https://asecuritysite.com/encryption/js10 
 
 ## A	Hashing
@@ -638,17 +636,7 @@ If you get this to work, can you expand to include other MAC methods. A starting
 
 
 
-
-
-## K	What I should have learnt from this lab?
-The key things learnt:
-
-* The differing methods used to hash data.
-* How hashcat and John The Ripper are used to crack hashed values.
-* How salt is added to the hashing process.
-* The core difference between the fast hashing methods (such as MD5 and SHA-1) and the slow ones (bcrypt and PBKDF2).
-
-## L	Additional
+## K	Additional
 The following provides a hash most of the widely used hashing method. For this enter the code of [code](https://repl.it/@billbuchanan/hashescomplete#main.py):
 ```python
 # https://asecuritysite.com/encryption/hash
@@ -743,7 +731,7 @@ print ("Bcrypt:"+passlib.hash.bcrypt.hash(string, salt=salt2[:22]))
 
 
 
-## L.1	
+## K.1	
 In the code, what does the modifier of “[:22]” do?
 
 In running the methods, which of them take the longest time to compute?
@@ -766,7 +754,7 @@ For the following identify the hash methods used:
 * $2a$12$111111111111111111111uAQxS9vJNRtBb6zeFDV6k7tyB0DZJF0a
 
 
-## L.2	
+## K.2	
 It is known that a user has used a password of “passXord”, where X is an unknown character or number. Can crack the following hashes using Hashcat and a filter:
 <pre>
 5fa8051ada600a097bd0922d7a085b94734684c4e070b24a02cf43d24d6eedbe
@@ -778,7 +766,7 @@ Passwords used:
 Number of tests: 
 
 
-## L.3	
+## K.3	
 Download the bfield.hash password hash, and using the rockyou.txt list, determine the  first 10 passwords in the hashed file. An example command might be:
 <pre>
 hashcat -m 0 bfield.hash rockyou.txt
@@ -794,4 +782,33 @@ sudo apt-get install 7zip-full
 7z e bfield.hash.7z
 7z e rockyou.txt.bz2
 </pre>
+
+## L	What I should have learnt from this lab?
+The key things learnt:
+
+* The differing methods used to hash data.
+* How hashcat and John The Ripper are used to crack hashed values.
+* How salt is added to the hashing process.
+* The core difference between the fast hashing methods (such as MD5 and SHA-1) and the slow ones (bcrypt and PBKDF2).
+
+
+## Notes
+The code can be downloaded from:
+
+git clone https://github.com/billbuchanan/appliedcrypto
+
+If you need to update the code, go into the appliedcrypto folder, and run:
+
+git pull
+
+To install a Python library use:
+
+pip install libname
+
+To install a Node.js package, use:
+
+npm install libname
+
+## Possible solutions
+Have a look [here](https://github.com/billbuchanan/appliedcrypto/blob/main/unit03_hashing/lab/samples_ans.md)
 
