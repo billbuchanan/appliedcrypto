@@ -677,9 +677,9 @@ How might you crack a byte stream sequence like this:
 ## J	What I should have learnt from this lab?
 The key things learnt:
 
-•	How to encrypt and decrypt with symmetric key encryption, and where we use a passphrase to generate the encryption key.
-•	How padding is used within the encryption and decryption processes.
-•	The core difference between a block cipher and a stream cipher.
+*	How to encrypt and decrypt with symmetric key encryption, and where we use a passphrase to generate the encryption key.
+*	How padding is used within the encryption and decryption processes.
+*	The core difference between a block cipher and a stream cipher.
 
 ## Notes
 The code can be downloaded from:
