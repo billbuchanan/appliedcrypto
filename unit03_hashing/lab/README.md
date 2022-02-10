@@ -19,12 +19,12 @@ Web link (Hashing): http://asecuritysite.com/encryption/md5
 
 Match the hash signatures with their words (“Falkirk”, “Edinburgh”, “Glasgow” and “Stirling”).
 
-<pre>
+```
 03CF54D8CE19777B12732B8C50B3B66F
 D586293D554981ED611AB7B01316D2D5
 48E935332AADEC763F2C82CDB4601A25
 EE19033300A54DF2FA41DB9881B4B723
-</pre>
+```
 	
 03CF5: Is it [Falkirk][Edinburgh][Glasgow][Stirling]?
 
@@ -37,9 +37,9 @@ EE190: Is it [Falkirk][Edinburgh][Glasgow][Stirling]?
 ### A.2	
 Repeat Part 1, but now use openssl, such as:
 
-<pre>
+```
 echo -n 'Falkirk' | openssl md5
-</pre>
+```
 
 03CF5: Is it [Falkirk][Edinburgh][Glasgow][Stirling]?
 
@@ -73,13 +73,13 @@ How does the number of hex characters relate to the length of the hash signature
 
 ### A.4	
 For the following /etc/shadow file, determine the matching password:
-<pre>
+```
 bill:$apr1$waZS/8Tm$jDZmiZBct/c2hysERcZ3m1
 mike:$apr1$mKfrJquI$Kx0CL9krmqhCu0SHKqp5Q0
 fred:$apr1$Jbe/hCIb$/k3A4kjpJyC06BUUaPRKs0
 ian:$apr1$0GyPhsLi$jTTzW0HNS4Cl5ZEoyFLjB.
 jane: $1$rqOIRBBN$R2pOQH9egTTVN1Nlst2U7.
-</pre>
+```
 
 [Hint: openssl passwd -apr1 -salt ZaZS/8TF napier]
 
@@ -102,12 +102,12 @@ From Ubuntu, download the following:
 Web link (Files): http://asecuritysite.com/files02.zip
 
 and the files should have the following MD5 signatures:
-<pre>
+```
 MD5(1.txt)= 5d41402abc4b2a76b9719d911017c592
 MD5(2.txt)= 69faab6268350295550de7d587bc323d
 MD5(3.txt)= fea0f1f6fede90bd0a925b4194deac11
 MD5(4.txt)= d89b56f81cd7b82856231e662429bcf2	
-</pre>
+```
 
 Which file(s) have been modified?
 
@@ -144,17 +144,17 @@ On Ubuntu, next create a word file (words) with the words of “napier”, “pa
 
 Using hashcat crack the following MD5 signatures (hash1):
 
-<pre>
+```
 232DD5D7274E0D662F36C575A3BD634C
 5F4DCC3B5AA765D61D8327DEB882CF99
 6D5875265D1979BDAD1C8A8F383C5FF5
 04013F78ACCFEC9B673005FC6F20698D
-</pre?
+```
 
 Command used:  
-<pre>
+```
 hashcat –m 0 hash1 words
-</pre>
+```
 
 232DD...634C  Is it [napier][password][Ankle123][inkwell]?
 
@@ -166,13 +166,13 @@ hashcat –m 0 hash1 words
 
 ### B.3	
 Using the method used in the first part of this tutorial, find crack the following for names of fruits (the fruits are all in lowercase):
-<pre>
+```
 FE01D67A002DFA0F3AC084298142ECCD
 1F3870BE274F6C49B3E31A0C6728957F
 72B302BF297A228A75730123EFEF7C41
 8893DC16B1B2534BAB7B03727145A2BB
 889560D93572D538078CE1578567B91A
-</pre>
+```
 
 FE01D:
 
@@ -187,9 +187,9 @@ FE01D:
 ### B.4	
 We have hashed a SHA-256 value of the following and put it into a file named 
 file.txt:
-<pre>
+```
 106a5842fc5fce6f663176285ed1516dbb1e3d15c05abab12fdca46d60b539b7
-</pre>
+```
 
 By adding a word of “help” in a word file of words.txt, prove that the following cracks the hash (where file.txt contains the hashed value):
 
@@ -198,9 +198,9 @@ hashcat -m 1400 file.txt words.txt
 ### B.5	
 The following is an NTLM hash, for “help”:
 
-<pre>
+```
 0333c27eb4b9401d91fef02a9f74840e
-</pre>
+```
 
 Prove that the following can crack the hash (where file.txt contains the hashed value):
 <pre>
@@ -210,12 +210,12 @@ hashcat -m 1000 file.txt words.txt
 ### B.6	
 Now crack the following Scottish football teams (all are single words):
 
-<pre>
+```
 635450503029fc2484f1d7eb80da8e25bdc1770e1dd14710c592c8929ba37ee9
 b3cb6d04f9ccbf6dfe08f40c11648360ca421f0c531e69f326a72dc7e80a0912
 bc5fb9abe8d5e72eb49cf00b3dbd173cbf914835281fadd674d5a2b680e47d50
 6ac16a68ac94ca8298c9c2329593a4a4130b6fed2472a98424b7b4019ef1d968
-</pre>
+```
 
 Football teams:
 
@@ -231,11 +231,11 @@ hashcat -a 3 -m 1400 file.txt ?l?l?l?l?l?l?l?l --increment
 
 Using this style of command (look at the hash type and perhaps this is a SHA-256 hash), crack the following words:
 
-<pre>
+```
 4dc2159bba05da394c3b94c6f54354db1f1f43b321ac4bbdfc2f658237858c70
 0282d9b79f42c74c1550b20ff2dd16aafc3fe5d8ae9a00b2f66996d0ae882775
 47c215b5f70eb9c9b4bcb2c027007d6cf38a899f40d1d1da6922e49308b15b69
-</pre>
+```
 
 Words:
 
@@ -256,10 +256,10 @@ hashcat -a 3 -m 1000 file.txt password?d
 
 Using these commands, crack the following:
 
-<pre>
+```
 7a6c8de8ad7f89b922cc29c9505f58c3
 db0edd04aaac4506f7edab03ac855d56
-</pre>
+```
 
 Note: Remember to try both MD5 (0) and NTLM hash (1000).
 
@@ -287,11 +287,11 @@ Bert:
 
 ### C.2	
 On Ubuntu, and using John the Ripper, the following pwdump passwords (they are names of major Scottish cities/towns):
-<pre>
+```
 Admin:500:629E2BA1C0338CE0AAD3B435B51404EE:9408CB400B20ABA3DFEC054D2B6EE5A1:::
 fred:501:33E58ABB4D723E5EE72C57EF50F76A05:4DFC4E7AA65D71FD4E06D061871C05F2:::
 bert:502:BC2B6A869601E4D9AAD3B435B51404EE:2D8947D98F0B09A88DC9FCD6E546A711:::	
-</pre>
+```
 Admin:
 
 Fred:
@@ -299,11 +299,11 @@ Fred:
 Bert:
 ### C.3	
 On Ubuntu, and using John the Ripper, crack the following pwdump passwords (they are the names of animals):
-<pre>
+```
 fred:500:5A8BB08EFF0D416AAAD3B435B51404EE:85A2ED1CA59D0479B1E3406972AB1928:::
 bert:501:C6E4266FEBEBD6A8AAD3B435B51404EE:0B9957E8BED733E0350C703AC1CDA822:::
 admin:502:333CB006680FAF0A417EAF50CFAC29C3:D2EDBC29463C40E76297119421D2A707:::	
-</pre>
+```
 
 Fred:
 
@@ -360,13 +360,13 @@ Create a Python script to determine the LM hash and NTLM hash of the following w
 ## E	APR1
 The Apache-defined APR1 format addresses the problems of brute forcing an MD5 hash, and basically iterates over the hash value 1,000 times. This considerably slows an intruder as they try to crack the hashed value. The resulting hashed string contains “$apr1$” to identify it and uses a 32-bit salt value.  We can use both htpassword and Openssl to compute the hashed string (where “bill” is the user and “hello” is the password):
 
-<pre>
+```
 # htpasswd -nbm bill hello
 bill:$apr1$PkWj6gM4$XGWpADBVPyypjL/cL0XMc1
 
 # openssl passwd -apr1 -salt PkWj6gM4 hello
 $apr1$PkWj6gM4$XGWpADBVPyypjL/cL0XMc1
-</pre>
+```
 
 We can also create a simple Python program with the passlib library, and add the same salt as the example above [code](https://repl.it/@billbuchanan/ch03code02#main.py):
 ```python
@@ -378,9 +378,10 @@ print ("APR1:"+passlib.hash.apr_md5_crypt.hash(string, salt=salt))
 ```
 
 We can created a simple Python program with the passlib library, and add the same salt as the example above:
-<pre>
+
+```
 APR1:$apr1$PkWj6gM4$XGWpADBVPyypjL/cL0XMc1
-</pre>
+```
 
 Refer to: http://asecuritysite.com/encryption/apr1
 
@@ -398,10 +399,10 @@ Prove them against on-line APR1 generator (or from the page given above).
 ## F	SHA
 While APR1 has a salted value, the SHA-1 hash does not have a salted value. It produces a 160-bit signature, thus can contain a larger set of hashed value than MD5, but because there is no salt it can be cracked to rainbow tables, and also brute force. The format for the storage of the hashed password on Linux systems is:
 
-<pre>
+```
 # htpasswd -nbs bill hello
 bill:{SHA}qvTGHdzF6KLavt4PO0gs2a6pQ00=
-</pre>
+```
 
 We can also generate salted passwords with crypt, and can use the Python script of [code](https://repl.it/@billbuchanan/ch03code03#main.py):
 ```python
@@ -445,9 +446,9 @@ DK = PBKDF2(Password, Salt, MInterations, dkLen)
 
 where Password is the pass phrase, Salt is the salt, MInterations is the number of iterations, and dklen is the length of the derived hash.In WPA-2, the IEEE 802.11i standard defines that the pre-shared key is defined by:
 
-<pre>
+```
 PSK = PBKDF2(PassPhrase, ssid, ssidLength, 4096, 256)
-</pre>
+```
 
 In TrueCrypt we use PBKDF2 to generate the key (with salt) and which will decrypt the header, and reveal the keys which have been used to encrypt the disk (using AES, 3DES or Twofish). We use:
 
@@ -495,9 +496,9 @@ Create a Python script to create the PBKDF2 hash for the following (uses a salt 
 MD5 and SHA-1 produce a hash signature, but this can be attacked by rainbow tables. Bcrypt (Blowfish Crypt) is a more powerful hash generator for passwords and uses salt to create a non-recurrent hash. It was designed by Niels Provos and David Mazières, and is based on the Blowfish cipher. It is used as the default password hashing method for BSD and other systems. 
 
 Overall it uses a 128-bit salt value, which requires 22 Base-64 characters. It can use a number of iterations, which will slow down any brute-force cracking of the hashed value. For example, “Hello” with a salt value of “$2a$06$NkYh0RCM8pNWPaYvRLgN9.” gives:
-<pre>
+```
 $2a$06$NkYh0RCM8pNWPaYvRLgN9.LbJw4gcnWCOQYIom0P08UEZRQQjbfpy
-</pre>
+```
 
 As illustrated in Figure 1, the first part is "$2a$" (or "$2b$"), and then followed by the number of rounds used. In this case is it 6 rounds which is 2<sup>6</sup> iterations (where each additional round doubles the hash time). The 128-bit (22 character) salt values comes after this, and then finally there is a 184-bit hash code (which is 31 characters). 
 
@@ -607,18 +608,20 @@ SHA-256:
 SHA-512:
 
 ## I	HMAC
-Write a Python or Node.js program which will prove the following:
-<pre>
-Type:		HMAC-MD5
-Message:	Hello
-Password:	qwerty123
-Hex:		c3a2fa8f20dee654a32c30e666cec48e
-Base64:	7376b67daf1fdb475e7bae786b7d9cdf47baeba71e738f1e
-</pre>
+Write a Python program which will prove the following:
 
-If you get this to work, can you expand to include other MAC methods. You can test against this page:
+```
+Data:  Hello
+ Hex:  48656c6c6f
+Key:  qwerty123
+ Hex:  717765727479313233
 
-https://asecuritysite.com/encryption/js10
+HMAC-MD5: c3a2fa8f20dee654a32c30e666cec48e w6L6jyDe5lSjLDDmZs7Ejg==
+```
+
+If you get this to work, can you expand to include other MAC methods. A starting point for your code is 
+[here](https://asecuritysite.com/hash/hashnew2_hmacmd5). Using this online tool, check that the HMAC values are correct [here](https://cryptii.com/pipes/hmac).
+
 
 ## J	Reflective statements
 1.	Why might increasing the number of iterations be a better method of protecting a hashed password than using a salted version?
