@@ -15,7 +15,7 @@ In this section we will look at some fundamental hashing methods.
 ### A.1	
 Using (either on your Windows desktop or on Ubuntu):
 
-Web link (Hashing): http://asecuritysite.com/encryption/md5
+Web link (Hashing): [here](http://asecuritysite.com/hash/md5)
 
 Match the hash signatures with their words (“Falkirk”, “Edinburgh”, “Glasgow” and “Stirling”).
 
@@ -54,7 +54,7 @@ EE190: Is it [Falkirk][Edinburgh][Glasgow][Stirling]?
 
 Using:
 
-Web link (Hashing): http://asecuritysite.com/encryption/md5
+Web link (Hashing): [here](http://asecuritysite.com/hash/md5)
 
 Determine the number of hex characters in the following hash signatures.
 
@@ -81,7 +81,10 @@ ian:$apr1$0GyPhsLi$jTTzW0HNS4Cl5ZEoyFLjB.
 jane: $1$rqOIRBBN$R2pOQH9egTTVN1Nlst2U7.
 ```
 
-[Hint: openssl passwd -apr1 -salt ZaZS/8TF napier]
+Hint: 
+```
+openssl passwd -apr1 -salt ZaZS/8TF napier
+```
 
 The passwords are password, napier, inkwell and Ankle123.
 
@@ -99,7 +102,7 @@ Jane’s password:
 
 From Ubuntu, download the following:
 
-Web link (Files): http://asecuritysite.com/files02.zip
+Web link (Files): [here](http://asecuritysite.com/files02.zip)
 
 and the files should have the following MD5 signatures:
 ```
@@ -114,7 +117,7 @@ Which file(s) have been modified?
 ### A.6	
 From Ubuntu, download the following ZIP file:
 
-Web link (PS Files): http://asecuritysite.com/letters.zip
+Web link (PS Files): [here](http://asecuritysite.com/letters.zip)
 
 On your Ubuntu instance, you should be able to view the files by double clicking on them in the file explorer (as you should have a PostScript viewer installed).
 
@@ -203,9 +206,9 @@ The following is an NTLM hash, for “help”:
 ```
 
 Prove that the following can crack the hash (where file.txt contains the hashed value):
-<pre>
+```
 hashcat -m 1000 file.txt words.txt
-</pre>
+```
 
 ### B.6	
 Now crack the following Scottish football teams (all are single words):
@@ -225,9 +228,9 @@ Football teams:
 
 ### B.7	
 Rather than use a dictionary, we can use a brute force a hashed password using a lowercase character set:
-<pre>
+```
 hashcat -a 3 -m 1400 file.txt ?l?l?l?l?l?l?l?l --increment
-</pre>
+```
 
 Using this style of command (look at the hash type and perhaps this is a SHA-256 hash), crack the following words:
 
@@ -248,11 +251,11 @@ What happens when you take the “--increment” flag away?
 
 ## B.8	
 We can focus on given letters, such as where we add a letter or a digit at the end:
-<pre>
+```
 hashcat -a 3 -m 1000 file.txt password?l
 hashcat -a 3 -m 1000 file.txt password?u
 hashcat -a 3 -m 1000 file.txt password?d
-</pre>
+```
 
 Using these commands, crack the following:
 
@@ -276,10 +279,10 @@ All of the passwords in this section are in lowercase.
 
 ### C.1	
 On Ubuntu, and using John the Ripper, and using a word list with the names of fruits, crack the following pwdump passwords:
-<pre>
+```
 fred:500:E79E56A8E5C6F8FEAAD3B435B51404EE:5EBE7DFA074DA8EE8AEF1FAA2BBDE876:::
 bert:501:10EAF413723CBB15AAD3B435B51404EE:CA8E025E9893E8CE3D2CBF847FC56814:::	
-</pre>
+```
 
 Fred:
 
@@ -327,10 +330,10 @@ networksims gives:	D7-5A-34-5D-5D-20-7A-00-38-32-A0-DB-BA-51-68-07
 napier123 gives:	67-82-2A-34-ED-C7-48-92-B7-5E-0C-8D-76-95-4A-50
 
 For “hello” we get:
-<pre>
+```
 LM: FD-A9-5F-BE-CA-28-8D-44-AA-D3-B4-35-B5-14-04-EE
 NTLM: 06-6D-DF-D4-EF-0E-9C-D7-C2-56-FE-77-19-1E-F4-3C
-</pre>
+```
 
 We can check these with a Python script [code](https://repl.it/@billbuchanan/ch03code01#main.py):
 ```python
@@ -419,11 +422,11 @@ SHA-512 salts start with $6$ and are up to 16 chars long.
 SHA-256 salts start with $5$ and are up to 16 chars long.
 	
 Which produces:
-<pre>
+```
 SHA1:$sha1$480000$8sFt66rZ$klAZf7IPWRN1ACGNZIMxxuVaIKRj
 SHA256:$5$rounds=535000$8sFt66rZ$.YYuHL27JtcOX8WpjwKf2VM876kLTGZHsHwCBbq9xTD
 SHA512:$6$rounds=656000$8sFt66rZ$aMTKQHl60VXFjiDAsyNFxn4gRezZOZarxHaK.TcpVYLpMw6MnX0lyPQU06SSVmSdmF/VNbvPkkMpOEONvSd5Q1
-</pre>
+```
 
 ### F.1	Create a Python script to create the SHA hash for the following:
 
@@ -440,9 +443,9 @@ PBKDF2 (Password-Based Key Derivation Function 2) is defined in RFC 2898 and gen
 
 PBKDF2 is used in WPA-2 and TrueCrypt. Its main focus is to produced a hashed version of a password and includes a salt value to reduce the opportunity for a rainbow table attack. It generally uses over 1,000 iterations in order to slow down the creation of the hash, so that it can overcome brute force attacks. The generalise format for PBKDF2 is:
 
-<pre>
+```
 DK = PBKDF2(Password, Salt, MInterations, dkLen)
-</pre>
+```
 
 where Password is the pass phrase, Salt is the salt, MInterations is the number of iterations, and dklen is the length of the derived hash.In WPA-2, the IEEE 802.11i standard defines that the pre-shared key is defined by:
 
