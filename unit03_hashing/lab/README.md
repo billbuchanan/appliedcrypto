@@ -142,6 +142,8 @@ Hash rate for SHA-256:
 
 Hash rate for APR1:
 
+**Hint** - You can use *hashcat --help* to find all the flags that you can use!
+
 ### B.2	
 On Ubuntu, next create a word file (words) with the words of “napier”, “password” “Ankle123” and “inkwell”
 
