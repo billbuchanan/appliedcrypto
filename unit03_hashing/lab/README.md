@@ -132,7 +132,7 @@ Now determine the MD5 signature for them. What can you observe from the result?
 ## B	Hash Cracking (Hashcat)
 
 ### B.1	
-Run the hashcat benchmark (eg hashcat –b -m 0), and complete the following:
+Run the hashcat benchmark (eg hashcat -b -m 0), and complete the following:
 
 Hash rate for MD5:
 
