@@ -10,7 +10,6 @@ git clone https://github.com/billbuchanan/appliedcrypto.git
 
 Some of the associated material will be hosted on this site [here](https://asecuritysite.com/csn11131). Also, the VM for the module can be downloaded [here](https://1drv.ms/u/s!AtLuQYeqHsJljfBbjVakRcSGIsQ3GA?e=DgvMbM).
 
-<iframe width="768" height="432" src="https://miro.com/app/live-embed/uXjVONOK8d0=/?moveToViewport=-1344,-494,2222,1155" frameBorder="0" scrolling="no" allowFullScreen></iframe>
 
 ## Draft Timetable
 The following is the draft timetable:
