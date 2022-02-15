@@ -455,6 +455,52 @@ Answers:
 
 Just convert the hex value to a byte array:
 
+```python
+from cryptography.hazmat.primitives import hashes
+from cryptography.hazmat.primitives.ciphers import Cipher, algorithms
+import sys
+import binascii
+from cryptography.hazmat.backends import default_backend
+
+
+msg = "edinburgh"
+key = "qwerty"
+
+if (len(sys.argv)>1):
+	msg=str(sys.argv[1])
+
+if (len(sys.argv)>2):
+	key=str(sys.argv[2])
+
+print ("Data:\t",msg)
+print ("Key:\t",key)
+
+digest = hashes.Hash(hashes.SHA256(),default_backend())
+digest.update(key.encode())
+k=digest.finalize()
+
+nonce = b'\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0'
+add=''
+
+algorithm = algorithms.ChaCha20(k, nonce)
+
+
+cipher = Cipher(algorithm, mode=None, backend=default_backend())
+# encryptor = cipher.encryptor()
+# ct = encryptor.update(msg.encode())
+
+ct=binascii.unhexlify("e47a2bfe646a")
+pt = cipher.decryptor()
+pt=pt.update(ct)
+
+
+print ("\nKey:\t",binascii.b2a_hex(key.encode()).decode())
+print ("Nonce:\t",binascii.b2a_hex(nonce).decode())
+print ("\nCipher:\t",binascii.b2a_hex(ct).decode())
+print ("Decrypted:\t",pt.decode())
+```
+
+<!--
 ```javascript
 var chacha20 = require("chacha20");
 var crypto = require('crypto');
@@ -477,6 +523,8 @@ console.log("Ciphertext:\t",ciphertext);
 
 console.log("Decipher\t",chacha20.decrypt(key,nonce, new Buffer(ciphertext,"hex")).toString());
 ```
+-->
+
 A sample run is:
 <pre>
 $ <b>npm install chacha20</b>
