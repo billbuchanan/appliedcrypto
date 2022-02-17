@@ -132,7 +132,7 @@ Now determine the MD5 signature for them. What can you observe from the result?
 ## B	Hash Cracking (Hashcat)
 
 ### B.1	
-Run the hashcat benchmark (eg hashcat –b -m 0), and complete the following:
+Run the hashcat benchmark (eg hashcat -b -m 0), and complete the following:
 
 Hash rate for MD5:
 
@@ -141,6 +141,8 @@ Hash rate for SHA-1:
 Hash rate for SHA-256:
 
 Hash rate for APR1:
+
+**Hint** - You can use *hashcat --help* to find all the flags that you can use!
 
 ### B.2	
 On Ubuntu, next create a word file (words) with the words of “napier”, “password” “Ankle123” and “inkwell”
@@ -168,7 +170,7 @@ hashcat –m 0 hash1 words
 04013...698D Is it [napier][password][Ankle123][inkwell]?
 
 ### B.3	
-Using the method used in the first part of this tutorial, find crack the following for names of fruits (the fruits are all in lowercase):
+Using the method used in the first part of this tutorial, find crack the following for names of fruits such as "orange", "apple", "banana", "pear", "peach" (the fruits are all in lowercase):
 ```
 FE01D67A002DFA0F3AC084298142ECCD
 1F3870BE274F6C49B3E31A0C6728957F
