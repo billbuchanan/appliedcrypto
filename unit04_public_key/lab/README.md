@@ -305,31 +305,42 @@ https://asecuritysite.com/encryption/elc
 Code used:
 
 ```python
-import OpenSSL
-import pyelliptic
+from cryptography.hazmat.primitives.asymmetric import ec
+from cryptography.hazmat.primitives import serialization
+import binascii
+import sys
 
-secretkey="password"
-test="Test123"
-
-alice = pyelliptic.ECC() 
-bob = pyelliptic.ECC()
-
-print ("++++Keys++++")
-print ("Bob's private key: ",bob.get_privkey().hex())
-print ("Bob's public key: ",bob.get_pubkey().hex())
-
-print()
-print ("Alice's private key: ",alice.get_privkey().hex())
-print ("Alice's public key: ",alice.get_pubkey().hex())
+private_key = ec.generate_private_key(ec.SECP256K1())
 
 
-ciphertext = alice.encrypt(test, bob.get_pubkey())
+vals = private_key.private_numbers()
+no_bits=vals.private_value.bit_length()
+print (f"Private key value: {vals.private_value}. Number of bits {no_bits}")
 
-print ("\n++++Encryption++++")
+public_key = private_key.public_key()
+vals=public_key.public_numbers()
 
-print ("Cipher: "+ciphertext.hex())
+enc_point=binascii.b2a_hex(vals.encode_point()).decode()
 
-print ("Decrypt: "+bob.decrypt(ciphertext))
+print (f"\nPublic key encoded point: {enc_point} \nx={enc_point[2:(len(enc_point)-2)//2+2]} \ny={enc_point[(len(enc_point)-2)//2+2:]}")
+
+
+pem = private_key.private_bytes(encoding=serialization.Encoding.PEM,format=serialization.PrivateFormat.PKCS8,encryption_algorithm=serialization.NoEncryption())
+
+der = private_key.private_bytes(encoding=serialization.Encoding.DER,format=serialization.PrivateFormat.PKCS8,encryption_algorithm=serialization.NoEncryption())
+
+
+
+print ("\nPrivate key (PEM):\n",pem.decode())
+print ("Private key (DER):\n",binascii.b2a_hex(der))
+
+pem = public_key.public_bytes(encoding=serialization.Encoding.PEM,format=serialization.PublicFormat.SubjectPublicKeyInfo)
+
+der = public_key.public_bytes(encoding=serialization.Encoding.DER,format=serialization.PublicFormat.SubjectPublicKeyInfo)
+
+print ("\nPublic key (PEM):\n",pem.decode())
+print ("Public key (DER):\n",binascii.b2a_hex(der))
+
 ```
 
 For a message of “Hello. Alice”, what is the ciphertext sent (just include the first four characters):
@@ -345,7 +356,7 @@ First five points:
 
 
 
-
+<!--
 ### D.3	
 Elliptic curve methods are often used to sign messages, and where Bob will sign a message with his private key, and where Alice can prove that he has signed it by using his public key. With ECC, we can use ECDSA, and which was used in the first version of Bitcoin. Enter the following code:
 
@@ -390,7 +401,7 @@ By searching on the Internet, can you find in which application areas that SECP2
 
 What do you observe from the different hash signatures from the elliptic curve methods?
 
-
+-->
 
 
 ## E	RSA
