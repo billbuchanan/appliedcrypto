@@ -136,18 +136,18 @@ Use the following command to view the keys:
 ### B.2	
 Use following command to view the output file:
 
-<pre>
+```
 cat private.pem
-</pre>
+```
 
 What can be observed at the start and end of the file:
 
 
 ### B.3	
 Next we view the RSA key pair:
-<pre>
+```
 openssl rsa -in private.pem -text 
-</pre>
+```
 
 Which are the attributes of the key shown:
 
@@ -161,9 +161,9 @@ Which number format is used to display the information on the attributes:
 
 ### B.4	
 Let’s now secure the encrypted key with 3-DES:
- <pre>
+```
 openssl rsa -in private.pem -des3 -out key3des.pem 
-</pre>
+```
 	
 
  
@@ -172,9 +172,9 @@ Why should you have a password on the usage of your private key?
 ### B.5 	
 Next we will export the public key:
 
-<pre>
+```
 openssl rsa -in private.pem -out public.pem -outform PEM -pubout 
-</pre>
+```
 
 View the output key. What does the header and footer of the file identify?
 
@@ -223,9 +223,10 @@ Elliptic Curve Cryptography (ECC) is now used extensively within public key encr
 
 ### C.1	
 First we need to generate a private key with:
-<pre>
+```
 openssl ecparam -name secp256k1 -genkey -out priv.pem	
-</pre>		
+```
+
 The file will only contain the private key (and should have 256 bits).
 
 Now use “cat priv.pem” to view your key. 
@@ -234,9 +235,9 @@ Can you view your key?
 
 ### C.2	
 We can view the details of the ECC parameters used with:
-<pre>
+```
 openssl ecparam -in priv.pem -text -param_enc explicit -noout
-</pre>
+```
 
 Outline these values:
 
@@ -252,9 +253,9 @@ Order (last two bytes):
 
 ### C.3	
 Now generate your public key based on your private key with:
-<pre>
+```
 openssl ec -in priv.pem -text -noout
-</pre>
+```
 
 How many bits and bytes does your private key have:
 
@@ -407,8 +408,8 @@ What do you observe from the different hash signatures from the elliptic curve m
 ## E	RSA
 ### E.1 
 A simple RSA program to encrypt and decrypt with RSA is given next. Prove its operation:
-```
 
+```python
 import rsa
 (bob_pub, bob_priv) = rsa.newkeys(512)
 
@@ -420,7 +421,7 @@ print(message.decode('utf8'))
 
 Now add the lines following lines after the creation of the keys:
 
-```
+```python
 print (bob_pub)
 print (bob_priv)
 ```
@@ -607,9 +608,9 @@ An important element in data loss prevention is encrypted emails. In this part o
 
 #### 1. Create a key pair with (RSA and 2,048-bit keys):
 
-<pre>
+```
 gpg --gen-key
-</pre>
+```
 
 Now export your public key using the form of:
 ```
