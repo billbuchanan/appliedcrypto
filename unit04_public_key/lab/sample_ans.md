@@ -467,8 +467,6 @@ print ("Public key (DER):\n",binascii.b2a_hex(der))
 <pre> 
 	
 Private key value: 100412371531109186445752967835007606723422767215817529341655177594081088564056.  Number of bits 256
-D1.py:19: CryptographyDeprecationWarning: encode_point has been deprecated on EllipticCurvePublicNumbers and will be removed in a future version. Please use EllipticCurvePublicKey.public_bytes to obtain both compressed and uncompressed point encoding.
-  enc_point=binascii.b2a_hex(vals.encode_point()).decode()
 
 Public key encoded point: 048987ec7866a5d1e3116f08a3a8b8d53b7c84ec273956519cbe332e0a66c4c910babe551d3a2081b32746fb9f576c12b25a6a1bc6adc87b4e1c391805cfbbd01b 
 x=8987ec7866a5d1e3116f08a3a8b8d53b7c84ec273956519cbe332e0a66c4c910 
