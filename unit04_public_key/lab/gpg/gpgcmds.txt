@@ -1,3 +1,6 @@
+gpg --gen-key
+gpg --export -a "Bill Buchanan" > mypub.key
+gpg --export-secret-key -a "Bill Buchanan" > mypriv.key
 gpg --import otherkey.key
 gpg --list-keys
 gpg -e -a -u "Bill Buchanan" -r "Fred Smith" hello.txt
