@@ -423,6 +423,77 @@ For the prime number we have 65 bytes + 1 bit (521 bits).
 
 # ECC Encryption
 ## D.1
+	
+**Python 3.8**:
+
+```
+from cryptography.hazmat.primitives.asymmetric import ec
+from cryptography.hazmat.primitives import serialization
+import binascii
+import sys
+
+private_key = ec.generate_private_key(ec.SECP256K1())
+
+
+vals = private_key.private_numbers()
+no_bits=vals.private_value.bit_length()
+print (f"Private key value: {vals.private_value}. Number of bits {no_bits}")
+
+public_key = private_key.public_key()
+vals=public_key.public_numbers()
+
+enc_point=binascii.b2a_hex(vals.encode_point()).decode()
+
+print (f"\nPublic key encoded point: {enc_point} \nx={enc_point[2:(len(enc_point)-2)//2+2]} \ny={enc_point[(len(enc_point)-2)//2+2:]}")
+
+
+pem = private_key.private_bytes(encoding=serialization.Encoding.PEM,format=serialization.PrivateFormat.PKCS8,encryption_algorithm=serialization.NoEncryption())
+
+der = private_key.private_bytes(encoding=serialization.Encoding.DER,format=serialization.PrivateFormat.PKCS8,encryption_algorithm=serialization.NoEncryption())
+
+
+
+print ("\nPrivate key (PEM):\n",pem.decode())
+print ("Private key (DER):\n",binascii.b2a_hex(der))
+
+pem = public_key.public_bytes(encoding=serialization.Encoding.PEM,format=serialization.PublicFormat.SubjectPublicKeyInfo)
+
+der = public_key.public_bytes(encoding=serialization.Encoding.DER,format=serialization.PublicFormat.SubjectPublicKeyInfo)
+
+print ("\nPublic key (PEM):\n",pem.decode())
+print ("Public key (DER):\n",binascii.b2a_hex(der))	
+```
+
+<pre> 
+	
+Private key value: 100412371531109186445752967835007606723422767215817529341655177594081088564056.  Number of bits 256
+D1.py:19: CryptographyDeprecationWarning: encode_point has been deprecated on EllipticCurvePublicNumbers and will be removed in a future version. Please use EllipticCurvePublicKey.public_bytes to obtain both compressed and uncompressed point encoding.
+  enc_point=binascii.b2a_hex(vals.encode_point()).decode()
+
+Public key encoded point: 048987ec7866a5d1e3116f08a3a8b8d53b7c84ec273956519cbe332e0a66c4c910babe551d3a2081b32746fb9f576c12b25a6a1bc6adc87b4e1c391805cfbbd01b 
+x=8987ec7866a5d1e3116f08a3a8b8d53b7c84ec273956519cbe332e0a66c4c910 
+y=babe551d3a2081b32746fb9f576c12b25a6a1bc6adc87b4e1c391805cfbbd01b
+
+Private key (PEM):
+ -----BEGIN PRIVATE KEY-----
+MIGEAgEAMBAGByqGSM49AgEGBSuBBAAKBG0wawIBAQQg3f9jZOIMwueRirpNJc9/
+WefKlG5mLuIZNEPDFuJ661ihRANCAASJh+x4ZqXR4xFvCKOouNU7fITsJzlWUZy+
+My4KZsTJELq+VR06IIGzJ0b7n1dsErJaahvGrch7Thw5GAXPu9Ab
+-----END PRIVATE KEY-----
+
+Private key (DER):
+ b'308184020100301006072a8648ce3d020106052b8104000a046d306b0201010420ddff6364e20cc2e7918aba4d25cf7f59e7ca946e662ee2193443c316e27aeb58a144034200048987ec7866a5d1e3116f08a3a8b8d53b7c84ec273956519cbe332e0a66c4c910babe551d3a2081b32746fb9f576c12b25a6a1bc6adc87b4e1c391805cfbbd01b'
+
+Public key (PEM):
+ -----BEGIN PUBLIC KEY-----
+MFYwEAYHKoZIzj0CAQYFK4EEAAoDQgAEiYfseGal0eMRbwijqLjVO3yE7Cc5VlGc
+vjMuCmbEyRC6vlUdOiCBsydG+59XbBKyWmobxq3Ie04cORgFz7vQGw==
+-----END PUBLIC KEY-----
+
+Public key (DER):
+ b'3056301006072a8648ce3d020106052b8104000a034200048987ec7866a5d1e3116f08a3a8b8d53b7c84ec273956519cbe332e0a66c4c910babe551d3a2081b32746fb9f576c12b25a6a1bc6adc87b4e1c391805cfbbd01b'
+
+</pre>
 
 **Python 2.7**:
 	
@@ -474,46 +545,6 @@ Decrypt: Test123
 
 Bob verified: True
 </pre>
-	
-**Python 3.8**:
-
-```
-from cryptography.hazmat.primitives.asymmetric import ec
-from cryptography.hazmat.primitives import serialization
-import binascii
-import sys
-
-private_key = ec.generate_private_key(ec.SECP256K1())
-
-
-vals = private_key.private_numbers()
-no_bits=vals.private_value.bit_length()
-print (f"Private key value: {vals.private_value}. Number of bits {no_bits}")
-
-public_key = private_key.public_key()
-vals=public_key.public_numbers()
-
-enc_point=binascii.b2a_hex(vals.encode_point()).decode()
-
-print (f"\nPublic key encoded point: {enc_point} \nx={enc_point[2:(len(enc_point)-2)//2+2]} \ny={enc_point[(len(enc_point)-2)//2+2:]}")
-
-
-pem = private_key.private_bytes(encoding=serialization.Encoding.PEM,format=serialization.PrivateFormat.PKCS8,encryption_algorithm=serialization.NoEncryption())
-
-der = private_key.private_bytes(encoding=serialization.Encoding.DER,format=serialization.PrivateFormat.PKCS8,encryption_algorithm=serialization.NoEncryption())
-
-
-
-print ("\nPrivate key (PEM):\n",pem.decode())
-print ("Private key (DER):\n",binascii.b2a_hex(der))
-
-pem = public_key.public_bytes(encoding=serialization.Encoding.PEM,format=serialization.PublicFormat.SubjectPublicKeyInfo)
-
-der = public_key.public_bytes(encoding=serialization.Encoding.DER,format=serialization.PublicFormat.SubjectPublicKeyInfo)
-
-print ("\nPublic key (PEM):\n",pem.decode())
-print ("Public key (DER):\n",binascii.b2a_hex(der))	
-```
 	
 ## D.2
 y<sup>2</sup> = x<sup>3 + 7 (mod 89)
