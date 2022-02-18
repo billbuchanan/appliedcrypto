@@ -346,6 +346,7 @@ print ("Public key (DER):\n",binascii.b2a_hex(der))
 
 For a message of “Hello. Alice”, what is the ciphertext sent (just include the first four characters):
 
+**NOTE**: Python 3.5 is not working using the above code example. Please use Python 3.8 !
 
 
 ### D.2 	
