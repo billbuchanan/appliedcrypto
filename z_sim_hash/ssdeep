@@ -1,0 +1,4 @@
+import ssdeep
+hash1 = ssdeep.hash('Also called fuzzy hashes, Ctph can match inputs that have homologies.')
+'3:AXGBicFlgVNhBGcL6wCrFQEv:AXGHsNhxLsr2C'
+>>> hash2 = ssdeep.hash('Also called fuzzy hashes, CTPH can match inputs that have homologies.')

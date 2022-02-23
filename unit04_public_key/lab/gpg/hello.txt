@@ -1,1 +1,5 @@
-Hello
+Hello.
+
+Thanks for the message.
+
+-- Bill
