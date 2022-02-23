@@ -736,7 +736,7 @@ Did you receive a reply:
 
 ## G GitHub Keys
 
-### I.1
+### G.1
 On your VM, go into the ~/.ssh folder. Now generate your SSH keys:
 
 ```

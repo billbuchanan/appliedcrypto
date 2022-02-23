@@ -999,6 +999,38 @@ AES-128-CBC,231906D9476629A1F38BF98A15E72E03
 Password: napier
 ![tc](https://github.com/billbuchanan/esecurity/blob/master/unit04_public_key/lab/tc.png)
 
+# Additional
+
+```python
+from Crypto.PublicKey import RSA
+from base64 import b64decode
+from Crypto.Cipher import PKCS1_OAEP
+
+
+binPrivKey = "-----BEGIN RSA PRIVATE KEY-----\nMIICXQIBAAKBgQCfQfirYVXgzT90v6SqgeID7q/WK1XaVTNGVFolDUOcrXl/egRG\n4iag5tiTbrMYCQ8CSTYn7q0U4AmBXihlbWDqf6MMk6OEoDxdWZTiG1MmQ1wZikFE\ns7sYSog/poYleCeYW8kVzHNWnt9IuQWekIg6ZHkwp4NE/aW8HxvEwYRqCQIDAQAB\nAoGAE6rkiFmxbt06GHNwZQQ8QssP2Q2qARgjiGxzY38DWg6MYiNR8uUL6zQHDBIQ\nOQgpW9lpwD24D0tpsRnNOFVtMeafcxmykX+qHGtNeKJuTtqSm2eTI6gNbC8iosGT\nXJEPM8tc/dfZ2sDobLfi0alWFOzWo8vKaLnnAdMHoZ8mDo8CQQDCMx08JVlTW1zl\n+4UTEnyyYmIezw5ORfMqPtN1LpQ4ptYnHNMVJPWcpRwBYZfHlPOPtuVwo6gzv82G\nQpgQsd4PAkEA0fA8e8R6JbeUR1HxsqWeCnPz3Ahq5Ya5WA6HyJQml9aDVqKDDp2L\n3AcqsvFEKJ/T34r31so2yW6hj2yFBnzOZwJBAIqanrgJ1CpJYBGJJd6J6FQNIgjp\nMUWuaTJyqsvNFd8lPF2oFgPWYDKQKV/W/tRkvD2LhVCSjf95WsADkbMAsAMCQAHo\nwWQOwV2eccbERAJv5yQJMeqKWQ6FTyIx36I/VqqC1Obwy2hSnnb9ybGe6BPGgFLE\HMTjSeRDEU0Qm5UXhXkCQQCPlZJqlgksBN/TULHC4RgsXIx+oFylBrkiFamYsuEt\nKn52h41pX7FI5TXcqIDPw+uqAu50JnwDR0dLYY6fvIce\n-----END RSA PRIVATE KEY-----"
+
+privKeyObj = RSA.importKey(binPrivKey)
+
+pubKeyObj="fIVuuWFLVANs9MjatXbIbtH7/n0dBpDirXKi82jZovXS/krxy43cP0J9jlNz4dqxLgdiqtRe1AcymX06JUo1SrcqDEh3lQxoU1KUvV7jG9GE3pSxHq4dQlcWdHz95b9go6QYbe/5S/uJgolR+S9qaDE8tXYysP8FeXIPd0dXxHo="
+
+ciphertext=b64decode(pubKeyObj)
+
+cipher = PKCS1_OAEP.new(privKeyObj)
+message = cipher.decrypt(ciphertext)
+
+print
+print ("====Decrypted===")
+print ("Message:",message)
+```
+
+Sample test run [here](https://replit.com/@billbuchanan/hadditional#main.py).
+
+To give:
+
+```
+Message: b'help me...'
+```
+
 
 
 
