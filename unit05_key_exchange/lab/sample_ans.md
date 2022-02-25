@@ -144,15 +144,15 @@ By doing a search on the Internet, which curve does Bitcoin use?
 Tor network, IoT, etc
 
 ### Can you explain how you would use these EC parameters to perform the ECDH key exchange?
-Alice generates a, and then a value of aG (mod p).
+Alice generates a, and then a value of a<sup>G</sup> (mod p).
 
-Bob generates b, and then a value of bG (mod p).
+Bob generates b, and then a value of b<sup>G</sup> (mod p).
 
-Alice passes aG (mod p) to Bob.
+Alice passes a<sup>G</sup> (mod p) to Bob.
 
-Bob passes bG (mod p) to Alice.
+Bob passes b<sup>G</sup> (mod p) to Alice.
 
-Alice computes abG (mod p), and Bob also computes abG (mod p), and they have a shared secret.
+Alice computes ab<sup>G</sup> (mod p), and Bob also computes ab<sup>G</sup> (mod p), and they have a shared secret.
 
 
 
