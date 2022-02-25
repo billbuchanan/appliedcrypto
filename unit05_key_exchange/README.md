@@ -5,7 +5,7 @@ The key concepts are: Basics of Key Exchange; Diffie-Hellman, Diffie-Hellman Wea
 What you should know at the end of unit?
 
 * Understand how the Diffie-Hellman process works, with a simple example
-* Understands how the private key is used to check the identity of the sender, and how public key is used to preserve the privacy of the message.
+* Understand how the private key is used to check the identity of the sender, and how public key is used to preserve the privacy of the message.
 * Understand the basics of how Bob and Alice generate a shared key with ECC.
 
 ## Presentations
