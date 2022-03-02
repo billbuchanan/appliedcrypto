@@ -6,7 +6,7 @@ Objective: Key exchange allows us to pass a shared secret key between Bob and Al
 Web link (Demo): https://youtu.be/Lnw4FhiOwiU
 
 ## A	Diffie-Hellman
-No	Description	Result
+
 ### A.1	
 Bob and Alice have agreed on the values:
 

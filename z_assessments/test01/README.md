@@ -17,7 +17,7 @@ Some test details are:
 ## Sample questions
 
 ### 1. Symmetric Key
-Key principles: Salting, AES, ECB, CBC, Key entropy.
+Key principles: Salting, AES, ECB, CBC, GCM, Key entropy.
 
 1. Computing power increases each year. Outline the challenge this gives when protecting encrypted data. [Ref: Symmetric Key]
 2. What are the possible advantages of using stream ciphers over block ciphers? [Ref: Symmetric Key]
@@ -31,6 +31,7 @@ Key principles: Salting, AES, ECB, CBC, Key entropy.
 10. Why would Eve have an aversion to salt? [Ref: Symmetric Key]
 11. Bob tells Alice that she won't be able to view the cipher text, but when she looks at the messages, they seem to be full of printable characters. What format is Bob likely to be using for the encoding of the cipher text, and what would you ask Alice to look for, in order to confirm your guess? [Ref: Symmetric Key]
 12. Alice has been reading her crypto books, and she reads that there should be an '=' symbol at the end of the encoding. She observes her encoding of cipher messages to Bob and sees that some do not have an '=' sign at the end. Is there a problem with her encoder? If not, how often, on average, should she see an '=' sign at the end of her ciphered messages? [Ref: Symmetric Key]
+13. What are advantages does AES GCM mode have over CBC mode?
 
 
 ### 2. Hashing

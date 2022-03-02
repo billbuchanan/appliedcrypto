@@ -13,7 +13,7 @@ What you should know at the end of unit?
 * Week 5 Presentation (lecture - Part 1) - Key Exchange: [here](https://youtu.be/l_osjo8r13Q)
 * Week 5 Presentation (lecture - Part 2) - Key Exchange: [here](https://youtu.be/95AuvZNm0Yg)
 * Week 5 Presentation (PDF) - Key Exchange: [here](https://asecuritysite.com/public/unit05_key_exchange.pdf)
-* Week 5 Presentation (class lecture) - Key Exchange (Recorded 14 Feb 2020): [here](https://youtu.be/WIkDh_5198M)
+<!-- * Week 5 Presentation (class lecture) - Key Exchange (Recorded 14 Feb 2020): [here](https://youtu.be/WIkDh_5198M) -->
 
 ## Examples
 
