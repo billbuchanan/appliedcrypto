@@ -26,15 +26,15 @@ The following are sample questions for key exchange:
 
 * Eve listens to Bob and Alice's communcication for their Diffie-Hellman handshaking. In order to generate the same key as Bob and Alice, which values will Eve try to determine, and how is it likely to be difficult to gain these?
 * For the following key exchanges, Bob generates x, and Alice generates y. Prove the shared key. [Examples](https://asecuritysite.com/public/diffie_examples.pdf)
-  * x=3, y=4, G=4 and N=7. Share=1.
-  * x=6, y=15, G=5 and N=23. Share=2.
-  * x=5, y=7, G=10 and N=541. Share=193.
-  * x=6, y=15, G=5 and N=23. Share=2.
-  * x=7, y=7, G=5 and N=11. Share=9.
-  * x=7, y=9, G=8 and N=13. Share=5.
-  * x=5, y=4, G=2969 and N=9929. Share=8106.
-  * x=6, y=5, G=3881 and N=125. Share=792.
-  * x=3, y=4, G=3623 and N=1153. Share=939.
+  * x=3, y=4, g=4 and N=7. Share=1.
+  * x=6, y=15, g=5 and N=23. Share=2.
+  * x=5, y=7, g=10 and N=541. Share=193.
+  * x=6, y=15, g=5 and N=23. Share=2.
+  * x=7, y=7, g=5 and N=11. Share=9.
+  * x=7, y=9, g=8 and N=13. Share=5.
+  * x=5, y=4, g=2969 and N=9929. Share=8106.
+  * x=6, y=5, g=3881 and N=125. Share=792.
+  * x=3, y=4, g=3623 and N=1153. Share=939.
 * Why are Forward Security and Ephemeral so important for the security of your keys?
 
 ## Examples
