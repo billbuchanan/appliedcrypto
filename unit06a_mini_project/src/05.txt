@@ -1,0 +1,3 @@
+echo -n Hello | openssl enc -aes-256-cbc  -pass pass:"qwerty" -e -base64 -S 241fa86763b85341 
+openssl enc -aes-256-cbc  -pass pass:"qwerty" -d -base64 -S 241fa86763b85341 -in enc.txt -out out.txt
+

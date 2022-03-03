@@ -1,0 +1,4 @@
+echo -n Hello | openssl md5 -hmac qwerty
+echo -n Hello | openssl sha1 -hmac qwerty
+echo -n Hello | openssl sha256 -hmac qwerty
+

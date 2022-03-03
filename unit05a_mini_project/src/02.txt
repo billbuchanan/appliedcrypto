@@ -1,5 +1,0 @@
-echo -n Hello | openssl md5
-echo -n Hello | openssl sha1
-echo -n Hello | openssl sha256
-echo -n Hello | openssl sha1 -ripemd160
-
