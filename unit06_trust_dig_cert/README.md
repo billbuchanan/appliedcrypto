@@ -14,13 +14,13 @@ The key concepts are:
 
 ## Presentations
 
-* Unit 6 Presentation (PDF) - Digital Certs: [here](https://github.com/billbuchanan/esecurity/blob/master/unit06_trust_dig_cert/lab/new_lab06.pdf).
-* Unit 6 Presentation (lecture) - Digital Certs: [here](https://youtu.be/2ptgq8u0I5g).
+* Unit 6 Presentation (PDF) - Digital Certs: [here](https://github.com/billbuchanan/appliedcrypto/blob/master/unit06_trust_dig_cert/lab/new_lab06.pdf).
+<!-- * Unit 6 Presentation (lecture) - Digital Certs: [here](https://youtu.be/2ptgq8u0I5g). -->
 * Unit 6 Presentation (video) - Digital Certs: [here](https://youtu.be/ZJ2G8KC1zDs).
 
 ## Lab
 
-* Unit 6 Lab (PDF): [here](https://github.com/billbuchanan/esecurity/tree/master/unit06_trust_dig_cert/lab).
+* Unit 6 Lab (PDF): [here](https://github.com/billbuchanan/appliedcrypto/tree/master/unit06_trust_dig_cert/lab).
 * Unit 6 Lab (video) - Digital Certs: [here](https://www.youtube.com/watch?v=-uNQFv0GTZc).
 
 ## Sample Exam Questions
