@@ -435,6 +435,64 @@ sudo /etc/init.d/apache2 restart
 HTTPs should now be enabled with a self-signed certificate. If you try https://localhost, you will have to add an exception to view the page, as we are using a self-signed certificate:
 
  
+## Additional lab question
+The ECDSA signature is used in Bitcoin and Ethereum. Using the code [here](https://asecuritysite.com/ecdsa/ecdsa3):
+
+```python
+import sys
+import random
+import hashlib
+import libnum
+
+from secp256k1 import curve,scalar_mult,point_add
+
+msg="Hello"
+
+if (len(sys.argv)>1):
+  msg=(sys.argv[1])
+
+# Alice's key pair (dA,QA)
+dA = random.randint(0, curve.n-1)
+QA = scalar_mult(dA,curve.g)
+
+h=int(hashlib.sha256(msg.encode()).hexdigest(),16)
+
+k = random.randint(0, curve.n-1)
+
+rpoint = scalar_mult(k,curve.g)
+
+r = rpoint[0] % curve.n
+
+# Bob takes m and (r,s) and checks
+inv_k = libnum.invmod(k,curve.n)
+
+s = (inv_k*(h+r*dA)) % curve.n
+
+print (f"Msg: {msg}\n\nAlice's private key={dA}\nAlice's public key={QA}\nk= {k}\n\nr={r}\ns={s}")
+
+# To check signature
+
+inv_s = libnum.invmod(s,curve.n)
+c = inv_s
+u1=(h*c) % curve.n
+u2=(r*c) % curve.n
+P = point_add(scalar_mult(u1,curve.g), scalar_mult(u2,QA))
+
+res = P[0] % curve.n
+print (f"\nResult r={res}")
+
+if (res==r):
+	print("Signature matches!")
+```
+
+Run the code and answer the following questions:
+
+* How is the private key created?
+* How is the public key created?
+* Can you identify the nonce value used in the signature?
+* What are the two output values of the signature?
+* Which key (public or private key) is used to verify the signature?
+* Which key (public or private key) is used to verify the signature?
 
 ## What I should have learnt from this lab?
 The key things learnt:
