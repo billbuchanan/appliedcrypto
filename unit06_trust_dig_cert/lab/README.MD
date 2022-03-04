@@ -1,4 +1,4 @@
-![esecurity](https://raw.githubusercontent.com/billbuchanan/esecurity/master/z_associated/esecurity_graphics.jpg)
+![esecurity](https://raw.githubusercontent.com/billbuchanan/appliedcrypto/master/z_associated/esecurity_graphics.jpg)
 
 # Lab 6: Trust and Digital Certificates
 
