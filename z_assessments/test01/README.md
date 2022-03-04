@@ -5,8 +5,6 @@ There will be four main questions in the exam: Symmetric Key (Unit 2), Hashing (
 
 **Test date:** 5pm, 18 March 2022 (open book test, taken over Moodle). 
 
-** Test time: ** TBC
-
 Some test details are:
 
 * It is an open book test. 
