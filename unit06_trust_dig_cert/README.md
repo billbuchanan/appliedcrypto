@@ -7,6 +7,8 @@ The key concepts are:
 * Digital Certificate: Usage, formats, and PKI.
 * Creation of the trust infrastructure.
 
+You can find examples of digital certificates [here](https://asecuritysite.com/digitalcert/).
+
 ## What you should know at the end of unit?
 
 * Understand the trust infrastructures of PKI.
