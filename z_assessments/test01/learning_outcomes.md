@@ -22,6 +22,7 @@ Students should:
 1. Explain how the e and d values are determined within the RSA method. Where would I find this info? There are some examples [here](https://asecuritysite.com/log/rsa_examples.pdf).
 1. Understand how the Diffie-Hellman process works, with a simple example.
 1. Understand how the Elliptic Curve Diffie Hellman works, with a simple example.
+1. Understand the operation of PKI, and how Alice can get a trusted version of Bob's public key.
 
 Remember to review sample paper [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/fake_exam_paper.md) for some sample questions.
 
