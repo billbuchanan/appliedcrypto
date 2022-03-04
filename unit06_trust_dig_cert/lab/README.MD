@@ -11,7 +11,7 @@ Objective: Digital certificates are used to define a trust infrastructure within
 From this web link (Digital Certificate): 
 
 ```
-http://asecuritysite.com/encryption/digitalcert
+http://asecuritysite.com/digitalcert/digitalcert
 ```
 
 Open up Certificate 1 and identify the following:	
@@ -89,7 +89,7 @@ Now we will create our own self-signed certificates.
 ### B.1	
 Create your own certificate from:
 
-Web link (Create Certificate): http://asecuritysite.com/encryption/createcert
+Web link (Create Certificate): [here](http://asecuritysite.com/digitalcert/createcert)
 
 Add in your own details.	
 
@@ -222,7 +222,7 @@ print ("State/province:", components['ST'])
 print ("Country:", components['C'])
 ```
 
-Web link (CSR): [here](https://asecuritysite.com/encryption/csr)
+Web link (CSR): [here](https://asecuritysite.com/digitalcert/csr)
 
 ### D.8	
 Now check the signing on these certificate requests:
@@ -352,7 +352,7 @@ We have a root certificate authority of My Global Corp, which is based in Washin
 
 ### E.1	We will now view some PFX certificate files, and which are protected with a password:
 
-Web link (Digital Certificates): [here](http://asecuritysite.com/encryption/digitalcert2)
+Web link (Digital Certificates): [here](http://asecuritysite.com/digitalcert/digitalcert2)
 
 * For Certificate 1, can you open it in the Web browser with an incorrect password:
 * Now enter “apples” as a password, and record some of the key details of the certificate:
