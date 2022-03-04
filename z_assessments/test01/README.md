@@ -1,9 +1,9 @@
 ![esecurity](https://raw.githubusercontent.com/billbuchanan/esecurity/master/z_associated/esecurity_graphics.jpg)
 
 # Test 1
-There will be four main questions in the exam: Symmetric Key (Unit 2), Hashing (Unit 3), Public Key (Unit 4), and Key Exchange (Unit 5). An outline is [here](https://www.youtube.com/watch?v=Oj3T2UO1WDw&feature=emb_title), and some learning outcomes are [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/learning_outcomes.md). A PDF version of the questions is [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/2021_fake_exam_questions.pdf) and a fake example paper is [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/fake_exam_paper.md).
+There will be four main questions in the exam: Symmetric Key (Unit 2), Hashing (Unit 3), Public Key (Unit 4), Key Exchange (Unit 5) an Digital Certicates (Unit 6). An outline is [here](https://www.youtube.com/watch?v=Oj3T2UO1WDw&feature=emb_title), and some learning outcomes are [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/learning_outcomes.md). A PDF version of the questions is [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/2021_fake_exam_questions.pdf) and a fake example paper is [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/fake_exam_paper.md).
 
-**Test date:** 18 March 2022 (open book test, taken over Moodle). 
+**Test date:** 5pm, 18 March 2022 (open book test, taken over Moodle). 
 
 ** Test time: ** TBC
 
@@ -84,4 +84,8 @@ Key topics: Diffie-Hellman, Simple DH calculations, ECDH operation, Passing with
 * For Diffie-Hellman: G=2,351; N=5,683; x=7 and y=14. What is the shared key? [Ref: Key Exchange]
 * With Diffie-Hellman, G is 1579, and N is 7561. Bob selects 13 and Alice selects 14. Prove that the shared key is 868. [Ref: Key Exchange]
 * Eve says that she sees the values passed within ECDH by Bob and Alice, and that she can crack the key. By explaining the ECDH key exchange method, outline how it would likely to be difficult for Eve to determine the shared key.
+
+### 5. Digital Ceritifcates
+* For PKI, briefly outline how Alice knows that she is using the correct version of Bob's public key.
+
 
