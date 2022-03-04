@@ -21,7 +21,7 @@ Open up Certificate 1 and identify the following:
 * Name:
 * Issuer:
 * What is CN used for:
-* What is ON used for:
+* What is OU used for:
 * What is O used for:
 * What is L used for:
 
