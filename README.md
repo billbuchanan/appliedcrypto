@@ -23,7 +23,7 @@ The following is the draft timetable:
 | 6  | 25 Feb 2022  | Key Exchange                                   | Lab                     |
 | 7  | 4 Mar 2022   | Digital Signatures and Certificates                 | Lab                    |
 | 8  | 11 Mar 2022  | Revision lecture and Test 1/Coursework   | Mini-project/Coursework |
-| 9  | 18 Mar 2022  | Test (Units 1-5) 40% of overall mark |                                |
+| 9  | 18 Mar 2022  | Test (Units 1-5) 40% of overall mark [here](https://github.com/billbuchanan/appliedcrypto/tree/main/z_assessments/test01) |                                |
 | 10 | 25 Mar 2022  | Tunnelling                                     | Lab                      |
 | 11 | 1 Apr 2022   | Blockchain                                                | Lab      |
 | 12 | 8 Apr 2022   | Future Cryptography                                    | Lab                            |
