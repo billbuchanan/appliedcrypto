@@ -1,4 +1,4 @@
-![esecurity](https://raw.githubusercontent.com/billbuchanan/esecurity/master/z_associated/esecurity_graphics.jpg)
+![esecurity](https://raw.githubusercontent.com/billbuchanan/appliedcrypto/master/z_associated/esecurity_graphics.jpg)
 
 # Lab 6: Trust and Digital Certificates
 
@@ -11,7 +11,7 @@ Objective: Digital certificates are used to define a trust infrastructure within
 From this web link (Digital Certificate): 
 
 ```
-http://asecuritysite.com/encryption/digitalcert
+http://asecuritysite.com/digitalcert/digitalcert
 ```
 
 Open up Certificate 1 and identify the following:	
@@ -21,7 +21,7 @@ Open up Certificate 1 and identify the following:
 * Name:
 * Issuer:
 * What is CN used for:
-* What is ON used for:
+* What is OU used for:
 * What is O used for:
 * What is L used for:
 
@@ -89,7 +89,7 @@ Now we will create our own self-signed certificates.
 ### B.1	
 Create your own certificate from:
 
-Web link (Create Certificate): http://asecuritysite.com/encryption/createcert
+Web link (Create Certificate): [here](http://asecuritysite.com/digitalcert/createcert)
 
 Add in your own details.	
 
@@ -222,7 +222,7 @@ print ("State/province:", components['ST'])
 print ("Country:", components['C'])
 ```
 
-Web link (CSR): [here](https://asecuritysite.com/encryption/csr)
+Web link (CSR): [here](https://asecuritysite.com/digitalcert/csr)
 
 ### D.8	
 Now check the signing on these certificate requests:
@@ -352,7 +352,7 @@ We have a root certificate authority of My Global Corp, which is based in Washin
 
 ### E.1	We will now view some PFX certificate files, and which are protected with a password:
 
-Web link (Digital Certificates): [here](http://asecuritysite.com/encryption/digitalcert2)
+Web link (Digital Certificates): [here](http://asecuritysite.com/digitalcert/digitalcert2)
 
 * For Certificate 1, can you open it in the Web browser with an incorrect password:
 * Now enter “apples” as a password, and record some of the key details of the certificate:
@@ -435,6 +435,67 @@ sudo /etc/init.d/apache2 restart
 HTTPs should now be enabled with a self-signed certificate. If you try https://localhost, you will have to add an exception to view the page, as we are using a self-signed certificate:
 
  
+## Additional lab question
+The ECDSA signature is used in Bitcoin and Ethereum. Using the code [here](https://asecuritysite.com/ecdsa/ecdsa3):
+
+```python
+import sys
+import random
+import hashlib
+import libnum
+
+from secp256k1 import curve,scalar_mult,point_add
+
+msg="Hello"
+
+if (len(sys.argv)>1):
+  msg=(sys.argv[1])
+
+# Alice's key pair (dA,QA)
+dA = random.randint(0, curve.n-1)
+QA = scalar_mult(dA,curve.g)
+
+h=int(hashlib.sha256(msg.encode()).hexdigest(),16)
+
+k = random.randint(0, curve.n-1)
+
+rpoint = scalar_mult(k,curve.g)
+
+r = rpoint[0] % curve.n
+
+# Bob takes m and (r,s) and checks
+inv_k = libnum.invmod(k,curve.n)
+
+s = (inv_k*(h+r*dA)) % curve.n
+
+print (f"Msg: {msg}\n\nAlice's private key={dA}\nAlice's public key={QA}\nk= {k}\n\nr={r}\ns={s}")
+
+# To check signature
+
+inv_s = libnum.invmod(s,curve.n)
+c = inv_s
+u1=(h*c) % curve.n
+u2=(r*c) % curve.n
+P = point_add(scalar_mult(u1,curve.g), scalar_mult(u2,QA))
+
+res = P[0] % curve.n
+print (f"\nResult r={res}")
+
+if (res==r):
+	print("Signature matches!")
+```
+
+Run the code and answer the following questions:
+
+* How is the private key created?
+* How is the public key created?
+* Can you identify the nonce value used in the signature?
+* What are the two output values of the signature?
+* Which key (public or private key) is used to verify the signature?
+* Which key (public or private key) is used to verify the signature?
+
+
+
 
 ## What I should have learnt from this lab?
 The key things learnt:

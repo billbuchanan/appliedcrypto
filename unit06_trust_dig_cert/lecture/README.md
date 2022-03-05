@@ -15,8 +15,10 @@ The key concepts are:
 ## Presentations
 
 * Week 7 Presentation (PDF) - Digital Certs: [here](https://asecuritysite.com/public/chapter06_digital_cert.pdf).
-* Week 7 Presentation (lecture) - Digital Certs: [here](https://youtu.be/2ptgq8u0I5g).
 * Week 7 Presentation (video) - Digital Certs: [here](https://youtu.be/ZJ2G8KC1zDs).
+* Doodle: [here](https://youtu.be/k1sCVNg3mho)
+<!-- * Week 7 Presentation (lecture) - Digital Certs: [here](https://youtu.be/2ptgq8u0I5g). -->
+
 
 
 

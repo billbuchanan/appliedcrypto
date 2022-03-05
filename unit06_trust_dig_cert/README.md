@@ -7,6 +7,8 @@ The key concepts are:
 * Digital Certificate: Usage, formats, and PKI.
 * Creation of the trust infrastructure.
 
+You can find examples of digital certificates [here](https://asecuritysite.com/digitalcert/).
+
 ## What you should know at the end of unit?
 
 * Understand the trust infrastructures of PKI.
@@ -14,13 +16,14 @@ The key concepts are:
 
 ## Presentations
 
-* Unit 6 Presentation (PDF) - Digital Certs: [here](https://github.com/billbuchanan/esecurity/blob/master/unit06_trust_dig_cert/lab/new_lab06.pdf).
-* Unit 6 Presentation (lecture) - Digital Certs: [here](https://youtu.be/2ptgq8u0I5g).
-* Unit 6 Presentation (video) - Digital Certs: [here](https://youtu.be/ZJ2G8KC1zDs).
+* Week 7 Presentation (PDF) - Digital Certs: [here](https://asecuritysite.com/public/chapter06_digital_cert.pdf).
+* Week 7 Presentation (video) - Digital Certs: [here](https://youtu.be/ZJ2G8KC1zDs).
+* Doodle: [here](https://youtu.be/k1sCVNg3mho)
+<!-- * Week 7 Presentation (lecture) - Digital Certs: [here](https://youtu.be/2ptgq8u0I5g). -->
 
 ## Lab
 
-* Unit 6 Lab (PDF): [here](https://github.com/billbuchanan/esecurity/tree/master/unit06_trust_dig_cert/lab).
+* Unit 6 Lab (PDF): [here](https://github.com/billbuchanan/appliedcrypto/tree/master/unit06_trust_dig_cert/lab).
 * Unit 6 Lab (video) - Digital Certs: [here](https://www.youtube.com/watch?v=-uNQFv0GTZc).
 
 ## Sample Exam Questions
