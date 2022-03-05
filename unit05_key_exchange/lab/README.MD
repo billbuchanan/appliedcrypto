@@ -63,7 +63,7 @@ Do they match: [Yes] [No]
 ### B.1	
 Generate 768-bit Diffie-Hellman parameters:
 ```
-openssl dhparam -out dhparams.pem 768 -text
+openssl dhparam -out dhparams.pem -text 768 
 ```
 
 View your key with:
@@ -92,27 +92,27 @@ How would we change the g value?
 
 ### B.2	
 Let’s look at the Elliptic curves we can create:
-<pre>
+```
 openssl ecparam -list_curves
-</pre>
+```
 
 We can create our elliptic parameter file with:
 
-<pre>
+```
 openssl ecparam -name secp256k1 -out secp256k1.pem
-</pre>
+```
 
 Now view the details with:
-<pre>
+```
 openssl ecparam -in secp256k1.pem -text -param_enc explicit -noout
-</pre>
+```
 
 What are the details of the key?
 
 Now we can create our key pair:
-<pre>
+```
 openssl ecparam -in secp256k1.pem -genkey -noout -out mykey.pem
-</pre>
+```
 
 Name three 160-bit curves:
 
