@@ -66,7 +66,7 @@ Generate 768-bit Diffie-Hellman parameters:
 openssl dhparam -out dhparams.pem -text 768 
 ```
 
-View your key with:
+View your key exchange parameters with:
 
 ```
 cat dhparams.pem	
