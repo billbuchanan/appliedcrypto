@@ -1,7 +1,7 @@
 ![esecurity](https://raw.githubusercontent.com/billbuchanan/esecurity/master/z_associated/esecurity_graphics.jpg)
 
 # Lab 7: Tunnelling and Web Security
-Objective: In this lab we will investigate the usage of SSL/TLS and VPN tunnels.
+Objective: In this lab we will investigate the usage of SSL/TLS and VPN tunnftels.
 
 
 YouTube Demo: https://youtu.be/ASCDJq4Wy9Y 
@@ -166,9 +166,10 @@ Other significant details:
 ## B	Viewing details
 
 ### B.1	
-On your VM instance (or your desktop), run Wireshark and capture traffic from your main network connection. Start a Web browser and go to Google.com.
-
-
+On your VM instance (or your desktop), run Wireshark and capture traffic from your main network connection. Start a Web browser and go to:
+```
+https://google.com.
+```
 
 Stop Wireshark and identify some of your connection details:
 	
@@ -190,7 +191,11 @@ Using Firefox, and examining the connection details from the site (click on gree
 
  
 
-### B.2	Run Wireshark and capture traffic from your main network connection. Start a Web browser and go to https://twitter.com.
+### B.2	Run Wireshark and capture traffic from your main network connection. Start a Web browser and go to:
+
+```
+https://twitter.com.
+```
 
 Stop Wireshark and identify some of your connection details:
 
@@ -250,23 +255,21 @@ Who has signed the certificate:
 ## D	Examining traces
 
 ### D.1	Download the following file, and examine the trace with Wireshark:
-
+```
 http://asecuritysite.com/log/ssl.zip
-	
+```
+
 Client IP address and TCP port:
 
 Web server IP address and TCP port:
 
-Determine one of the symmetric key encryption methods, the key exchange, and the hashing methods that the client wants to use (Hint: look at the ‘Client Hello’ packet)”
+Determine one of the symmetric key encryption methods, the key exchange, and the hashing methods that the client wants to use (Hint: look at the ‘Client Hello’ packet):
 
 
-Which SSL/TLS method has been used:
-
-Which encryption method is used for the tunnel:
-
-Which hashing method is used for the tunnel:
-
-What is the length of the encryption key:
+* Which SSL/TLS method has been used:
+* Which encryption method is used for the tunnel:
+* Which hashing method is used for the tunnel:
+* What is the length of the encryption key:
 
 ### D.2	Download the following file, and examine the trace with Wireshark:
 
