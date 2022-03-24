@@ -141,7 +141,9 @@ with open('sites.csv') as csvfile:
       print (row['web'])
 ```      
 
-Note that it will can take a few minutes to perform a single scan. By reading the out3.txt file, outline your findings [Replit](https://replit.com/@billbuchanan/ssllab#main.py):
+Note that it will can take a few minutes to perform a single scan. By reading the out3.txt file, outline your findings.
+
+Here is the [Replit](https://replit.com/@billbuchanan/ssllab#main.py) site.
 
 
 Site name:				Site rating:
@@ -213,9 +215,9 @@ Using Firefox, and examining the connection details from the site (click on gree
 
 ### C.1	
 On your VM instance (or your desktop), make a connection to the www.live.com Web site:
-<pre>
+```
 openssl s_client -connect www.live.com:443
-</pre>
+```
 
 Which SSL/TLS method has been used:
 
@@ -268,8 +270,11 @@ What is the length of the encryption key:
 
 ### D.2	Download the following file, and examine the trace with Wireshark:
 
+```
 http://asecuritysite.com/log/https.zip
-	Client IP address and TCP port:
+```
+
+Client IP address and TCP port:
 
 Web server IP address and TCP port:
 
@@ -283,7 +288,9 @@ What is the length of the encryption key:
 
 ### D.3	Download the following file, and examine the trace with Wireshark:
 
+```
 http://asecuritysite.com/log/heart.zip
+```
 
 Client IP address and TCP port:
 
@@ -300,8 +307,9 @@ What is the length of the encryption key:
 
 
 ### D.4	Download the following file, and examine the trace with Wireshark:
-
+```
 http://asecuritysite.com/log/ipsec.zip 
+```
 
 Which is the IP address of the client and of the server:
 
@@ -317,9 +325,11 @@ Determine one of the encryption and the hashing methods that the client wants to
 Now determine the encryption and hashing methods that are agreed in the ISAKMP:
 
 
-Download the following file, and examine the trace with Wireshark:
+### D.5	Download the following file, and examine the trace with Wireshark:
 
+```
 http://asecuritysite.com/log/tor.zip 
+```
 
 Which TCP port does the client use to send to?
 
@@ -337,9 +347,9 @@ Can you determine the Web site that is being connected to?
 ## E	TLS Connection
 ### E.1	
 We will now create our own SSL/TLS server and client in Python. First, we need to generate a certificate for our server:
-<pre>
+```
 openssl req -new -x509 -days 365 -nodes -out mycert.pem -keyout mycert.pem
-</pre>
+```
 
 Next we will create a server which will listen on Port 444 (as 443 is likely to be used already for HTTPs), and support two cipher suites ('AES256+ECDH:AES256+EDH'):
 
@@ -412,13 +422,14 @@ if __name__ == '__main__':
 
 Now run Wireshark (sudo wireshark &), and capture from the Ethernet port (a sample run is show in in Figure 1). Now run the server, and then run the client. Stop Wireshark and determine:
 	
- The cipher suites sent from client to the server (‘Client Hello’): 
+The cipher suites sent from client to the server (‘Client Hello’): 
 
 
 The cipher suite selected by the server (‘Server Hello’):
 
 
 If we change the code to:
+
 ```python
 context.set_ciphers(‘HIGH’)
 ```
@@ -456,6 +467,7 @@ Hashing methods:
 •	aGOST, kGOST, GOST94, GOST89MAC.
 
 We can also use: HIGH (256-bit); MEDIUM (128-bit); LOW (56-bit or 64-bit).
+
 ## G	Secure services
 ### G.1	
 On your VM, determine your IP address with ipconfig, and then using nmap, show the running servers on the server:
