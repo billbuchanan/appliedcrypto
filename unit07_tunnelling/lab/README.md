@@ -10,61 +10,38 @@ YouTube Demo: https://youtu.be/ASCDJq4Wy9Y
 The Ssllabs tool (https://ssllabs.com) can be used to assess the security of the cryptography used on a Web site. Pick three of your favouriate sites to scan. Now perform a test on them, and determine:
 
 
-What grade does the site get?
-			
-The digital certificate key size and type?
-			
-Does the name of the site match the name on the server?			
-
-Who is the signer of the digital certificate?
-			
-The expiry date on the digital certificate?
-			
-What is the hashing method on the certificate?
-			
-If it uses RSA keys, what is the e value that is used in the encryption (Me mod N)?			
-Determine a weak cipher suite used and example why it might be weak?
-			
-Is SSL v2 supported?
-
-			
-If SSL v2 was supported, what problems might there be with the site (this will require some research)?			
-Outline the usage of TLS 1.0/1.1 and 1.2, and identify a problem if one of these TLS versions were not supported?	
-
-
-		
-Is the site vulnerable to Heartbleed?
-
-Is the site vulnerable to DROWN?
-
-Is the site vulnerable to BEAST?
-
-Is the site vulnerable to POODLE?			
+* What grade does the site get?
+* The digital certificate key size and type?
+* Does the name of the site match the name on the server?			
+* Who is the signer of the digital certificate?
+* The expiry date on the digital certificate?
+* What is the hashing method on the certificate?
+* If it uses RSA keys, what is the e value that is used in the encryption (Me mod N)?			
+* Determine a weak cipher suite used and example why it might be weak?
+* Is SSL v2 supported?
+* If SSL v2 was supported, what problems might there be with the site (this will require some research)?			
+* Outline the usage of TLS 1.0/1.1 and 1.2, and identify a problem if one of these TLS versions were not supported?	
+* Is the site vulnerable to Heartbleed?
+* Is the site vulnerable to DROWN?
+* Is the site vulnerable to BEAST?
+* Is the site vulnerable to POODLE?			
 
 Research questions:
 
-What does TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 identify?
-
-
-
-If a site gets a ‘T’ grade, what is the problem?
-
-
-If the site was susceptible to Poodle, what is the vulnerability?
-
-
-Can you find a site which gets an “A+”? What features does a site need to get an “A+” grade?
-
+* What does TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 identify?
+* If a site gets a ‘T’ grade, what is the problem?
+* If the site was susceptible to Poodle, what is the vulnerability?
+* Can you find a site which gets an "A+"? What features does a site need to get an "A+" grade?
 
 
 ## A.2	
 We will now create a Python program which calls up the SSLlabs assessment. First create a CSV file (sites.csv) with your sites in it. The format is Name of site, URL:
 
-<pre>
+```
 web,site
 Cloudflare,www.cloudflare.com
 BBC,bbc.co.uk
-</pre>
+```
 
 Next enter the following code and run it: 
 
@@ -146,17 +123,15 @@ Note that it will can take a few minutes to perform a single scan. By reading th
 Here is the [Replit](https://replit.com/@billbuchanan/ssllab#main.py) site.
 
 
-Site name:				Site rating:
-
+Site name:				
+Site rating:
 Other significant details:
 
 
 
 
-
-Site name:				Site rating:
-
-
+Site name:				
+Site rating:
 Other significant details:
 
 
@@ -173,23 +148,14 @@ https://google.com.
 
 Stop Wireshark and identify some of your connection details:
 	
-Your IP address and TCP port:
+* Your IP address and TCP port:
+* Google’s Web server IP address and TCP port:
+* Which SSL/TLS version is used:
+* By examining the Wireshark trace, which encryption method is used for the tunnel (hint: look in the ‘Server Hello’ response):
+* By examining the Wireshark trace, which hashing method is used for the tunnel (hint: look in the ‘Server Hello’ response):
+* By examining the Wireshark trace, what is the length of the encryption key (hint: look in the ‘Server Hello’ response):
+* Using Firefox, and examining the connection details from the site (click on green padlock), can you verify the TLS version, the symmetric key encryption method, the handshaking method and the hashing method used within the tunnel? A sample is shown below.
 
-Google’s Web server IP address and TCP port:
-
-Which SSL/TLS version is used:
-
-By examining the Wireshark trace, which encryption method is used for the tunnel (hint: look in the ‘Server Hello’ response):
-
-By examining the Wireshark trace, which hashing method is used for the tunnel (hint: look in the ‘Server Hello’ response):
-
-By examining the Wireshark trace, what is the length of the encryption key (hint: look in the ‘Server Hello’ response):
-
-Using Firefox, and examining the connection details from the site (click on green padlock), can you verify the TLS version, the symmetric key encryption method, the handshaking method and the hashing method used within the tunnel? A sample is shown below.
-
-
-
- 
 
 ### B.2	Run Wireshark and capture traffic from your main network connection. Start a Web browser and go to:
 
@@ -199,21 +165,13 @@ https://twitter.com.
 
 Stop Wireshark and identify some of your connection details:
 
-Your IP address and TCP port:
-
-Twitter’s Web server IP address and TCP port:
-
-Which SSL/TLS version is used:
-
-By examining the Wireshark trace, which encryption method is used for the tunnel:
-
-By examining the Wireshark trace, which hash method is used for the tunnel:
-
-By examining the Wireshark trace, what is the length of the encryption key:
-
-
-Using Firefox, and examining the connection details from the site (click on green padlock), can you verify the TLS version, the symmetric key encryption method, the handshaking method and the hashing method used within the tunnel? 
-
+* Your IP address and TCP port:
+* Twitter’s Web server IP address and TCP port:
+* Which SSL/TLS version is used:
+* By examining the Wireshark trace, which encryption method is used for the tunnel (hint: look in the ‘Server Hello’ response):
+* By examining the Wireshark trace, which hashing method is used for the tunnel (hint: look in the ‘Server Hello’ response):
+* By examining the Wireshark trace, what is the length of the encryption key (hint: look in the ‘Server Hello’ response):
+* Using Firefox, and examining the connection details from the site (click on green padlock), can you verify the TLS version, the symmetric key encryption method, the handshaking method and the hashing method used within the tunnel? A sample is shown below.
 
 
 ## C	OpenSSL
@@ -224,31 +182,14 @@ On your VM instance (or your desktop), make a connection to the www.live.com Web
 openssl s_client -connect www.live.com:443
 ```
 
-Which SSL/TLS method has been used:
-
-Which method is used on the encryption key on the certificate, and what is the size of the public key?
-
-
-Which is the handshaking method that has been used to create the encryption key?
-
-
-Which TLS version is used for the tunnel?
-
-
-Which symmetric encryption method is used for the tunnel:
-
-
-Which hashing method is used for the tunnel:
-
-
-What is the length of the symmetric encryption key:
-
-
-Who has signed the certificate:
-
-
-
-
+* Which SSL/TLS method has been used:
+* Which method is used on the encryption key on the certificate, and what is the size of the public key?
+* Which is the handshaking method that has been used to create the encryption key?
+* Which TLS version is used for the tunnel?
+* Which symmetric encryption method is used for the tunnel:
+* Which hashing method is used for the tunnel:
+* What is the length of the symmetric encryption key:
+* Who has signed the certificate:
 
 
 
@@ -259,17 +200,15 @@ Who has signed the certificate:
 http://asecuritysite.com/log/ssl.zip
 ```
 
-Client IP address and TCP port:
-
-Web server IP address and TCP port:
-
-Determine one of the symmetric key encryption methods, the key exchange, and the hashing methods that the client wants to use (Hint: look at the ‘Client Hello’ packet):
+* Client IP address and TCP port:
+* Web server IP address and TCP port:
+* Determine one of the symmetric key encryption methods, the key exchange, and the hashing methods that the client wants to use (Hint: look at the ‘Client Hello’ packet):
 
 
-* Which SSL/TLS method has been used:
-* Which encryption method is used for the tunnel:
-* Which hashing method is used for the tunnel:
-* What is the length of the encryption key:
+** Which SSL/TLS method has been used:
+** Which encryption method is used for the tunnel:
+** Which hashing method is used for the tunnel:
+** What is the length of the encryption key:
 
 ### D.2	Download the following file, and examine the trace with Wireshark:
 
