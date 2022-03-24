@@ -203,12 +203,10 @@ http://asecuritysite.com/log/ssl.zip
 * Client IP address and TCP port:
 * Web server IP address and TCP port:
 * Determine one of the symmetric key encryption methods, the key exchange, and the hashing methods that the client wants to use (Hint: look at the ‘Client Hello’ packet):
-
-
-** Which SSL/TLS method has been used:
-** Which encryption method is used for the tunnel:
-** Which hashing method is used for the tunnel:
-** What is the length of the encryption key:
+* Which SSL/TLS method has been used:
+* Which encryption method is used for the tunnel:
+* Which hashing method is used for the tunnel:
+* What is the length of the encryption key:
 
 ### D.2	Download the following file, and examine the trace with Wireshark:
 
@@ -216,17 +214,13 @@ http://asecuritysite.com/log/ssl.zip
 http://asecuritysite.com/log/https.zip
 ```
 
-Client IP address and TCP port:
-
-Web server IP address and TCP port:
-
-Which SSL/TLS method has been used:
-
-Which encryption method is used for the tunnel:
-
-Which hashing method is used for the tunnel:
-
-What is the length of the encryption key:
+* Client IP address and TCP port:
+* Web server IP address and TCP port:
+* Determine one of the symmetric key encryption methods, the key exchange, and the hashing methods that the client wants to use (Hint: look at the ‘Client Hello’ packet):
+* Which SSL/TLS method has been used:
+* Which encryption method is used for the tunnel:
+* Which hashing method is used for the tunnel:
+* What is the length of the encryption key:
 
 ### D.3	Download the following file, and examine the trace with Wireshark:
 
@@ -234,18 +228,13 @@ What is the length of the encryption key:
 http://asecuritysite.com/log/heart.zip
 ```
 
-Client IP address and TCP port:
-
-Web server IP address and TCP port:
-
-Which SSL/TLS method has been used:
-
-Which encryption method is used for the tunnel:
-
-Which hashing method is used for the tunnel:
-
-
-What is the length of the encryption key:
+* Client IP address and TCP port:
+* Web server IP address and TCP port:
+* Determine one of the symmetric key encryption methods, the key exchange, and the hashing methods that the client wants to use (Hint: look at the ‘Client Hello’ packet):
+* Which SSL/TLS method has been used:
+* Which encryption method is used for the tunnel:
+* Which hashing method is used for the tunnel:
+* What is the length of the encryption key:
 
 
 ### D.4	Download the following file, and examine the trace with Wireshark:
@@ -253,18 +242,10 @@ What is the length of the encryption key:
 http://asecuritysite.com/log/ipsec.zip 
 ```
 
-Which is the IP address of the client and of the server:
-
-
-Which packet number identifies the start of the VPN connection (Hint: look for UDP Port 500):
-
-
-
-Determine one of the encryption and the hashing methods that the client wants to use:
-
-
-
-Now determine the encryption and hashing methods that are agreed in the ISAKMP:
+* Which is the IP address of the client and of the server:
+* Which packet number identifies the start of the VPN connection (Hint: look for UDP Port 500):
+* Determine one of the encryption and the hashing methods that the client wants to use:
+* Now determine the encryption and hashing methods that are agreed in the ISAKMP:
 
 
 ### D.5	Download the following file, and examine the trace with Wireshark:
@@ -273,17 +254,12 @@ Now determine the encryption and hashing methods that are agreed in the ISAKMP:
 http://asecuritysite.com/log/tor.zip 
 ```
 
-Which TCP port does the client use to send to?
-
-What is the IP address of the Tor node that the client connects to?
-
-What is strange about the packet size?
-
-Is SSL/TLS used for the connection?
-
-Can you trace any content in the conversation?
-
-Can you determine the Web site that is being connected to?
+* Which TCP port does the client use to send to?
+* What is the IP address of the Tor node that the client connects to?
+* What is strange about the packet size?
+* Is SSL/TLS used for the connection?
+* Can you trace any content in the conversation?
+* Can you determine the Web site that is being connected to?
 
 
 ## E	TLS Connection
@@ -364,10 +340,8 @@ if __name__ == '__main__':
 
 Now run Wireshark (sudo wireshark &), and capture from the Ethernet port (a sample run is show in in Figure 1). Now run the server, and then run the client. Stop Wireshark and determine:
 	
-The cipher suites sent from client to the server (‘Client Hello’): 
-
-
-The cipher suite selected by the server (‘Server Hello’):
+* The cipher suites sent from client to the server (‘Client Hello’): 
+* The cipher suite selected by the server (‘Server Hello’):
 
 
 If we change the code to:
