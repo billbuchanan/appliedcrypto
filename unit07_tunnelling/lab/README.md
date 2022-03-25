@@ -143,7 +143,7 @@ Other significant details:
 ### B.1	
 On your VM instance (or your desktop), run Wireshark and capture traffic from your main network connection. Start a Web browser and go to:
 ```
-https://google.com.
+https://google.com
 ```
 
 Stop Wireshark and identify some of your connection details:
@@ -160,7 +160,7 @@ Stop Wireshark and identify some of your connection details:
 ### B.2	Run Wireshark and capture traffic from your main network connection. Start a Web browser and go to:
 
 ```
-https://twitter.com.
+https://twitter.com
 ```
 
 Stop Wireshark and identify some of your connection details:
