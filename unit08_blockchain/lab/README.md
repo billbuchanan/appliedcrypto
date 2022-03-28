@@ -109,6 +109,65 @@ Hash rate:
 Balance for 1GbVUSW5WJmRCpaCJ4hanUny77oDaWW4to:
 
 ## Ethereum
+So, let’s write a bit of code that does some simple maths. In the following we will implement sqrt(), sqr(), mul(), sub(), and add():
+
+```
+pragma solidity ^0.8.0;
+contract mymath {function sqrt(uint x) public view returns (uint y) {
+    uint z = (x + 1) / 2;
+    y = x;
+    while (z < y) {
+        y = z;
+        z = (x / z + z) / 2;
+    }
+}
+function sqr(uint a) public view returns (uint) {
+    uint c = a * a;
+    return c;
+  }function mul(uint a, uint b) public view returns (uint) {
+    uint c = a * b;
+    return c;
+  }function sub(uint a, uint b) public view returns (uint) {
+    return a - b;
+  }function add(uint a, uint b) public view returns (uint) {
+    uint c = a + b;
+    return c;
+  }}
+ ``` 
+
+In this case, the “public ” part makes sure we can see the output of the function, and the “view” part allows it to be stateless (and where we just have to receiver the value without the smart contact remember the state). On Ethereum we normally use the Solidity language to create a smart contract and then compile it into the byte code required for the ledger. First, can we start by entering the Solidity code into Remix [here]:
+
+Once entered, we can then compile it with the Solidity compiler. It is important to take a note of the compiler version at this stage, as we will need this later:
+
+Once compiled we can then deploy the smart contract to a test network (Ropsten). For this , we need to connect our Metamask wallet:
+
+Once it has been deployed, we can see our wallet identifies the deployed contract:
+Onto the ledger
+
+And clicking through gives us the address of the contract, and then viewing it on the explorer, we can see the transaction:
+
+The address here is “0x0895..”, so we can view the smart contract from:
+
+https://ropsten.etherscan.io/address/0x0895a540cff8e7829284f1d9c55daf624d6e2df9
+
+We now need to verify and publish the contact, with click on “Verify and Publish”:
+
+After this, we can define the Compiler Version and the licence:
+
+We then need to add your code for it to be checked:
+
+It takes around 30 seconds, but, eventually, we should have our code accepted:
+
+We now have the contract published to the Ropsten test network:
+
+Next, by selected the Contract tab, and can view the read parameters. The exposed functions are add(), mul(), sqr(), sqrt() and sub():
+
+To test, we can just enter the variables for a given function, and get a result:
+
+
+
+
+## Ethereum
 In this tutorial, we will run an Ethereum blockchain on your Ubuntu host:
 
 Demo:	https://www.youtube.com/watch?v=Gl3Suylr-7E 
