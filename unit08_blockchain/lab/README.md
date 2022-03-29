@@ -437,59 +437,59 @@ After this, our contract will be shown as being pending deployment:
 
 ![Alt text](https://asecuritysite.com/public/sc03.png)
 
-    <p>It will take 10–15 minutes to deploy, but it can be speeded up by increasing the gas limit:</p>
+It will take 10–15 minutes to deploy, but it can be speeded up by increasing the gas limit:
 
 ![Alt text](https://asecuritysite.com/public/sc04.png)
 
-    <p>Once deployed, we can view the contract details:</p>
+Once deployed, we can view the contract details:
 
 ![Alt text](https://asecuritysite.com/public/sc05.png)
 
-    <p> And can then view the transaction for the contact [<a href="https://ropsten.etherscan.io/tx/0x70604b7c25c12eea5210c75afaa89879f383dc94b894d570f06925d0d95b7fdb" target="_blank">here</a>]:</p>
+And can then view the transaction for the contact [<a href="https://ropsten.etherscan.io/tx/0x70604b7c25c12eea5210c75afaa89879f383dc94b894d570f06925d0d95b7fdb" target="_blank">here</a>]:
 
 ![Alt text](https://asecuritysite.com/public/sc06.png)
 
-    <p> And then view the contact [<a href="https://ropsten.etherscan.io/address/0x7db2f938e1037a13dde315634a71a91625542a52" target="_blank">here</a>]:</p>
+And then view the contact [here](https://ropsten.etherscan.io/address/0x7db2f938e1037a13dde315634a71a91625542a52")]:
 
 ![Alt text](https://asecuritysite.com/public/sc07.png)
 
-    <p>Next, we select the Contract tab:</p>
+Next, we select the Contract tab:
     
 ![Alt text](https://asecuritysite.com/public/sc08.png)
 
-    <p>And then select "Verify and Publish" and enter the details of the compiler version (v0.4.26):</p>
+And then select "Verify and Publish" and enter the details of the compiler version (v0.4.26):
 
 ![Alt text](https://asecuritysite.com/public/sc09.png)
 
-    <p>We then need to copy-and-pasete the contract code into the Source Code text box:</p>
+We then need to copy-and-pasete the contract code into the Source Code text box:
 
 ![Alt text](https://asecuritysite.com/public/sc10.png)
 
-    <p>After less than 45 seconds, the contract will be approved:</p>
+After less than 45 seconds, the contract will be approved:
     
 ![Alt text](https://asecuritysite.com/public/sc11.png)
 
-    <p>When the contact is run there is a constructor to transfer the tokens to the wallet we have defined (and who will be the owner of the token). We can now go back to the wallet which is specified, to see if the tokens have been transferred:</p>
+When the contact is run there is a constructor to transfer the tokens to the wallet we have defined (and who will be the owner of the token). We can now go back to the wallet which is specified, to see if the tokens have been transferred:
 
 ![Alt text](https://asecuritysite.com/public/sc12.png)
 
-    <p> Next, we can transfer the tokens into our wallet, by defining the contract address:</p>
+Next, we can transfer the tokens into our wallet, by defining the contract address:
 
 ![Alt text](https://asecuritysite.com/public/sc13.png)
 
-    <p>  We will now have our new tokens in the wallet:</p>
+We will now have our new tokens in the wallet:
 
 ![Alt text](https://asecuritysite.com/public/sc14.png)
 
-    <p> And with:</p>
+And with:
 
 ![Alt text](https://asecuritysite.com/public/sc15.png)
 
-    <p> We can now transfer the cryptocurrency to another wallet:</p>
+We can now transfer the cryptocurrency to another wallet:
 
 ![Alt text](https://asecuritysite.com/public/sc16.png)
 
-    <p>We can view the ENUToken: [<a href="https://ropsten.etherscan.io/token/0x7db2f938e1037a13dde315634a71a91625542a52" target="_blank">here</a>]:</p>
+We can view the ENUToken: [here](https://ropsten.etherscan.io/token/0x7db2f938e1037a13dde315634a71a91625542a52)]:
 
 ![Alt text](https://asecuritysite.com/public/sc17.png)
 
