@@ -427,7 +427,7 @@ When you create your own contract, make sure you change the public constructor()
 
 The wallet ID is the public ID of your wallet in Metamask. Now we compile:
 
-<img src="/public/sc01.png" width="800px" />
+![Alt text](https://asecuritysite.com/public/sc01.png)
 
 Next, we will deploy to the Ropsten test network:
 
