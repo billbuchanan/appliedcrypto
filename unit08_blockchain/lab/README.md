@@ -122,15 +122,18 @@ contract mymath {function sqrt(uint x) public view returns (uint y) {
 function sqr(uint a) public view returns (uint) {
     uint c = a * a;
     return c;
-  }function mul(uint a, uint b) public view returns (uint) {
+  }
+function mul(uint a, uint b) public view returns (uint) {
     uint c = a * b;
     return c;
-  }function sub(uint a, uint b) public view returns (uint) {
+  }
+function sub(uint a, uint b) public view returns (uint) {
     return a - b;
-  }function add(uint a, uint b) public view returns (uint) {
+  }
+function add(uint a, uint b) public view returns (uint) {
     uint c = a + b;
     return c;
-  }}
+}}
  ``` 
 
 In this case, the "public" part makes sure we can see the output of the function, and the "view" part allows it to be stateless (and where we just have to receiver the value without the smart contact remember the state). On Ethereum we normally use the Solidity language to create a smart contract and then compile it into the byte code required for the ledger. First, can we start by entering the Solidity code into Remix [<a href="https://remix.ethereum.org/#optimize=false&runs=200&evmVersion=null" target="_blank">here</a>]:
