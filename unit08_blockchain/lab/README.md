@@ -165,7 +165,304 @@ Next, by selected the Contract tab, and can view the read parameters. The expose
 To test, we can just enter the variables for a given function, and get a result:
 
 
+## Creating ERC-20 tokens
+  <p>Within the Ethereum blockchain, we can record transactions and run smart contracts. These things allow us to run DApps (decentralized applications) and which can support the running of the infrastructure in return for some payment (Ether). A DApp can also create tokens for new currencies, shares in a company or to prove the ownership of an asset. ERC-20 is a standard format for a Fungible Token and which can support the sharing, transfer and storage of tokens. These tokens are supported by the whole of the Ethereum infrastructure and can be easily traded. They support a number of mandatory functions:
+    </p>
+    <ul>
+        <li>totalSupply. This function is the total number of ERC-20 tokens that have been created.</li>
+        <li>balanceOf. This function identifies the number of tokens that a given address has in its account.</li>
+        <li>transfer. This function supports the transfer of tokens to a defined user address.</li>
+        <li>transferFrom. This function supports a user to transfer tokens to another user.</li>
+        <li>approve. This function checks that a transaction is valid, based on the supply of token.</li>
+        <li>allowance. This function checks if a user has enough funds in their account for a transaction.</li>
 
+    </ul>
+    <p>There are also a number of options:</p>
+    <ul>
+        <li>
+            Token Name. This is the name that the token will be defined as.
+        </li>
+        <li>Symbol. This is the symbol that the token will use.</li>
+        <li>Decimal. This is the number of decimal places to be used for any transactions.</li>
+    </ul>
+
+    <p>
+        So, let's create a token named "ENUToken", and use the tutorial sample from [
+        <a href="https://github.com/bitfwdcommunity/Issue-your-own-ERC20-token/blob/master/contracts/erc20_tutorial.sol" target="_blank">here</a>]. First, we open up remix.ethereum, and enter the following Solidy contract:
+    </p>
+
+    <pre>
+pragma solidity ^0.4.24;
+
+// ----------------------------------------------------------------------------
+// 'ENU Token' token contract
+//
+// Deployed to : 0xbB15B38e4ef6aF154b89A2E57E03Cd5cbD752233
+// Symbol      : ENUToken
+// Name        : ENU Token
+// Total supply: 100000000
+// Decimals    : 18
+
+// Based on https://github.com/bitfwdcommunity/Issue-your-own-ERC20-token/tree/master/contracts
+
+
+// ----------------------------------------------------------------------------
+// Safe maths
+// ----------------------------------------------------------------------------
+contract SafeMath {
+    function safeAdd(uint a, uint b) public pure returns (uint c) {
+        c = a + b;
+        require(c >= a);
+    }
+    function safeSub(uint a, uint b) public pure returns (uint c) {
+        require(b <= a);
+        c = a - b;
+    }
+    function safeMul(uint a, uint b) public pure returns (uint c) {
+        c = a * b;
+        require(a == 0 || c / a == b);
+    }
+    function safeDiv(uint a, uint b) public pure returns (uint c) {
+        require(b > 0);
+        c = a / b;
+    }
+}
+
+
+// ----------------------------------------------------------------------------
+// ERC Token Standard #20 Interface
+// https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20-token-standard.md
+// ----------------------------------------------------------------------------
+contract ERC20Interface {
+    function totalSupply() public constant returns (uint);
+    function balanceOf(address tokenOwner) public constant returns (uint balance);
+    function allowance(address tokenOwner, address spender) public constant returns (uint remaining);
+    function transfer(address to, uint tokens) public returns (bool success);
+    function approve(address spender, uint tokens) public returns (bool success);
+    function transferFrom(address from, address to, uint tokens) public returns (bool success);
+
+    event Transfer(address indexed from, address indexed to, uint tokens);
+    event Approval(address indexed tokenOwner, address indexed spender, uint tokens);
+}
+
+
+// ----------------------------------------------------------------------------
+// Contract function to receive approval and execute function in one call
+//
+// Borrowed from MiniMeToken
+// ----------------------------------------------------------------------------
+contract ApproveAndCallFallBack {
+    function receiveApproval(address from, uint256 tokens, address token, bytes data) public;
+}
+
+
+// ----------------------------------------------------------------------------
+// Owned contract
+// ----------------------------------------------------------------------------
+contract Owned {
+    address public owner;
+    address public newOwner;
+
+    event OwnershipTransferred(address indexed _from, address indexed _to);
+
+    constructor() public {
+        owner = msg.sender;
+    }
+
+    modifier onlyOwner {
+        require(msg.sender == owner);
+        _;
+    }
+
+    function transferOwnership(address _newOwner) public onlyOwner {
+        newOwner = _newOwner;
+    }
+    function acceptOwnership() public {
+        require(msg.sender == newOwner);
+        emit OwnershipTransferred(owner, newOwner);
+        owner = newOwner;
+        newOwner = address(0);
+    }
+}
+
+
+// ----------------------------------------------------------------------------
+// ERC20 Token, with the addition of symbol, name and decimals and assisted
+// token transfers
+// ----------------------------------------------------------------------------
+contract <b style="color:red">BillToken</b> is ERC20Interface, Owned, SafeMath {
+    string public symbol;
+    string public  name;
+    uint8 public decimals;
+    uint public _totalSupply;
+
+    mapping(address => uint) balances;
+    mapping(address => mapping(address => uint)) allowed;
+
+
+    // ------------------------------------------------------------------------
+    // Constructor
+    // ------------------------------------------------------------------------
+    constructor() public {
+        symbol = <b style="color:red">"ENUToken"</b>;
+        name = <b style="color:red">"ENU Token"</b>;
+        decimals = 18;
+        _totalSupply = 100000000000000000000000000;
+        balances[<b style="color:red">0xbB15B38e4ef6aF154b89A2E57E03Cd5cbD752233</b>] = _totalSupply;
+        emit Transfer(address(0), <b style="color:red">0xbB15B38e4ef6aF154b89A2E57E03Cd5cbD752233</b>, _totalSupply);
+    }
+
+
+    // ------------------------------------------------------------------------
+    // Total supply
+    // ------------------------------------------------------------------------
+    function totalSupply() public constant returns (uint) {
+        return _totalSupply  - balances[address(0)];
+    }
+
+
+    // ------------------------------------------------------------------------
+    // Get the token balance for account tokenOwner
+    // ------------------------------------------------------------------------
+    function balanceOf(address tokenOwner) public constant returns (uint balance) {
+        return balances[tokenOwner];
+    }
+
+
+    // ------------------------------------------------------------------------
+    // Transfer the balance from token owner's account to to account
+    // - Owner's account must have sufficient balance to transfer
+    // - 0 value transfers are allowed
+    // ------------------------------------------------------------------------
+    function transfer(address to, uint tokens) public returns (bool success) {
+        balances[msg.sender] = safeSub(balances[msg.sender], tokens);
+        balances[to] = safeAdd(balances[to], tokens);
+        emit Transfer(msg.sender, to, tokens);
+        return true;
+    }
+
+
+    // ------------------------------------------------------------------------
+    // Token owner can approve for spender to transferFrom(...) tokens
+    // from the token owner's account
+    //
+    // https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20-token-standard.md
+    // recommends that there are no checks for the approval double-spend attack
+    // as this should be implemented in user interfaces 
+    // ------------------------------------------------------------------------
+    function approve(address spender, uint tokens) public returns (bool success) {
+        allowed[msg.sender][spender] = tokens;
+        emit Approval(msg.sender, spender, tokens);
+        return true;
+    }
+
+
+    // ------------------------------------------------------------------------
+    // Transfer tokens from the from account to the to account
+    // 
+    // The calling account must already have sufficient tokens approve(...)-d
+    // for spending from the from account and
+    // - From account must have sufficient balance to transfer
+    // - Spender must have sufficient allowance to transfer
+    // - 0 value transfers are allowed
+    // ------------------------------------------------------------------------
+    function transferFrom(address from, address to, uint tokens) public returns (bool success) {
+        balances[from] = safeSub(balances[from], tokens);
+        allowed[from][msg.sender] = safeSub(allowed[from][msg.sender], tokens);
+        balances[to] = safeAdd(balances[to], tokens);
+        emit Transfer(from, to, tokens);
+        return true;
+    }
+
+
+    // ------------------------------------------------------------------------
+    // Returns the amount of tokens approved by the owner that can be
+    // transferred to the spender's account
+    // ------------------------------------------------------------------------
+    function allowance(address tokenOwner, address spender) public constant returns (uint remaining) {
+        return allowed[tokenOwner][spender];
+    }
+
+
+    // ------------------------------------------------------------------------
+    // Token owner can approve for spender to transferFrom(...) tokens
+    // from the token owner's account. The spender contract function
+    // receiveApproval(...) is then executed
+    // ------------------------------------------------------------------------
+    function approveAndCall(address spender, uint tokens, bytes data) public returns (bool success) {
+        allowed[msg.sender][spender] = tokens;
+        emit Approval(msg.sender, spender, tokens);
+        ApproveAndCallFallBack(spender).receiveApproval(msg.sender, tokens, this, data);
+        return true;
+    }
+
+
+    // ------------------------------------------------------------------------
+    // Don't accept ETH
+    // ------------------------------------------------------------------------
+    function () public payable {
+        revert();
+    }
+
+
+    // ------------------------------------------------------------------------
+    // Owner can transfer out any accidentally sent ERC20 tokens
+    // ------------------------------------------------------------------------
+    function transferAnyERC20Token(address tokenAddress, uint tokens) public onlyOwner returns (bool success) {
+        return ERC20Interface(tokenAddress).transfer(owner, tokens);
+    }
+}
+</pre>
+
+
+    <p>When you create your own contract, make sure you change the public constructor() with: the symbol, the name, and the wallet ID:</p>
+<pre>
+    constructor() public {
+    symbol = <b style="color:red">"ENUToken"</b>;
+    name = <b style="color:red">"ENU Token"</b>;
+    decimals = 18;
+    _totalSupply = 100000000000000000000000000;
+    balances[<b style="color:red">0xbB15B38e4ef6aF154b89A2E57E03Cd5cbD752233</b>] = _totalSupply;
+    emit Transfer(address(0), <b style="color:red">0xbB15B38e4ef6aF154b89A2E57E03Cd5cbD752233</b>, _totalSupply);
+    }
+</pre>
+    <p>The wallet ID is the public ID of your wallet in Metamask. Now we compile:</p>
+
+    <p><img src="/public/sc01.png" width="800px" /></p>
+
+    <p>Next, we will deploy to the Ropsten test network:</p>
+    <p><img src="https://asecuritysite.com/public/sc02.png" width="800px" /></p>
+    <p>After this, our contract will be shown as being pending deployment:</p>
+    <p><img src="/public/sc03.png" width="800px" /></p>
+    <p>It will take 10–15 minutes to deploy, but it can be speeded up by increasing the gas limit:</p>
+    <p><img src="/public/sc04.png" width="300px" /></p>
+    <p>Once deployed, we can view the contract details:</p>
+    <p><img src="/public/sc05.png" width="800px" /></p>
+    <p> And can then view the transaction for the contact [<a href="https://ropsten.etherscan.io/tx/0x70604b7c25c12eea5210c75afaa89879f383dc94b894d570f06925d0d95b7fdb" target="_blank">here</a>]:</p>
+    <p><img src="/public/sc06.png" width="800px" /></p>
+    <p> And then view the contact [<a href="https://ropsten.etherscan.io/address/0x7db2f938e1037a13dde315634a71a91625542a52" target="_blank">here</a>]:</p>
+    <p><img src="/public/sc07.png" width="800px" /></p>
+    <p>Next, we select the Contract tab:</p>
+    <p><img src="/public/sc08.png" width="800px" /></p>
+    <p>And then select "Verify and Publish" and enter the details of the compiler version (v0.4.26):</p>
+    <p><img src="/public/sc09.png" width="800px" /></p>
+    <p>We then need to copy-and-pasete the contract code into the Source Code text box:</p>
+    <p><img src="/public/sc10.png" width="800px" /></p>
+    <p>After less than 45 seconds, the contract will be approved:</p>
+    <p><img src="/public/sc11.png" width="800px" /></p>
+    <p>When the contact is run there is a constructor to transfer the tokens to the wallet we have defined (and who will be the owner of the token). We can now go back to the wallet which is specified, to see if the tokens have been transferred:</p>
+    <p><img src="/public/sc12.png" width="800px" /></p>
+    <p> Next, we can transfer the tokens into our wallet, by defining the contract address:</p>
+    <p><img src="/public/sc13.png" width="800px" /></p>
+    <p>  We will now have our new tokens in the wallet:</p>
+    <p><img src="/public/sc14.png" width="800px" /></p>
+    <p> And with:</p>
+    <p><img src="/public/sc15.png" width="800px" /></p>
+    <p> We can now transfer the cryptocurrency to another wallet:</p>
+    <p><img src="/public/sc16.png" width="800px" /></p>
+
+    <p>We can view the ENUToken: [<a href="https://ropsten.etherscan.io/token/0x7db2f938e1037a13dde315634a71a91625542a52" target="_blank">here</a>]:</p>
+    <p><img src="/public/sc17.png" width="800px" /></p>
 
 ## Ethereum
 In this tutorial, we will run an Ethereum blockchain on your Ubuntu host:
