@@ -2,8 +2,6 @@
 
 # Lab 8: Blockchain and Cryptocurrencies
 
-At the end of this lab, remember to stop your Blockchain (Control-C from the console that is running Geth), and shut down your VM. You may also want to use “rm -r mynapier” in order to delete your blockchain.
-
 Aim:		To provide a foundation in understanding in Bitcoin and Blockchain.
 
 ## Activities
@@ -111,7 +109,7 @@ Balance for 1GbVUSW5WJmRCpaCJ4hanUny77oDaWW4to:
 ## Creating a Smart Contract in Ethereum
 So, let’s write a bit of code that does some simple maths. In the following we will implement sqrt(), sqr(), mul(), sub(), and add():
 
-```
+```solidity
 pragma solidity ^0.8.0;
 contract mymath {function sqrt(uint x) public view returns (uint y) {
     uint z = (x + 1) / 2;
@@ -204,19 +202,16 @@ Note:You can get Ether for our wallet [here](https://faucet.metamask.io/)
 * allowance. This function checks if a user has enough funds in their account for a transaction.
 
  
-    <p>There are also a number of options:</p>
-
+There are also a number of options:
 
 * Token Name. This is the name that the token will be defined as.
 * Symbol. This is the symbol that the token will use.
 * Decimal. This is the number of decimal places to be used for any transactions.
 
+So, let's create a token named "ENUToken", and use the tutorial sample from [here](https://github.com/bitfwdcommunity/Issue-your-own-ERC20-token/blob/master/contracts/erc20_tutorial.sol). First, we open up remix.ethereum, and enter the following Solidy contract:
 
-    <p>
-        So, let's create a token named "ENUToken", and use the tutorial sample from [here](https://github.com/bitfwdcommunity/Issue-your-own-ERC20-token/blob/master/contracts/erc20_tutorial.sol). First, we open up remix.ethereum, and enter the following Solidy contract:
-    </p>
 
-```
+```solidity
 pragma solidity ^0.4.24;
 
 // ----------------------------------------------------------------------------
@@ -521,6 +516,7 @@ We can view the ENUToken: [here](https://ropsten.etherscan.io/token/0x7db2f938e1
 ![Alt text](https://asecuritysite.com/public/sc17.png)
 
 # Additional Tutorial
+At the end of this lab, remember to stop your Blockchain (Control-C from the console that is running Geth), and shut down your VM. You may also want to use “rm -r mynapier” in order to delete your blockchain.
 ## Using Geth
 In this tutorial, we will run an Ethereum blockchain on your Ubuntu host:
 
