@@ -135,34 +135,61 @@ function sqr(uint a) public view returns (uint) {
   }}
  ``` 
 
-In this case, the “public ” part makes sure we can see the output of the function, and the “view” part allows it to be stateless (and where we just have to receiver the value without the smart contact remember the state). On Ethereum we normally use the Solidity language to create a smart contract and then compile it into the byte code required for the ledger. First, can we start by entering the Solidity code into Remix [here]:
+In this case, the "public" part makes sure we can see the output of the function, and the "view" part allows it to be stateless (and where we just have to receiver the value without the smart contact remember the state). On Ethereum we normally use the Solidity language to create a smart contract and then compile it into the byte code required for the ledger. First, can we start by entering the Solidity code into Remix [<a href="https://remix.ethereum.org/#optimize=false&runs=200&evmVersion=null" target="_blank">here</a>]:
+
+![here](https://asecuritysite.com/public/eth001.png)
 
 Once entered, we can then compile it with the Solidity compiler. It is important to take a note of the compiler version at this stage, as we will need this later:
 
+
+![here](https://asecuritysite.com/public/eth002.png)
+   
 Once compiled we can then deploy the smart contract to a test network (Ropsten). For this , we need to connect our Metamask wallet:
+   
+![here](https://asecuritysite.com/public/eth003.png)   
+
 
 Once it has been deployed, we can see our wallet identifies the deployed contract:
-Onto the ledger
+    
+ ![here](https://asecuritysite.com/public/eth004.png)     
 
 And clicking through gives us the address of the contract, and then viewing it on the explorer, we can see the transaction:
+    
+![here](https://asecuritysite.com/public/eth005.png)     
 
-The address here is “0x0895..”, so we can view the smart contract from:
 
-https://ropsten.etherscan.io/address/0x0895a540cff8e7829284f1d9c55daf624d6e2df9
+The address here is “0x0895..”, so we can view the smart contract from: [here](https://ropsten.etherscan.io/address/0x0895a540cff8e7829284f1d9c55daf624d6e2df9).  We now need to verify and publish the contact, with click on “Verify and Publish”:
+    
+![here](https://asecuritysite.com/public/eth006.png)   
 
-We now need to verify and publish the contact, with click on “Verify and Publish”:
 
-After this, we can define the Compiler Version and the licence:
+After this, we can define the Compiler Version and the licence
+    
+ ![here](https://asecuritysite.com/public/eth007.png)   
 
 We then need to add your code for it to be checked:
+    
+ ![here](https://asecuritysite.com/public/eth008.png)       
 
-It takes around 30 seconds, but, eventually, we should have our code accepted:
+ It takes around 30 seconds, but, eventually, we should have our code accepted:
+    
+ ![here](https://asecuritysite.com/public/eth009.png)        
+
 
 We now have the contract published to the Ropsten test network:
+    
+  ![here](https://asecuritysite.com/public/eth010.png)       
+
 
 Next, by selected the Contract tab, and can view the read parameters. The exposed functions are add(), mul(), sqr(), sqrt() and sub():
-
+    
+    ![here](https://asecuritysite.com/public/eth011.png)       
+ 
 To test, we can just enter the variables for a given function, and get a result:
+    
+![here](https://asecuritysite.com/public/eth012.png)       
+ 
+Note:You can get Ether for our wallet [here](https://faucet.metamask.io/)
 
 
 ## Creating ERC-20 tokens
