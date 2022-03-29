@@ -108,7 +108,7 @@ Hash rate:
 
 Balance for 1GbVUSW5WJmRCpaCJ4hanUny77oDaWW4to:
 
-## Ethereum
+## Creating a Smart Contract in Ethereum
 So, let’s write a bit of code that does some simple maths. In the following we will implement sqrt(), sqr(), mul(), sub(), and add():
 
 ```
@@ -520,7 +520,8 @@ We can view the ENUToken: [here](https://ropsten.etherscan.io/token/0x7db2f938e1
 
 ![Alt text](https://asecuritysite.com/public/sc17.png)
 
-## Ethereum
+# Additional Tutorial
+## Using Geth
 In this tutorial, we will run an Ethereum blockchain on your Ubuntu host:
 
 Demo:	https://www.youtube.com/watch?v=Gl3Suylr-7E 
