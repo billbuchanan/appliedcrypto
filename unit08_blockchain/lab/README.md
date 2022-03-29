@@ -324,11 +324,11 @@ contract <b style="color:red">BillToken</b> is ERC20Interface, Owned, SafeMath {
     // Constructor
     // ------------------------------------------------------------------------
     constructor() public {
-        symbol = <b style="color:red">"ENUToken"</b>;
-        name = <b style="color:red">"ENU Token"</b>;
+        symbol = "ENUToken";
+        name = "ENU Token";
         decimals = 18;
         _totalSupply = 100000000000000000000000000;
-        balances[<b style="color:red">0xbB15B38e4ef6aF154b89A2E57E03Cd5cbD752233</b>] = _totalSupply;
+        balances[0xbB15B38e4ef6aF154b89A2E57E03Cd5cbD752233] = _totalSupply;
         emit Transfer(address(0), <b style="color:red">0xbB15B38e4ef6aF154b89A2E57E03Cd5cbD752233</b>, _totalSupply);
     }
 
@@ -438,12 +438,12 @@ When you create your own contract, make sure you change the public constructor()
 
 ```
     constructor() public {
-    symbol = <b style="color:red">"ENUToken"</b>;
-    name = <b style="color:red">"ENU Token"</b>;
+    symbol = "ENUToken";
+    name = "ENU Token";
     decimals = 18;
     _totalSupply = 100000000000000000000000000;
-    balances[<b style="color:red">0xbB15B38e4ef6aF154b89A2E57E03Cd5cbD752233</b>] = _totalSupply;
-    emit Transfer(address(0), <b style="color:red">0xbB15B38e4ef6aF154b89A2E57E03Cd5cbD752233</b>, _totalSupply);
+    balances[0xbB15B38e4ef6aF154b89A2E57E03Cd5cbD752233] = _totalSupply;
+    emit Transfer(address(0), 0xbB15B38e4ef6aF154b89A2E57E03Cd5cbD752233, _totalSupply);
     }
 ```
 
