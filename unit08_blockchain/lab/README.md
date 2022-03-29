@@ -425,13 +425,16 @@ When you create your own contract, make sure you change the public constructor()
     }
 ```
 
-    <p>The wallet ID is the public ID of your wallet in Metamask. Now we compile:</p>
+The wallet ID is the public ID of your wallet in Metamask. Now we compile:
 
-    <p><img src="/public/sc01.png" width="800px" /></p>
+<img src="/public/sc01.png" width="800px" />
 
-    <p>Next, we will deploy to the Ropsten test network:</p>
-    <p><img src="https://asecuritysite.com/public/sc02.png" width="800px" /></p>
-    <p>After this, our contract will be shown as being pending deployment:</p>
+Next, we will deploy to the Ropsten test network:
+
+<img src="https://asecuritysite.com/public/sc02.png" width="800px" />
+
+After this, our contract will be shown as being pending deployment:
+
     <p><img src="/public/sc03.png" width="800px" /></p>
     <p>It will take 10–15 minutes to deploy, but it can be speeded up by increasing the gas limit:</p>
     <p><img src="/public/sc04.png" width="300px" /></p>
