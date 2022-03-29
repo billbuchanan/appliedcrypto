@@ -178,12 +178,12 @@ We then need to add your code for it to be checked:
 
 We now have the contract published to the Ropsten test network:
     
-  ![here](https://asecuritysite.com/public/eth010.png)       
+![here](https://asecuritysite.com/public/eth010.png)       
 
 
 Next, by selected the Contract tab, and can view the read parameters. The exposed functions are add(), mul(), sqr(), sqrt() and sub():
     
-    ![here](https://asecuritysite.com/public/eth011.png)       
+![here](https://asecuritysite.com/public/eth011.png)       
  
 To test, we can just enter the variables for a given function, and get a result:
     
