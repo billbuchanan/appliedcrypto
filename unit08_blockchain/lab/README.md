@@ -168,30 +168,28 @@ To test, we can just enter the variables for a given function, and get a result:
 ## Creating ERC-20 tokens
   <p>Within the Ethereum blockchain, we can record transactions and run smart contracts. These things allow us to run DApps (decentralized applications) and which can support the running of the infrastructure in return for some payment (Ether). A DApp can also create tokens for new currencies, shares in a company or to prove the ownership of an asset. ERC-20 is a standard format for a Fungible Token and which can support the sharing, transfer and storage of tokens. These tokens are supported by the whole of the Ethereum infrastructure and can be easily traded. They support a number of mandatory functions:
     </p>
-    <ul>
-        <li>totalSupply. This function is the total number of ERC-20 tokens that have been created.</li>
-        <li>balanceOf. This function identifies the number of tokens that a given address has in its account.</li>
-        <li>transfer. This function supports the transfer of tokens to a defined user address.</li>
-        <li>transferFrom. This function supports a user to transfer tokens to another user.</li>
-        <li>approve. This function checks that a transaction is valid, based on the supply of token.</li>
-        <li>allowance. This function checks if a user has enough funds in their account for a transaction.</li>
 
-    </ul>
+* totalSupply. This function is the total number of ERC-20 tokens that have been created.
+* balanceOf. This function identifies the number of tokens that a given address has in its account.
+* transfer. This function supports the transfer of tokens to a defined user address.
+* transferFrom. This function supports a user to transfer tokens to another user.
+* approve. This function checks that a transaction is valid, based on the supply of token.
+* allowance. This function checks if a user has enough funds in their account for a transaction.
+
+ 
     <p>There are also a number of options:</p>
-    <ul>
-        <li>
-            Token Name. This is the name that the token will be defined as.
-        </li>
-        <li>Symbol. This is the symbol that the token will use.</li>
-        <li>Decimal. This is the number of decimal places to be used for any transactions.</li>
-    </ul>
+
+
+* Token Name. This is the name that the token will be defined as.
+* Symbol. This is the symbol that the token will use.
+* Decimal. This is the number of decimal places to be used for any transactions.
+
 
     <p>
-        So, let's create a token named "ENUToken", and use the tutorial sample from [
-        <a href="https://github.com/bitfwdcommunity/Issue-your-own-ERC20-token/blob/master/contracts/erc20_tutorial.sol" target="_blank">here</a>]. First, we open up remix.ethereum, and enter the following Solidy contract:
+        So, let's create a token named "ENUToken", and use the tutorial sample from [here](https://github.com/bitfwdcommunity/Issue-your-own-ERC20-token/blob/master/contracts/erc20_tutorial.sol). First, we open up remix.ethereum, and enter the following Solidy contract:
     </p>
 
-    <pre>
+```
 pragma solidity ^0.4.24;
 
 // ----------------------------------------------------------------------------
@@ -412,11 +410,11 @@ contract <b style="color:red">BillToken</b> is ERC20Interface, Owned, SafeMath {
         return ERC20Interface(tokenAddress).transfer(owner, tokens);
     }
 }
-</pre>
+```
 
 
     <p>When you create your own contract, make sure you change the public constructor() with: the symbol, the name, and the wallet ID:</p>
-<pre>
+```
     constructor() public {
     symbol = <b style="color:red">"ENUToken"</b>;
     name = <b style="color:red">"ENU Token"</b>;
@@ -425,7 +423,8 @@ contract <b style="color:red">BillToken</b> is ERC20Interface, Owned, SafeMath {
     balances[<b style="color:red">0xbB15B38e4ef6aF154b89A2E57E03Cd5cbD752233</b>] = _totalSupply;
     emit Transfer(address(0), <b style="color:red">0xbB15B38e4ef6aF154b89A2E57E03Cd5cbD752233</b>, _totalSupply);
     }
-</pre>
+```
+
     <p>The wallet ID is the public ID of your wallet in Metamask. Now we compile:</p>
 
     <p><img src="/public/sc01.png" width="800px" /></p>
