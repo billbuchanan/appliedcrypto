@@ -412,8 +412,8 @@ contract <b style="color:red">BillToken</b> is ERC20Interface, Owned, SafeMath {
 }
 ```
 
+When you create your own contract, make sure you change the public constructor() with: the symbol, the name, and the wallet ID:
 
-    <p>When you create your own contract, make sure you change the public constructor() with: the symbol, the name, and the wallet ID:</p>
 ```
     constructor() public {
     symbol = <b style="color:red">"ENUToken"</b>;
