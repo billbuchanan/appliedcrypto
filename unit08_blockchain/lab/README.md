@@ -111,8 +111,8 @@ The Ropsten network allows a user to test an Ethereum application, and using fre
 
 * What is your public ID?
 * Find out someone else's public ID, and send them 0.001 Ether.
-* Can you see the transaction on 
-* Can you see your transaction on the other person's wallet?
+* Can you see the transaction on the Ethereum network?
+* Can you see your transaction on the Ethereum network for the person you send it to?
 
 ## Creating a Smart Contract in Ethereum
 So, let’s write a bit of code that does some simple maths. In the following we will implement sqrt(), sqr(), mul(), sub(), and add():
