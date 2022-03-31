@@ -136,7 +136,7 @@ function add(uint a, uint b) public view returns (uint) {
 }}
  ``` 
 
-In this case, the "public" part makes sure we can see the output of the function, and the "view" part allows it to be stateless (and where we just have to receiver the value without the smart contact remember the state). On Ethereum we normally use the Solidity language to create a smart contract and then compile it into the byte code required for the ledger. First, can we start by entering the Solidity code into Remix [<a href="https://remix.ethereum.org/#optimize=false&runs=200&evmVersion=null" target="_blank">here</a>]:
+In this case, the "public" part makes sure we can see the output of the function, and the "view" part allows it to be stateless (and where we just have to receiver the value without the smart contact remember the state). On Ethereum we normally use the Solidity language to create a smart contract and then compile it into the byte code required for the ledger. First, can we start by entering the Solidity code into Remix [<a href="https://remix.ethereum.org/" target="_blank">here</a>]:
 
 ![here](https://asecuritysite.com/public/eth001.png)
 
@@ -194,8 +194,8 @@ Note:You can get Ether for our wallet [here](https://faucet.metamask.io/)
 
 
 ## Creating ERC-20 tokens
-  <p>Within the Ethereum blockchain, we can record transactions and run smart contracts. These things allow us to run DApps (decentralized applications) and which can support the running of the infrastructure in return for some payment (Ether). A DApp can also create tokens for new currencies, shares in a company or to prove the ownership of an asset. ERC-20 is a standard format for a Fungible Token and which can support the sharing, transfer and storage of tokens. These tokens are supported by the whole of the Ethereum infrastructure and can be easily traded. They support a number of mandatory functions:
-    </p>
+Within the Ethereum blockchain, we can record transactions and run smart contracts. These things allow us to run DApps (decentralized applications) and which can support the running of the infrastructure in return for some payment (Ether). A DApp can also create tokens for new currencies, shares in a company or to prove the ownership of an asset. ERC-20 is a standard format for a Fungible Token and which can support the sharing, transfer and storage of tokens. These tokens are supported by the whole of the Ethereum infrastructure and can be easily traded. They support a number of mandatory functions:
+
 
 * totalSupply. This function is the total number of ERC-20 tokens that have been created.
 * balanceOf. This function identifies the number of tokens that a given address has in its account.
@@ -203,7 +203,6 @@ Note:You can get Ether for our wallet [here](https://faucet.metamask.io/)
 * transferFrom. This function supports a user to transfer tokens to another user.
 * approve. This function checks that a transaction is valid, based on the supply of token.
 * allowance. This function checks if a user has enough funds in their account for a transaction.
-
  
 There are also a number of options:
 
@@ -211,7 +210,9 @@ There are also a number of options:
 * Symbol. This is the symbol that the token will use.
 * Decimal. This is the number of decimal places to be used for any transactions.
 
-So, let's create a token named "ENUToken", and use the tutorial sample from [here](https://github.com/bitfwdcommunity/Issue-your-own-ERC20-token/blob/master/contracts/erc20_tutorial.sol). First, we open up remix.ethereum, and enter the following Solidy contract:
+Now we you create your own token. If you are Bob Smith, then call your token "BobSmithToken", and your currency will be "BobSmith". 
+
+So, let's create a token named "ENUToken" (change the name to your name), and use the tutorial sample from [here](https://github.com/bitfwdcommunity/Issue-your-own-ERC20-token/blob/master/contracts/erc20_tutorial.sol). First, we open up [https://remix.ethereum.org/](https://remix.ethereum.org/), and enter the following Solidy contract:
 
 
 ```solidity
@@ -437,9 +438,9 @@ contract <b style="color:red">BillToken</b> is ERC20Interface, Owned, SafeMath {
 }
 ```
 
-When you create your own contract, make sure you change the public constructor() with: the symbol, the name, and the wallet ID:
+When you create your own contract, make sure you change the public constructor() with: the **symbol**, the **name**, and the **wallet ID**. You are the owner of the token, so you need to enter the public ID of your wallet for two hex values given next:
 
-```
+```solidity
     constructor() public {
     symbol = "ENUToken";
     name = "ENU Token";
