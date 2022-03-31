@@ -36,9 +36,8 @@ Determine the following [here](https://www.blockchain.com/charts):
 
 
 ### L1.3	
-Download and create the Python file defined on this page:
+Download and create the Python file defined on this page [here](https://asecuritysite.com/encryption/bit):
 
-https://asecuritysite.com/encryption/bit
 ```Python
 import httplib2
 
@@ -86,33 +85,26 @@ print("Received for 1Gb...4to (BTC): ",int(content)/100000000)
 
 Now run the Python file, and compare the results in L.1.2.
 
-Total bitcoins in circulation:
-
-Most recent hash block (last four hex digits):
-
-Block reward per block:
-
-Difficulty:
-
-Average time between blocks:
-
-Market capitalisation (USD):
-
-24 hr price (USD):
-
-24hr transactions (USD):
-
-Hash rate:
-
-Balance for 1GbVUSW5WJmRCpaCJ4hanUny77oDaWW4to:
+* Total bitcoins in circulation:
+* Most recent hash block (last four hex digits):
+* Block reward per block:
+* Difficulty:
+* Average time between blocks:
+* Market capitalisation (USD):
+* 24 hr price (USD):
+* 24hr transactions (USD):
+* Hash rate:
+* Balance for 1GbVUSW5WJmRCpaCJ4hanUny77oDaWW4to:
 
 ## Setting up your Ethereum wallet on Ropsten
-The Ropsten network allows a user to test an Ethereum application, and using free Ether. Initially setup your MetaMask wallet.
+The Ropsten network allows a user to test an Ethereum application, and using free Ether. Initially setup your MetaMask wallet. A document to outline how you set this up is [here](https://github.com/billbuchanan/appliedcrypto/blob/main/unit08_blockchain/lab/Metamask.pdf). Once you have set it up, answer the following:
 
-* What is your public ID?
-* Find out someone else's public ID, and send them 0.001 Ether.
-* Can you see the transaction on the Ethereum network?
+* What is your public ID (just define the first four hex values)?
+* Find out someone else's public ID, and send them 0.001 Ether. If you are doing the lab on your own, send it to Bill (ID: 0xbB15B38e4ef6aF154b89A2E57E03Cd5cbD752233).
+* Can you see the transaction on the Ethereum network? An example of a wallet is [here](https://ropsten.etherscan.io/address/0xbb15b38e4ef6af154b89a2e57e03cd5cbd752233).
 * Can you see your transaction on the Ethereum network for the person you send it to?
+* What was the transaction fee for the transfer? If you were using the main Ethereum network, how much would the transaction cost in Dollars?
+* Ask someone to send you 0.001 Ether. Did you receive it? If you are doing the lab on your own, ask your lab tutor to send you 0.001 Ether.
 
 ## Creating a Smart Contract in Ethereum
 So, let’s write a bit of code that does some simple maths. In the following we will implement sqrt(), sqr(), mul(), sub(), and add():
