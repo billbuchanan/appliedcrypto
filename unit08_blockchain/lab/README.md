@@ -519,6 +519,12 @@ We can view the ENUToken: [here](https://ropsten.etherscan.io/token/0x7db2f938e1
 
 ![Alt text](https://asecuritysite.com/public/sc17.png)
 
+Now answer the following:
+
+* Do you see the tokens in your wallet?
+* Now end 0.1 of your token to Bill's wallet. ID: 0xbb15b38e4ef6af154b89a2e57e03cd5cbd752233
+* Did Bill receive the token?
+
 # Additional Tutorial
 At the end of this lab, remember to stop your Blockchain (Control-C from the console that is running Geth), and shut down your VM. You may also want to use “rm -r mynapier” in order to delete your blockchain.
 ## Using Geth
