@@ -314,7 +314,7 @@ contract Owned {
 // ERC20 Token, with the addition of symbol, name and decimals and assisted
 // token transfers
 // ----------------------------------------------------------------------------
-contract <b style="color:red">BillToken</b> is ERC20Interface, Owned, SafeMath {
+contract BillToken is ERC20Interface, Owned, SafeMath {
     string public symbol;
     string public  name;
     uint8 public decimals;
@@ -333,7 +333,7 @@ contract <b style="color:red">BillToken</b> is ERC20Interface, Owned, SafeMath {
         decimals = 18;
         _totalSupply = 100000000000000000000000000;
         balances[0xbB15B38e4ef6aF154b89A2E57E03Cd5cbD752233] = _totalSupply;
-        emit Transfer(address(0), <b style="color:red">0xbB15B38e4ef6aF154b89A2E57E03Cd5cbD752233</b>, _totalSupply);
+        emit Transfer(address(0), 0xbB15B38e4ef6aF154b89A2E57E03Cd5cbD752233, _totalSupply);
     }
 
 
