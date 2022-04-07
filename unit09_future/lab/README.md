@@ -9,7 +9,7 @@ Aim:		To provide a foundation in some of the up-and-coming methods in cryptograp
 ## Running a local blockchain
 In a previous lab we ran our blockchain on the Ropsten test network. In this tutorial, we will run a local blockchain using ganache. We can install from:
 
-```
+```Solidity
 https://trufflesuite.com/ganache/
 ```
 
@@ -43,7 +43,7 @@ We should now have a blockchain with accounts:
 
 Now with remix.ethereum.org [here](https://remix.ethereum.org), enter the following code:
 
-```
+```Solidity
 pragma solidity ^0.8.0;
 
 contract mymath {
