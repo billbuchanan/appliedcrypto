@@ -95,6 +95,7 @@ Once we deploy our contact, we can use Remix to test it. In the following we see
 
 ![here](https://asecuritysite.com/public/estate22.png)  
 
+Test the other functions, and check that they work.
 
 ## Light-weight crypto
 ### L1	
