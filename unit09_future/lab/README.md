@@ -6,6 +6,16 @@ Aim:		To provide a foundation in some of the up-and-coming methods in cryptograp
 
 **New feature:** Repl.it code additions.
 
+## Running a local blockchain
+
+![here](https://asecuritysite.com/public/gan04.png)  
+
+![here](https://asecuritysite.com/public/gan03.png)  
+
+![here](https://asecuritysite.com/public/gan02.png)  
+
+![here](https://asecuritysite.com/public/gan01.png)  
+
 ## Light-weight crypto
 ### L1	
 In many operations within public key methods we use the exponential operation:
