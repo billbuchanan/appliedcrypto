@@ -39,6 +39,67 @@ We should now have a blockchain with accounts:
 
 ![here](https://asecuritysite.com/public/gan01.png)  
 
+## Testing
+
+Now with remix.ethereum.org [here](https://remix.ethereum.org), enter the following code:
+
+```
+pragma solidity ^0.8.0;
+
+contract mymath {
+
+function sqrt(uint x) public view returns (uint y) {
+    uint z = (x + 1) / 2;
+    y = x;
+    while (z < y) {
+        y = z;
+        z = (x / z + z) / 2;
+    }
+}
+function sqr(uint a) public view returns (uint) {
+    uint c = a * a;
+    return c;
+  }
+
+function mul(uint a, uint b) public view returns (uint) {
+    uint c = a * b;
+    return c;
+  }
+
+  function sub(uint a, uint b) public view returns (uint) {
+    return a - b;
+  }
+
+  function add(uint a, uint b) public view returns (uint) {
+    uint c = a + b;
+    return c;
+  }
+
+
+}
+```
+
+Ganache includes 10 accounts, and which each has 100 Eth in its account. These accounts can then be used to perform transactions on the blockchain. The server places itself on a certain port. In the example above, this port is TCP port 8545. This port will be used to connect from Remix to our blockchain and deploy our smart contract.
+
+![here](https://asecuritysite.com/public/estate19.png)  
+
+Next, we compile the smart contract:
+
+![here](https://asecuritysite.com/public/estate20.png)  
+
+And if we get no errors, we can now deploy the contact to our blockchain. For this we now select the Deployment tab, and then for the Environment we select “Web3 Provider”. It should then pick up the first account address:
+
+![here](https://asecuritysite.com/public/estate21.png)  
+
+We should be all good to now deploy by clicking on the “Deploy” button, and Remix should give us a message that it has deployed the contract successfully.
+
+![here](https://asecuritysite.com/public/estate22.png)  
+
+Once we deploy our contact, we can use Remix to test it. In the following we see we can test the add() method for the contact, and add 5 and 3, with a result of 8:
+
+![here](https://asecuritysite.com/public/estate23.png)  
+
+
 ## Light-weight crypto
 ### L1	
 In many operations within public key methods we use the exponential operation:
