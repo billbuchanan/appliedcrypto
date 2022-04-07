@@ -174,16 +174,15 @@ Now we can go ahead and test the contract:
 
 ![here](https://asecuritysite.com/public/estate49.png)  
 
-In this case we see that the Base64 string for “hello” is “aGVsbG8=”, and that the Keccak-256 hash for “hello” is “0x1c8aff950685c2ed4bc3174f3472287b56d9517b9c948127319a09a7a36deac8”. You can test this [here]:
+In this case we see that the Base64 string for “hello” is “aGVsbG8=”, and that the Keccak-256 hash for “hello” is “0x1c8aff950685c2ed4bc3174f3472287b56d9517b9c948127319a09a7a36deac8”. You can test this [here](https://asecuritysite.com/hash/s3?m=hello):
 
 ![here](https://asecuritysite.com/public/estate50.png)  
 
-And [here] for Base64:
+And [here](https://asecuritysite.com/Coding/ascii?ascii=hello) for Base64:
 
 ![here](https://asecuritysite.com/public/estate51.png)  
 
-Now go ahead and test each of the methods, and prove that they work.
-
+Now go ahead and test each of the functions, and prove that they work.
 
 ## Light-weight crypto
 ### L1	
