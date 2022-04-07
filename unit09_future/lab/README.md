@@ -79,25 +79,21 @@ function mul(uint a, uint b) public view returns (uint) {
 }
 ```
 
-Ganache includes 10 accounts, and which each has 100 Eth in its account. These accounts can then be used to perform transactions on the blockchain. The server places itself on a certain port. In the example above, this port is TCP port 8545. This port will be used to connect from Remix to our blockchain and deploy our smart contract.
+Ganache includes 10 accounts, and which each has 100 Eth in its account. These accounts can then be used to perform transactions on the blockchain. The server places itself on a certain port. In the example above, this port is TCP port 8545. This port will be used to connect from Remix to our blockchain and deploy our smart contract. Next, we compile the smart contract:
 
 ![here](https://asecuritysite.com/public/estate19.png)  
 
-Next, we compile the smart contract:
+And if we get no errors, we can now deploy the contact to our blockchain. For this we now select the Deployment tab, and then for the Environment we select “Web3 Provider”. It should then pick up the first account address:
 
 ![here](https://asecuritysite.com/public/estate20.png)  
 
-And if we get no errors, we can now deploy the contact to our blockchain. For this we now select the Deployment tab, and then for the Environment we select “Web3 Provider”. It should then pick up the first account address:
+We should be all good to now deploy by clicking on the “Deploy” button, and Remix should give us a message that it has deployed the contract successfully.
 
 ![here](https://asecuritysite.com/public/estate21.png)  
 
-We should be all good to now deploy by clicking on the “Deploy” button, and Remix should give us a message that it has deployed the contract successfully.
-
-![here](https://asecuritysite.com/public/estate22.png)  
-
 Once we deploy our contact, we can use Remix to test it. In the following we see we can test the add() method for the contact, and add 5 and 3, with a result of 8:
 
-![here](https://asecuritysite.com/public/estate23.png)  
+![here](https://asecuritysite.com/public/estate22.png)  
 
 
 ## Light-weight crypto
