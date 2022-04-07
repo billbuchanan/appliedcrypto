@@ -7,12 +7,35 @@ Aim:		To provide a foundation in some of the up-and-coming methods in cryptograp
 **New feature:** Repl.it code additions.
 
 ## Running a local blockchain
+In a previous lab we ran our blockchain on the Ropsten test network. In this tutorial, we will run a local blockchain using ganache. We can install from:
+
+```
+https://trufflesuite.com/ganache/
+```
+
+Then download the correct version for your computer:
 
 ![here](https://asecuritysite.com/public/gan04.png)  
 
+This should download the application file into your Downloads folder. Next go to the terminal and enter:
+
+```
+cd 
+cd Downloads
+chmod a+x ganache-2.5.4-linux-x86_64.AppImage
+```
+Then run the program:
+
+```
+./ganache-2.5.4-linux-x86_64.AppImage
+```
 ![here](https://asecuritysite.com/public/gan03.png)  
 
+This should run the blockchain, and now select Quick start:
+
 ![here](https://asecuritysite.com/public/gan02.png)  
+
+We should now have a blockchain with accounts:
 
 ![here](https://asecuritysite.com/public/gan01.png)  
 
