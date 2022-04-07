@@ -6,7 +6,7 @@ Aim:		To provide a foundation in some of the up-and-coming methods in cryptograp
 
 **New feature:** Repl.it code additions.
 
-## Running a local blockchain
+## A Running a local blockchain
 In a previous lab we ran our blockchain on the Ropsten test network. In this tutorial, we will run a local blockchain using ganache. We can install from:
 
 ```Solidity
@@ -39,7 +39,7 @@ We should now have a blockchain with accounts:
 
 ![here](https://asecuritysite.com/public/gan01.png)  
 
-## Testing
+## B Testing
 
 Now with remix.ethereum.org [here](https://remix.ethereum.org), enter the following code:
 
@@ -97,7 +97,7 @@ Once we deploy our contact, we can use Remix to test it. In the following we see
 
 Test the other functions, and check that they work.
 
-## Hashing
+## C Hashing
 Open Zeppelin is open-source Solidity library that supports a wide range of functions that integrate into smart contracts in Ethereum. In the following we will implement a number of standard hashing methods, alongside a Base64 integration from Open Zeppelin:
 
 ```Solidity
@@ -184,8 +184,8 @@ And [here](https://asecuritysite.com/Coding/ascii?ascii=hello) for Base64:
 
 Now go ahead and test each of the functions, and prove that they work.
 
-## Light-weight crypto
-### L1	
+## D Light-weight crypto
+### D1	
 In many operations within public key methods we use the exponential operation:
 
 g<sup>x</sup> (mod p)
@@ -215,7 +215,7 @@ Now measure the times taken. What do you observe?
 Now increase the range for x (so that it is relatively large) and make n a large prime number. What do you observe from the performance:
 
 
-### L2	
+### D2	
 Normally light-weight crypto has to be fast and efficient. The XTEA method is one of the fastest around. Some standard open source code in Node.js is (use npm install xtea):
 
 ```Node.js
@@ -232,10 +232,11 @@ console.log('Decipher:\t'+ xtea.decrypt( ciphertext, key ).toString() );
 Repl.it: https://repl.it/@billbuchanan/xteajs
 
 A sample run is:
-<pre>
+
+```
 Cipher:	52deb267335dd52a49837931c233cea8
 Decipher:	ABCDEFGH
-</pre>
+```
 
 
 
@@ -253,7 +254,7 @@ If possible, run the code on another machine, and estimate the rate of encryptio
 
 
 
-### L3	
+### D3	
 RC4 is a stream cipher created by Ron Rivest and has a variable key length.  Run the following Python code and test it:
 
 ```Python
@@ -347,9 +348,9 @@ What are the main advantages of having a variable key size and having a stream c
 
 
 
-## 3	Zero-knowledge proof (ZKP)
+## E	Zero-knowledge proof (ZKP)
 
-### L5	
+### E.1	
 With ZKP, Alice can prove that he still knows something to Bob, without revealing her secret. At the basis of many methods is the Fiat-Shamir method:
 
  
@@ -408,7 +409,7 @@ else:
 
 Repl.it: https://repl.it/@billbuchanan/zktut
 
-### L6	
+### E.2
 We can now expand this method by creating a password, and then making this the secret. Copy and run the code here:
 
 https://asecuritysite.com/encryption/fiat2
@@ -422,7 +423,7 @@ How does the password get converting into a form which can be used in the Fiat-S
 
 
 
-### L1.7	
+### E.3	
 The Diffie-Hellman method can be used to perform a zero-knowledge proof implementation. Copy the code from the following link and verify that it works:
 
 https://asecuritysite.com/encryption/diffiez
