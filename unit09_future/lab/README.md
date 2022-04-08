@@ -184,12 +184,23 @@ And [here](https://asecuritysite.com/Coding/ascii?ascii=hello) for Base64:
 
 Now go ahead and test each of the functions, and prove that they work.
 
-## D Light-weight crypto
+## D Post-quantum crypto
+There are many examples of PQC [here](https://asecuritysite.com/pqc/).
+
+What are the names of the finalists for the NIST standard for PQC related to digital signatures? 
+
+By analysing the results from this page [here](https://asecuritysite.com/pqc/pqc_sig). Which method do you think will win the competition?
+
+What are the names of the finalists for the NIST standard for PQC related to key exchange mechanism? 
+
+By analysing the results from this page [here](https://asecuritysite.com/pqc/pqc_kem). Which method do you think will win the competition?
+
+## E Light-weight crypto
 There are many examples of light-weight cryptography [here](https://asecuritysite.com/light/).
 
 What are the names of the finalists for the NIST standard for light-weight cryptography?
 
-### D1	
+### E1	
 In many operations within public key methods we use the exponential operation:
 
 g<sup>x</sup> (mod p)
@@ -219,7 +230,7 @@ Now measure the times taken. What do you observe?
 Now increase the range for x (so that it is relatively large) and make n a large prime number. What do you observe from the performance:
 
 
-### D2	
+### E2	
 Normally light-weight crypto has to be fast and efficient. The XTEA method is one of the fastest around. Some standard open source code in Node.js is (use npm install xtea):
 
 ```Node.js
@@ -260,7 +271,7 @@ If possible, run the code on another machine, and estimate the rate of encryptio
 
 
 
-### D3	
+### E3	
 RC4 is a stream cipher created by Ron Rivest and has a variable key length.  Run the following Python code and test it:
 
 ```Python
@@ -358,9 +369,9 @@ What are the main advantages of having a variable key size and having a stream c
 
 
 
-## E	Zero-knowledge proof (ZKP)
+## F	Zero-knowledge proof (ZKP)
 
-### E.1	
+### F.1	
 With ZKP, Alice can prove that he still knows something to Bob, without revealing her secret. At the basis of many methods is the Fiat-Shamir method:
 
  
@@ -500,7 +511,7 @@ else:
 
 Repl.it: https://repl.it/@billbuchanan/zktut
 
-### E.2
+### F.2
 We can now expand this method by creating a password, and then making this the secret. Copy and run the code here:
 
 https://asecuritysite.com/encryption/fiat2
@@ -514,7 +525,7 @@ How does the password get converting into a form which can be used in the Fiat-S
 
 
 
-### E.3	
+### F.3	
 The Diffie-Hellman method can be used to perform a zero-knowledge proof implementation. Copy the code from the following link and verify that it works:
 
 https://asecuritysite.com/encryption/diffiez
