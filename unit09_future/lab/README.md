@@ -199,8 +199,8 @@ x= random.randint(2, 100)
 n=997
 res1 = g**x % n
 res2= pow(g,x, n)
-print res1
-print res2
+print (res1)
+print (res2)
 ```
 
 Repl.it: https://repl.it/@billbuchanan/powex
