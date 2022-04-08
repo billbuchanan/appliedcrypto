@@ -231,6 +231,8 @@ console.log('Decipher:\t'+ xtea.decrypt( ciphertext, key ).toString() );
 
 Repl.it: https://repl.it/@billbuchanan/xteajs
 
+Note: It you prefer to use Python, the code is [here](https://asecuritysite.com/light/xtea).
+
 A sample run is:
 
 ```
@@ -348,7 +350,6 @@ RC4 uses an s-Box. Can you find a way to print out the S-box values for a key of
 
 
 What are the main advantages of having a variable key size and having a stream cipher in light-weight cryptography?
-
 
 
 
