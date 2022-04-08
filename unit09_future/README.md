@@ -4,8 +4,9 @@
 
 The key concepts are:
 
+* Light-weight cryptography.
 * Zero-knowledge proof (ZKP).
-* Homomophic encryption.
+* Homomorphic encryption.
 * Quantum-robust encryption.
 
 ## What you should know at the end of unit?
@@ -16,12 +17,11 @@ The key concepts are:
 ## Material
 
 * Week 9 Lecture (Video): [here](https://youtu.be/CKZjrCnUrAM).
-* Week 9 Lecture (PDF): [here](https://asecuritysite.com/public/unit09_next_gen.pdf).
-* Week 9 Lab (PDF): [here](https://asecuritysite.com/public/lab09.pdf).
+* Week 9 Lecture (PDF): [here](https://github.com/billbuchanan/appliedcrypto/tree/main/unit09_future/lecture).
+* Week 9 Lab (PDF): [here](https://github.com/billbuchanan/appliedcrypto/tree/main/unit09_future/lab).
 
 ## A few demos and articles
 
 * Light-weight crypto: [here](https://asecuritysite.com/light).
 * ZKP: [here](https://asecuritysite.com/zero).
-*
-
+* PCQ: [here](https://asecuritysite.com/pqc).
