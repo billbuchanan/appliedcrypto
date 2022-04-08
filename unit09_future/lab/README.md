@@ -258,10 +258,11 @@ If possible, run the code on another machine, and estimate the rate of encryptio
 RC4 is a stream cipher created by Ron Rivest and has a variable key length.  Run the following Python code and test it:
 
 ```Python
+import sys
 def KSA(key):
     keylength = len(key)
 
-    S = range(256)
+    S = list(range(256))
 
     j = 0
     for i in range(256):
@@ -277,6 +278,7 @@ def PRGA(S):
     while True:
         i = (i + 1) % 256
         j = (j + S[i]) % 256
+        
         S[i], S[j] = S[j], S[i]  # swap
 
         K = S[(S[i] + S[j]) % 256]
@@ -284,16 +286,9 @@ def PRGA(S):
 
 def RC4(key):
     S = KSA(key)
+    
     return PRGA(S)
 
-def asctohex(string_in):
-	a=""
-	for x in string_in:
-		a = a + ("0"+((hex(ord(x)))[2:]))[-2:]
-	return(a)
-
-def convert_key(s):
-        return [ord(c) for c in s]
 
 key="0102030405"
 
@@ -305,19 +300,21 @@ if (len(sys.argv)>1):
 if (len(sys.argv)>2):
 	key=str(sys.argv[2])
 
-key = key.decode('hex')
-key = convert_key(key)
+key =  bytes.fromhex(key)
 
 keystream = RC4(key)
-print "Keystream: ",
+print ("Keystream:\t", end='')
 for i in range (0,15):
-	print hex(keystream.next()),
-print
-print "Cipher: ",
+	print (hex(next(keystream))[2:],end='')
+
+print ("\nPlaintext:\t",plaintext)
+print ("Cipher:\t\t",end='')
 keystream = RC4(key)
 
 for c in plaintext:
-	sys.stdout.write("%02X" % (ord(c) ^ keystream.next()))
+	sys.stdout.write("%02X" % (ord(c) ^ next(keystream)))
+
+print ("\n\nS-box: ",KSA(key))
 ```
 Repl.it: https://repl.it/@billbuchanan/rc4tut
 
@@ -325,13 +322,21 @@ Now go to https://tools.ietf.org/html/rfc6229 and test a few key generation valu
 
 Tests:
 
-Key: 0102030405 Key stream (first six bytes):
+Key: 0102030405 
 
-Key:		Key stream (first six bytes):
+Key stream (first six bytes):
 
-Key:		Key stream (first six bytes):
+Key:		
 
-Key:		Key stream (first six bytes):
+Key stream (first six bytes):
+
+Key:		
+
+Key stream (first six bytes):
+
+Key:		
+
+Key stream (first six bytes):
 
 How does the Python code produce a key stream length which matches the input data stream:
 
