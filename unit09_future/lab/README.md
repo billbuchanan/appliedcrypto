@@ -185,6 +185,10 @@ And [here](https://asecuritysite.com/Coding/ascii?ascii=hello) for Base64:
 Now go ahead and test each of the functions, and prove that they work.
 
 ## D Light-weight crypto
+There are many examples of light-weight cryptography [here](https://asecuritysite.com/light/).
+
+What are the names of the finalists for the NIST standard for light-weight cryptography?
+
 ### D1	
 In many operations within public key methods we use the exponential operation:
 
