@@ -27,9 +27,9 @@ The following is the draft timetable:
 | 10 | 25 Mar 2022  | Tunnelling                                     | Lab                      |
 | 11 | 1 Apr 2022   | Blockchain                                                | Lab      |
 | 12 | 8 Apr 2022   | Future Cryptography                                    | Lab                            |
-| 13 | 29 Apr 2022  |                            |                             |
+| 13 | 29 Apr 2022  | TBC                           |    Lab                          | 
 | 14 | 6 May 2022   |                                                    |                             |
-| 15 | 13 May 2022  | Coursework Hand-in - 60% of overall mark    |     Lab (Tokenization)                           |
+| 15 | 13 May 2022  | Coursework Hand-in - 60% of overall mark (15 May)    |     Lab (Tokenization)                           |
 
 
 
