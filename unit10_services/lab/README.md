@@ -4,6 +4,7 @@
 
 To provide a foundation around the usage of tokens for authorization. We will use your Ubuntu instance for this work, and aim to provide an introduction to Docker. Make sure you have created your GitHub account, as we will use the account details later in the lab.
 
+
 ## A	JWT
 ### A.1	
 The JSON Web Token can be used to grant access rights. It is signed using a secret passphrase. Using node.js, create the following program (you need to use npm install jwt-simple):
@@ -547,6 +548,37 @@ Can you explain the operation of the policy, and, in this case, that Alice is au
 
 
 Can you stop your container, and then run it on Port 8181?
+
+## A Creating an NFT
+For normal crypto tokens (ERC-20) we use FT (Fungible Tokens) and where there is a finite number of these, and each of these is the same. For example, we could release one million ERC-20 tokens and then trade with them. They will all have the same value, and I cannot mint any more. With NFTs (ERC-721), we can mint any number of cryptography tokens, and each will have an owner. Each of these can have its own value, or be pinned to a physical asset or identity. For example, as a tutor, I could assign each of my students to an NFT, and where we link the NFT to the student. Overall, we create these with a smart contract, and where there is an "owner" of the creation of the tokens. It is this account that will create the tokens as required, and then allocate them to new owners. First open Remix (remix.)
+
+```solidity
+pragma solidity ^0.8.0;
+
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
+import "@openzeppelin/contracts/utils/Counters.sol";
+
+contract BillToken is ERC721URIStorage{
+    using Counters for Counters.Counter;
+    Counters.Counter private _tokenIds;
+    mapping(string => uint8) hashes;
+    
+    constructor() ERC721("Bill Token", "BTK") {}
+  
+    function awardItem(address recipient, string memory hash, string memory metadata) public returns (uint256){
+        require(hashes[hash] != 1);
+        hashes[hash] = 1;
+        _tokenIds.increment();
+        uint256 newItemId = _tokenIds.current();
+        _mint(recipient, newItemId);
+        _setTokenURI(newItemId, metadata);
+        
+        return newItemId;
+    }
+}
+```
+
+Now follow the tutorial (here)[https://asecuritysite.com/ethereum/ethereum09]
 
 ## References
 [1] https://requests-oauthlib.readthedocs.io/en/latest/examples/real_world_example.html#real-example
