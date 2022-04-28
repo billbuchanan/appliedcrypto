@@ -578,7 +578,7 @@ contract BillToken is ERC721URIStorage{
 }
 ```
 
-Now follow the tutorial (here)[https://asecuritysite.com/ethereum/ethereum09]
+Now follow the tutorial [here](https://asecuritysite.com/ethereum/ethereum09)
 
 ## References
 [1] https://requests-oauthlib.readthedocs.io/en/latest/examples/real_world_example.html#real-example
