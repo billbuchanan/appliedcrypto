@@ -67,26 +67,26 @@ Try each of the hashing methods (HSXXX), and observe how the JWT changes:
 ### A.3	
 Now, match the following parameters to the correct signing secret. For the following the message is “{ isa: 14321}”, and the signing keys used are either "napier", "napier123", "qwerty" or "fox123":
 
-<pre>
+```
 eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.InsgaXNhOiAxNDMyMX0i.czeOHowkTpZQ2qG5pZneOlnpdBGMCnTLXaPImNmSr9w
-</pre>
+```
 Secret: 
-<pre>
+```
 eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.InsgaXNhOiAxNDMyMX0i.WWR2-Wxw0Nm0Expix600cOltjnjhC7hCjOmHH2cPpJ4
-</pre>
+```
 Secret: 
-<pre>
+```
 eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.InsgaXNhOiAxNDMyMX0i.uSXNmESTf_NUk0QC8IJyPfsm_QMu00UP6eIvOA3Dag4
-</pre>
+```
 Secret: 
 
 **Repl.it:** https://repl.it/@billbuchanan/jwt2
 
 ### A.4	
 The following JWT has been signed with the passphrase of “fox123”:
-<pre>
+```
 eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.IntcImlzc1wiOiBcImZyZWRcIixcInN1YmplY3RcIjpcImxvZ2luXCIsXCJkZXBhcnRtZW50XCI6IFwic2FsZXNcIixcImlhdFwiOiBcIjE1MjUxOTMzNzdcIixcImV4cFwiOiBcIjE1MjUyMzY1NzdcIn0i.4QpsBQ5HDbAjzv3EaMp0UQdCG-MnEanW7g8q9AUvOLU
-</pre>
+```
 
 Can you read the message with the wrong passphrase?
 
@@ -101,9 +101,9 @@ When was the token issued, and when was its expiry time?
 
 ### A.5	
 The following JWT was signed with a three-character word [a-z]. Can you determine the secret phrase:
-<pre>
+```
 eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.IntcImlzc1wiOiBcImZyZWRcIixcInN1YmplY3RcIjpcImxvZ2luXCIsXCJkZXBhcnRtZW50XCI6IFwic2FsZXNcIixcImlhdFwiOiBcIjE1MjUxOTMzNzdcIixcImV4cFwiOiBcIjE1MjUyMzY1NzdcIn0i.zyd0cy8p4xgpeoyOQ8G61xnA5Cmg5w095tNH9IWg9Wc
-</pre>
+```
 
 Don't look here, if you don't one an answer just now:
 
@@ -111,9 +111,9 @@ Don't look here, if you don't one an answer just now:
 
 ### A.6	
 The following JWT has a secret phrase of “napier”:
-<pre>
+```
 eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.IntcImlzc1wiOiBcImZyZWRcIixcInN1YmplY3RcIjpcImxvZ2luXCIsXCJkZXBhcnRtZW50XCI6IFwic2FsZXNcIixcImlhdFwiOiBcIjE1MjUxOTMzNzdcIixcImV4cFwiOiBcIjE1MjUyMzY1NzdcIn0i.G-cLzbqrTb_daMusbJTEEi_p-1cGC9_Q2ONtGGXe65Q
-</pre>
+```
 
 Did you decode it?
 
@@ -186,14 +186,14 @@ Generate several tokens, and outline the values which change on the token?
 
 ### B.2	
 The following Fernet token uses a password of “napier”. 
-<pre>
+```
 Cipher: 6741414141414263706c6c645f707a5f2d6158394c3173623566354d366a6a636d575f5436307a737233764d5446484c634f622d6150794447486d55416a7839685a47496a477870367830455066657344725f376b676457584d38565747586e41773d3d
 
 Version:	67
 Time stamp:	4141414141426370
 IV:		6c6c645f707a5f2d6158394c31736235
 HMAC:		6a477870367830455066657344725f376b676457584d38565747586e41773d3d
-</pre>
+```
 
 Can you determine the message:
 
@@ -280,7 +280,7 @@ if __name__ == "__main__":
 
 ### C.3	
 Now add your Client ID and Client secret to the code, and run it:
-<pre>
+```
 napier@napier-virtual-machine:~/esecurity/unit10_services/src$ python c02.py
  * Serving Flask app "c01" (lazy loading)
  * Environment: production
@@ -291,7 +291,7 @@ napier@napier-virtual-machine:~/esecurity/unit10_services/src$ python c02.py
  * Restarting with stat
  * Debugger is active!
  * Debugger PIN: 118-069-597
-</pre>
+```
 
 ### C.4	
 Now open up a browser, and connect to http://127.0.0.1. Next you should be faced with the GitHub login (Figure 4).
@@ -322,22 +322,22 @@ Figure 4: GitHub authorization
 ## D	Introduction to Docker
 ### D.1	
 Docker is used to create a light-weight infrastructure for services. First we will install some of the pre-requisites:
-<pre>
+```
 sudo apt install apt-transport-https ca-certificates curl software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
 sudo apt update
 apt-cache policy docker-ce
 sudo apt install docker-ce
-</pre>
+```
 Now we will create a Docker instance for an SSH server.
-<pre>
+```
 mkdir docker_sshd
 cd docker_sshd
-</pre>
+```
 
 Now create a file name “Dockerfile”, and add the following:
-<pre>
+```
 FROM ubuntu:16.04
 
 RUN apt-get update && apt-get install -y openssh-server
@@ -353,10 +353,10 @@ RUN echo "export VISIBLE=now" >> /etc/profile
 
 EXPOSE 22
 CMD ["/usr/sbin/sshd", "-D"]
-</pre>
+```
 
 Now build the docker file:
-<pre>
+```
 napier@napier-virtual-machine:~/Docker_sshd$  docker build -t docker_sshd .
 
 Step 10/10 : CMD ["/usr/sbin/sshd", "-D"]
@@ -365,10 +365,10 @@ Removing intermediate container 982e91d7a665
  ---> e90cde8a95d3
 Successfully built e90cde8a95d3
 Successfully tagged docker_sshd:latest
-</pre>
+```
 
 We can view the images that we have created with the “docker image ls” command:
-<pre>
+```
 napier@napier-virtual-machine:~/Docker_sshd$ docker image ls
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 docker_sshd         latest              e90cde8a95d3        4 minutes ago       196MB
@@ -377,14 +377,14 @@ python              2.7-slim            48e3247f2a19        5 days ago          
 ethereum/solc       stable              1b65904c442c        2 weeks ago         6.48MB
 hello-world         latest              fce289e99eb9        3 months ago        1.84kB
 ubuntu              16.04               b0ef3016420a        3 months ago  
-</pre>
+```
 
 Which instances are installed?
 
 
 
 Now log into your SSH server, and use the password defined in the Dockerfile. Create a new folder on your SSH server, and then create a file and add something to it:
-<pre>
+```
 napier@napier-virtual-machine:~/Docker_sshd$ docker run -d -P --name test_sshd docker_sshd
 2e1ee60deb3f44f2c4a6af5ebd0e32f9882ba4e03042f0eb30285f74e49ced39
 napier@napier-virtual-machine:~/Docker_sshd$ docker port test_sshd 22
@@ -411,23 +411,23 @@ applicable law.
 root@2e1ee60deb3f:~# ls
 root@2e1ee60deb3f:~# mkdir test
 root@2e1ee60deb3f:~#
-</pre>
+```
 
 There are many options we can use with docker run:
-<pre>
+```
 --rm	Remove container when it exits.
 -d	Runs docker container in the background so there is no output (also --detach)
 --ip 10.10.10.10	Assign an IP address of 10.10.10.10.
 -p 22:3000 	Map port 22 to port 3000 (also --publish).
 --name my_c	Give the container a unique name.
-</pre>
+```
 
 Now list the running containers:
-<pre>
+```
 napier@napier-virtual-machine:~/docker_sshd$ docker ps
 CONTAINER ID   IMAGE        COMMAND              CREATED     STATUS            PORTS                                                    NAMES
 f0e1674e5c7a   docker_sshd  "/usr/sbin/sshd -D"      3 minutes ago       Up 3 minutes        0.0.0.0:32770->22/tcp                                    test_sshd
-</pre>
+```
 
 What information can you gain about your container from this listing?
 
@@ -445,10 +445,10 @@ By running “netstat” can you see the running port?
 
 
 Now we will stop the container, and then remove it:
-<pre>
+```
 napier@napier-virtual-machine:~/Docker_sshd$ docker container stop test_sshd
 test_sshd
-</pre>
+```
 
 
 Can you now run the SSH container with Port 8888?
@@ -459,11 +459,11 @@ Did it run?
 
 Finally, we will get rid of the docker container:
 
-<pre>
+```
 napier@napier-virtual-machine:~/Docker_sshd$ docker container rm test_sshd
 
 napier@napier-virtual-machine:~/Docker_sshd$ docker image rm docker_sshd
-</pre>
+```
 
 
 Can you prove that the container does not exist?
