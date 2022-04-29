@@ -17,8 +17,8 @@ The key concepts are:
 ## Material
 
 * Week 9 Lecture (Video): [here](https://youtu.be/CKZjrCnUrAM).
-* Week 9 Lecture (Video Live): [here](https://www.youtube.com/watch?v=AWMGHAVh_nE).
-* Week 9 Lecture (PDF): [here](https://asecuritysite.com/public/unit09_next_gen.pdf).
+* Week 9 Lecture (PDF): [here](https://github.com/billbuchanan/appliedcrypto/tree/main/unit09_future/lecture).
+* Week 9 Lab (PDF): [here](https://github.com/billbuchanan/appliedcrypto/tree/main/unit09_future/lab).
 
 
 
