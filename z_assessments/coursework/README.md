@@ -1,7 +1,7 @@
 ![esecurity](https://raw.githubusercontent.com/billbuchanan/esecurity/master/z_associated/esecurity_graphics.jpg)
 
 # Analysis of Next Generation Cryptography
-The coursework hand-in date is: **Sunday 15 May 2022, 11:59pm**. There will be a hand-in in Moodle for your submission. **Note: there is no need to write your own code for the method(s) investigated, as it will typically involve running standard code from GitHub sources.**
+The coursework hand-in date is: **Friday, 29 July 2022**. There will be a hand-in in Moodle for your submission. **Note: there is no need to write your own code for the method(s) investigated, as it will typically involve running standard code from GitHub sources.**
 
 ## Requirements
 
