@@ -3,7 +3,7 @@
 # Test 1
 There will be four main questions in the exam: Symmetric Key (Unit 2), Hashing (Unit 3), Public Key (Unit 4), Key Exchange (Unit 5) an Digital Certicates (Unit 6). An outline is [here](https://www.youtube.com/watch?v=Oj3T2UO1WDw&feature=emb_title), and some learning outcomes are [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/learning_outcomes.md). A PDF version of the questions is [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/2021_fake_exam_questions.pdf) and a fake example paper is [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/fake_exam_paper.md).
 
-**Test date:** 29 July 2022 (open book test, taken over Moodle). 
+**Test date:** 3pm, 29 July 2022 (open book test, taken over Moodle).  Please contact Bill to confirm you are taking this test.
 
 Some test details are:
 
