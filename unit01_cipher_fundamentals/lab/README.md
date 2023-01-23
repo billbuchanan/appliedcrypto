@@ -4,7 +4,7 @@
 
 Objective: The key objective of this lab is to be introduced to some of the fundamental principles involved in cryptography, including the usage of Base-64, hexadecimal, the modulus operator some basic operators (such as AND, OR, X-OR, Rotate Right and Rotate Left), and prime numbers. This lab also involves cracking puzzles, and which have been added to get you to think about the methods involved in cipher cracking. You can undertake the additional challenges if you want to further develop your cryptography skills.
 
-Go to **vsoc.napier.ac.uk** and find your folder. Run your Ubuntu instance [demo](https://youtu.be/v6H7lHblKes). The virtual machine's **password** is *napier123*. Lab demo: (Note that you will be using Ubuntu, while the demo shows Kali). A demo of the lab is [here](https://www.youtube.com/watch?v=v6H7lHblKes).
+Go to **vsoc2.napier.ac.uk** and find your folder. Run your Ubuntu instance [demo](https://youtu.be/v6H7lHblKes). The virtual machine's **password** is *napier123*. Lab demo: (Note that you will be using Ubuntu, while the demo shows Kali). A demo of the lab is [here](https://www.youtube.com/watch?v=v6H7lHblKes).
 
 ## Introduction
 Note: Most of the examples are in Python 3. If there are Python 2 examples, remember and put parenthesis around the print statement string, such as print (hex(val)).
