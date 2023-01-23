@@ -16,7 +16,7 @@ The units involved in the module are:
 * Future Cryptography. Outline of areas such as Homomorphic Encryption, Zero-knowledge proofs and Quantum-robust cryptography.
 * Host security.
 
-The module uses Teams as the main communication channel. There is also a Teams session each Friday at 6:30pm.
+The module uses Teams as the main communication channel [here](https://teams.microsoft.com/l/team/19%3aoiGtiSHzHFM9tPVlc8590AS64_S7TvV3HCqVhVaLlvA1%40thread.tacv2/conversations?groupId=2eea5bc7-7986-4e4f-8b76-f53cc28894a6&tenantId=99e0dc58-9c4b-4820-8617-04c386c254c6). There is also a Teams session each Friday at 6pm.
 
 ## Module outline
 An introduction video is here:
