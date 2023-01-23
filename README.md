@@ -17,8 +17,8 @@ The following is the draft timetable:
 | No | Date         | Subject                                            | Lab                            |
 |----|--------------|----------------------------------------------------|--------------------------------|
 | 2  | 27 Jan 2023  | Ciphers and Fundamentals [Unit](https://github.com/billbuchanan/appliedcrypto/tree/master/unit01_cipher_fundamentals)                      | [Lab](ttps://github.com/billbuchanan/appliedcrypto/blob/master/unit01_cipher_fundamentals/lab/new_lab01.pdf) [Demo](https://www.youtube.com/watch?v=v6H7lHblKes)         |
-| 3  | 2 Feb 2023   | Symmetric Key                                  | Lab        |
-| 4  | 9 Feb 2023  | Hashing and MAC                                | Lab                     |
+| 3  | 3 Feb 2023   | Symmetric Key                                  | Lab        |
+| 4  | 10 Feb 2023  | Hashing and MAC                                | Lab                     |
 | 5  | 17 Feb 2023  | Asymmetric (Public) Key                        | Lab                     |
 | 6  | 24 Feb 2023  | Key Exchange                                   | Lab                     |
 | 7  | 3 Mar 2022   | Digital Signatures and Certificates                 | Lab                    |
