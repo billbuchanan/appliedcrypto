@@ -17,8 +17,8 @@ The key concepts involved in this unit are:
 
 ## Presentations
 
-
 * Unit 1 Presentation (PDF) - Cipher Fundamentals [here](https://github.com/billbuchanan/appliedcrypto/blob/master/unit01_cipher_fundamentals/lecture/chapter01_ciphers_fundamentals.pdf)
 * Unit 1 Doodle (Video) - Cipher Fundamentals [here](https://youtu.be/_sgU_d9tUcE)
+* Unit 1 Pre-recorded (Video) - Cipher Fundamentals [here] (https://youtu.be/zqmjUpJNcJA)
 
 
