@@ -19,6 +19,7 @@ Back-up of content: [here](https://asecuritysite.com/csn11117/unit02)
 ## Presentations
 
 * Week 2 Presentation (PPTX) - Symmetric Key Encryption: [here](https://github.com/billbuchanan/appliedcrypto/blob/master/unit02_symmetric/lecture/chapter02_secret.pptx)
+* Week 2 Doodle (Video) - Symmetric Key Encryption [here](https://youtu.be/FAjEn-u-qfA)
 * Week 2 Presentation (Video) - Symmetric Key Encryption [here](https://youtu.be/nLRV34K3xIo)
 
 ## Lab
