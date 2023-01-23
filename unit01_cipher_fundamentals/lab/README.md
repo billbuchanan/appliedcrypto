@@ -148,9 +148,9 @@ Why would a shift left or shift right operator not be used on its own in cryptog
 ### A.12 Factors
 In several cases in cryptography, we try and factorize a value into its factors. An example is 15, and which has factors of 5 and 3. Using the Python program defined in the following link, determine the factors of 432:
 
-Web link (Factorization): https://asecuritysite.com/encryption/factors
+Web link (Factorization): [https://asecuritysite.com/primes/factors](https://asecuritysite.com/primes/factors)
 
-Think of two extremely large values and determine their factors.
+Think of two extremely large values and determine their factors. 
 
 
 ### A.13 Compression
@@ -160,11 +160,11 @@ Web link (Compression): https://asecuritysite.com/encryption/gzip
 
 Take a string of “abc” and compress it, and now keep building up the string with the same sequence (such as “abcabc…”). What do you observe from the length of the compression string if you use a random characters of the same length as an input:
 	
-<pre>
+```python
 eJzzyc9Lyc8DAAgpAms=
 eJxzSi3KycwDAAfXAl0=
 eJzzSy1XiMwvygYADKUC8A==
-</pre>
+```
 
 ## B	GCD
 GCD is known as the greatest common divisor, or greatest common factor (gcf), and is the largest positive integer that divides into two numbers without a remain-der. For example, the GCD of 9 and 15 is 3. It is used many encryption algorithms, and a sample algorithm to determine the GCD of two values (a and b) is given on:
@@ -219,6 +219,7 @@ Yes/No
 
 ### C.3	Proving
 Now prove the following:
+
 * message = 5, e=5, p = 53. Ans: 51
 * message = 4, e=11, p = 79. Ans: 36
 * message = 101, e=7, p = 293. Ans: 176
@@ -294,7 +295,7 @@ Up to 10,000:
 
 The Miller-Rabin Test for Primes is an efficient method in testing for a prime number. Access the following page and download the Python script. 
 
-Web link (Miller-Radin):	http://asecuritysite.com/encryption/rabin
+Web link (Miller-Radin):	http://asecuritysite.com/primes/rabin
 
 Using this determine the following:
 
@@ -323,7 +324,7 @@ Normally simulation and modelling use PRNG, so that the values generated can be 
 
 Computer programs often struggle to generate TRNG, and hardware generators are sometimes used. One method is to generate a random number based on low-level, statistically random "noise" signals. This includes things like thermal noise, and a photoelectric effect.
 
-Web link (Random number):	http://asecuritysite.com/encryption/random
+Web link (Random number):	http://asecuritysite.com/random/random
 
 One method of creating a simple random number generator is to use a sequence generator of the form (Linear Congruential Random Numbers):
 
@@ -345,7 +346,7 @@ Using this example, we get:
 </pre>
 
 
-Web link (Linear congruential):	http://asecuritysite.com/encryption/linear
+Web link (Linear congruential):	http://asecuritysite.com/random/linear
 
 ### E.1	
 Implement the Python code given above.
