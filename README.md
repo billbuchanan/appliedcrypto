@@ -16,7 +16,7 @@ The following is the draft timetable:
 
 | No | Date         | Subject                                            | Lab                            |
 |----|--------------|----------------------------------------------------|--------------------------------|
-| 2  | 27 Jan 2023  | Ciphers and Fundamentals [[Unit](https://github.com/billbuchanan/appliedcrypto/tree/main/unit02_symmetric)]                      | [[Lab](https://github.com/billbuchanan/appliedcrypto/tree/main/unit01_cipher_fundamentals/lab)] [[Demo](https://www.youtube.com/watch?v=v6H7lHblKes)]         |
+| 2  | 27 Jan 2023  | Ciphers and Fundamentals [[Unit](https://github.com/billbuchanan/appliedcrypto/tree/main/unit01_cipher_fundamentals)]                      | [[Lab](https://github.com/billbuchanan/appliedcrypto/tree/main/unit01_cipher_fundamentals/lab)] [[Demo](https://www.youtube.com/watch?v=v6H7lHblKes)]         |
 | 3  | 3 Feb 2023   | Symmetric Key [[Unit](https://github.com/billbuchanan/appliedcrypto/tree/main/unit02_symmetric)]                                 | [[Lab](https://github.com/billbuchanan/appliedcrypto/tree/main/unit02_symmetric/lab)]         |
 | 4  | 10 Feb 2023  | Hashing and MAC [[Unit](https://github.com/billbuchanan/appliedcrypto/tree/main/unit03_hashing)]                               | [[Lab](https://github.com/billbuchanan/appliedcrypto/tree/main/unit03_hashing/lab)]                   |
 | 5  | 17 Feb 2023  | Asymmetric (Public) Key [[Unit](https://github.com/billbuchanan/appliedcrypto/tree/main/unit04_public_key)]                       | [[Lab](https://github.com/billbuchanan/appliedcrypto/tree/main/unit04_public_key/lab)]                     |
