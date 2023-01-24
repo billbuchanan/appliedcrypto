@@ -27,7 +27,7 @@ The following is the draft timetable:
 | 10 | 24 Mar 2023  | Tunnelling     [[Unit](https://github.com/billbuchanan/appliedcrypto/tree/main/unit07_tunnelling)]                                | [[Lab](https://github.com/billbuchanan/appliedcrypto/tree/main/unit07_tunnelling/lab)]                      |
 | 11 | 31 Mar 2023   | Blockchain   [[Unit](https://github.com/billbuchanan/appliedcrypto/tree/main/unit08_blockchain)]                                             | [[Lab](https://github.com/billbuchanan/appliedcrypto/tree/main/unit08_blockchain/lab)]      |
 | 12 | 28 Apr 2023   | Future Cryptography  [[Unit](https://github.com/billbuchanan/appliedcrypto/tree/main/unit09_future)]                                  | [[Lab](https://github.com/billbuchanan/appliedcrypto/tree/main/unit09_future/lab)]                            |
-| 13 | 5 May 2023  | Tokens and Services    [[Unit](https://github.com/billbuchanan/appliedcrypto/tree/main/unit10_services)]                      |    [[Lab](https://github.com/billbuchanan/appliedcrypto/tree/main/unit10_services/lab)]                          | 
+| 13 | 5 May 2023  | Host/Cloud Security    [[Unit](https://github.com/billbuchanan/appliedcrypto/tree/main/unit10_services)]                      |    [[Lab](https://github.com/billbuchanan/appliedcrypto/tree/main/unit10_services/lab)]                          | 
 | 14 | 12 May 2023   |                                                    |                             |
 | 15 | 19 May 2023  | Coursework Hand-in - 60% of overall mark (15 May)    |                             |
 
