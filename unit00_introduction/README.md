@@ -21,7 +21,7 @@ The module uses Teams as the main communication channel [here](https://teams.mic
 ## Module outline
 An introduction video is here:
 
-[![](http://img.youtube.com/vi/uU0bRRUojZ8/0.jpg)](http://www.youtube.com/watch?v=uU0bRRUojZ8 "")
+[![](http://img.youtube.com/vi/uU0bRRUojZ8/0.jpg)](http://www.youtube.com/watch?v=0RyBLmKtWG0 "")
 
 and a Doodle:
 
