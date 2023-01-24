@@ -16,7 +16,7 @@ You are requested to investigate, build a prototype, and evaluate one of the fol
 * **Tokenization**. There is a vast increase in the usage of tokens to either protect sensitive details or provide one-time access. This area will allow you to investigate different tokenization methods, such as using Ferrnet tokens or some of the security weaknesses of OAuth 2.
 * **IPFS (Interplanetary File System)**. This breaks files into chunks and then distributes them around the world and where we can integrate version control on files. Overall it has advances in reducing latency, improving resilance, and avoiding censorship.
 * **Passwordless systems**. This supports MFA using biometrics, NFC, and BLE, and supports FIDO2 using public key encryption.
-* **Privacy Preserving Machine Learning**. With this we can use cyptography methods to preserve the privacy of our data for machine learning  applications.
+* **Privacy-Preserving Machine Learning**. With this we can use cyptography methods to preserve the privacy of our data for machine learning  applications.
 
 There are many different methods involved in each of these areas, so while your literature review might have a relatively wide scope, you might want to focus in on one or more methods for your implementation and evaluation. You may also pick another related area, but this would have to be approved by your tutor.
 
