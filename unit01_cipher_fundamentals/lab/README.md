@@ -227,16 +227,23 @@ Now prove the following:
 An outline of the Python 2.7 code is:
 
 ```python
-message = raw_input('Enter message: ')
-e =  raw_input('Enter exponent: ') 
-p = raw_input('Enter prime ')
+message = input('Enter message value: ')
+e =  input('Enter exponent: ') 
+p = input('Enter prime ')
 
 cipher = (int(message) ** int(e)) % int(p)
-print (cipher)	
+print (f"Result is: {cipher}")	
 ```
 
 Note: In Python 3.x, we using input() instead of raw_input().
 
+# Setting up AWS
+You should have an account for AWS. Access your AWS Lab, and 
+
+# AWS Setup
+In future labs, we will be using AWS KMS (Key Management System) and AWS HSM (Hardware Security Module). We will be using the command line consolea and the AWS Management Console. If you have time, please setup a Linux instance. 
+
+# Additional Lab
 ## D	Simple prime number test
 A prime number is a value which only has factors of 1 and itself. Prime numbers are used fairly extensively in cryptography, as computers struggle to factorize them when they are multiplied together.  The simplest test for a prime number is to divide the value from all the integers from 2 to the value divided by 2. If any of the results leaves no remainder, the value is a prime, otherwise it is composite. We can obviously improve on this by getting rid of even numbers which are greater than 2, and also that the highest value to be tested is the square root of the value. 
 
