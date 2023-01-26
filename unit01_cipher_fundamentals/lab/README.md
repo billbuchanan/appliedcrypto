@@ -10,7 +10,7 @@ Go to **vsoc2.napier.ac.uk** and find your folder. Run your Ubuntu instance [dem
 Note: Most of the examples are in Python 3. If there are Python 2 examples, remember and put parenthesis around the print statement string, such as print (hex(val)).
 
 ### A.1	Is prime?
-Using: http://asecuritysite.com/Encryption/testprime
+Using: [here](http://asecuritysite.com/Encryption/testprime)
 
 
 Test for the following prime numbers:
@@ -23,7 +23,7 @@ Test for the following prime numbers:
 
 ### A.2	gcd
 
-Using: http://asecuritysite.com/Encryption/gcd
+Using: [here](https://asecuritysite.com/principles_pub/gcd)
 
 Determine the GCD for the following:
 88, 46:
@@ -32,7 +32,7 @@ Determine the GCD for the following:
 
 ### A.3 Base-64 convertor 
 
-Using: http://asecuritysite.com/coding/ascii
+Using: [here](http://asecuritysite.com/coding/ascii)
 
 Determine the Base 64 and Hex values for the following strings:
 
@@ -45,15 +45,15 @@ HELLO:
 
 ### A.4	Base-64 convertor 
 
-Using: http://asecuritysite.com/coding/ascii
+Using: [here](http://asecuritysite.com/coding/ascii)
 
 Determine the following ASCII strings for these encoded formats:
 
-<pre>
+```
 bGxveWRz
 6E6170696572
 01000001 01101110 01101011 01101100 01100101 00110001 00110010 00110011
-</pre>
+```
 
 ### A.5	The mod operator
 Using Python, what is the result of 53,431 (mod 453)?
@@ -103,9 +103,10 @@ console.log(String.fromCharCode(val))
 ```
 
 This program will use node.js. Create a file named a_08.js and then run with:
-<pre>
+
+```
 node a_08.js
-</pre>
+```
 
 Results:
 
@@ -130,7 +131,7 @@ Observation:
 ### A.11 Bit shift
 Using Python, using a decimal value of 41, determine the result of a shift left by one bit, a shift left by two bits, a right shift by one bit, and a right shift by two bits:
 
-Web link (Bit shift): https://asecuritysite.com/comms/shift
+Web link (Bit shift): [here](https://asecuritysite.com/comms/shift)
 
 Decimal form:     41
 
@@ -148,7 +149,7 @@ Why would a shift left or shift right operator not be used on its own in cryptog
 ### A.12 Factors
 In several cases in cryptography, we try and factorize a value into its factors. An example is 15, and which has factors of 5 and 3. Using the Python program defined in the following link, determine the factors of 432:
 
-Web link (Factorization): [https://asecuritysite.com/primes/factors](https://asecuritysite.com/primes/factors)
+Web link (Factorization): [here](https://asecuritysite.com/primes/factors)
 
 Think of two extremely large values and determine their factors. 
 
@@ -156,7 +157,7 @@ Think of two extremely large values and determine their factors.
 ### A.13 Compression
 Another format we can use for our data is compression, and we can do the compression before or after the encryption process. One of the most popular methods is gzip compress, and which uses the LZ method to reduce the number of bits used. For this we will use node.js. Create a file named a_13.js and  determine what the following Base64 conversions are when they are uncompressed (Hint: they are cities of the World):
 
-Web link (Compression): https://asecuritysite.com/encryption/gzip
+Web link (Compression): [here](https://asecuritysite.com/encryption/gzip)
 
 Take a string of “abc” and compress it, and now keep building up the string with the same sequence (such as “abcabc…”). What do you observe from the length of the compression string if you use a random characters of the same length as an input:
 	
@@ -169,7 +170,7 @@ eJzzSy1XiMwvygYADKUC8A==
 ## B	GCD
 GCD is known as the greatest common divisor, or greatest common factor (gcf), and is the largest positive integer that divides into two numbers without a remain-der. For example, the GCD of 9 and 15 is 3. It is used many encryption algorithms, and a sample algorithm to determine the GCD of two values (a and b) is given on:
 
-Web link (GCD):	http://asecuritysite.com/encryption/gcd
+Web link (GCD):	[here](https://asecuritysite.com/principles_pub/gcd)
 
 ### B.1	Write a Python program to determine the GCD for the following:
 
@@ -235,15 +236,11 @@ cipher = (int(message) ** int(e)) % int(p)
 print (f"Result is: {cipher}")	
 ```
 
-Note: In Python 3.x, we using input() instead of raw_input().
-
-# Setting up AWS
-You should have an account for AWS. Access your AWS Lab, and 
-
 # AWS Setup
-In future labs, we will be using AWS KMS (Key Management System) and AWS HSM (Hardware Security Module). We will be using the command line consolea and the AWS Management Console. If you have time, please setup a Linux instance. The lab is [here](https://github.com/billbuchanan/appliedcrypto/blob/main/unit01_cipher_fundamentals/lab/aws_linux.pdf).
+In future labs, we will investigation Cloud-based encryption and security. For this we will be using AWS KMS (Key Management System) and AWS HSM (Hardware Security Module). We will be using the AWS command line console, Python and the AWS Management Console. If you have time, setup a Linux instance (instead of AWS Linux your might want to install Ubuntu). The lab is [here](https://github.com/billbuchanan/appliedcrypto/blob/main/unit01_cipher_fundamentals/lab/aws_linux.pdf). If you want, you can use the AWS instance for future labs instead of the one in vSoC2.
 
-# Additional Lab
+# Advanced Lab
+If you are looking to do extra exercises, this section provides some additional challenges.
 ## D	Simple prime number test
 A prime number is a value which only has factors of 1 and itself. Prime numbers are used fairly extensively in cryptography, as computers struggle to factorize them when they are multiplied together.  The simplest test for a prime number is to divide the value from all the integers from 2 to the value divided by 2. If any of the results leaves no remainder, the value is a prime, otherwise it is composite. We can obviously improve on this by getting rid of even numbers which are greater than 2, and also that the highest value to be tested is the square root of the value. 
 
@@ -331,7 +328,7 @@ Normally simulation and modelling use PRNG, so that the values generated can be 
 
 Computer programs often struggle to generate TRNG, and hardware generators are sometimes used. One method is to generate a random number based on low-level, statistically random "noise" signals. This includes things like thermal noise, and a photoelectric effect.
 
-Web link (Random number):	http://asecuritysite.com/random/random
+Web link (Random number):	[here](http://asecuritysite.com/random/random)
 
 One method of creating a simple random number generator is to use a sequence generator of the form (Linear Congruential Random Numbers):
 
@@ -341,16 +338,16 @@ Where a, c and m are integers, and where X0 is the seed value of the series.
 
 If we take the values of a=21, X0=35, c=31 and m=100 we get a series of:
 
-<pre>
+```
 66 17 88 79 90 21 72 43 34 45 76 27 98 89 0 31 82 53
-</pre>
+```
 
 Using this example, we get:
-<pre>
+```
 (21×35+31) mod 100 gives 66
 (21×66+31) mod 100 gives 17
 (21×17+31) mod 100 gives 88
-</pre>
+```
 
 
 Web link (Linear congruential):	http://asecuritysite.com/random/linear
@@ -388,7 +385,7 @@ a=2,175,143, seed=3553, c=10,653, and m=1,000,000.
 First four numbers of sequence?
 
 
-## F	What I should have learnt from this lab?
+# What I should have learnt from this lab?
 The key things learnt:
 
 * Some fundamental principles around number and character formats, including binary, hexadecimal and Base64.
