@@ -241,7 +241,7 @@ Note: In Python 3.x, we using input() instead of raw_input().
 You should have an account for AWS. Access your AWS Lab, and 
 
 # AWS Setup
-In future labs, we will be using AWS KMS (Key Management System) and AWS HSM (Hardware Security Module). We will be using the command line consolea and the AWS Management Console. If you have time, please setup a Linux instance. 
+In future labs, we will be using AWS KMS (Key Management System) and AWS HSM (Hardware Security Module). We will be using the command line consolea and the AWS Management Console. If you have time, please setup a Linux instance. The lab is [here](https://github.com/billbuchanan/appliedcrypto/blob/main/unit01_cipher_fundamentals/lab/aws_linux.pdf).
 
 # Additional Lab
 ## D	Simple prime number test
