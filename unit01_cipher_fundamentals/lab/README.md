@@ -237,7 +237,7 @@ print (f"Result is: {cipher}")
 ```
 
 # AWS Setup
-In future labs, we will investigation Cloud-based encryption and security. For this we will be using AWS KMS (Key Management System) and AWS HSM (Hardware Security Module). We will be using the AWS command line console, Python and the AWS Management Console. If you have time, setup a Linux instance (instead of AWS Linux your might want to install Ubuntu). The lab is [here](https://github.com/billbuchanan/appliedcrypto/blob/main/unit01_cipher_fundamentals/lab/aws_linux.pdf). If you want, you can use the AWS instance for future labs instead of the one in vSoC2.
+In future labs, we will investigation Cloud-based encryption and security. For this we will be using AWS KMS (Key Management System) and AWS HSM (Hardware Security Module). We will be using the AWS command line console, Python and the AWS Management Console. If you have time, setup a Linux instance (instead of AWS Linux your might want to install Ubuntu). The lab is [here](https://github.com/billbuchanan/appliedcrypto/blob/main/unit01_cipher_fundamentals/lab/aws/aws_linux.pdf. If you want, you can use the AWS instance for future labs instead of the one in vSoC2.
 
 # Advanced Lab
 If you are looking to do extra exercises, this section provides some additional challenges.
