@@ -1,26 +1,36 @@
-
+import math
 import sys
+import decimal
 
-test=1000
+def sieve(limit):
+    if limit % 2 == 0:
+        return False
 
-if (len(sys.argv)>1):
-	test=int(sys.argv[1])
+    squareroot = math.floor(decimal.Decimal(limit).sqrt())
 
-def sieve_for_primes_to(n):
-    size = n//2
-    print(f'size: {size}')
-    sieve = [1]*size
-    print(f'sieve: {sieve}')
-    limit = int(n**0.5)
-    print(f'limit: {limit}')
-    for i in range(1,limit):
-        if sieve[i]:
-            val = 2*i+1
-            tmp = ((size-1) - i)//val 
-            print(f'sieve: {sieve}, i: {i}, val: {val}, tmp: {tmp}')
-            sieve[i+val::val] = [0]*tmp
-            print(f'sieve: {sieve}, sieve[{i+val}::{val}]: {sieve[i+val::val]}, [0]*{tmp}: {[0]*tmp}')
-    return [2] + [i*2+1 for i, v in enumerate(sieve) if v and i>0]
- 
+    for k in range(1, squareroot):
 
-print (sieve_for_primes_to(test))
+        testval = 6 * k - 1
+        # print(f'limit: {limit}, testval: {testval}, limit % testval: {limit % testval}, squareroot: {squareroot}')
+
+        if limit % testval == 0:
+            return False
+
+        testval = 6 * k + 1
+        # print(f'limit: {limit}, testval: {testval}, limit % testval: {limit % testval}')
+        if testval > squareroot:
+            break
+
+        if limit % testval == 0:
+            return False
+
+    return True
+
+def main(argv):
+    if sieve(int(argv[0])):
+        print(f'{int(argv[0])} is prime')
+    else:
+        print(f'{int(argv[0])} is not prime')
+
+if __name__ == "__main__":
+    main(sys.argv[1:])
