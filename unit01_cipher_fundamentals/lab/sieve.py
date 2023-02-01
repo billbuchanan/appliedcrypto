@@ -1,7 +1,6 @@
-import array
 import math
 import sys
-import numpy as np
+import time
 import decimal
 
 def sieve(limit):
@@ -24,7 +23,9 @@ def sieve(limit):
         print(f'{limit} is not prime, divisors: {divisors}')
 
 def main(argv):
+    start_time = time.time()
     sieve(int(argv[0]))
+    print("--- %s seconds ---" % (time.time() - start_time))
 
 if __name__ == "__main__":
     main(sys.argv[1:])
