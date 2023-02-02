@@ -376,11 +376,11 @@ What is the password:
 With symmetric key encryption, Bob and Alice use the same encryption key to encrypt and decrypt. In the following case, Bob and Alice share the same encryption key, and where Bob encrypts plaintext to produce ciphertext. Alice then decrypts with the same key, in order to recover the plaintext:</p>
 
 
-![Alt text](https://asecuritysite.com//public/kms_30.png "a title"
+![Alt text](https://asecuritysite.com/public/kms_30.png)
 
 Now we can create a file named 1.txt, and enter some text:
 
-![Alt text](https://asecuritysite.com//public/kms06.png "a title"
+![Alt text](https://asecuritysite.com/public/kms06.png)
 
 Once we have this, we can then encrypt the file using the “aws kms encrypt” command, and then use “fileb://1.txt” to refer to the file:
 
@@ -461,7 +461,7 @@ This is my secret file.
 ```
 Here’s a sample run in an AWS Foundation Lab environment:
 
-![Alt text](https://asecuritysite.com//public/kms07.png "a title"
+![Alt text](https://asecuritysite.com//public/kms07.png)
 
 Here’s a sample run in an AWS Foundation Lab environment:
 
