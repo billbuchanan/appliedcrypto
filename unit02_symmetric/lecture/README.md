@@ -21,7 +21,7 @@ The key concepts involved in this unit are:
 ## Videos
 The voice over lecture is here:
 
-[![](http://img.youtube.com/vi/nLRV34K3xIo/0.jpg)](https://www.youtube.com/watch?v=nLRV34K3xIo "")
+[![](http://img.youtube.com/vi/nLRV34K3xIo/0.jpg)](https://www.youtube.com/watch?v=kdCI5UiVl04 "")
 
 
 
