@@ -4,9 +4,7 @@
 
 The key concepts involved are defining key entropy; key generators (such as using hashing methods to generate keys based on passphrases); symmetric key methods (AES, Twofish, 3DES, RC4 and ChaCha20); stream or block encryption; symmetric key modes (ECB/CBC/OFB); and salting/IV.
 
-<!---
-Back-up of content: [here](https://asecuritysite.com/csn11117/unit02)
--->
+
 
 ## What you should know at the end of unit?
 
@@ -19,7 +17,7 @@ Back-up of content: [here](https://asecuritysite.com/csn11117/unit02)
 ## Presentations
 
 * Week 2 Presentation (PPTX) - Symmetric Key Encryption: [here](https://github.com/billbuchanan/appliedcrypto/blob/master/unit02_symmetric/lecture/chapter02_secret.pptx)
-* Week 2 Doodle (Video) - Symmetric Key Encryption [here](https://youtu.be/FAjEn-u-qfA)
+* Week 2 Doodle (Video) - Symmetric Key Encryption [here](https://youtu.be/kdCI5UiVl04)
 * Week 2 Presentation (Video) - Symmetric Key Encryption [here](https://youtu.be/nLRV34K3xIo)
 
 ## Lab
