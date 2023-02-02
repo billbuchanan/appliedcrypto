@@ -15,7 +15,7 @@ The key concepts involved in this unit are:
 ## Presentations
 
 * Week 2 Presentation (PDF) - Symmetric Key Encryption: [here](https://asecuritysite.com/public/chapter02_secret.pdf)
-* Week 2 Presentation (Video) - Symmetric Key Encryption [here](https://youtu.be/nLRV34K3xIo)
+* Week 2 Presentation (Video) - Symmetric Key Encryption [here](https://youtu.be/kdCI5UiVl04)
 
 
 ## Videos
