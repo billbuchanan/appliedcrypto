@@ -16,9 +16,9 @@ The key concepts involved are defining key entropy; key generators (such as usin
 
 ## Presentations
 
-* Week 2 Presentation (PPTX) - Symmetric Key Encryption: [here](https://github.com/billbuchanan/appliedcrypto/blob/master/unit02_symmetric/lecture/chapter02_secret.pptx)
-* Week 2 Doodle (Video) - Symmetric Key Encryption [here](https://youtu.be/FAjEn-u-qfA)
-* Week 2 Presentation (Video) - Symmetric Key Encryption [here](https://youtu.be/kdCI5UiVl04)
+* Unit 2 Presentation (PPTX) - Symmetric Key Encryption: [here](https://github.com/billbuchanan/appliedcrypto/blob/master/unit02_symmetric/lecture/chapter02_secret.pptx)
+* Unit 2 Doodle (Video) - Symmetric Key Encryption [here](https://youtu.be/FAjEn-u-qfA)
+* Unit 2 Presentation (Video) - Symmetric Key Encryption [here](https://youtu.be/kdCI5UiVl04)
 
 ## Lab
 
