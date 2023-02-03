@@ -638,8 +638,8 @@ Using an Internet search, list ten other encryption algorithms which can be used
 
 
 
-#  AWS Encryption
-With symmetric key encryption, Bob and Alice use the same encryption key to encrypt and decrypt. In the following case, Bob and Alice share the same encryption key, and where Bob encrypts plaintext to produce ciphertext. Alice then decrypts with the same key, in order to recover the plaintext:</p>
+#  Part 3: AWS Encryption
+You should have access to your AWS Leader Lab, and where we will use AWS KMS (Key Management System) to generate encryption keys, and use symmetric key encryption. With symmetric key encryption, Bob and Alice use the same encryption key to encrypt and decrypt. In the following case, Bob and Alice share the same encryption key, and where Bob encrypts plaintext to produce ciphertext. Alice then decrypts with the same key, in order to recover the plaintext:</p>
 
 
 ![Alt text](https://asecuritysite.com/public/kms_30.png) {width=50% }
