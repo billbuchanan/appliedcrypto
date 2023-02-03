@@ -372,164 +372,9 @@ Run the program and try to crack:
 What is the password:
 
 
-## G AWS Encryption
-With symmetric key encryption, Bob and Alice use the same encryption key to encrypt and decrypt. In the following case, Bob and Alice share the same encryption key, and where Bob encrypts plaintext to produce ciphertext. Alice then decrypts with the same key, in order to recover the plaintext:</p>
 
 
-![Alt text](https://asecuritysite.com/public/kms_30.png) {width=50% }
-
-Now we can create a file named 1.txt, and enter some text:
-
-![Alt text](https://asecuritysite.com/public/kms06.png){width=50% }
-
-Once we have this, we can then encrypt the file using the “aws kms encrypt” command, and then use “fileb://1.txt” to refer to the file:
-
-```Python
-aws kms encrypt  --key-id alias/MySymKey   --plaintext fileb://1.txt   --query CiphertextBlob --output text > 1.out
-cat 1.out
-```
-
-This produces a ciphertext blob, and which is in Base64 format:
-```
-AQICAHgTBDpVTrBTrduWKdNnvMoMMUWjObqp+GqbghUx7qa6JwEQ7F2Fzubd+pcz3I06bFuLAAAAdjB0BgkqhkiG9w0BBwagZzBlAgEAMGAGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMgl3vWRVPyL7KK3klAgEQgDP+dQ4KsqT94hiARF8zlybFAtXJJBIucc8M952KHmkJzBGQQP4f8YQQ70DELV97ZXizzME=
-```
-
-We could transmit this in Base64 format, but we need to convert it into a binary format for us to now decrypt it. For this we use the “Base64 -d” command:
-
-```
-$ base64 -i 1.out  --decode > 1.enc
-$ cat 1.enc
-```
-
-The result is a binary output:
-```
-$ cat 1.enc
-x:UNSۖ)g
-00e0`  1`He.0']3܍:l[v0t *H
-]YOȾ+y%3u
-D_3&$.q
-i        @@-_{exddd_v1_w_W3n_145559
-```
-
-Now we can decrypt this with our key, and using the command of:
-```
-$ aws kms decrypt --key-id alias/BillsNewKey --output text --query Plaintext --ciphertext-blob fileb://1.enc > 2.out
-$ cat 2.out
-```
-
-The output of this is our secret message in Base64 format:
-```
-VGhpcyBpcyBteSBzZWNyZXQgZmlsZS4K
-```
-
-and now we can decode this into plaintext:
-```
-$ base64 -i 2.out  --decode
-This is my secret file.
-```
-The commands we have used are:
-```
-aws kms encrypt  --key-id alias/BillsNewKey   --plaintext fileb://1.txt  --query CiphertextBlob --output text > 1.out
-echo "== Ciphertext (Base64)"
-cat 1.out
-echo "== Ciphertext (Binary)"
-base64 -i 1.out  --decode > 1.enc
-cat 1.enc
-aws kms decrypt --key-id alias/BillsNewKey --output text --query Plaintext --ciphertext-blob fileb://1.enc > 2.out
-echo "== Plaintext (Base64)"
-cat 2.out
-echo "== Plaintext"
-base64 -i 2.out  --decode
-```
-
-and the result of this is:
-```
-== Ciphertext (Base64)
-AQICAHgTBDpVTrBTrduWKdNnvMoMMUWjObqp+GqbghUx7qa6JwEfz+s9z3e0Mw0tOzuB5LuYAAAAdjB0BgkqhkiG9w0BBwagZzBlAgEAMGAGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMqqwXsxB5QlQGVqZWAgEQgDOyBv6KYg4wN2bU/ZKSJ+5opJXMrjQj9GGvuuD2/Jeto9Er5yS91/iCb896CzCSeqUYJeo=
-
-== Ciphertext (Binary)
-x:UNSۖ)g
-00e0`v0t`He.0'=w*H
-yBTVV3b07f'ḫ4#a+$oz
-0z%
-
-== Plaintext (Base64)
-VGhpcyBpcyBteSBzZWNyZXQgZmlsZS4K
-
-== Plaintext
-This is my secret file.
-```
-Here’s a sample run in an AWS Foundation Lab environment:
-
-![Alt text](https://asecuritysite.com//public/kms07.png)
-
-Here’s a sample run in an AWS Foundation Lab environment:
-
-### Using Python
-
-Along with using the CLI, we can create the encryption using Python. In the following we use the boto3 library, and have a key ID of “98a90e1f-2cb5–4564-a3aa-d0c060cdcf0a” and which is in the US-East-1 region:
-```Python
-import base64
-import binascii
-import boto3
-
-AWS_REGION = 'us-east-1'
-
-def enable_kms_key(key_ID):
-    try:
-        response = kms_client.enable_key(KeyId=key_ID)
-
-    except ClientError:
-        print('KMS Key not working')
-        raise
-    else:
-        return response
-
-
-def encrypt(secret, alias):
-    try:
-        ciphertext = kms_client.encrypt(KeyId=alias,Plaintext=bytes(secret, encoding='utf8'),
-        )
-    except ClientError:
-        print('Problem with encryption.')
-        raise
-    else:
-        return base64.b64encode(ciphertext["CiphertextBlob"])
-
-
-def decrypt(ciphertext, alias):
-    try:
-        plain_text = kms_client.decrypt(KeyId=alias,CiphertextBlob=bytes(base64.b64decode(ciphertext)))
-    except ClientError:
-        print('Problem with decryption.')
-        raise
-    else:
-        return plain_text['Plaintext']
-
-kms_client = boto3.client("kms", region_name=AWS_REGION)
-
-KEY_ID = '98a90e1f-2cb5-4564-a3aa-d0c060cdcf0a'
-kms = enable_kms_key(KEY_ID)
-print(f'KMS key ID {KEY_ID} ')
-msg='Hello'
-print(f"Plaintext: {msg}")
-
-cipher=encrypt(msg,KEY_ID)
-print(f"Cipher {cipher}")
-plaintext=decrypt(cipher,KEY_ID)
-print(f"Plain: {plaintext.decode()}")
-```
-    
-
-Each of the steps is similar to our CLI approach. A sample run gives:
-```
-KMS key ID 98a90e1f-2cb5-4564-a3aa-d0c060cdcf0a 
-Plaintext: Hello
-Cipher b'AQICAHgTBDpVTrBTrduWKdNnvMoMMUWjObqp+GqbghUx7qa6JwHH797e/TF4csEBEFNmjvD5AAAAYzBhBgkqhkiG9w0BBwagVDBSAgEAME0GCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMJf0xVfikbMLfLI6jAgEQgCDYBm2NvB/I2NMxGgSw8wuWA/p6c6Jjm19/wK4eVrLXUw=='
-Plain: Hello
-```
-
-# Advanced Lab
+# Part 2: Advanced Lab
 ## G	Stream Ciphers
 The Chacha20 cipher is a stream cipher which uses a 256-bit key and a 64-bit nonce (salt value). Currently AES has a virtual monopoly on secret key encryption. There would be major problems, though, if this was cracked. Along with this AES has been shown to be weak around cache-collision attacks. Google thus propose ChaCha20 as an alternative, and actively use it within TLS connections. Currently it is three times faster than software-enabled AES and is not sensitive to timing attacks. It operates by creating a key stream which is then X-ORed with the plaintext. It has been standardised with RFC 7539.
 
@@ -793,6 +638,164 @@ Using an Internet search, list ten other encryption algorithms which can be used
 
 
 
+#  AWS Encryption
+With symmetric key encryption, Bob and Alice use the same encryption key to encrypt and decrypt. In the following case, Bob and Alice share the same encryption key, and where Bob encrypts plaintext to produce ciphertext. Alice then decrypts with the same key, in order to recover the plaintext:</p>
+
+
+![Alt text](https://asecuritysite.com/public/kms_30.png) {width=50% }
+
+Now we can create a file named 1.txt, and enter some text:
+
+![Alt text](https://asecuritysite.com/public/kms06.png){width=50% }
+
+Once we have this, we can then encrypt the file using the “aws kms encrypt” command, and then use “fileb://1.txt” to refer to the file:
+
+```Python
+aws kms encrypt  --key-id alias/MySymKey   --plaintext fileb://1.txt   --query CiphertextBlob --output text > 1.out
+cat 1.out
+```
+
+This produces a ciphertext blob, and which is in Base64 format:
+```
+AQICAHgTBDpVTrBTrduWKdNnvMoMMUWjObqp+GqbghUx7qa6JwEQ7F2Fzubd+pcz3I06bFuLAAAAdjB0BgkqhkiG9w0BBwagZzBlAgEAMGAGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMgl3vWRVPyL7KK3klAgEQgDP+dQ4KsqT94hiARF8zlybFAtXJJBIucc8M952KHmkJzBGQQP4f8YQQ70DELV97ZXizzME=
+```
+
+We could transmit this in Base64 format, but we need to convert it into a binary format for us to now decrypt it. For this we use the “Base64 -d” command:
+
+```
+$ base64 -i 1.out  --decode > 1.enc
+$ cat 1.enc
+```
+
+The result is a binary output:
+```
+$ cat 1.enc
+x:UNSۖ)g
+00e0`  1`He.0']3܍:l[v0t *H
+]YOȾ+y%3u
+D_3&$.q
+i        @@-_{exddd_v1_w_W3n_145559
+```
+
+Now we can decrypt this with our key, and using the command of:
+```
+$ aws kms decrypt --key-id alias/BillsNewKey --output text --query Plaintext --ciphertext-blob fileb://1.enc > 2.out
+$ cat 2.out
+```
+
+The output of this is our secret message in Base64 format:
+```
+VGhpcyBpcyBteSBzZWNyZXQgZmlsZS4K
+```
+
+and now we can decode this into plaintext:
+```
+$ base64 -i 2.out  --decode
+This is my secret file.
+```
+The commands we have used are:
+```
+aws kms encrypt  --key-id alias/BillsNewKey   --plaintext fileb://1.txt  --query CiphertextBlob --output text > 1.out
+echo "== Ciphertext (Base64)"
+cat 1.out
+echo "== Ciphertext (Binary)"
+base64 -i 1.out  --decode > 1.enc
+cat 1.enc
+aws kms decrypt --key-id alias/BillsNewKey --output text --query Plaintext --ciphertext-blob fileb://1.enc > 2.out
+echo "== Plaintext (Base64)"
+cat 2.out
+echo "== Plaintext"
+base64 -i 2.out  --decode
+```
+
+and the result of this is:
+```
+== Ciphertext (Base64)
+AQICAHgTBDpVTrBTrduWKdNnvMoMMUWjObqp+GqbghUx7qa6JwEfz+s9z3e0Mw0tOzuB5LuYAAAAdjB0BgkqhkiG9w0BBwagZzBlAgEAMGAGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMqqwXsxB5QlQGVqZWAgEQgDOyBv6KYg4wN2bU/ZKSJ+5opJXMrjQj9GGvuuD2/Jeto9Er5yS91/iCb896CzCSeqUYJeo=
+
+== Ciphertext (Binary)
+x:UNSۖ)g
+00e0`v0t`He.0'=w*H
+yBTVV3b07f'ḫ4#a+$oz
+0z%
+
+== Plaintext (Base64)
+VGhpcyBpcyBteSBzZWNyZXQgZmlsZS4K
+
+== Plaintext
+This is my secret file.
+```
+Here’s a sample run in an AWS Foundation Lab environment:
+
+![Alt text](https://asecuritysite.com//public/kms07.png)
+
+Here’s a sample run in an AWS Foundation Lab environment:
+
+## Using Python
+
+Along with using the CLI, we can create the encryption using Python. In the following we use the boto3 library, and have a key ID of “98a90e1f-2cb5–4564-a3aa-d0c060cdcf0a” and which is in the US-East-1 region:
+```Python
+import base64
+import binascii
+import boto3
+
+AWS_REGION = 'us-east-1'
+
+def enable_kms_key(key_ID):
+    try:
+        response = kms_client.enable_key(KeyId=key_ID)
+
+    except ClientError:
+        print('KMS Key not working')
+        raise
+    else:
+        return response
+
+
+def encrypt(secret, alias):
+    try:
+        ciphertext = kms_client.encrypt(KeyId=alias,Plaintext=bytes(secret, encoding='utf8'),
+        )
+    except ClientError:
+        print('Problem with encryption.')
+        raise
+    else:
+        return base64.b64encode(ciphertext["CiphertextBlob"])
+
+
+def decrypt(ciphertext, alias):
+    try:
+        plain_text = kms_client.decrypt(KeyId=alias,CiphertextBlob=bytes(base64.b64decode(ciphertext)))
+    except ClientError:
+        print('Problem with decryption.')
+        raise
+    else:
+        return plain_text['Plaintext']
+
+kms_client = boto3.client("kms", region_name=AWS_REGION)
+
+KEY_ID = '98a90e1f-2cb5-4564-a3aa-d0c060cdcf0a'
+kms = enable_kms_key(KEY_ID)
+print(f'KMS key ID {KEY_ID} ')
+msg='Hello'
+print(f"Plaintext: {msg}")
+
+cipher=encrypt(msg,KEY_ID)
+print(f"Cipher {cipher}")
+plaintext=decrypt(cipher,KEY_ID)
+print(f"Plain: {plaintext.decode()}")
+```
+    
+
+Each of the steps is similar to our CLI approach. A sample run gives:
+```
+KMS key ID 98a90e1f-2cb5-4564-a3aa-d0c060cdcf0a 
+Plaintext: Hello
+Cipher b'AQICAHgTBDpVTrBTrduWKdNnvMoMMUWjObqp+GqbghUx7qa6JwHH797e/TF4csEBEFNmjvD5AAAAYzBhBgkqhkiG9w0BBwagVDBSAgEAME0GCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMJf0xVfikbMLfLI6jAgEQgCDYBm2NvB/I2NMxGgSw8wuWA/p6c6Jjm19/wK4eVrLXUw=='
+Plain: Hello
+```
+
+
 ## I	Reflective questions
 1.	If we have five ‘a’ values (“aaaaa”). What will be the padding value used for 256-bit AES with CMS:
 
@@ -808,9 +811,9 @@ Using an Internet search, list ten other encryption algorithms which can be used
 
 3.	The following cipher text is 256-bit AES ECB for a number of spaces (0x20):
 
-<pre>
+```
 c3f791fad9f9392116b2d12c8f6c4b3dc3f791fad9f9392116b2d12c8f6c4b3dc3f791fad9f9392116b2d12c8f6c4b3dc3f791fad9f9392116b2d12c8f6c4b3da3c788929dd8a9022bf04ebf1c98a4e4
-</pre>
+```
 
 What can you observe from the cipher text:
 
@@ -829,10 +832,7 @@ How might you crack a byte stream sequence like this:
 4.	For ChaCha20, we only generate a key stream. How is the ciphertext then created:
 
 
-
-
-
-## J	What I should have learnt from this lab?
+# What I should have learnt from this lab?
 The key things learnt:
 
 *	How to encrypt and decrypt with symmetric key encryption, and where we use a passphrase to generate the encryption key.
