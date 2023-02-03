@@ -642,31 +642,31 @@ Using an Internet search, list ten other encryption algorithms which can be used
 You should have access to your AWS Learner Lab, and where we will use AWS KMS (Key Management System) to generate encryption keys, and use symmetric key encryption. With symmetric key encryption, Bob and Alice use the same encryption key to encrypt and decrypt. In the following case, Bob and Alice share the same encryption key, and where Bob encrypts plaintext to produce ciphertext. Alice then decrypts with the same key, in order to recover the plaintext:</p>
 
 
-![Alt text](https://asecuritysite.com/public/kms_30.png) {width=50% }
+![Alt text](https://asecuritysite.com/public/kms_30.png) 
 
 Normally we use AES encryption for this. Initially in KMS, we create a new key within our Customer managed keys:
 
-![Alt text](https://asecuritysite.com/public/kms01.png) {width=50% }
+![Alt text](https://asecuritysite.com/public/kms01.png) 
 
 and then create the key:
  
-![Alt text](https://asecuritysite.com/public/kms02.png) {width=50% }
+![Alt text](https://asecuritysite.com/public/kms02.png) 
 
 
 
 Next, we give it a name:
 
-![Alt text](https://asecuritysite.com/public/kms03.png) {width=50% }
+![Alt text](https://asecuritysite.com/public/kms03.png)
 
 
 And then define the administrative permission (those who can delete it):
 
-![Alt text](https://asecuritysite.com/public/kms04.png) {width=50% }
+![Alt text](https://asecuritysite.com/public/kms04.png) 
 
 
 And the usage:
 
-![Alt text](https://asecuritysite.com/public/kms05.png) {width=50% }
+![Alt text](https://asecuritysite.com/public/kms05.png) 
 
  
 The policy is then:
