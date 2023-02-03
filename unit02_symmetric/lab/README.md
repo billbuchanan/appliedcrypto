@@ -644,6 +644,142 @@ You should have access to your AWS Learner Lab, and where we will use AWS KMS (K
 
 ![Alt text](https://asecuritysite.com/public/kms_30.png) {width=50% }
 
+Normally we use AES encryption for this. Initially in KMS, we create a new key within our Customer managed keys:
+
+![Alt text](https://asecuritysite.com/public/kms01.png) {width=50% }
+
+and then create the key:
+ 
+![Alt text](https://asecuritysite.com/public/kms02.png) {width=50% }
+
+
+
+Next, we give it a name:
+
+![Alt text](https://asecuritysite.com/public/kms03.png) {width=50% }
+
+
+And then define the administrative permission (those who can delete it):
+
+![Alt text](https://asecuritysite.com/public/kms04.png) {width=50% }
+
+
+And the usage:
+
+![Alt text](https://asecuritysite.com/public/kms05.png) {width=50% }
+
+ 
+The policy is then:
+```
+{
+    "Id": "key-consolepolicy-3",
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Enable IAM User Permissions",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::22222222:root"
+            },
+            "Action": "kms:*",
+            "Resource": "*"
+        },
+        {
+            "Sid": "Allow access for Key Administrators",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::22222222:role/LabRole",
+                    "arn:aws:iam::22222222:role/aws-service-role/trustedadvisor.amazonaws.com/AWSServiceRoleForTrustedAdvisor",
+                    "arn:aws:iam::22222222:role/aws-service-role/events.amazonaws.com/AWSServiceRoleForCloudWatchEvents",
+                    "arn:aws:iam::22222222:role/EMR_EC2_DefaultRole",
+                    "arn:aws:iam::22222222:role/aws-service-role/elasticache.amazonaws.com/AWSServiceRoleForElastiCache",
+                    "arn:aws:iam::22222222:role/aws-service-role/organizations.amazonaws.com/AWSServiceRoleForOrganizations",
+                    "arn:aws:iam::22222222:role/EMR_DefaultRole",
+                    "arn:aws:iam::22222222:role/EMR_AutoScaling_DefaultRole",
+                    "arn:aws:iam::22222222:role/aws-service-role/cloud9.amazonaws.com/AWSServiceRoleForAWSCloud9",
+                    "arn:aws:iam::22222222:role/aws-service-role/support.amazonaws.com/AWSServiceRoleForSupport"
+                ]
+            },
+            "Action": [
+                "kms:Create*",
+                "kms:Describe*",
+                "kms:Enable*",
+                "kms:List*",
+                "kms:Put*",
+                "kms:Update*",
+                "kms:Revoke*",
+                "kms:Disable*",
+                "kms:Get*",
+                "kms:Delete*",
+                "kms:TagResource",
+                "kms:UntagResource",
+                "kms:ScheduleKeyDeletion",
+                "kms:CancelKeyDeletion"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "Allow use of the key",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::22222222:role/LabRole",
+                    "arn:aws:iam::22222222:role/aws-service-role/trustedadvisor.amazonaws.com/AWSServiceRoleForTrustedAdvisor",
+                    "arn:aws:iam::22222222:role/aws-service-role/events.amazonaws.com/AWSServiceRoleForCloudWatchEvents",
+                    "arn:aws:iam::22222222:role/EMR_EC2_DefaultRole",
+                    "arn:aws:iam::22222222:role/aws-service-role/elasticache.amazonaws.com/AWSServiceRoleForElastiCache",
+                    "arn:aws:iam::22222222:role/aws-service-role/organizations.amazonaws.com/AWSServiceRoleForOrganizations",
+                    "arn:aws:iam::22222222:role/EMR_DefaultRole",
+                    "arn:aws:iam::22222222:role/EMR_AutoScaling_DefaultRole",
+                    "arn:aws:iam::22222222:role/aws-service-role/cloud9.amazonaws.com/AWSServiceRoleForAWSCloud9",
+                    "arn:aws:iam::22222222:role/aws-service-role/support.amazonaws.com/AWSServiceRoleForSupport"
+                ]
+            },
+            "Action": [
+                "kms:Encrypt",
+                "kms:Decrypt",
+                "kms:ReEncrypt*",
+                "kms:GenerateDataKey*",
+                "kms:DescribeKey"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "Allow attachment of persistent resources",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::22222222:role/LabRole",
+                    "arn:aws:iam::22222222:role/aws-service-role/trustedadvisor.amazonaws.com/AWSServiceRoleForTrustedAdvisor",
+                    "arn:aws:iam::22222222:role/aws-service-role/events.amazonaws.com/AWSServiceRoleForCloudWatchEvents",
+                    "arn:aws:iam::22222222:role/EMR_EC2_DefaultRole",
+                    "arn:aws:iam::22222222:role/aws-service-role/elasticache.amazonaws.com/AWSServiceRoleForElastiCache",
+                    "arn:aws:iam::22222222:role/aws-service-role/organizations.amazonaws.com/AWSServiceRoleForOrganizations",
+                    "arn:aws:iam::22222222:role/EMR_DefaultRole",
+                    "arn:aws:iam::22222222:role/EMR_AutoScaling_DefaultRole",
+                    "arn:aws:iam::22222222:role/aws-service-role/cloud9.amazonaws.com/AWSServiceRoleForAWSCloud9",
+                    "arn:aws:iam::22222222:role/aws-service-role/support.amazonaws.com/AWSServiceRoleForSupport"
+                ]
+            },
+            "Action": [
+                "kms:CreateGrant",
+                "kms:ListGrants",
+                "kms:RevokeGrant"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "Bool": {
+                    "kms:GrantIsForAWSResource": "true"
+                }
+            }
+        }
+    ]
+}
+```
+
+
+## AWS Encryption
 Now we can create a file named 1.txt, and enter some text:
 
 ![Alt text](https://asecuritysite.com/public/kms06.png){width=50% }
