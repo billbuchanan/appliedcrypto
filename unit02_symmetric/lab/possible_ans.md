@@ -332,6 +332,65 @@ print("  decrypt: ",plaintext.decode())
 
 A sample is [here](https://replit.com/@billbuchanan/desdec#main.py).
 
+If you want to pass as arguments:
+
+```Python
+from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes 
+from cryptography.hazmat.primitives import padding
+from cryptography.hazmat.backends import default_backend
+import sys
+import hashlib
+import binascii
+
+val='hello'
+password='hello'
+
+plaintext=val
+
+def encrypt(plaintext,key, mode):
+    method=algorithms.TripleDES(key)
+    cipher = Cipher(method,mode, default_backend())
+    encryptor = cipher.encryptor()
+    ct = encryptor.update(plaintext) + encryptor.finalize()
+    return(ct)
+
+def decrypt(ciphertext,key, mode):
+    method=algorithms.TripleDES(key)
+    cipher = Cipher(method, mode, default_backend())
+    decryptor = cipher.decryptor()
+    pl = decryptor.update(ciphertext) + decryptor.finalize()
+    return(pl)
+
+def pad(data,size=64):
+    padder = padding.PKCS7(size).padder()
+    padded_data = padder.update(data)
+    padded_data += padder.finalize()
+    return(padded_data)
+
+def unpad(data,size=64):
+    padder = padding.PKCS7(size).unpadder()
+    unpadded_data = padder.update(data)
+    unpadded_data += padder.finalize()
+    return(unpadded_data)
+
+
+
+if (len(sys.argv)>1):
+    digest=str(sys.argv[1])
+if (len(sys.argv)>2):
+    password=str(sys.argv[2])
+  
+ 
+key = hashlib.sha256(password.encode()).digest()[:16]
+
+ciphertext=binascii.unhexlify(digest)
+
+plaintext = decrypt(ciphertext,key,modes.ECB())
+
+plaintext = unpad(plaintext)
+print("  decrypt: ",plaintext.decode())
+```
+
 ### E.3
 In this case we will convert from Base-64 into a byte array and then try to decrypt:
 
