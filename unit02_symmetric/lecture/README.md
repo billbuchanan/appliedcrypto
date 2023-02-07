@@ -14,14 +14,8 @@ The key concepts involved in this unit are:
 
 ## Presentations
 
-* Week 2 Presentation (PDF) - Symmetric Key Encryption: [here](https://asecuritysite.com/public/chapter02_secret.pdf)
-* Week 2 Presentation (Video) - Symmetric Key Encryption [here](https://youtu.be/kdCI5UiVl04)
-
-
-## Videos
-The voice over lecture is here:
-
-[![](http://img.youtube.com/vi/kdCI5UiVl04/0.jpg)](https://www.youtube.com/watch?v=kdCI5UiVl04 "")
-
+* Unit 2 Presentation (PPTX) - Symmetric Key Encryption: [here](https://github.com/billbuchanan/appliedcrypto/blob/master/unit02_symmetric/lecture/chapter02_secret.pptx)
+* Unit 2 Doodle (Video) - Symmetric Key Encryption [here](https://youtu.be/FAjEn-u-qfA)
+* Unit 2 Presentation (Video) - Symmetric Key Encryption [here](https://youtu.be/kdCI5UiVl04)
 
 
