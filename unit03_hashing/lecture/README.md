@@ -32,7 +32,7 @@ The key concepts are: MD2. MD4. MD5. SHA-1. Salting. Collisions. Murmur and FNV.
 ## Videos
 The voice over lecture is here:
 
-[![](http://img.youtube.com/vi/3D11YGD4vFQ/0.jpg)](https://www.youtube.com/watch?v=RCArDEBXvW0 "")
+[![](http://img.youtube.com/vi/RCArDEBXvW0/0.jpg)](https://www.youtube.com/watch?v=RCArDEBXvW0 "")
 
 
 
