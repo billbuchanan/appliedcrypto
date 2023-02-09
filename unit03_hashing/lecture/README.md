@@ -34,6 +34,13 @@ The voice over lecture is here:
 
 [![](http://img.youtube.com/vi/RCArDEBXvW0/0.jpg)](https://www.youtube.com/watch?v=RCArDEBXvW0 "")
 
+## Demos
+Here are a few demos:
 
+* OpenSSL hashing methods: [here](https://asecuritysite.com/openssl/openssl_full2)
+* Blake, MD5, SHA1, SHA256: [here](https://asecuritysite.com/hash/hashnew)
+* Blake 3: [here](https://asecuritysite.com/hash/blake3)
+* Benchmarks: [here](https://asecuritysite.com/hash/htest)
+* sha512crypt ($6$) SHA512 (Unix): [here](https://asecuritysite.com/hash/splunk_hash)
 
 
