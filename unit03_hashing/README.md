@@ -18,16 +18,15 @@ The key concepts are: MD2. MD4. MD5. SHA-1. Salting. Collisions. Murmur and FNV.
 ## Presentations
 
 * Unit 3 Presentation (PDF) - Hashing: [here](https://github.com/billbuchanan/appliedcrypto/blob/master/unit03_hashing/lecture/chapter03_hashing_authentication.pdf)
-* Unit 3 Presentation (video) - Hashing: [here](https://youtu.be/3D11YGD4vFQ)
+* Unit 3 Presentation (video) - Hashing: [here](https://youtu.be/RCArDEBXvW0)
 * Unit 3 Presentation (Doodle) - Hashing: [here](https://youtu.be/F3xRatoArEs)
 
-<!-- * Unit 3 Presentation (live lecture) - See Teams [here](https://teams.microsoft.com/l/team/19%3ae4651d3846ed4a02ab6284eba8a37836%40thread.tacv2/conversations?groupId=d5c028ee-0450-4370-a9c5-48014fce2ca6&tenantId=99e0dc58-9c4b-4820-8617-04c386c254c6) for morning and evening lecture. -->
 
 ## Lab
 
 * Unit 3 Lab (PDF): [here](https://github.com/billbuchanan/appliedcrypto/blob/master/unit03_hashing/lab/new_lab03.pdf)
 * Unit 3 Lab (video): [here](https://www.youtube.com/watch?v=rnTLr6iUbf0)
-<!-- * Unit 3 Lab Part 2 (video): [here](https://www.youtube.com/watch?v=FKO6Pjsbp3g) -->
+
 
 ## Tests
 
