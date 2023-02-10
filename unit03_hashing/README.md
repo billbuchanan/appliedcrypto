@@ -25,7 +25,7 @@ The key concepts are: MD2. MD4. MD5. SHA-1. Salting. Collisions. Murmur and FNV.
 ## Lab
 
 * Unit 3 Lab (PDF): [here](https://github.com/billbuchanan/appliedcrypto/blob/master/unit03_hashing/lab/new_lab03.pdf)
-* Unit 3 Lab (video): [here](https://www.youtube.com/watch?v=RCArDEBXvW0)
+* Unit 3 Lab (video): [here](https://www.youtube.com/watch?v=rnTLr6iUbf0)
 
 
 ## Tests
