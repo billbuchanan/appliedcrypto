@@ -83,7 +83,7 @@ jane: $1$rqOIRBBN$R2pOQH9egTTVN1Nlst2U7.
 
 Hint: 
 ```
-openssl passwd -apr1 -salt ZaZS/8TF napier
+openssl passwd -apr1 -salt waZS/8T napier
 ```
 
 The passwords are password, napier, inkwell and Ankle123.
