@@ -610,7 +610,67 @@ An important element in data loss prevention is encrypted emails. In this part o
 #### 1. Create a key pair with (RSA and 2,048-bit keys):
 
 ```
-gpg --gen-key
+> gpg --gen-key
+gpg (GnuPG) 1.4.23; Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+gpg: keyring `C:/Users/Administrator/AppData/Roaming/gnupg\secring.gpg' created
+gpg: keyring `C:/Users/Administrator/AppData/Roaming/gnupg\pubring.gpg' created
+Please select what kind of key you want:
+   (1) RSA and RSA (default)
+   (2) DSA and Elgamal
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+Your selection? 1
+RSA keys may be between 1024 and 4096 bits long.
+What keysize do you want? (2048)
+Requested keysize is 2048 bits
+Please specify how long the key should be valid.
+         0 = key does not expire
+      <n>  = key expires in n days
+      <n>w = key expires in n weeks
+      <n>m = key expires in n months
+      <n>y = key expires in n years
+Key is valid for? (0)
+Key does not expire at all
+Is this correct? (y/N) y
+
+You need a user ID to identify your key; the software constructs the user ID
+from the Real Name, Comment and Email Address in this form:
+    "Heinrich Heine (Der Dichter) <heinrichh@duesseldorf.de>"
+
+Real name: Bill Buchanan
+Email address: w.buchanan@napier.ac.uk
+Comment: My Key
+You selected this USER-ID:
+    "Bill Buchanan (My Key) <w.buchanan@napier.ac.uk>"
+
+Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? O
+You need a Passphrase to protect your secret key.
+
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+..+++++
+.......+++++
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
++++++
++++++
+gpg: C:/Users/Administrator/AppData/Roaming/gnupg\trustdb.gpg: trustdb created
+gpg: key E343DC3A marked as ultimately trusted
+public and secret key created and signed.
+
+gpg: checking the trustdb
+gpg: 3 marginal(s) needed, 1 complete(s) needed, PGP trust model
+gpg: depth: 0  valid:   1  signed:   0  trust: 0-, 0q, 0n, 0m, 0f, 1u
+pub   2048R/E343DC3A 2023-02-12
+      Key fingerprint = 745F 2F35 1244 943C 5997  5AF5 5F00 436C E343 DC3A
+uid                  Bill Buchanan (My Key) <w.buchanan@napier.ac.uk>
 ```
 
 Now export your public key using the form of:
