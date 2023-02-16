@@ -220,7 +220,7 @@ cat file.bin
 
 
 ## C	OpenSSL (ECC)
-Elliptic Curve Cryptography (ECC) is now used extensively within public key encryption, including with Bitcoin, Ethereum, Tor, and many IoT applications. In this part of the lab we will use OpenSSL to create a key pair. For this we generate a random 256-bit private key (priv), and then generate a public key point (priv multiplied by G), using a generator (G), and which is a generator point on the selected elliptic curve.
+Elliptic Curve Cryptography (ECC) is now used extensively within public key signing and key exchange. This includes  with Bitcoin, Ethereum, Tor, and  IoT applications. In this part of the lab we will use OpenSSL to create an EC key pair. For this we generate a random 256-bit private key (priv), and then generate a public key point (which is priv multiplied by G). This will use a generator point (G), and which is an (x,y) point on the selected elliptic curve.
 
 
 ### C.1	
