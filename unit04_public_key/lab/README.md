@@ -1,5 +1,6 @@
 ![esecurity](https://raw.githubusercontent.com/billbuchanan/esecurity/master/z_associated/esecurity_graphics.jpg)
 
+Either complete Part 1 first and then do Part 2, or start with Part 1 and then do Part 2.
 
 # Part 1 (Lab 4: Asymmetric (Public) Key)
 Objective: The key objective of this lab is to provide a practical introduction to public key encryption, and with a focus on RSA and Elliptic Curve methods. This includes the creation of key pairs and in the signing process.
