@@ -1,6 +1,7 @@
 ![esecurity](https://raw.githubusercontent.com/billbuchanan/esecurity/master/z_associated/esecurity_graphics.jpg)
 
-# Lab 4: Asymmetric (Public) Key
+
+# Part 1 (Lab 4: Asymmetric (Public) Key)
 Objective: The key objective of this lab is to provide a practical introduction to public key encryption, and with a focus on RSA and Elliptic Curve methods. This includes the creation of key pairs and in the signing process.
 
 Video demo: [here](https://youtu.be/6T9bFA2nl3c )
@@ -913,7 +914,7 @@ Kn52h41pX7FI5TXcqIDPw+uqAu50JnwDR0dLYY6fvIce
 -----END RSA PRIVATE KEY-----
 ```
 
-# AWS Lab for RSA Encryption
+# Part 2: AWS Lab for RSA Encryption
 The steps to perform RSA encryption using the AWS KMS is here:
 
 [https://asecuritysite.com/aws/lab04](https://asecuritysite.com/aws/lab04)
