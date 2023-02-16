@@ -493,56 +493,6 @@ Public key (DER):
 
 </pre>
 
-**Python 2.7**:
-	
-```python
-import OpenSSL
-import pyelliptic
-
-secretkey="password"
-test="Test123"
-
-alice = pyelliptic.ECC() 
-bob = pyelliptic.ECC()
-
-print "++++Keys++++"
-print "Bob's private key: "+bob.get_privkey().encode('hex')
-print "Bob's public key: "+bob.get_pubkey().encode('hex')
-
-print
-print "Alice's private key: "+alice.get_privkey().encode('hex')
-print "Alice's public key: "+alice.get_pubkey().encode('hex')
-
-
-ciphertext = alice.encrypt(test, bob.get_pubkey())
-
-print "\n++++Encryption++++"
-
-print "Cipher: "+ciphertext.encode('hex')
-
-print "Decrypt: "+bob.decrypt(ciphertext)
-
-signature = bob.sign("Alice")
-
-print 
-print "Bob verified: "+ str(pyelliptic.ECC(pubkey=bob.get_pubkey()).verify
-(signature, "Alice"))
-```
-
-<pre>
-++++Keys++++
-Bob's private key: 02f9f16a09b1e7dbb7b6697f94407616d9cd57965146f9fa93e6167c8d59239e09ec68da
-Bob's public key: 040634cbbfe036049706a41449a8528bf0f72cb4ada794f57bcaffa7edf77106ac74ce86e605c488184302331d4586638a879b717e66d53ee65363330bfc9f0e780ffed18dab5ff6bf
-
-Alice's private key: 037cfc7ee3bc58f54f213877003b0d3bf8e6d760cc4474ccf9d6fed2ae1b241c0bb9b733
-Alice's public key: 04063eefc97bf6cf4b21f9cdad6899c77826f54c03db6c3b08b417bcaac605b53d9e1852f20369db917baa69e30b1a7eafaca8264028bee780701a957f81f8202c86c1f93515227a88
-
-++++Encryption++++
-Cipher: ad8e883133fcaf6d14bd7a8d66a610310406d6a7dfb1ea892d5a518ce9155abca28212ed103c4c194aef62462d62eb409e33e5203604291d73d25d0aa63228e1b91fca6339eb384c956b8df64bad1ec4b19883d6531c950ef9e53f4e4686cd8889bdef3edc6625263dd94360585bc3774273402f93d87211767ebd3bde961be86a121c52881873078a
-Decrypt: Test123
-
-Bob verified: True
-</pre>
 	
 ## D.2
 y<sup>2</sup> = x<sup>3 + 7 (mod 89)
