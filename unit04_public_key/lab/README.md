@@ -10,7 +10,7 @@ Note: If you are using Python 3, instead of "pip install pycrypto" you can insta
 ## A	RSA Encryption
 ### A.1	
 
-The following defines a public key that is used with PGP email encryption:
+With public key encryption, we can use the public key to either encrypt data, or it can be used to prove a digital signature. The following is a public key generated with the GPG program:
 ```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Version: GnuPG v2
@@ -49,15 +49,17 @@ Using the following Web page, determine the owner of the key, and the ID on the 
 
 [https://asecuritysite.com/encryption/pgp1](https://asecuritysite.com/pgp/pgp1)
 
+Now, save the file to newpub.gpg on your Ubuntu instance, and then determine the information that is provided with the command:
+
+```
+gpg newpub.gpg
+```
+
 By searching on-line, can you find the public key of three famous people, and view their key details, and can you discover some of the details of their keys (eg User ID, key encryption method, key size, etc)? 
 
 
 
 By searching on-line, what is an ASCII Armored Message?
-
-
-
-
 
 
 ### A.2	
@@ -72,10 +74,10 @@ And receives a ciphertext message of:
 uW6FQth0pKaWc3haoqxbjIA7q2rF+G0Kx3z9ZDPZGU3NmBfzpD9ByU1ZBtbgKC8ATVZzwj15AeteOnbjO3EHQC4A5Nu0xKTWpqpngYRGGmzMGtblW3wBlNQYovDsRUGt+cJK7RD0PKn6PMNqK5EQKCD6394K/gasQ9zA6fKn3f0=
 ```
 
-Using the following code:
+Use the following code:
 
 ```python
-# https://asecuritysite.com/encryption/rsa_example
+# https://asecuritysite.com/rsa/rsa_example
 from Crypto.PublicKey import RSA
 from Crypto.Cipher import PKCS1_OAEP
 import base64
@@ -153,16 +155,16 @@ Which are the attributes of the key shown:
 
 
 
-Which number format is used to display the information on the attributes:
+How many bits does the RSA modulus have, and how many bits are used for the two prime numbers. What is the value of e?
 
 
 
 
 
 ### B.4	
-Let’s now secure the encrypted key with 3-DES:
+Let’s now secure the encrypted key with 128-bit AES (and based on a key generated from a passphrase):
 ```
-openssl rsa -in private.pem -des3 -out key3des.pem 
+openssl rsa -in private.pem -aes128 -out keyaes.pem 
 ```
 	
 
@@ -186,7 +188,7 @@ Now create a file named “myfile.txt” and put a message into it. Next encrypt
 
 
 ```
-openssl rsautl -encrypt -inkey public.pem -pubin -in myfile.txt -out file.bin	
+openssl pkeyutl -encrypt -inkey public.pem -pubin -in myfile.txt -out file.bin	
 ```
 
 
@@ -194,7 +196,7 @@ openssl rsautl -encrypt -inkey public.pem -pubin -in myfile.txt -out file.bin
 And then decrypt with your private key:
 
 ```
-openssl rsautl -decrypt -inkey private.pem -in file.bin -out decrypted.txt
+openssl pkeyutl -decrypt -inkey private.pem -in file.bin -out decrypted.txt
 ```
 
 What are the contents of decrypted.txt?
@@ -203,13 +205,13 @@ What are the contents of decrypted.txt?
 What can you observe between these two commands for differing output formats:
 
 ```
-openssl rsautl -encrypt -inkey public.pem -pubin -in myfile.txt -out file.bin
+openssl pkeyutl -encrypt -inkey public.pem -pubin -in myfile.txt -out file.bin
 
 cat file.bin
 ```
 and:
 ```
-openssl rsautl -encrypt -inkey public.pem -pubin -in myfile.txt -out file.bin -hexdump
+openssl pkeyutl -encrypt -inkey public.pem -pubin -in myfile.txt -out file.bin -hexdump
 
 cat file.bin
 ```
