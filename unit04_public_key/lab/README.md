@@ -913,5 +913,12 @@ Kn52h41pX7FI5TXcqIDPw+uqAu50JnwDR0dLYY6fvIce
 -----END RSA PRIVATE KEY-----
 ```
 
+# AWS Lab for RSA Encryption
+The steps to perform RSA encryption using the AWS KMS is here:
+
+[https://asecuritysite.com/aws/lab04](https://asecuritysite.com/aws/lab04)
+
+Follow the steps to create RSA encryption.
+
 
 
