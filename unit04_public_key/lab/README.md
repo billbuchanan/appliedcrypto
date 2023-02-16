@@ -3,7 +3,7 @@
 # Lab 4: Asymmetric (Public) Key
 Objective: The key objective of this lab is to provide a practical introduction to public key encryption, and with a focus on RSA and Elliptic Curve methods. This includes the creation of key pairs and in the signing process.
 
-Video demo: https://youtu.be/6T9bFA2nl3c 
+Video demo: [here](https://youtu.be/6T9bFA2nl3c )
 
 Note: If you are using Python 3, instead of "pip install pycrypto" you can install pycryptodome with "pip3 install pycryptodome".
 
@@ -47,7 +47,7 @@ RmyUquF+/zNnSBVgtY1rzwaYi05XfuxG0WHVHPTtRyJ5pF4HSqiuvk6Z/4z3bw==
 
 Using the following Web page, determine the owner of the key, and the ID on the key:
 
-https://asecuritysite.com/encryption/pgp1
+[https://asecuritysite.com/encryption/pgp1](https://asecuritysite.com/pgp/pgp1)
 
 By searching on-line, can you find the public key of three famous people, and view their key details, and can you discover some of the details of their keys (eg User ID, key encryption method, key size, etc)? 
 
