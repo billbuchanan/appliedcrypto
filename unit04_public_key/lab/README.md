@@ -1,20 +1,21 @@
 ![esecurity](https://raw.githubusercontent.com/billbuchanan/esecurity/master/z_associated/esecurity_graphics.jpg)
 
-# Lab 4: Asymmetric (Public) Key
+Either complete Part 1 first and then do Part 2, or start with Part 1 and then do Part 2.
+
+# Part 1 (Lab 4: Asymmetric (Public) Key)
 Objective: The key objective of this lab is to provide a practical introduction to public key encryption, and with a focus on RSA and Elliptic Curve methods. This includes the creation of key pairs and in the signing process.
 
-Video demo: https://youtu.be/6T9bFA2nl3c 
+Video demo: [here](https://youtu.be/6T9bFA2nl3c )
 
 Note: If you are using Python 3, instead of "pip install pycrypto" you can install pycryptodome with "pip3 install pycryptodome".
 
 ## A	RSA Encryption
 ### A.1	
 
-The following defines a public key that is used with PGP email encryption:
+With public key encryption, we can use the public key to either encrypt data, or it can be used to prove a digital signature. The following is a public key generated with the GPG program:
 ```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Version: GnuPG v2
-
 mQENBFTzi1ABCADIEWchOyqRQmU4AyQAMj2Pn68Sqo9lTPdPcItwo9LbTdv1YCFz
 w3qLlp2RORMP+Kpdi92CIhdUYHDmZfHZ3IWTBgo9+y/Np9UJ6tNGocrgsq4xWz15
 4vX4jJRddC7QySSh9UxDpRWf9sgqEv1pah136r95ZuyjC1EXnoNxdLJtx8PliCXc
@@ -47,17 +48,19 @@ RmyUquF+/zNnSBVgtY1rzwaYi05XfuxG0WHVHPTtRyJ5pF4HSqiuvk6Z/4z3bw==
 
 Using the following Web page, determine the owner of the key, and the ID on the key:
 
-https://asecuritysite.com/encryption/pgp1
+[https://asecuritysite.com/encryption/pgp1](https://asecuritysite.com/pgp/pgp1)
+
+Now, save the file to newpub.gpg on your Ubuntu instance, and then determine the information that is provided with the command:
+
+```
+gpg newpub.gpg
+```
 
 By searching on-line, can you find the public key of three famous people, and view their key details, and can you discover some of the details of their keys (eg User ID, key encryption method, key size, etc)? 
 
 
 
 By searching on-line, what is an ASCII Armored Message?
-
-
-
-
 
 
 ### A.2	
@@ -72,10 +75,10 @@ And receives a ciphertext message of:
 uW6FQth0pKaWc3haoqxbjIA7q2rF+G0Kx3z9ZDPZGU3NmBfzpD9ByU1ZBtbgKC8ATVZzwj15AeteOnbjO3EHQC4A5Nu0xKTWpqpngYRGGmzMGtblW3wBlNQYovDsRUGt+cJK7RD0PKn6PMNqK5EQKCD6394K/gasQ9zA6fKn3f0=
 ```
 
-Using the following code:
+Use the following code:
 
 ```python
-# https://asecuritysite.com/encryption/rsa_example
+# https://asecuritysite.com/rsa/rsa_example
 from Crypto.PublicKey import RSA
 from Crypto.Cipher import PKCS1_OAEP
 import base64
@@ -153,16 +156,16 @@ Which are the attributes of the key shown:
 
 
 
-Which number format is used to display the information on the attributes:
+How many bits does the RSA modulus have, and how many bits are used for the two prime numbers. What is the value of e?
 
 
 
 
 
 ### B.4	
-Let’s now secure the encrypted key with 3-DES:
+Let’s now secure the encrypted key with 128-bit AES (and based on a key generated from a passphrase):
 ```
-openssl rsa -in private.pem -des3 -out key3des.pem 
+openssl rsa -in private.pem -aes128 -out keyaes.pem 
 ```
 	
 
@@ -186,7 +189,7 @@ Now create a file named “myfile.txt” and put a message into it. Next encrypt
 
 
 ```
-openssl rsautl -encrypt -inkey public.pem -pubin -in myfile.txt -out file.bin	
+openssl pkeyutl -encrypt -inkey public.pem -pubin -in myfile.txt -out file.bin	
 ```
 
 
@@ -194,7 +197,7 @@ openssl rsautl -encrypt -inkey public.pem -pubin -in myfile.txt -out file.bin
 And then decrypt with your private key:
 
 ```
-openssl rsautl -decrypt -inkey private.pem -in file.bin -out decrypted.txt
+openssl pkeyutl -decrypt -inkey private.pem -in file.bin -out decrypted.txt
 ```
 
 What are the contents of decrypted.txt?
@@ -203,13 +206,13 @@ What are the contents of decrypted.txt?
 What can you observe between these two commands for differing output formats:
 
 ```
-openssl rsautl -encrypt -inkey public.pem -pubin -in myfile.txt -out file.bin
+openssl pkeyutl -encrypt -inkey public.pem -pubin -in myfile.txt -out file.bin
 
 cat file.bin
 ```
 and:
 ```
-openssl rsautl -encrypt -inkey public.pem -pubin -in myfile.txt -out file.bin -hexdump
+openssl pkeyutl -encrypt -inkey public.pem -pubin -in myfile.txt -out file.bin -hexdump
 
 cat file.bin
 ```
@@ -218,7 +221,7 @@ cat file.bin
 
 
 ## C	OpenSSL (ECC)
-Elliptic Curve Cryptography (ECC) is now used extensively within public key encryption, including with Bitcoin, Ethereum, Tor, and many IoT applications. In this part of the lab we will use OpenSSL to create a key pair. For this we generate a random 256-bit private key (priv), and then generate a public key point (priv multiplied by G), using a generator (G), and which is a generator point on the selected elliptic curve.
+Elliptic Curve Cryptography (ECC) is now used extensively within public key signing and key exchange. This includes  with Bitcoin, Ethereum, Tor, and  IoT applications. In this part of the lab we will use OpenSSL to create an EC key pair. For this we generate a random 256-bit private key (priv), and then generate a public key point (which is priv multiplied by G). This will use a generator point (G), and which is an (x,y) point on the selected elliptic curve.
 
 
 ### C.1	
@@ -610,7 +613,67 @@ An important element in data loss prevention is encrypted emails. In this part o
 #### 1. Create a key pair with (RSA and 2,048-bit keys):
 
 ```
-gpg --gen-key
+> gpg --gen-key
+gpg (GnuPG) 1.4.23; Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+gpg: keyring `C:/Users/Administrator/AppData/Roaming/gnupg\secring.gpg' created
+gpg: keyring `C:/Users/Administrator/AppData/Roaming/gnupg\pubring.gpg' created
+Please select what kind of key you want:
+   (1) RSA and RSA (default)
+   (2) DSA and Elgamal
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+Your selection? 1
+RSA keys may be between 1024 and 4096 bits long.
+What keysize do you want? (2048)
+Requested keysize is 2048 bits
+Please specify how long the key should be valid.
+         0 = key does not expire
+      <n>  = key expires in n days
+      <n>w = key expires in n weeks
+      <n>m = key expires in n months
+      <n>y = key expires in n years
+Key is valid for? (0)
+Key does not expire at all
+Is this correct? (y/N) y
+
+You need a user ID to identify your key; the software constructs the user ID
+from the Real Name, Comment and Email Address in this form:
+    "Heinrich Heine (Der Dichter) <heinrichh@duesseldorf.de>"
+
+Real name: Bill Buchanan
+Email address: w.buchanan@napier.ac.uk
+Comment: My Key
+You selected this USER-ID:
+    "Bill Buchanan (My Key) <w.buchanan@napier.ac.uk>"
+
+Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? O
+You need a Passphrase to protect your secret key.
+
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+..+++++
+.......+++++
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
++++++
++++++
+gpg: C:/Users/Administrator/AppData/Roaming/gnupg\trustdb.gpg: trustdb created
+gpg: key E343DC3A marked as ultimately trusted
+public and secret key created and signed.
+
+gpg: checking the trustdb
+gpg: 3 marginal(s) needed, 1 complete(s) needed, PGP trust model
+gpg: depth: 0  valid:   1  signed:   0  trust: 0-, 0q, 0n, 0m, 0f, 1u
+pub   2048R/E343DC3A 2023-02-12
+      Key fingerprint = 745F 2F35 1244 943C 5997  5AF5 5F00 436C E343 DC3A
+uid                  Bill Buchanan (My Key) <w.buchanan@napier.ac.uk>
 ```
 
 Now export your public key using the form of:
@@ -850,6 +913,13 @@ HMTjSeRDEU0Qm5UXhXkCQQCPlZJqlgksBN/TULHC4RgsXIx+oFylBrkiFamYsuEt
 Kn52h41pX7FI5TXcqIDPw+uqAu50JnwDR0dLYY6fvIce
 -----END RSA PRIVATE KEY-----
 ```
+
+# Part 2: AWS Lab for RSA Encryption
+The steps to perform RSA encryption using the AWS KMS is here:
+
+[https://asecuritysite.com/aws/lab04](https://asecuritysite.com/aws/lab04)
+
+Follow the steps to create RSA encryption.
 
 
 
