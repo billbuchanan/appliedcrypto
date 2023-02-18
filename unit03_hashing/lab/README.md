@@ -78,12 +78,12 @@ bill:$apr1$waZS/8Tm$jDZmiZBct/c2hysERcZ3m1
 mike:$apr1$mKfrJquI$Kx0CL9krmqhCu0SHKqp5Q0
 fred:$apr1$Jbe/hCIb$/k3A4kjpJyC06BUUaPRKs0
 ian:$apr1$0GyPhsLi$jTTzW0HNS4Cl5ZEoyFLjB.
-jane: $1$rqOIRBBN$R2pOQH9egTTVN1Nlst2U7.
+jane:$1$rqOIRBBN$R2pOQH9egTTVN1Nlst2U7.
 ```
 
 Hint: 
 ```
-openssl passwd -apr1 -salt ZaZS/8TF napier
+openssl passwd -apr1 -salt waZS/8Tm napier
 ```
 
 The passwords are password, napier, inkwell and Ankle123.
@@ -761,10 +761,11 @@ For the following identify the hash methods used:
 
 ## K.2	
 It is known that a user has used a password of “passXord”, where X is an unknown character or number. Can crack the following hashes using Hashcat and a filter:
-<pre>
+
+```
 5fa8051ada600a097bd0922d7a085b94734684c4e070b24a02cf43d24d6eedbe
 a6f63a5fb10b3bba180a79f2fc565b1db2101040ce71ea80692d671857fe2117
-</pre>
+```
 
 Passwords used:
 
@@ -773,20 +774,22 @@ Number of tests:
 
 ## K.3	
 Download the bfield.hash password hash, and using the rockyou.txt list, determine the  first 10 passwords in the hashed file. An example command might be:
-<pre>
+
+```
 hashcat -m 0 bfield.hash rockyou.txt
-</pre>
+
+```
 
 First 10 passwords from bfield.hash: 
 
 
 
 The download of the hashes and wordlist is likely to be zipped with 7-zip. Here's some commands you might use:
-<pre>
+```
 sudo apt-get install 7zip-full
 7z e bfield.hash.7z
 7z e rockyou.txt.bz2
-</pre>
+```
 
 ## L	What I should have learnt from this lab?
 The key things learnt:
@@ -816,4 +819,7 @@ npm install libname
 
 ## Possible solutions
 Have a look [here](https://github.com/billbuchanan/appliedcrypto/blob/main/unit03_hashing/lab/samples_ans.md)
+
+# AWS Lab (Encrypting Data Buckets)
+If you have time and interesting in coninuing to develop your Cloud skills, please complete the lab on encrypting data buckets [here](https://asecuritysite.com/aws/lab02).
 

@@ -25,19 +25,23 @@ The key concepts are: MD2. MD4. MD5. SHA-1. Salting. Collisions. Murmur and FNV.
 
 ## Presentations
 
-* Week 3 Presentation (PDF) - Hashing: [here](https://github.com/billbuchanan/esecurity/blob/master/unit03_hashing/lecture/chapter03_hashing_authentication.pdf)
-* Week 3 Presentation (video) - Hashing: [here](https://youtu.be/3D11YGD4vFQ)
-<!-- * Unit 3 Presentation (live lecture) - See Teams [here](https://teams.microsoft.com/l/team/19%3ae4651d3846ed4a02ab6284eba8a37836%40thread.tacv2/conversations?groupId=d5c028ee-0450-4370-a9c5-48014fce2ca6&tenantId=99e0dc58-9c4b-4820-8617-04c386c254c6) for morning and evening lecture. -->
+* Unit 3 Presentation (PDF) - Hashing: [here](https://github.com/billbuchanan/appliedcrypto/blob/master/unit03_hashing/lecture/chapter03_hashing_authentication.pdf)
+* Unit 3 Presentation (video) - Hashing: [here](https://youtu.be/RCArDEBXvW0)
+* Unit 3 Presentation (Doodle) - Hashing: [here](https://youtu.be/F3xRatoArEs)
+
 
 ## Videos
 The voice over lecture is here:
 
-[![](http://img.youtube.com/vi/3D11YGD4vFQ/0.jpg)](https://www.youtube.com/watch?v=3D11YGD4vFQ "")
+[![](http://img.youtube.com/vi/RCArDEBXvW0/0.jpg)](https://www.youtube.com/watch?v=RCArDEBXvW0 "")
 
-<!--
-And the classroom lecture from 2020 is here:
+## Demos
+Here are a few demos:
 
-[![](http://img.youtube.com/vi/gh2CI5m2W6Y/0.jpg)](https://www.youtube.com/watch?v=gh2CI5m2W6Y "")
--->
+* OpenSSL hashing methods: [here](https://asecuritysite.com/openssl/openssl_full2)
+* Blake, MD5, SHA1, SHA256: [here](https://asecuritysite.com/hash/hashnew)
+* Blake 3: [here](https://asecuritysite.com/hash/blake3)
+* Benchmarks: [here](https://asecuritysite.com/hash/htest)
+* sha512crypt ($6$) SHA512 (Unix): [here](https://asecuritysite.com/hash/splunk_hash)
 
 

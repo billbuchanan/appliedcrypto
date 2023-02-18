@@ -17,9 +17,8 @@ The key concepts are: Basics, RSA, Elliptic Curve and ElGamal.
 
 ## Presentations
 
-* Week 4 Presentation (PDF) - Public Key Encryption: [here](https://github.com/billbuchanan/esecurity/blob/master/unit04_public_key/lecture/chapter04_public_msc.pdf).
-* Week 4 Presentation (video) - Public Key Encryption: [here](https://youtu.be/QEYqkxuzoTg).
-* Week 4 Presentation (lecture video - 8 Feb 2020) - Public Key Encryption: [here](https://www.youtube.com/watch?v=PEdCHWdE3zk).
+* Unit 4 Presentation (PDF) - Public Key Encryption: [here](https://github.com/billbuchanan/esecurity/blob/master/unit04_public_key/lecture/chapter04_public_msc.pdf).
+* Unit 4 Presentation (video) - Public Key Encryption: [here](https://youtu.be/qoRCL3qDnXE).
 
 ## Examples
 
