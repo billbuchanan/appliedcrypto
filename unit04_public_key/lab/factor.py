@@ -11,5 +11,6 @@ def factors(n):    # (cf. https://stackoverflow.com/questions/16007204/factorizi
             if n > 1:
                 yield n; break
 
-for f in factors(879509040449463763008386484793372267):
-    print(f)
+if __name__ == "__main__":
+    for f in factors(720):
+        print(f)
