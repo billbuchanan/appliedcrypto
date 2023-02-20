@@ -1,6 +1,7 @@
 import sys
 from sieve import sieve
 from euclidian import inverse_of
+from libnum import invmod
 
 def calculate_N(p, q):
     return p * q
@@ -11,7 +12,14 @@ def calculate_PHI(p, q):
 def determine_eNdN(p, q, e):
     N = calculate_N(p, q)
     PHI = calculate_PHI(p, q)
-    d = inverse_of(e, PHI)
+
+    if PHI % e == 0:
+        print(f'PHI: {PHI} shares a common factor with e: {e}! Change keys p: {p} and q: {q} or enter a different value of e: {e}.')
+        return False, False, False
+    else:
+       print(f'Alternative method of computing d: {invmod(e, PHI)}')     
+       d = inverse_of(e, PHI)
+ 
     eN = e * N
     dN = d * N
     return d, eN, dN
@@ -32,11 +40,12 @@ if __name__ == "__main__":
         N = calculate_N(p, q)
         PHI = calculate_PHI(p, q)
         d, en, dn = determine_eNdN(p, q, e)
-        print(f'p:{p}, q: {q}, N: {N}, PHI: {PHI}, d: {d}, e.N: {en}, d.N: {dn}')
 
-        if M:
+        if d and M:
+            print(f'p:{p}, q: {q}, N: {N}, PHI: {PHI}, d: {d}, e.N: {en}, d.N: {dn}')
             C = encrypt(M, e, N)
             P = decrypt(C, d, N)
             print(f'M: {M}, C: {C}, Pt: {P}')
+        
     else:
         print(f'p:{p} and q: {q} must both be prime.')
