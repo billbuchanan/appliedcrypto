@@ -16,17 +16,17 @@ Bob Select x=6, Alice selects y=9
 
 Now calculate (using a calculator):
 
-Bob’s A value (g<sup>x</sup> mod N):	
+Alice’s A value (g<sup>x</sup> mod N):	
 	
-Alice’s B value (g<sup>y</sup> mod N):
+Bob’s B value (g<sup>y</sup> mod N):
 
 ### A.2	
 Now they exchange the values. Next calculate the shared key:
 
 
-Bob’s value (B<sup>x</sup> mod N):	
+Alice’s value (B<sup>x</sup> mod N):	
 	
-Alice’s value (A<sup>y</sup> mod N):
+Bobs’s value (A<sup>y</sup> mod N):
 
 Do they match? [Yes] [No]
 
@@ -320,42 +320,53 @@ print ('Bob gets Eve\'s value and calculates key of: ',Key2)
 ECDH is now one of the most used key exchange methods, and uses the Diffie Hellman method, but adds in elliptic curve methods. With this Alice generates (a) and Bob generates (b). We select a point on a curve (G), and Alice generates aG, and Bob generates bG. They pass the values to each other, and then Alice received bG, and Bob receives aG. Alice multiplies by a, to get abG, and Bob will multiply by b, and also get abG. This will be their shared key.
 
 ### D.1	
-Copy and paste the code from (you may have to run “pip install eccsnacks”):
+In the following we will implement ECDH using the secp256k1 curve (as used in Bitcoin). Confirm that Bob and Alice will have the same shared key.
 
-Web link (ECDH):  https://asecuritysite.com/encryption/curve
+Web link (ECDH):  [here](https://asecuritysite.com/hazmat/hashnew13)
 
-and confirm that Bob and Alice will always get the same shared key.
 ```python
-import os
+from cryptography.hazmat.primitives import hashes
+from cryptography.hazmat.primitives.asymmetric import ec
+from cryptography.hazmat.primitives.kdf.hkdf import HKDF
+from cryptography.hazmat.primitives import serialization
+from cryptography.hazmat.backends import default_backend
 import binascii
-from x25519 import base_point_mult,multscalar,bytes_to_int,int_to_bytes
+import sys
+
+Bob_private_key = ec.generate_private_key(ec.SECP256K1(),default_backend())
+Alice_private_key = ec.generate_private_key(ec.SECP256K1(),default_backend())
+
+Bob_shared_key = Bob_private_key.exchange(ec.ECDH(), Alice_private_key.public_key())
+
+Bob_derived_key = HKDF(algorithm=hashes.SHA256(),length=size,salt=None,info=b'',backend=default_backend()).derive(Bob_shared_key)
+
+Alice_shared_key = Alice_private_key.exchange(ec.ECDH(), Bob_private_key.public_key())
+
+Alice_derived_key = HKDF(algorithm=hashes.SHA256(),length=size,salt=None,info=b'',backend=default_backend()).derive(Alice_shared_key)
+
+print ("Name of curve: ",Bob_private_key.public_key().curve.name)
+print (f"Generated key size: {size} bytes ({size*8} bits)")
+
+vals = Bob_private_key.private_numbers()
+print (f"\nBob private key value: {vals.private_value}")
+vals=Bob_private_key.public_key()
+enc_point=binascii.b2a_hex(vals.public_bytes(encoding=serialization.Encoding.PEM,format=serialization.PublicFormat.SubjectPublicKeyInfo)).decode()
+print("Bob's public key: ",enc_point)
+
+vals = Alice_private_key.private_numbers()
+print (f"\nAlice private key value: {vals.private_value}")
+vals=Alice_private_key.public_key()
+enc_point=binascii.b2a_hex(vals.public_bytes(encoding=serialization.Encoding.PEM,format=serialization.PublicFormat.SubjectPublicKeyInfo)).decode()
+print("Alice's public key: ",enc_point)
 
 
-a = os.urandom(32)
-b = os.urandom(32)
-# a = int_to_bytes(10,32) # just for testing a=10 (32 bytes - 256 bits)
-# b = int_to_bytes(12,32) # just for testing b=12 (32 bytes - 256 bits)
-
-print (f"\n\nBob private (b):\t{bytes_to_int(b)}")
-print (f"Alice private (a): \t{bytes_to_int(a)}")
-
-
-
-# Traditional ECDH: 
-a_pub = base_point_mult(a)
-b_pub = base_point_mult(b)
-
-print ("\n\nBob public (bG):\t",binascii.hexlify(b_pub.encode()))
-
-print ("Alice public (aG):\t",binascii.hexlify(a_pub.encode()))
-
-k_a = multscalar(a, b_pub) # a (bG)
-k_b = multscalar(b, a_pub) # b (aG)
-
-
-print ("\n\nBob shared (b)aG:\t",binascii.hexlify(k_b.encode()))
-print ("Alice shared (a)bG:\t",binascii.hexlify(k_a.encode()))
+print ("\nBob's derived key: ",binascii.b2a_hex(Bob_derived_key).decode())
+print("Alice's derived key: ",binascii.b2a_hex(Alice_derived_key).decode())())
 ```
+
+Now modify the code to implement the SECP192R1 and also for the SECP521R1 curve. What do you notice about the sizes of the keys created between the different curve types?
+
+
 The code to implement Curve 25519 for key exchange (X25519) is:
 
 ```python
