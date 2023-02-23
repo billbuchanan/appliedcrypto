@@ -370,149 +370,51 @@ Now modify the code to implement the SECP192R1 and also for the SECP521R1 curve.
 The code to implement Curve 25519 for key exchange (X25519) is:
 
 ```python
-P = 2 ** 255 - 19
-A24 = 121665
-def bytes_to_int(bytes):
+from cryptography.hazmat.primitives import hashes
+from cryptography.hazmat.primitives.asymmetric.x25519 import X25519PrivateKey
+from cryptography.hazmat.primitives.kdf.hkdf import HKDF
+from cryptography.hazmat.primitives import serialization
+from cryptography.hazmat.backends import default_backend
+import binascii
+import sys
 
-    result = 0
-    
-    for b in bytes:
-        result = result * 256 + int(b)
-    
-    return result
+Bob_private_key = X25519PrivateKey.generate()
+
+Alice_private_key = X25519PrivateKey.generate()
+
+size=32 # 256 bit key
+
+Bob_shared_key = Bob_private_key.exchange(Alice_private_key.public_key())
+
+Bob_derived_key = HKDF(algorithm=hashes.SHA256(),length=size,salt=None,info=b'',backend=default_backend()).derive(Bob_shared_key)
+
+Alice_shared_key = Alice_private_key.exchange(Bob_private_key.public_key())
+
+Alice_derived_key = HKDF(algorithm=hashes.SHA256(),length=size,salt=None,info=b'',backend=default_backend()).derive(Alice_shared_key)
+
+print ("Name of curve: Curve 25519")
+
+vals = binascii.b2a_hex(Bob_private_key.private_bytes(serialization.Encoding.Raw,serialization.PrivateFormat.Raw,serialization.NoEncryption()))
+print (f"\nBob private key value: {vals}")
+vals=Bob_private_key.public_key()
+enc_point=binascii.b2a_hex(vals.public_bytes(encoding=serialization.Encoding.PEM,format=serialization.PublicFormat.SubjectPublicKeyInfo)).decode()
+print("Bob's public key: ",enc_point)
+
+vals = binascii.b2a_hex(Alice_private_key.private_bytes(serialization.Encoding.Raw,serialization.PrivateFormat.Raw,serialization.NoEncryption()))
+print (f"\nAlice private key value: {vals}")
+vals=Alice_private_key.public_key()
+enc_point=binascii.b2a_hex(vals.public_bytes(encoding=serialization.Encoding.PEM,format=serialization.PublicFormat.SubjectPublicKeyInfo)).decode()
+print("Alice's public key: ",enc_point)
 
 
-def int_to_bytes(value, length):
-    result = []
-    for i in range(0, length):
-        result.append(value >> (i * 8) & 0xff)
-    
-    return result
-
-def cswap(swap, x_2, x_3):
-    dummy = swap * ((x_2 - x_3) % P)
-    x_2 = x_2 - dummy
-    x_2 %= P
-    x_3 = x_3 + dummy
-    x_3 %= P
-    return (x_2, x_3)
-
-# Based on https://tools.ietf.org/html/rfc7748
-def X25519(k, u):
-    x_1 = u
-    x_2 = 1
-    z_2 = 0
-    x_3 = u
-    z_3 = 1
-    swap = 0
-
-    for t in reversed(range(255)):
-        k_t = (k >> t) & 1
-        swap ^= k_t
-        x_2, x_3 = cswap(swap, x_2, x_3)
-        z_2, z_3 = cswap(swap, z_2, z_3)
-        swap = k_t
-
-        A = x_2 + z_2
-        A %= P
-
-        AA = A * A
-        AA %= P
-
-        B = x_2 - z_2
-        B %= P
-
-        BB = B * B
-        BB %= P
-
-        E = AA - BB
-        E %= P
-
-        C = x_3 + z_3
-        C %= P
-
-        D = x_3 - z_3
-        D %= P
-
-        DA = D * A
-        DA %= P
-
-        CB = C * B
-        CB %= P
-
-        x_3 = ((DA + CB) % P)**2
-        x_3 %= P
-
-        z_3 = x_1 * (((DA - CB) % P)**2) % P
-        z_3 %= P
-
-        x_2 = AA * BB
-        x_2 %= P
-
-        z_2 = E * ((AA + (A24 * E) % P) % P)
-        z_2 %= P
-
-    x_2, x_3 = cswap(swap, x_2, x_3)
-    z_2, z_3 = cswap(swap, z_2, z_3)
-
-    return (x_2 * pow(z_2, P - 2, P)) % P
-
-def decodeScalar25519(k):
-  k_list = [(b) for b in k]
-  k_list[0] &= 248
-  k_list[31] &= 127
-  k_list[31] |= 64
-  return decodeLittleEndian(k_list)
-
-def decodeLittleEndian(b):
-    return sum([b[i] << 8*i for i in range( 32 )])
-
-def unpack2(s):
-    if len(s) != 32:
-        raise ValueError('Invalid Curve25519 scalar (len=%d)' % len(s))
-    t = sum((ord(s[i]) ) << (8 * i) for i in range(31))
-    t += (((ord(s[31]) ) & 0x7f) << 248)
-    return t    
-
-def pack(n):
-    return ''.join([chr((n >> (8 * i)) & 255) for i in range(32)])
-
-def clamp(n):
-    n &= ~7
-    n &= ~(128 << 8 * 31)
-    n |= 64 << 8 * 31
-    return n
-
-# Return nP
-def multscalar(n, p):
-    n = clamp(decodeScalar25519(n))
-    p = unpack2(p)
-    return pack(X25519(n, p))
-
-# Start at x=9. Find point n times x-point
-def base_point_mult(n):
-    n = clamp(decodeScalar25519(n))
-    return pack(X25519(n, 9))
+print ("\nBob's derived key: ",binascii.b2a_hex(Bob_derived_key).decode())
+print("Alice's derived key: ",binascii.b2a_hex(Alice_derived_key).decode())
 ```
 A sample of this is [here](https://repl.it/@billbuchanan/simpleecdh).
 
 
 Do Bob and Alice end up with the same key?
 
-
-How large are the random numbers that Bob and Alice generate? 
-
-
-
-Do you think that this program will be secure? How might Eve discover the shared secret? 
-
-
-
-Estimate the time it would take her to discover the key if she can try one billion keys per second:
-
-
-
-How would you modify that program so that it was more secure?
 
 ### D.2
 We used Curve 25519 in D.1. Can you modify the code so that it uses secp256k1? The code for secp256k1 is defined in the secp256k1.py file [here](https://asecuritysite.com/encryption/python_secp256k1ecdh2). 
