@@ -398,13 +398,13 @@ print ("Name of curve: Curve 25519")
 vals = binascii.b2a_hex(Bob_private_key.private_bytes(serialization.Encoding.Raw,serialization.PrivateFormat.Raw,serialization.NoEncryption()))
 print (f"\nBob private key value: {vals}")
 vals=Bob_private_key.public_key()
-enc_point=binascii.b2a_hex(vals.public_bytes(encoding=serialization.Encoding.PEM,format=serialization.PublicFormat.SubjectPublicKeyInfo)).decode()
+enc_point=binascii.b2a_hex(vals.public_bytes(encoding=serialization.Encoding.DER,format=serialization.PublicFormat.SubjectPublicKeyInfo)).decode()
 print("Bob's public key: ",enc_point)
 
 vals = binascii.b2a_hex(Alice_private_key.private_bytes(serialization.Encoding.Raw,serialization.PrivateFormat.Raw,serialization.NoEncryption()))
 print (f"\nAlice private key value: {vals}")
 vals=Alice_private_key.public_key()
-enc_point=binascii.b2a_hex(vals.public_bytes(encoding=serialization.Encoding.PEM,format=serialization.PublicFormat.SubjectPublicKeyInfo)).decode()
+enc_point=binascii.b2a_hex(vals.public_bytes(encoding=serialization.Encoding.DER,format=serialization.PublicFormat.SubjectPublicKeyInfo)).decode()
 print("Alice's public key: ",enc_point)
 
 
@@ -416,10 +416,9 @@ A sample of this is [here](https://asecuritysite.com/hazmat/hashnew29).
 
 Do Bob and Alice end up with the same key?
 
-The public key starts with a "30" or a "20", but the ECDH method used a public key with a "40" at the start. Which is the different between these public key forms?
+In this case we have DER format for the public key. This normally starts with a "03". From the test run, copy the DER value and paste it [here](https://asecuritysite.com/encryption/sigs4). Can you view the public key point?
 
 If you change the "DER" to "PEM" how does it change the viewing of the keys (remember to remove binascii.b2a_hex() method)?
-
 
 
 ## E	Simple Key Distribution Centre (KDC)
