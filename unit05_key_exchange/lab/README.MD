@@ -367,6 +367,7 @@ print("Alice's derived key: ",binascii.b2a_hex(Alice_derived_key).decode())())
 Now modify the code to implement the SECP192R1 and also for the SECP521R1 curve. What do you notice about the sizes of the keys created between the different curve types?
 
 
+### D.2
 The code to implement Curve 25519 for key exchange (X25519) is:
 
 ```python
@@ -415,11 +416,11 @@ A sample of this is [here](https://asecuritysite.com/hazmat/hashnew29).
 
 Do Bob and Alice end up with the same key?
 
+The public key starts with a "30" or a "20", but the ECDH method used a public key with a "40" at the start. Which is the different between these public key forms?
+
 If you change the "DER" to "PEM" how does it change the viewing of the keys (remember to remove binascii.b2a_hex() method)?
 
 
-### D.2
-We used Curve 25519 in D.1. Can you modify the code so that it uses secp256k1? The code for secp256k1 is defined in the secp256k1.py file [here](https://asecuritysite.com/encryption/python_secp256k1ecdh2). 
 
 ## E	Simple Key Distribution Centre (KDC)
 Rather than using key exchange, we can setup a KDC, and where Bob and Alice can have long-term keys. These can be used to generate a session key for them to use.  Enter the following Python program, and prove its operation:
