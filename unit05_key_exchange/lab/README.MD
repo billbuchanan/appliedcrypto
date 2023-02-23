@@ -418,6 +418,8 @@ Do Bob and Alice end up with the same key?
 
 In this case we have DER format for the public key. This normally starts with a "03". From the test run, copy the DER value and paste it [here](https://asecuritysite.com/encryption/sigs4). Can you view the public key point?
 
+With the DER form, you should find there is an OID of "1.3.101.110". From an Internet search, what does "1.3.101.110" represent?
+
 If you change the "DER" to "PEM" how does it change the viewing of the keys (remember to remove binascii.b2a_hex() method)?
 
 
