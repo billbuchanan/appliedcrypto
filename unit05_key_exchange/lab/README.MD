@@ -410,10 +410,12 @@ print("Alice's public key: ",enc_point)
 print ("\nBob's derived key: ",binascii.b2a_hex(Bob_derived_key).decode())
 print("Alice's derived key: ",binascii.b2a_hex(Alice_derived_key).decode())
 ```
-A sample of this is [here](https://repl.it/@billbuchanan/simpleecdh).
+A sample of this is [here](https://asecuritysite.com/hazmat/hashnew29).
 
 
 Do Bob and Alice end up with the same key?
+
+If you change the "DER" to "PEM" how does it change the viewing of the keys (remember to remove binascii.b2a_hex() method)?
 
 
 ### D.2
@@ -522,8 +524,8 @@ Can you now write a generate DH key cracker for any value of g, p, A (passed by 
 ## G	What I should have learnt from this lab?
 The key things learnt:
 
-•	The basics of the Diffie Hellman method.
-•	The basic method used with ECDH.
+* The basics of the Diffie Hellman method.
+* The basic method used with ECDH.
 
 
 
