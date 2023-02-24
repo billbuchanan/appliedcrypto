@@ -10,7 +10,7 @@ What you should know at the end of unit?
 
 ## Presentations
 
-* Week 5 Presentation (lecture - Part 1) - Key Exchange: [here](https://github.com/billbuchanan/appliedcrypto/edit/main/unit05_key_exchange/lecture)
+* Week 5 Presentation (lecture) - Key Exchange: [here](https://github.com/billbuchanan/appliedcrypto/edit/main/unit05_key_exchange/lecture)
 * Week 5 Presentation (PDF) - Key Exchange: [here](https://github.com/billbuchanan/appliedcrypto/edit/main/unit05_key_exchange/lab)
 * Doodle lecture - Key Exchange: [here](https://www.youtube.com/watch?v=qmOA1d6lptY)
 
