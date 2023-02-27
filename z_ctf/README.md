@@ -1,4 +1,6 @@
-# Cracking an encrypted key
+# Encryption CTFs
+These are a collection of CTFs related to encryption.
+## Cracking an encrypted key
 Bob has encrypted this RSA key pair with 128-bit AES. But he can't remember the password he applied. All he can remember is that it might have been his favouriate colour. Can you determine the two prime numbers (in hex) which make up the modulus?
 ```
 -----BEGIN ENCRYPTED PRIVATE KEY-----
@@ -63,6 +65,23 @@ aXH3uxNfE8bxVAfFCxTJV0XOLTvEcwIhAJVPbRaEfyvMyskZDYHbQrfvgjyMTTyW
 VTIsAZLHXvFp
 -----END PRIVATE KEY-----
 ```
+## Cracking RSA with Chinese Remainder Theory - Håstad’s Broadcast 
 
+Bob has used the RSA method with three different moduli to encrypt the same message for Alice. These modulus values are 181573934956808382047424502743618497959, 263663189152094019455553753982108272769, and 150466971419052326232703131045351509419. The corresponding ciphered values are 89486828865161621017578261527117772610, 176405275524632787228669332980053978025, and 120736618872251736750094696442087698014. Determine the English city in the message (assume he has used an exponent of 3).
+
+### Answer
+
+The method is defined [here](https://asecuritysite.com/cracking/rsa_ctf01). In this case, we have used 64-bit primes here and which generates 128-bit modulus values. The values of:
+
+Cipher 1: 89486828865161621017578261527117772610, N1=181573934956808382047424502743618497959
+Cipher 2: 176405275524632787228669332980053978025, N2=263663189152094019455553753982108272769
+Cipher 3: 120736618872251736750094696442087698014, N3=150466971419052326232703131045351509419
+
+We can solved M^e with CRT to get 8445460724692873078755117519791553896065429140561722150551706781
+
+If we assume e=3, we take the third root to get: 2036453269898309954661
+Next we convert this integer to bytes, and display as a string.
+
+Decipher: b'newcastle'
 
 
