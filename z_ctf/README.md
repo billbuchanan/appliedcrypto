@@ -107,4 +107,25 @@ Plaintext message recovered: stirling
 
 Other information: p=753157364191008241, q=955204000626999853, bits=60, cipher1=209638380732875581317199500772023869, cipher2=56248192157359843908741632748142357
 
+## Fermat's attack
+
+Bob has used RSA to cipher a message to Alice. The cipher value is 19523604121706482215558200036877169200 with a modulus of 102424133664786548527964377021117628383 and using e=65537. His generator, though, has created the two primes numbers fairly near to each other. Using this information, find the original message.
+
+Theory: [https://asecuritysite.com/cracking/fermat_fact](https://asecuritysite.com/cracking/fermat_fact)
+
+### Answer:
+```
+C:  19523604121706482215558200036877169200
+N:  102424133664786548527964377021117628383
+Number of bits in p and q:  64
+Number of bits in modulus (N): 128
+
+p= 10120480900865301167
+q= 10120480900866013649
+d= 42017071785064716978655477336057510113
+PHI= 102424133664786548507723415219386313568
+Message: b'swansea'
+```
+
+
 
