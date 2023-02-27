@@ -4,16 +4,16 @@ These are a collection of CTFs related to encryption.
 Bob has encrypted this RSA key pair with 128-bit AES. But he can't remember the password he applied. All he can remember is that it might have been his favouriate colour. Can you determine the two prime numbers (in hex) which make up the modulus?
 ```
 -----BEGIN ENCRYPTED PRIVATE KEY-----
-MIIBvTBXBgkqhkiG9w0BBQ0wSjApBgkqhkiG9w0BBQwwHAQIZY3Pgqla6lACAggA
-MAwGCCqGSIb3DQIJBQAwHQYJYIZIAWUDBAECBBCcN0BAWWQwD5+pgSGvnHOpBIIB
-YGdKvIl5FzpYbFa7pKWUKyQlKY/QxA4Jhh6iMNU1osXVvczb08lFf7q1tB3Q4QTz
-Z8LZaQdnfD5ZGyUbOkEAZnIGThtClqGQQoxwMx226n5efyQvkhCjSfpLFHboY2m1
-+tG3OvoO/BmRDbY5PGWURGGwXgsFCgLgV7OfqC6qCfYqPtgBFbNjVZQSM6ojC7dd
-p6x3FnU9wvEuVbkuyHjTgVgA8CegeRY+hSXAprd2SD46Y6JqjLHoCA+jbLqJtsXW
-cJo88VgUfaz08Ehr4t+gQxl0vS0bm6bevbI1Boe9rQgKGThrqqWrvTXlY17nK48m
-4W+Si67DeIIBG5JHIHWQ45Gh/zdjxZdjFXGZi+VSNfgryDPWViPZuhxvR7t1UKpo
-JQpHMvfLrgOeLzO5uH8ToAzySJxXIsJKqKXdL7Y41wyF9+C/ahbZppMzzANrjhWc
-pXVqFsHfEJRcW9zZXuxCk20=
+MIIBvTBXBgkqhkiG9w0BBQ0wSjApBgkqhkiG9w0BBQwwHAQIzZS/FkAl8o8CAggA
+MAwGCCqGSIb3DQIJBQAwHQYJYIZIAWUDBAECBBDQG9NEvzkLxz9ywcanUMSQBIIB
+YJgi4T/Ko02Uwc2rYbWtXmgElqtso2LmSSOLQ6SyTOqaNvOiCn3F+AmUpF4XGHuH
+2Oig7U9afUfnk9MAqQf+/hSi5Lc+kbyvLCJjy881Gd8URiqNDhfQM9B0PUljnPY6
+de4rGXAg9rzqIfpOxfNEggADegEEN8T1EdxWtrFLViEuZ11h1FWQ92Nsiv9HUi3T
+36dC+zRgKeeze2C0REPtd7xWugHocyQL+YtGtGGbSUnukhrTAXAFsZxNDQfy+D9U
+o8B3YhPUC1z47nhhmTNtVYiIvFgDDJCa9NOPPnOQ4G5rwcLgpbplsksXfXLM/ONj
+gCnrJ7dIt+1ZXsr9K+oynBw86hVBppiQhVar19B4ftPfWDoSieKBuihwIYW0mXqT
+P0Jn92jXdCHM0b/9NwO9XkFNvGCRetJHnXuY7oD/7HRH9WkcftloO0r/cAxW0JVl
+uvAJRPcSU9/nYqpQT6uOwXQ=
 -----END ENCRYPTED PRIVATE KEY-----
 ```
 The method is defined [https://asecuritysite.com/openssl/rsa_keygen2](https://asecuritysite.com/openssl/rsa_keygen2).
@@ -23,48 +23,48 @@ For this we can basically try with a batch file, and substitute colours. This on
 % cat 1.key | openssl rsa -passin pass:blue -text
 Private-Key: (512 bit, 2 primes)
 modulus:
-    00:c3:da:b8:08:4e:88:5e:23:11:52:e0:b8:25:42:
-    52:40:40:22:58:5d:80:f7:34:2b:f6:ff:5d:1f:7e:
-    e3:1d:29:9f:65:77:6d:71:76:97:57:5f:f8:d7:4d:
-    b8:9c:0a:4f:7e:93:ff:f5:46:8f:e8:c1:89:b5:b1:
-    a2:1e:64:23:71
+    00:eb:3a:72:f0:05:d5:3f:de:f9:5e:7f:77:0a:86:
+    f0:a4:bd:ca:51:d1:ac:a7:6a:a7:1d:af:9b:dd:cc:
+    a1:37:c5:12:0c:59:57:4d:59:d8:d4:b8:fa:7c:34:
+    d8:8b:ab:e6:5b:5e:2e:f1:85:48:27:89:45:bc:cc:
+    3a:1f:71:ee:31
 publicExponent: 65537 (0x10001)
 privateExponent:
-    14:31:67:ca:0b:76:c9:e5:e9:b2:56:d3:05:9c:69:
-    e8:8f:f4:3a:92:21:6a:db:69:31:05:31:2f:bf:20:
-    61:70:2b:ef:1e:b4:a8:40:23:6b:1c:fd:58:0e:66:
-    aa:0c:d4:e1:3c:47:a2:8b:08:f2:a6:5a:c2:1e:7d:
-    76:d4:bd:f5
+    00:b4:bc:85:21:9d:29:bb:d8:a3:fc:12:ae:31:9d:
+    7a:fa:e9:84:b1:97:0c:34:da:82:ab:11:8a:0e:42:
+    b3:40:b8:26:c5:9e:8a:4e:a9:9d:a2:df:a9:e6:e4:
+    89:fa:6b:f1:5e:b4:14:12:60:e4:0f:89:45:b9:db:
+    6c:ba:eb:45:1d
 prime1:
-    00:ec:14:d3:2a:06:c3:bf:0d:68:e0:83:3f:7c:7f:
-    ec:87:16:30:dd:9a:bc:57:0d:e7:0b:db:39:16:5b:
-    12:4c:df
+    00:f8:07:29:8d:3e:20:d4:ee:1d:0d:fd:36:cd:26:
+    36:d2:15:5d:f2:3e:6b:fd:ee:2c:29:01:98:4f:a8:
+    68:6f:63
 prime2:
-    00:d4:61:05:b7:59:ff:93:ee:91:33:56:fb:87:86:
-    68:4e:fa:82:8c:10:68:85:b3:70:9e:f2:c8:e1:a3:
-    ca:49:af
+    00:f2:c9:f7:bf:f2:50:e7:2a:02:8c:74:04:e0:c0:
+    b2:d5:9d:b9:fb:d8:d4:eb:5b:33:53:87:ae:86:c8:
+    7b:32:5b
 exponent1:
-    74:62:ab:db:bb:2c:03:63:24:02:13:12:58:59:64:
-    8d:10:56:94:d9:74:e2:61:fb:36:b0:23:cb:ae:a8:
-    2d:f7
+    5b:d0:2a:ed:82:06:1d:4c:57:ad:0a:02:f3:46:26:
+    1c:f6:93:e4:4c:7f:25:6c:b9:24:24:d7:01:05:d2:
+    43:09
 exponent2:
-    00:9e:cf:da:85:6c:20:49:0f:d9:b6:69:71:f7:bb:
-    13:5f:13:c6:f1:54:07:c5:0b:14:c9:57:45:ce:2d:
-    3b:c4:73
+    00:95:a8:a5:cd:6e:43:2c:9b:9a:c2:95:69:c4:59:
+    44:63:a5:3c:55:e0:4d:2f:5f:22:7e:64:ee:d2:2a:
+    96:b6:6d
 coefficient:
-    00:95:4f:6d:16:84:7f:2b:cc:ca:c9:19:0d:81:db:
-    42:b7:ef:82:3c:8c:4d:3c:96:55:32:2c:01:92:c7:
-    5e:f1:69
+    3f:01:70:5e:21:bc:ff:6c:a1:a9:23:ff:9f:15:76:
+    ab:a0:29:f0:cb:a4:71:51:da:2f:06:cb:ac:ad:00:
+    b9:75
 writing RSA key
 -----BEGIN PRIVATE KEY-----
-MIIBVQIBADANBgkqhkiG9w0BAQEFAASCAT8wggE7AgEAAkEAw9q4CE6IXiMRUuC4
-JUJSQEAiWF2A9zQr9v9dH37jHSmfZXdtcXaXV1/41024nApPfpP/9UaP6MGJtbGi
-HmQjcQIDAQABAkAUMWfKC3bJ5emyVtMFnGnoj/Q6kiFq22kxBTEvvyBhcCvvHrSo
-QCNrHP1YDmaqDNThPEeiiwjyplrCHn121L31AiEA7BTTKgbDvw1o4IM/fH/shxYw
-3Zq8Vw3nC9s5FlsSTN8CIQDUYQW3Wf+T7pEzVvuHhmhO+oKMEGiFs3Ce8sjho8pJ
-rwIgdGKr27ssA2MkAhMSWFlkjRBWlNl04mH7NrAjy66oLfcCIQCez9qFbCBJD9m2
-aXH3uxNfE8bxVAfFCxTJV0XOLTvEcwIhAJVPbRaEfyvMyskZDYHbQrfvgjyMTTyW
-VTIsAZLHXvFp
+MIIBVQIBADANBgkqhkiG9w0BAQEFAASCAT8wggE7AgEAAkEA6zpy8AXVP975Xn93
+CobwpL3KUdGsp2qnHa+b3cyhN8USDFlXTVnY1Lj6fDTYi6vmW14u8YVIJ4lFvMw6
+H3HuMQIDAQABAkEAtLyFIZ0pu9ij/BKuMZ16+umEsZcMNNqCqxGKDkKzQLgmxZ6K
+Tqmdot+p5uSJ+mvxXrQUEmDkD4lFudtsuutFHQIhAPgHKY0+INTuHQ39Ns0mNtIV
+XfI+a/3uLCkBmE+oaG9jAiEA8sn3v/JQ5yoCjHQE4MCy1Z25+9jU61szU4euhsh7
+MlsCIFvQKu2CBh1MV60KAvNGJhz2k+RMfyVsuSQk1wEF0kMJAiEAlailzW5DLJua
+wpVpxFlEY6U8VeBNL18ifmTu0iqWtm0CID8BcF4hvP9soakj/58VdqugKfDLpHFR
+2i8Gy6ytALl1
 -----END PRIVATE KEY-----
 ```
 ## Cracking RSA with Chinese Remainder Theory - Håstad’s Broadcast 
