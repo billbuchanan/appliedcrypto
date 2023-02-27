@@ -16,6 +16,8 @@ JQpHMvfLrgOeLzO5uH8ToAzySJxXIsJKqKXdL7Y41wyF9+C/ahbZppMzzANrjhWc
 pXVqFsHfEJRcW9zZXuxCk20=
 -----END ENCRYPTED PRIVATE KEY-----
 ```
+The method is defined [https://asecuritysite.com/openssl/rsa_keygen2](https://asecuritysite.com/openssl/rsa_keygen2).
+### Answer
 For this we can basically try with a batch file, and substitute colours. This one works:
 ```
 % cat 1.key | openssl rsa -passin pass:blue -text
@@ -68,6 +70,8 @@ VTIsAZLHXvFp
 ## Cracking RSA with Chinese Remainder Theory - Håstad’s Broadcast 
 
 Bob has used the RSA method with three different moduli to encrypt the same message for Alice. These modulus values are 181573934956808382047424502743618497959, 263663189152094019455553753982108272769, and 150466971419052326232703131045351509419. The corresponding ciphered values are 89486828865161621017578261527117772610, 176405275524632787228669332980053978025, and 120736618872251736750094696442087698014. Determine the English city in the message (assume he has used an exponent of 3).
+
+The method is defined [https://asecuritysite.com/cracking/rsa_ctf01](https://asecuritysite.com/cracking/rsa_ctf01).
 
 ### Answer
 
