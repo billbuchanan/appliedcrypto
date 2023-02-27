@@ -88,4 +88,21 @@ Next we convert this integer to bytes, and display as a string.
 
 Decipher: b'newcastle'
 
+## RSA with a different public exponent and the same modulus (N)
+
+Two RSA ciphers of:
+Cipher 1: 285ff85d5d3eaf05cf1724fd469e3d
+Cipher 2: 0ad53fff1bb9aec32f124e6a3bbf15
+These have been created by the following RSA public keys:
+Key 1: e1=65539, N=719418927376937392469793631028788573
+Key 2: e2=65537, N=719418927376937392469793631028788573
+
+Determine the Scottish city.
+
+Method is here: [https://asecuritysite.com/cracking/rsa_e](https://asecuritysite.com/cracking/rsa_e) 
+
+### Answer
+
+p=753157364191008241, q=955204000626999853, bits=60, cipher1=209638380732875581317199500772023869, cipher2=56248192157359843908741632748142357
+
 
