@@ -85,7 +85,7 @@ Examine the following certificate, and identify its weakness.
 
 ![alt text](http://asecuritysite.com/public/certp.png)
 
-Identify the OID number related to the public key encryption method, and use this page [here](https://oidref.com/) to identify it.
+There are two OID numbers related to the public key encryption method and the siganture method. Use this page [here](https://oidref.com/) to identify them.
 
 ## B	Creating certificates
 
