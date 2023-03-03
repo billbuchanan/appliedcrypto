@@ -25,7 +25,7 @@ Open up Certificate 1 and identify the following:
 * What is O used for:
 * What is L used for:
 
-The public key should be "30818902 ... 203010001". This is a DER format, and we can examine by pasting into this DER analyser [here](https://asecuritysite.com/digitalcert/sigs3). Using this, what do the two values represent, and what type of public key is it?
+The public key should be "30818902 ... 203010001". We can see this starts with "30", and which represents a DER format. We can examine by pasting into this DER analyser [here](https://asecuritysite.com/digitalcert/sigs3). Using this, what do the two values represent, and what type of public key is it?
 
 
 ### A.2	
