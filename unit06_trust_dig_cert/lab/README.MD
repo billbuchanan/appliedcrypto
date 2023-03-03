@@ -53,7 +53,7 @@ Who is the issuer on the certificate?
 
 Google moved in July 2018 to mark sites as being insecure if they did not have a match between their digital certificate and the site. First open a browser and see if you can access testfire.net (you can try both https and http for the connection). 
 
-* Run a scan from [SSLLabs](www.ssllabs.com) on testfire.net. What do you observe from the result?
+* Run a scan from [SSLLabs](https://www.ssllabs.com/) on testfire.net. What do you observe from the result?
 * What is the SSLLabs rating on this site? Is it "A", "B", "C", "D", "E" or "F"?
 * What does a “T” rating identify?
 * Can you locate another "T" rated site?
