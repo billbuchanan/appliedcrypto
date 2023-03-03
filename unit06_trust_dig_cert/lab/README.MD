@@ -29,7 +29,7 @@ The public key should be "30818902 ... 203010001". We can see this starts with "
 
 
 ### A.2	
-Now open-up the ZIP file for the certificate, and view the CER file.
+Now open-up the ZIP file for the certificates , and view the CER file.
 
 * What other information can you gain from the certificate:
 * What is the size of the public key:
@@ -79,6 +79,13 @@ Now use openssl to read the certificates:
 ```
 openssl x509 -inform der -in [certname] -noout -text
 ```
+
+### A.7
+Examine the following certificate, and identify its weakness.
+
+![alt text](http://asecuritysite.com/public/certp.png)
+
+Identify the OID number related to the public key encryption method, and use this page [here](https://oidref.com/) to identify it.
 
 ## B	Creating certificates
 
