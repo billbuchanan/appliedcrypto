@@ -13,3 +13,32 @@ openssl x509 -inform PEM -in microsoft.pem -outform DER -out microsoft.cer
 
 openssl s_client -connect oracle.com:443 -showcerts < /dev/null | openssl x509 -outform pem > oracle.pem
 openssl x509 -inform PEM -in oracle.pem -outform DER -out oracle.cer
+
+openssl s_client -connect bbc.co.uk:443 -showcerts < /dev/null | openssl x509 -outform pem > bbc.pem
+openssl x509 -inform PEM -in bbc.pem -outform DER -out bbc.cer
+
+openssl s_client -connect bt.com:443 -showcerts < /dev/null | openssl x509 -outform pem > bt.pem
+openssl x509 -inform PEM -in bt.pem -outform DER -out bt.cer
+
+openssl s_client -connect napier.ac.uk:443 -showcerts < /dev/null | openssl x509 -outform pem > napier.pem
+openssl x509 -inform PEM -in napier.pem -outform DER -out napier.cer
+
+
+openssl s_client -connect facebook.com:443 -showcerts < /dev/null | openssl x509 -outform pem > facebook.pem
+openssl x509 -inform PEM -in facebook.pem -outform DER -out facebook.cer
+
+openssl s_client -connect instagram.com:443 -showcerts < /dev/null | openssl x509 -outform pem > instagram.pem
+openssl x509 -inform PEM -in instagram.pem -outform DER -out instagram.cer
+
+openssl s_client -connect whatsapp.com:443 -showcerts < /dev/null | openssl x509 -outform pem > whatsapp.pem
+openssl x509 -inform PEM -in whatsapp.pem -outform DER -out whatsapp.cer
+
+
+openssl s_client -connect rbs.co.uk:443 -showcerts < /dev/null | openssl x509 -outform pem > rbs.pem
+openssl x509 -inform PEM -in rbs.pem -outform DER -out rbs.cer
+
+openssl s_client -connect walmart.com:443 -showcerts < /dev/null | openssl x509 -outform pem > walmart.pem
+openssl x509 -inform PEM -in walmart.pem -outform DER -out walmart.cer
+
+openssl s_client -connect amazon.com:443 -showcerts < /dev/null | openssl x509 -outform pem > amazon.pem
+openssl x509 -inform PEM -in amazon.pem -outform DER -out amazon.cer
