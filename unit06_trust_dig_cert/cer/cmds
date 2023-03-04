@@ -1,0 +1,16 @@
+openssl s_client -connect google.com:443 -showcerts < /dev/null | openssl x509  -outform pem > google.pem
+openssl x509 -inform PEM -in googlecert.pem -outform DER -out google.cer
+
+openssl s_client -connect microsoft.com:443 -showcerts < /dev/null | openssl x509 -outform pem > microsoft.pem
+openssl x509 -inform PEM -in microsoft.pem -outform DER -out microsoft.cer
+
+
+openssl s_client -connect intel.com:443 -showcerts < /dev/null | openssl x509 
+-outform pem > inte.pem
+openssl x509 -inform PEM -in inte.pem -outform DER -out intel.cer
+
+openssl s_client -connect microsoft.com:443 -showcerts < /dev/null | openssl x509 -outform pem > microsoft.pem
+openssl x509 -inform PEM -in microsoft.pem -outform DER -out microsoft.cer
+
+openssl s_client -connect oracle.com:443 -showcerts < /dev/null | openssl x509 -outform pem > oracle.pem
+openssl x509 -inform PEM -in oracle.pem -outform DER -out oracle.cer
