@@ -25,10 +25,11 @@ Open up Certificate 1 and identify the following:
 * What is O used for:
 * What is L used for:
 
+The public key should be "30818902 ... 203010001". We can see this starts with "30", and which represents a DER format. We can examine by pasting into this DER analyser [here](https://asecuritysite.com/digitalcert/sigs3). Using this, what do the two values represent, and what type of public key is it?
 
 
 ### A.2	
-Now open-up the ZIP file for the certificate, and view the CER file.
+Now open-up the ZIP file for the certificates , and view the CER file.
 
 * What other information can you gain from the certificate:
 * What is the size of the public key:
@@ -50,14 +51,12 @@ Who is the issuer on the certificate?
 
 ### A.4	
 
-Google moved in July 2018 to mark sites as being insecure if they did not have a match between their digital certificate and the site. A scan, at the time, on health and social care sites from the following page showed problems in digital certificates:
+Google moved in July 2018 to mark sites as being insecure if they did not have a match between their digital certificate and the site. First open a browser and see if you can access testfire.net (you can try both https and http for the connection). 
 
-[Health care sites going offline](https://bit.ly/2EkUvX0)
-
-* Outline three sites that still have problems with their digital certificate, and the reason for the problem (you perhaps should try Chrome to assess):
-* Pick two sites that you feel are not setup properly for their digital certificate, and then run a scan from SSLLabs (www.ssllabs.com). Identify the problems that they have with their digital certificate:
-* What are their SSLLabs rating?
-* Can you find a site with an “T” rating?
+* Run a scan from [SSLLabs](https://www.ssllabs.com/) on testfire.net. What do you observe from the result?
+* What is the SSLLabs rating on this site? Is it "A", "B", "C", "D", "E" or "F"?
+* What does a “T” rating identify?
+* Can you locate another "T" rated site?
 
 ### A.5	
 Which the certificates in A.2, for Example 2 to Example 6. Complete the following table:
@@ -80,6 +79,13 @@ Now use openssl to read the certificates:
 ```
 openssl x509 -inform der -in [certname] -noout -text
 ```
+
+### A.7
+Examine the following certificate, and identify its weakness.
+
+![alt text](http://asecuritysite.com/public/certp.png)
+
+There are two OID numbers related to the public key encryption method and the siganture method. Use this page [here](https://oidref.com/) to identify them.
 
 ## B	Creating certificates
 
