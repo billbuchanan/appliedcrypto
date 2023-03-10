@@ -1,4 +1,20 @@
-![esecurity](https://raw.githubusercontent.com/billbuchanan/esecurity/master/z_associated/esecurity_graphics.jpg)
+![esecurity](https://raw.githubusercontent.com/billbuchanan/appliedcrypto/master/z_associated/esecurity_graphics.jpg)
+
+In this lab, either catch-up on your labs, complete the AWS labs for cryptography or complete the mini-project.
+
+# Unit 5a: AWS Labs for Cryptography
+There are a range of labs to complete using your AWS lab environment:
+
+* Symmetric Key encryption. [Go](https://asecuritysite.com/aws/lab03). An additional lab to outline the usage of symmetric key encryption using KMS.
+* Public Key encryption (RSA). [Go](https://asecuritysite.com/aws/lab04). An additional lab to outline the usage of public key encryption using RSA, and in storing the key pair in KMS.
+* Public Key Signing (RSA). [Go](https://asecuritysite.com/aws/lab09). An additional lab to outline the usage of public key encryption using RSA, and in storing the key pair in KMS.
+* Public Key Signing (RSA) and OpenSSL. [Go](https://asecuritysite.com/aws/lab10). An additional lab to outline the usage of public key signing using RSA, and in storing the key pair in KMS.
+* Digital Signing with ECDSA. [Go](https://asecuritysite.com/aws/lab05). An additional lab to outline the usage of public key encryption in generating an ECDSA signature, and in storing the key pair in KMS.
+* HMAC. [Go](https://asecuritysite.com/aws/lab06). An additional lab to outline the usage of an HMAC signature, in KMS.
+* Secrets Manager. [Go](https://asecuritysite.com/aws/lab07). An additional lab to outline the usage of secrets manager in KMS.
+* Envelope encryption. [Go](https://asecuritysite.com/aws/lab08). An additional lab to outline the usage of envelope encryption in KMS.
+
+
 
 # Unit 5a: Mini-project
 
