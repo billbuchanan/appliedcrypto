@@ -2,7 +2,7 @@
 
 In this lab, either catch-up on your labs, complete the AWS labs for cryptography or complete the mini-project.
 
-# Unit 5a: AWS Labs
+# Unit 5a: AWS Labs for Cryptography
 There are a range of labs to complete using your AWS lab environment:
 
 * Symmetric Key encryption. [Go](https://asecuritysite.com/aws/lab03). An additional lab to outline the usage of symmetric key encryption using KMS.
