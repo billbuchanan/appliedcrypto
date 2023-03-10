@@ -1,16 +1,20 @@
 ![esecurity](https://raw.githubusercontent.com/billbuchanan/esecurity/master/z_associated/esecurity_graphics.jpg)
 
 # Test 1
-There will be four main questions in the exam: Symmetric Key (Unit 2), Hashing (Unit 3), Public Key (Unit 4), Key Exchange (Unit 5) an Digital Certicates (Unit 6). An outline is [here](https://www.youtube.com/watch?v=Oj3T2UO1WDw&feature=emb_title), and some learning outcomes are [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/learning_outcomes.md). A PDF version of the questions is [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/2021_fake_exam_questions.pdf) and a fake example paper is [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/fake_exam_paper.md).
+There will be four main questions in the exam: Symmetric Key (Unit 1), Hashing (Unit 2), Public Key (Unit 3), Key Exchange (Unit 4) and Digital Certicates (Unit 5). An outline is [here](https://www.youtube.com/watch?v=Oj3T2UO1WDw&feature=emb_title), and some learning outcomes are [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/learning_outcomes.md). A PDF version of the questions is [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/2021_fake_exam_questions.pdf) and a fake example paper is [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/fake_exam_paper.md).
 
-**Test date:** TBC.  
+**Test date:** 17 Mar 2023 (time will be confirmed in an email).
 
 Some test details are:
 
 * It is an open book test. 
 * No copying and pasting is allowed for the questions, and answers will be checked against on-line sources for copying. 
+* No use of chat/AI bots.
 * A copied answer is likely to be graded with a score of zero, and copying and pasting from on-line content could be highlighted for an issue.
 * No chat windows should be open for the test.
+
+## Lectures
+The main lectures are [here](https://youtube.com/playlist?list=PLqhpVxkBo1dMOOH0R7t0SKftJF20hwzaE).
 
 ## Sample questions
 
@@ -83,7 +87,8 @@ Key topics: Diffie-Hellman, Simple DH calculations, ECDH operation, Passing with
 * With Diffie-Hellman, G is 1579, and N is 7561. Bob selects 13 and Alice selects 14. Prove that the shared key is 868. [Ref: Key Exchange]
 * Eve says that she sees the values passed within ECDH by Bob and Alice, and that she can crack the key. By explaining the ECDH key exchange method, outline how it would likely to be difficult for Eve to determine the shared key.
 
-### 5. Digital Ceritifcates
+### 5. Digital Certificates
 * For PKI, briefly outline how Alice knows that she is using the correct version of Bob's public key.
+* Understand the part that Trent plays in validating a certificate.
 
 
