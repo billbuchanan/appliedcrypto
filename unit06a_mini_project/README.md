@@ -7,12 +7,12 @@ There are a range of labs to complete using your AWS lab environment:
 
 * Symmetric Key encryption. [Go](https://asecuritysite.com/aws/lab03). An additional lab to outline the usage of symmetric key encryption using KMS.
 * Public Key encryption (RSA). [Go](https://asecuritysite.com/aws/lab04). An additional lab to outline the usage of public key encryption using RSA, and in storing the key pair in KMS.
-* Public Key Signing (RSA). Go. An additional lab to outline the usage of public key encryption using RSA, and in storing the key pair in KMS.
-* Public Key Signing (RSA) and OpenSSL. Go. An additional lab to outline the usage of public key signing using RSA, and in storing the key pair in KMS.
-* Digital Signing with ECDSA. Go. An additional lab to outline the usage of public key encryption in generating an ECDSA signature, and in storing the key pair in KMS.
-* HMAC. Go. An additional lab to outline the usage of an HMAC signature, in KMS.
-* Secrets Manager. Go. An additional lab to outline the usage of secrets manager in KMS.
-* Envelope encryption. Go. An additional lab to outline the usage of envelope encryption in KMS.
+* Public Key Signing (RSA). [Go](https://asecuritysite.com/aws/lab09). An additional lab to outline the usage of public key encryption using RSA, and in storing the key pair in KMS.
+* Public Key Signing (RSA) and OpenSSL. [Go](https://asecuritysite.com/aws/lab10). An additional lab to outline the usage of public key signing using RSA, and in storing the key pair in KMS.
+* Digital Signing with ECDSA. [Go](https://asecuritysite.com/aws/lab05). An additional lab to outline the usage of public key encryption in generating an ECDSA signature, and in storing the key pair in KMS.
+* HMAC. [Go](https://asecuritysite.com/aws/lab06). An additional lab to outline the usage of an HMAC signature, in KMS.
+* Secrets Manager. [Go](https://asecuritysite.com/aws/lab07). An additional lab to outline the usage of secrets manager in KMS.
+* Envelope encryption. [Go](https://asecuritysite.com/aws/lab08). An additional lab to outline the usage of envelope encryption in KMS.
 
 
 
