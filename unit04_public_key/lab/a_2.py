@@ -11,6 +11,6 @@ privKeyObj = RSA.importKey(binPrivKey)
 cipher = PKCS1_OAEP.new(privKeyObj)
 message = cipher.decrypt(ciphertext)
 
-print
+
 print ("====Decrypted===")
 print ("Message:",message)
