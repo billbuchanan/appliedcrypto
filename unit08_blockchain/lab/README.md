@@ -174,6 +174,14 @@ Hash rate:
 
 
 ## B	Ethereum
+We will be using the Sepolia test network. If you have to setup your wallet, the details are:
+
+* Network name: Sepolia
+* RPC Url: https://rpc.sepolia.org
+* Chain ID: 1115511
+* Symbol: SepoliaEth
+* Explorer: https://sepolia.etherscan.io
+
 ## Setting up your Ethereum wallet on Sepolia
 The Sepolia network allows a user to test an Ethereum application, and using free Ether. Initially setup your MetaMask wallet. A document to outline how you set this up is [here](https://github.com/billbuchanan/appliedcrypto/blob/main/unit08_blockchain/lab/Metamask.pdf). Once you have set it up, answer the following:
 
