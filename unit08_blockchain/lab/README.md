@@ -268,11 +268,11 @@ Next, by selected the Contract tab, and can view the read parameters. The expose
     
 ![here](https://asecuritysite.com/public/eth011.png)       
  
-To test, we can just enter the variables for a given function, and get a result:
+To test, we can just enter the variables for a given function, and get a result [here](https://sepolia.etherscan.io/address/0xe983b8c6a1d9f581514ca7a5bd5ff494da43944a#readContract):
     
 ![here](https://asecuritysite.com/public/eth012.png)       
  
-Note:You can get Ether for our wallet [here](https://faucet.metamask.io/)
+Note: You can get Ether for our wallet [here](https://sepoliafaucet.com/).
 
 
 ## Creating ERC-20 tokens
