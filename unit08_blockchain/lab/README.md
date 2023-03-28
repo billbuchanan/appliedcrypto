@@ -578,7 +578,7 @@ After less than 45 seconds, the contract will be approved [here](https://sepolia
     
 ![Alt text](https://asecuritysite.com/public/sc11.png)
 
-When the contact is run there is a constructor to transfer the tokens to the wallet we have defined (and who will be the owner of the token). We can now go back to the wallet which is specified, to see if the tokens have been transferred:
+When the contact is run there is a constructor to transfer the tokens to the wallet we have defined (and who will be the owner of the token). We can now go back to the wallet which is specified, to see if the tokens have been transferred [here](https://sepolia.etherscan.io/address/0xbb15b38e4ef6af154b89a2e57e03cd5cbd752233):
 
 ![Alt text](https://asecuritysite.com/public/sc12.png)
 
