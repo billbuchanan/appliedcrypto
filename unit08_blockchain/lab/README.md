@@ -553,8 +553,7 @@ Once deployed, we can view the contract details:
 
 ![Alt text](https://asecuritysite.com/public/sc05.png)
 
-And can then view the transaction for the contract: 
-<!-- [<a href="https://ropsten.etherscan.io/tx/0x70604b7c25c12eea5210c75afaa89879f383dc94b894d570f06925d0d95b7fdb" target="_blank">here</a>] -->
+And can then view the transaction for the contract [here](https://sepolia.etherscan.io/tx/0x876a5bba07b8b85e53e3273bdb69337d766de7daefe25564c6b3be31db75a0c2).
 
 ![Alt text](https://asecuritysite.com/public/sc06.png)
 
