@@ -570,11 +570,11 @@ And then select "Verify and Publish" and enter the details of the compiler versi
 
 ![Alt text](https://asecuritysite.com/public/sc09.png)
 
-We then need to copy-and-pasete the contract code into the Source Code text box:
+We then need to copy-and-paste the contract code into the Source Code text box:
 
 ![Alt text](https://asecuritysite.com/public/sc10.png)
 
-After less than 45 seconds, the contract will be approved:
+After less than 45 seconds, the contract will be approved [here](https://sepolia.etherscan.io/address/0xf221126aeb22f441f3912a9d4bb859e4504b44fa):
     
 ![Alt text](https://asecuritysite.com/public/sc11.png)
 
