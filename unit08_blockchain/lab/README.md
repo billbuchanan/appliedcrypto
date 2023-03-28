@@ -237,13 +237,11 @@ And clicking through gives us the address of the contract, and then viewing it o
 ![here](https://asecuritysite.com/public/eth005.png)     
 
 
-The address in the screenshot above is “0x0895..”, so you can click on your own address and view the smart contract in Etherscan. 
+The address in the screenshot above is “0xe983b8c6a1d9f581514ca7a5bd5ff494da43944a”, so you can click on your own address and view the smart contract in Etherscan. 
 
-In another example: 
+![image](https://asecuritysite.com/public/eth005a.png))
 
-![image](https://user-images.githubusercontent.com/44439128/205040755-0796dba5-c8ab-4f6e-ad74-5e023e32d4fb.png)
-
-The address of the contract is "0x3a40..", so you can visit it from from: [here](https://sepolia.etherscan.io/address/0x3a407068a13bfef0db1e319c364c153391b158cf). We now need to verify and publish the contact, with click on “Verify and Publish”:
+The address of the contract is "0xe983b8c6a1d9f581514ca7a5bd5ff494da43944a", so you can visit it from from: [here](https://sepolia.etherscan.io/address/0xe983b8c6a1d9f581514ca7a5bd5ff494da43944a). We now need to verify and publish the contact, with click on “Verify and Publish”:
     
 ![here](https://asecuritysite.com/public/eth006.png)   
 
