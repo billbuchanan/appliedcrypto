@@ -179,7 +179,7 @@ The Sepolia network allows a user to test an Ethereum application, and using fre
 
 * What is your public ID (just define the first four hex values)?
 * Find out someone else's public ID, and send them 0.001 Ether. If you are doing the lab on your own, send it to Bill (ID: 0xbB15B38e4ef6aF154b89A2E57E03Cd5cbD752233 []).
-* Can you see the transaction on the Ethereum network? An example of a wallet is [here](https://sepolia.etherscan.io/address/0xbb15b38e4ef6af154b89a2e57e03cd5cbd752233 [here](https://sepolia.etherscan.io/address/0xbb15b38e4ef6af154b89a2e57e03cd5cbd752233)).
+* Can you see the transaction on the Ethereum network? An example of a wallet is [here](https://sepolia.etherscan.io/address/0xbb15b38e4ef6af154b89a2e57e03cd5cbd752233).
 * Can you see your transaction on the Sepolia Ethereum network for the person you send it to?
 * What was the transaction fee for the transfer? If you were using the main Ethereum network, how much would the transaction cost in Dollars?
 * Ask someone to send you 0.001 Ether. Did you receive it? If you are doing the lab on your own, ask your lab tutor to send you 0.001 Ether.
