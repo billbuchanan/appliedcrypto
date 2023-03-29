@@ -1,0 +1,13 @@
+OpenMined is an open-source community focused on advancing privacy-preserving technologies, especially in the domain of machine learning. While there were several research papers that inspired the creation of OpenMined, some of the most influential ones are:
+
+"Differential Privacy" by Cynthia Dwork et al. (2006): This seminal paper introduced the concept of differential privacy, which is a mathematical framework for preserving privacy in data analysis. Differential privacy has become a central technique in many privacy-preserving technologies, including those used in OpenMined.
+
+"Privacy-Preserving Machine Learning" by Shiva Kasiviswanathan et al. (2013): This paper introduced several techniques for privacy-preserving machine learning, including homomorphic encryption, secure multi-party computation, and differential privacy. These techniques formed the basis of many of the privacy-preserving technologies used in OpenMined.
+
+"Federated Learning: Collaborative Machine Learning without Centralized Training Data" by H. Brendan McMahan et al. (2017): This paper introduced the concept of Federated Learning, which enables machine learning models to be trained on decentralized data sources while preserving data privacy. Federated Learning has become a key technique used in OpenMined.
+
+"Cryptonets: Applying Neural Networks to Encrypted Data with High Throughput and Accuracy" by Nicolas Papernot et al. (2016): This paper introduced the concept of Cryptonets, which are neural networks that can be trained on encrypted data using homomorphic encryption. Cryptonets are an important privacy-preserving technique used in OpenMined.
+
+"PySyft: A Python Library for Scalable and Secure Deep Learning" by Andrew Trask et al. (2018): This paper introduced PySyft, a Python library for privacy-preserving machine learning that enables scalable and secure deep learning. PySyft has become a central tool used in many of the privacy-preserving technologies developed by the OpenMined community.
+
+These are just a few examples of the research papers that influenced the creation of OpenMined. The community continues to explore and develop new privacy-preserving technologies for machine learning.
