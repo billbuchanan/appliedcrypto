@@ -178,7 +178,7 @@ We will be using the Sepolia test network. If you have to setup your wallet, the
 
 * Network name: Sepolia
 * RPC Url: https://rpc.sepolia.org
-* Chain ID: 1115511
+* Chain ID: 11155111
 * Symbol: SepoliaEth
 * Explorer: https://sepolia.etherscan.io
 
