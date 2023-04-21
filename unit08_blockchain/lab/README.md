@@ -178,9 +178,21 @@ We will be using the Sepolia test network. If you have to setup your wallet, the
 
 * Network name: Sepolia
 * RPC Url: https://rpc.sepolia.org
-* Chain ID: 1115511
+* Chain ID: 11155111
 * Symbol: SepoliaEth
 * Explorer: https://sepolia.etherscan.io
+
+You need to mine for some Ether. We can do this on one of these faucets:
+
+
+* https://sepoliafaucet.net
+* https://coinbase.com/faucets/ethereum-sepolia-faucet
+* https://grabteeth.xyz
+* https://sepolia-faucet.pk910.de/ (PoW powered)
+* https://faucet-sepolia.rockx.com/
+* https://faucet.quicknode.com/ethereum/sepolia
+* https://sepoliafaucet.com/ (Alchemy's free faucet)
+
 
 ## Setting up your Ethereum wallet on Sepolia
 The Sepolia network allows a user to test an Ethereum application, and using free Ether. Initially setup your MetaMask wallet. A document to outline how you set this up is [here](https://github.com/billbuchanan/appliedcrypto/blob/main/unit08_blockchain/lab/Metamask.pdf). Once you have set it up, answer the following:
