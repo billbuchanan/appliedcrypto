@@ -462,7 +462,66 @@ When you identity the two prime numbers (p and q), with Python, can you prove th
 Proven Yes/No
 
 
+#### Note
+You may find that the rsa library may not run on some systems, so the following is an equivalent:
 
+```
+from cryptography.hazmat.primitives.asymmetric import rsa
+from cryptography.hazmat.primitives import serialization
+import sys
+
+size=512
+M=5
+
+if (len(sys.argv)>1):
+	size=int(sys.argv[1])
+if (len(sys.argv)>2):
+	M=int(sys.argv[2])
+
+try:
+	print(f"RSA key size: {size}\nM={M}\n")
+
+	private_key = rsa.generate_private_key(public_exponent=65537,key_size=size)
+
+	priv= private_key.private_numbers()
+	p=priv.p
+	q=priv.q 
+	d=priv.d
+	n=p*q
+	print("=== RSA Private key ===")
+	print (f"p={p} q={q} d={d} N={n}")
+	print (f"\nBit length of p and q is {p.bit_length()}")
+	print (f"Bit length of N is {n.bit_length()}")
+
+	print("\n=== RSA Public key ===")
+	pub = private_key.public_key()
+	e=pub.public_numbers().e
+	n=pub.public_numbers().n
+	print (f"\nN={n} e={e}")
+
+
+
+	C = pow(M,e,n)
+	Plain = pow(C,d,n)
+	print (f"\nMessage={M}")
+	print (f"Cipher={C}")
+	print (f"Decrypt={Plain}")
+
+
+
+	print("\n=== Private Key PEM format ===")
+	pem = private_key.private_bytes(encoding=serialization.Encoding.PEM,format=serialization.PrivateFormat.PKCS8,encryption_algorithm=serialization.NoEncryption())
+	print ("Private key: ",pem.decode())
+
+
+	pem = pub.public_bytes(encoding=serialization.Encoding.PEM,format=serialization.PublicFormat.SubjectPublicKeyInfo)
+
+	print("\n=== Public Key PEM format ===")
+	print ("Public key: ",pem.decode())
+
+except Exception as e:
+    print(e)
+```
 
 ### E.2	
 We will follow a basic RSA process. If you are struggling here, have a look at the following page:
