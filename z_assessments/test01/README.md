@@ -1,7 +1,7 @@
 ![esecurity](https://raw.githubusercontent.com/billbuchanan/esecurity/master/z_associated/esecurity_graphics.jpg)
 
 # Test 1
-There will be four main questions in the exam: Symmetric Key (Unit 1), Hashing (Unit 2), Public Key (Unit 3), Key Exchange (Unit 4) and Digital Certicates (Unit 5). An outline is [here](https://www.youtube.com/watch?v=Oj3T2UO1WDw&feature=emb_title), and some learning outcomes are [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/learning_outcomes.md). A PDF version of the questions is [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/2021_fake_exam_questions.pdf) and a fake example paper is [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/fake_exam_paper.md).
+There will be four main questions in the exam: Symmetric Key (Unit 1), Hashing (Unit 2), Public Key (Unit 3), Key Exchange (Unit 4) and Digital Certificates (Unit 5). An outline is [here](https://www.youtube.com/watch?v=Oj3T2UO1WDw&feature=emb_title), and some learning outcomes are [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/learning_outcomes.md). A PDF version of the questions is [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/2021_fake_exam_questions.pdf) and a fake example paper is [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/fake_exam_paper.md).
 
 **Test date:** 12 Mar 2024: 6pm (campus-based - JKCC) or 6:30pm (distance-learning).
 
@@ -38,9 +38,9 @@ Key principles: Salting, AES, ECB, CBC, GCM, Key entropy.
 
 
 ### 2. Hashing
-Key principles: Hashing, Hashing Formats, Time to crack, operation of converting passwords to password with salt.
+Key principles: Hashing, Hashing Formats, Time to crack, operation of converting passwords to hash values with salt.
 
-* Bob uses a six-character password with lower case [a-z]. How many passwords are possible? His password system then tells him he needs to add numeric value [0-9]. If he adds it at the end, how many passwords are possible, and what is the key entropy? [Ref: Symmetric Key]
+* Bob uses a six-character password with lowercase [a-z]. How many passwords are possible? His password system then tells him he needs to add numeric value [0-9]. If he adds it at the end, how many passwords are possible, and what is the key entropy? [Ref: Symmetric Key]
 * Outline the importance of storing the salt value with the hashed value when storing hashed passwords. [Ref: Hashing]
 * Eve has captured a hashed password. How might she use the Cloud to be able to crack the hashed password, and what is a likely tool for this? [Ref: Hashing]
 * Bob is an administrator for a network, and he tells his management team that user passwords are now salted, and they are thus completely secure against attacks. Is he correct? Explain your viewpoint. [Ref: Hashing]
