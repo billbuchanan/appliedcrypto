@@ -3,7 +3,7 @@
 # Test 1
 There will be four main questions in the exam: Symmetric Key (Unit 1), Hashing (Unit 2), Public Key (Unit 3), Key Exchange (Unit 4) and Digital Certificates (Unit 5). An outline is [here](https://www.youtube.com/watch?v=Oj3T2UO1WDw&feature=emb_title), and some learning outcomes are [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/learning_outcomes.md). A PDF version of the questions is [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/2021_fake_exam_questions.pdf) and a fake example paper is [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/fake_exam_paper.md).
 
-**Test date:** 12 Mar 2024: 6pm (campus-based - JKCC) or 6:30pm (distance-learning).
+**Test date:** 12 Mar 2024: 6pm (campus-based - JKCC) or 6:30pm (distance-learning). The time of the test is 95 minutes (1 hour, 25 minutes).
 
 Some test details are:
 
