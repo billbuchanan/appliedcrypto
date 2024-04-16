@@ -29,7 +29,7 @@ The following is the draft timetable:
 | 12 | 16 Apr 2024   | Future Cryptography  [[Unit](https://github.com/billbuchanan/appliedcrypto/tree/main/unit09_future)]                                  | [[Lab](https://github.com/billbuchanan/appliedcrypto/tree/main/unit09_future/lab)]                            |
 | 13 | 23 Apr 2024  | Host/Cloud Security    [[Unit](https://github.com/billbuchanan/appliedcrypto/tree/main/unit10_services)]                      |    [[Lab](https://github.com/billbuchanan/appliedcrypto/tree/main/unit10_services/lab)]                          | 
 | 14 | 30 Apr 2024   |                                                    |     Jan Camenish                        |
-| 15 | 7 May 2024  | Coursework Hand-in - 60% of overall mark (Sunday, 12 May 2024) [[Coursework](https://github.com/billbuchanan/appliedcrypto/tree/main/z_assessments/coursework)]  Daniel J Bernstein  |                             |
+| 15 | 7 May 2024  | Coursework Hand-in - 60% of overall mark (Sunday, 12 May 2024) [[Coursework](https://github.com/billbuchanan/appliedcrypto/tree/main/z_assessments/coursework)]    |         Daniel J Bernstein                    |
 
 
 
