@@ -208,30 +208,26 @@ The Sepolia network allows a user to test an Ethereum application, and using fre
 So, let’s write a bit of code that does some simple maths. In the following we will implement sqrt(), sqr(), mul(), sub(), and add(). First, we open up https://remix.ethereum.org/. and enter the following Solidy contract:
 
 ```solidity
-pragma solidity ^0.8.0;
-contract mymath {function sqrt(uint x) public view returns (uint y) {
-    uint z = (x + 1) / 2;
-    y = x;
-    while (z < y) {
-        y = z;
-        z = (x / z + z) / 2;
+
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >=0.4.22 <0.9.0;
+contract MyMath {
+    function sqrt(uint x) public pure returns (uint y) {
+        y = uint(sqrtHelper(x));
+    }
+
+    // Internal helper function to compute sqrt
+    function sqrtHelper(uint x) internal pure returns (uint z) {
+        z = x;
+        uint y = (z + (x / z)) / 2;
+        while (y < z) {
+            z = y;
+            y = (z + (x / z)) / 2;
+        }
     }
 }
-function sqr(uint a) public view returns (uint) {
-    uint c = a * a;
-    return c;
-  }
-function mul(uint a, uint b) public view returns (uint) {
-    uint c = a * b;
-    return c;
-  }
-function sub(uint a, uint b) public view returns (uint) {
-    return a - b;
-  }
-function add(uint a, uint b) public view returns (uint) {
-    uint c = a + b;
-    return c;
-}}
+
  ``` 
 
 In this case, the "public" part makes sure we can see the output of the function, and the "view" part allows it to be stateless (and where we just have to receiver the value without the smart contact remember the state). On Ethereum we normally use the Solidity language to create a smart contract and then compile it into the byte code required for the ledger. First, can we start by entering the Solidity code into Remix [<a href="https://remix.ethereum.org/" target="_blank">here</a>]:
