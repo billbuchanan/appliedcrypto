@@ -65,7 +65,7 @@ The following are sample questions:
 </pre>
 ## Hands-on demos
 
-In the test, there is no need for any practical skills in setting up a Blockchain. If you are interested, though, the following provide some practical demos of using the Ethereum blockchain:
+In the test, there is no need for any practical skills in setting up a Blockchain. If you are interested, though, the following provides some practical demos of using the Ethereum blockchain:
 
 * Introduction to Blockchain (Intro): [here](https://www.youtube.com/watch?v=Gl3Suylr-7E).
 * A "Hello World" application: [here](https://www.youtube.com/watch?v=6-RYefqkhjg).
