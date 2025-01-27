@@ -191,7 +191,7 @@ Result = value<sup>x</sup> mod (prime number)
 
 For example, if we have a prime number of 269, and a value of 8 with an x value of 5, the result of this operation will be:
 
-Result = 85 mod 269 = 219
+Result = 8<sup>5</sup> mod 269 = 219
 
 With prime numbers, if we know the result, it is difficult to find the value of x even though we have the other values, as many values of x can produce the same result. It is this feature which makes it difficult to determine a secret value (in this case the secret is x).
 
