@@ -1,7 +1,7 @@
 ![esecurity](https://raw.githubusercontent.com/billbuchanan/esecurity/master/z_associated/esecurity_graphics.jpg)
 
 # Lab 2: Symmetric Key
-Objective: The key objective of this lab is to understand the range of symmetric key methods used within symmetric key encryption. We will introduce block ciphers, stream ciphers and padding. The key tools used include OpenSSL, Python and JavaScript. 
+Objective: The key objective of this lab is to understand the range of symmetric key methods used within symmetric key encryption. We will introduce block ciphers, stream ciphers and padding. The key tools used include OpenSSL, Python and JavaScript. You can either use the Ubuntu instance or the one you have created within AWS. 
 
 Lab Demo: [here](https://youtu.be/N3UADaXmOik) 
 
@@ -264,9 +264,9 @@ print("  decrypt: ",plaintext.decode())
 
 Now update the code so that you can enter a string and the program will show the cipher text. The format will be something like:
 
-<pre>
+```
 python cipher01.py hello mykey
-</pre>
+```
 
 where “hello” is the plain text, and “mykey” is the key.  A possible integration is:
 
@@ -309,7 +309,7 @@ password=input('Enter password:')
 ```
 
 ## E	Python Coding (Decrypting)
-Now modify your coding for 256-bit AES ECB encryption, so that you can enter the cipher text, and an encryption key, and the code will decrypt to provide the result. You should use CMS for padding. With this, determine the plaintext for the following (note, all the plain text values are countries around the World):
+Now modify your coding for 256-bit AES ECB encryption so that you can enter the ciphertext and an encryption key, and the code will decrypt to provide the result. You should use CMS for padding. With this, determine the plaintext for the following (note, all the plain text values are countries around the World):
 
 | CMS Cipher (256-bit AES ECB) |		Key 	|	Plain text |
 |-----------|-----------|-----------|
@@ -318,7 +318,7 @@ Now modify your coding for 256-bit AES ECB encryption, so that you can enter the
 | 029c4dd71cdae632ec33e2be7674cc14 |	“changeme”| |
 | d8f11e13d25771e83898efdbad0e522c |	“123456”| |
 
-Now modify your coding for 64-bit DES ECB encryption, so that you can enter the cipher text, and an encryption key, and the code will decrypt to provide the result. You should use CMS for padding. With this, determine the plaintext for the following (note, all the plain text values are countries around the World):
+Now modify your coding for 64-bit DES ECB encryption so that you can enter the ciphertext and an encryption key, and the code will decrypt to provide the result. You should use CMS for padding. With this, determine the plaintext for the following (note, all the plain text values are countries around the World):
 
 
 | CMS Cipher (64-bit DES ECB) |		Key 	|	Plain text |
