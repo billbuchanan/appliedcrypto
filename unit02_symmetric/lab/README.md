@@ -7,6 +7,7 @@ Lab Demo: [here](https://youtu.be/N3UADaXmOik)
 
 Sample answers: [here](https://github.com/billbuchanan/appliedcrypto/blob/master/unit02_symmetric/lab/possible_ans.md)
 
+# Part 1: Standard Lab
 ## A	OpenSSL
 OpenSSL is a standard tool that we used in encryption. It supports many of the standard symmetric key methods, including AES, 3DES and ChaCha20.
 
