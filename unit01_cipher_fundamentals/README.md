@@ -20,7 +20,7 @@ The key concepts are:
 * **Understand the conversion of characters between hex, decimal and octal**. Sample question: Convert "hello" into a hex stream. Related material: [here](https://asecuritysite.com/Coding/ascii). 
   * *Why are we studying this?* Encrypted content is converted into a range of different formats, so we need to understand the process of taking plain text and then converting it into other encoding formats. Encryption keys, ciphertext and digital certificates are examples of binary content which must be represented in a text format.
 * **Compute the GCD for values**. Sample question: What is the GCD for 42 and 56? Related material: [here](https://asecuritysite.com/encryption/gcd). 
-  * *Why are we studying this?* GCD is a fundamental building block used in public key encryption, where we must find two numbers who do not share a common divisor. When we look at public key encryption we will see how GCD is used.
+  * *Why are we studying this?* GCD is a fundamental building block used in public key encryption, where we must find two numbers who do not share a common divisor. When we look at public key encryption, we will see how GCD is used.
 * **Compute the MOD for values**. Sample question: What is the result of 13 MOD 7? 
   * *Why are we studying this?* Within many of the public key methods we use the MOD operator with a prime number, and where it is difficult to find the value of x for Y=g<sup>x</sup>(mod p), even though we know Y, g and p. 
 * **Understand how to manually convert from ASCII to Base-64, and vice-versa**. Sample question: What is the Base-64 conversion of “hello”? [here](https://asecuritysite.com/Coding/ascii). 
@@ -60,7 +60,7 @@ The key concepts are:
 
 ## Tests
 
-* Take fun cipher code challenge: [here](https://asecuritysite.com/challenges/hex). Go see what score you can achieved. If you can get more than 30, you are doing every well. Something over 90 enters a genius level.
+* Take fun cipher code challenge: [here](https://asecuritysite.com/challenges). Go see what score you can achieved. If you can get more than 30, you are doing every well. Something over 90 enters a genius level.
 * Five minute challenge: [here](https://asecuritysite.com/challenges/scramb). See if you can solve a scrambled alphabet cipher in just five minutes.
 * Test 1 (Caesar): [here](https://asecuritysite.com/tests/tests?sortBy=caesar)
 * Test 2 (Hex): [here](https://asecuritysite.com/tests/tests?sortBy=hex01)
