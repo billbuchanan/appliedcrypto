@@ -773,7 +773,7 @@ Number of tests:
 
 
 ## K.3	
-Download the bfield.hash password hash, and using the rockyou.txt list, determine the  first 10 passwords in the hashed file. An example command might be:
+Download the bfield.hash password hash [here](https://www.adeptus-mechanicus.com/codex/hashpass/bfield.hash.7z), and using the rockyou.txt list, determine the  first 10 passwords in the hashed file. An example command might be:
 
 ```
 hashcat -m 0 bfield.hash rockyou.txt
