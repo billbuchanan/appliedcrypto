@@ -213,7 +213,7 @@ hashcat -m 1000 file.txt words.txt
 ```
 
 ### B.6	
-Now crack the following Scottish football teams (all are single words):
+Now crack the following Scottish football teams (all are single words and are lower case - and are in the Scottish Premier League or Scottish Championship):
 
 ```
 635450503029fc2484f1d7eb80da8e25bdc1770e1dd14710c592c8929ba37ee9
