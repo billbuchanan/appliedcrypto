@@ -491,7 +491,7 @@ Stopped: Thu Jan 30 16:22:40 2020
 ## B.6
 <pre>
 celtic
-motherwell
+falkirk
 aberdeen
 livingston
 </pre>

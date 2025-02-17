@@ -213,7 +213,7 @@ hashcat -m 1000 file.txt words.txt
 ```
 
 ### B.6	
-Now crack the following Scottish football teams (all are single words):
+Now crack the following Scottish football teams (all are single words and are lower case - and are in the Scottish Premier League or Scottish Championship):
 
 ```
 635450503029fc2484f1d7eb80da8e25bdc1770e1dd14710c592c8929ba37ee9
@@ -773,7 +773,7 @@ Number of tests:
 
 
 ## K.3	
-Download the bfield.hash password hash, and using the rockyou.txt list, determine the  first 10 passwords in the hashed file. An example command might be:
+Download the bfield.hash password hash [here](https://www.adeptus-mechanicus.com/codex/hashpass/bfield.hash.7z), and using the rockyou.txt list, determine the  first 10 passwords in the hashed file. An example command might be:
 
 ```
 hashcat -m 0 bfield.hash rockyou.txt
