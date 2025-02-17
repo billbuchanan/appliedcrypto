@@ -71,15 +71,6 @@ Using the following Web page, determine the owner of the key, and the ID on the 
 
 [https://asecuritysite.com/encryption/pgp1](https://asecuritysite.com/pgp/pgp1)
 
-Now, save the file to newpub.gpg on your Ubuntu instance, and then determine the information that is provided with the command:
-
-```
-gpg newpub.gpg
-```
-
-By searching on-line, can you find the public key of three famous people, and view their key details, and can you discover some of the details of their keys (eg User ID, key encryption method, key size, etc)? 
-
-
 
 By searching on-line, what is an ASCII Armored Message?
 
