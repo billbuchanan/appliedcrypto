@@ -1,1 +1,551 @@
-Hello
+Content-Type: multipart/mixed; boundary="------------Q9IJzJbmgzms0FpJIe1ripWd";
+ protected-headers="v1"
+Subject: Re: Your PGP message
+From: Declan Cox <40735779@live.napier.ac.uk>
+To: "Buchanan, Bill" <B.Buchanan@napier.ac.uk>
+Message-ID: <de131c24-841e-4570-81fe-5d1489a5a8e9@live.napier.ac.uk>
+References: <12D8938A-4206-4C9C-82B3-661D6668609E@napier.ac.uk>
+In-Reply-To: <12D8938A-4206-4C9C-82B3-661D6668609E@napier.ac.uk>
+
+--------------Q9IJzJbmgzms0FpJIe1ripWd
+Content-Type: multipart/mixed; boundary="------------GOrClR0WgXDnMeRRniOlTk5Y"
+
+--------------GOrClR0WgXDnMeRRniOlTk5Y
+Content-Type: multipart/alternative;
+ boundary="------------K0HW5cWO9VUuWVwtfQslxIjR"
+
+--------------K0HW5cWO9VUuWVwtfQslxIjR
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+
+Hi Bill,
+
+I hope you are well. I enjoyed your interview with Ivan Damgaard very 
+much, having spent a few years living in Denmark myself I especially 
+appreciated his insights into why he believes Denmark 'punches above 
+it's weight' in areas of technology and innovation. Great questions! One 
+other in the interview that I found fascinating was Zero Knowledge 
+Proofs - heard the term many times but it prompted me to look into it - 
+I hope to learn more while at Napier,
+
+Best regards,
+
+Declan
+
+
+On 21/02/2025 14:31, Buchanan, Bill wrote:
+>
+> If you have not already done so, please send me your public key, and 
+> send me back and encrypted message using my public key [here 
+> <https://asecuritysite.com/public.txt>]:
+>
+> -----BEGIN PGP PUBLIC KEY BLOCK-----
+>
+> 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
+>
+> n+wpRYh/3mkaDswQf93n
+>
+> =zhEX
+>
+> -----END PGP PUBLIC KEY BLOCK-----
+>
+> *Details:*
+>
+> 	
+>
+> Prof. William (Bill) J Buchanan, OBE, FRSE (Fellow of the Royal 
+> Society of Edinburgh), PhD, PFHEA, CEng, BSc (Hons)
+>
+> *Address:*
+>
+> 	
+>
+> Professor of Applied Cryptography, Edinburgh Napier University,
+> 10 Colinton Road, Edinburgh. EH10 5DT
+>
+> *Tel:*
+>
+> *My Web Site:*
+>
+> *YouTube:*
+>
+> *Wikipedia page:*
+>
+> *LinkedIn:*
+>
+> *Twitter:*
+>
+> *My Blog:*
+>
+> 	
+>
+> +44 (0)131 455 2759
+>
+> https://asecuritysite.com <https://asecuritysite.com>
+>
+> https://www.youtube.com/billbuchanan 
+> <https://www.youtube.com/billbuchanan>
+>
+> https://en.wikipedia.org/wiki/Bill_Buchanan_(computer_scientist) 
+> <https://en.wikipedia.org/wiki/Bill_Buchanan_(computer_scientist)>
+>
+> https://www.linkedin.com/in/billatnapier/ 
+> <https://www.linkedin.com/in/billatnapier/>
+>
+> https://twitter.com/billatnapier <https://twitter.com/billatnapier>
+>
+> https://medium.com/asecuritysite-when-bob-met-alice 
+> <https://medium.com/asecuritysite-when-bob-met-alice>
+>
+>
+> 	
+>
+> 	
+>
+> *Research page:***
+>
+> *Instagram:*
+>
+> *Research: *
+>
+> 	
+>
+> https://napier-repository.worktribe.com/person/110736/bill-buchanan 
+> <https://napier-repository.worktribe.com/person/110736/bill-buchanan>
+>
+> https://www.instagram.com/billatnapier 
+> <https://www.instagram.com/billatnapier>
+>
+> [Google Scholar 
+> <https://scholar.google.com/citations?hl=en&user=ghqbp04AAAAJ&view_op=list_works&sortby=pubdate>][ResearchGate 
+> <https://www.researchgate.net/profile/William-Buchanan-3>][ORCID 
+> <https://orcid.org/0000-0003-0809-3523>][Arxiv 
+> <https://arxiv.org/search/cs?searchtype=author&query=Buchanan%2C+W+J>][DBLP 
+> <https://dblp.org/pid/04/5266.html>]
+>
+> *Podcast:*
+>
+> 	
+>
+> Apple [here 
+> <https://podcasts.apple.com/us/podcast/a-security-podcast/id1617044319>] 
+> Spotify [here <https://open.spotify.com/show/3SX5sY2PqQowc3aA6xGoVO>]
+>
+--------------K0HW5cWO9VUuWVwtfQslxIjR
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+    <p>Hi Bill, <br>
+    </p>
+    <p>I hope you are well. I enjoyed your interview with Ivan Damgaard
+      very much, having spent a few years living in Denmark myself I
+      especially appreciated his insights into why he believes Denmark
+      'punches above it's weight' in areas of technology and innovation.
+      Great questions! One other in the interview that I found
+      fascinating was Zero Knowledge Proofs - heard the term many times
+      but it prompted me to look into it - I hope to learn more while at
+      Napier, <br>
+    </p>
+    <p>Best regards,</p>
+    <p>Declan</p>
+    <p><br>
+    </p>
+    <div class="moz-cite-prefix">On 21/02/2025 14:31, Buchanan, Bill
+      wrote:<br>
+    </div>
+    <blockquote type="cite"
+      cite="mid:12D8938A-4206-4C9C-82B3-661D6668609E@napier.ac.uk">
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta name="Generator"
+        content="Microsoft Word 15 (filtered medium)">
+      <style>@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}@font-face
+	{font-family:Aptos;
+	panose-1:2 11 0 4 2 2 2 2 2 4;}p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	font-size:12.0pt;
+	font-family:"Aptos",sans-serif;
+	mso-fareast-language:EN-US;}a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:#467886;
+	text-decoration:underline;}span.EmailStyle17
+	{mso-style-type:personal-compose;
+	font-family:"Aptos",sans-serif;
+	color:windowtext;}.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-ligatures:none;
+	mso-fareast-language:EN-US;}div.WordSection1
+	{page:WordSection1;}</style>
+      <div class="WordSection1">
+        <p class="MsoNormal">If you have not already done so, please
+          send me your public key, and send me back and encrypted
+          message using my public key [<a
+            href="https://asecuritysite.com/public.txt"
+            moz-do-not-send="true">here</a>]:<br>
+          <br>
+          -----BEGIN PGP PUBLIC KEY BLOCK-----<o:p></o:p></p>
+        <p class="MsoNormal"><o:p> </o:p></p>
+        <p class="MsoNormal">mQINBGAtkzYBEACkIejC2VRgZQ9uWwDlgdwtzNb6zQ3TPk6hU604XB+8eYAhM8q7<o:p></o:p></p>
+        <p class="MsoNormal">+u19vbnKQfT+asaunJO6VGdTAyUwJqYAnQAguAMOJpYcMVfLFdFkxmJ/WHssxtZN<o:p></o:p></p>
+        <p class="MsoNormal">Y5Y0uJ8w5jQhPhBTN0CIFBgcM95gUxADbIDZoxhL8PcCz7C/d9a1AItZLg/QWkXp<o:p></o:p></p>
+        <p class="MsoNormal">k0sQdvM+ki3kCoa7cVF499NgXNmkdUIdbFxR/l6nhMO0y8ZC5rc1GVTVKeKmFjZ5<o:p></o:p></p>
+        <p class="MsoNormal">obPKv9Gzrg0hFqe8v0M2UkdVDUhQxRPhvofhKuATF3oTVjCpdsiAnoE5ym4TKYS6<o:p></o:p></p>
+        <p class="MsoNormal">nnJykQnDdk0sLjjDy3ypfPXzSj4guJRi46AtYi/gsKNob52va3kdXjf/ZrRP4+PS<o:p></o:p></p>
+        <p class="MsoNormal">N6ODYP0VBaCQ58KGYIzjNWXwB2U8dk/WFLAL5kvj0jEIr0DzJyxaW3kZ6XXQlHTB<o:p></o:p></p>
+        <p class="MsoNormal">Um+PFd3h6nPSXq/7f69y3Wdlda4WeJSXXk2MUzVdlOlQIJxtyt4z/o2zi0cYqgP6<o:p></o:p></p>
+        <p class="MsoNormal">ZBLu9T8rhJY447sTiZx/8eDCdhGLtkMkqS8vxxpbonRKaog1hJ0cYKO13QmsudSp<o:p></o:p></p>
+        <p class="MsoNormal">n/23cO7gdIWMzGxYW5MFiHmNLo/9vCWbQPhM07Z+lunTlZIHVDGbjpfeNuJKU+uZ<o:p></o:p></p>
+        <p class="MsoNormal">NtUhec+rOcf+Fl2Wh8PTOy0J13sEgJLf8w4SOlPR8wWkEuu0uC26fm1MRQARAQAB<o:p></o:p></p>
+        <p class="MsoNormal">tCdCaWxsIEJ1Y2hhbmFuIDxCLkJ1Y2hhbmFuQG5hcGllci5hYy51az6JAlQEEwEI<o:p></o:p></p>
+        <p class="MsoNormal">AD4CGwMFCwkIBwIGFQoJCAsCBBYCAwECHgECF4AWIQSIFvygLS/JJTJT9vZIquNs<o:p></o:p></p>
+        <p class="MsoNormal">qTrj2AUCZ7MoYgUJDTJqJgAKCRBIquNsqTrj2NTAEACYQNG9cY37izksv3+YkrgA<o:p></o:p></p>
+        <p class="MsoNormal">hq7aIoECCFQ8vg+dDRRhXWFsDJ7XOc/w8o4y4TyPoMPSz7p+SpU0af6Xvn/j+Zu7<o:p></o:p></p>
+        <p class="MsoNormal">U0ZXLQGBkfkl6enddHOIi34gy9QdpKtxSWvHrLT1c+keyUP5wVotnqrebJnNqTQc<o:p></o:p></p>
+        <p class="MsoNormal">iIQcB0G8iw0TC3nIIv8OdzExmuG3eKcCSNTAEBws5/H9J5d/4YA48IGG7Xw6chE5<o:p></o:p></p>
+        <p class="MsoNormal">PS/JUqLLEf4EbrJ+VpNBLnWrREmgDiWFNdJEIbfQlZLUwlSVNgwOIuvT6W9BVmQJ<o:p></o:p></p>
+        <p class="MsoNormal">mGRXj+5mo1/vDIj1mPKWrPs/+avXW7eo8PJc013xODE5XJyocHRD+Bfp8smrG0wG<o:p></o:p></p>
+        <p class="MsoNormal">/MxONrtL6IVTEzmwMFDwD+XSjMZpCrXqscDyoAqU92Eqlkaf8dqWmcMNtU5UU+HT<o:p></o:p></p>
+        <p class="MsoNormal">hZBcs2uTB2P30/2O9LU1e64gHoLJBSQLEYh5dFRkIgQOCr/pjLCCAKg3oQflt36X<o:p></o:p></p>
+        <p class="MsoNormal">wRj/RLcj1eoARNbeNOoN1yAnlTYUxTxY3Pdgs/O15bcD0DYUAKrRNsXzHuPeKU6X<o:p></o:p></p>
+        <p class="MsoNormal">2A7UeqbIbNqfV/yyJaxT0B7NZlZ2X0+LBNg1+euhawfcNxlZZTnP04lX85dL9nnE<o:p></o:p></p>
+        <p class="MsoNormal">5YbW5GUYRgo3N1AiqsvQrZ45Qd9DOmIiMw6WhtaJ3Lhve6imrPS0H6y+U09q/RPQ<o:p></o:p></p>
+        <p class="MsoNormal">Y5dG8XrrUVTQGtkDzpvOybkCDQRgLZM2ARAAsfxQeEZirG6H6zhKSlPRhnVqUIQA<o:p></o:p></p>
+        <p class="MsoNormal">F5LSnCaIdjPxVtO1y6GESwT3vkRcNqEaCSFh4cMKeLZjYPWAuqriKVmPBvp8TBQa<o:p></o:p></p>
+        <p class="MsoNormal">YTLcBZRBBCYeqVYdklDDChW8xcrWzIYs5vHOhnHklEZGsnGkpV8zScJIG3iKqINp<o:p></o:p></p>
+        <p class="MsoNormal">5i3SjnUKBooDR0dKHcv3mA3BHm6HBR9EqVMoTq42ssPypOtB3jHFPB9mxzIHOCrc<o:p></o:p></p>
+        <p class="MsoNormal">U851IRMhRxiIFFPldFQNeucNWCTAmiBFBAZmW5sOjfeOvWd0R7iPatdqK+0QeBx+<o:p></o:p></p>
+        <p class="MsoNormal">MbeIEYNBfoLwedMDMszmtGidPhoc3bECzp3JFW6VTetvb/84eO/WdZXtOectMVJP<o:p></o:p></p>
+        <p class="MsoNormal">QXcyfzu0OMqWNV9tOHxsCXUY1tvJWYm+AiTuSbyuJv6UI/LyfbqDBYX2yNHw1iTY<o:p></o:p></p>
+        <p class="MsoNormal">HIjjk02RER9R4Wk0PdLxQlb7r5zwNOIM5mz7202BunB0e4qLbpH2tp9zLxrUxc8r<o:p></o:p></p>
+        <p class="MsoNormal">XqvSmTRv6NE95gPvagWORVnIe96Ag6kRA/ifstZQEldlB7LLWetpmDLj+wcdXMur<o:p></o:p></p>
+        <p class="MsoNormal">qHiPUJxg9vdZ939P/1AXM2iSLYp76VR0NR3WnavOwv8xLkGn0sYXBOKOMh8AGvUT<o:p></o:p></p>
+        <p class="MsoNormal">oAjFGfCIAlAw7ZcXyfbtgpmBnVCcQKu7Ft7x/L5Wh5XCeHJa4eih09I4d248yDr+<o:p></o:p></p>
+        <p class="MsoNormal">rB4ZBqbjh/b1IX0AEQEAAYkCPAQYAQgAJgIbDBYhBIgW/KAtL8klMlP29kiq42yp<o:p></o:p></p>
+        <p class="MsoNormal">OuPYBQJnuIjWBQkJafXmAAoJEEiq42ypOuPY+h0P/3e8YtIqHMALBYh1Ct/P/zqZ<o:p></o:p></p>
+        <p class="MsoNormal">FF1i2uzqmxC9oZg4ul/ex8nqdC1fku+leEOsd9uLMuvNFe8pUrVD2nhv+STV2njN<o:p></o:p></p>
+        <p class="MsoNormal">fxR1yUJs2vNTXIbqRpQHbbc2bV5oSEOycXvxWRdT9fEkYaKxQlmvkU7AcUode4Uy<o:p></o:p></p>
+        <p class="MsoNormal">nsg0L9JxPLEEmaDfxr67rHu8DaKdP/w9bOBjKA6AER9RG3QBuoaZ/FzuWmiZI/GE<o:p></o:p></p>
+        <p class="MsoNormal">mzwMZJq+SINbcfmYWM+4tZYGotxlMRNMCatMKr4iyWQzH1C32049nTMqM0gm6CqX<o:p></o:p></p>
+        <p class="MsoNormal">LEL2z8HhQgPSZbjYmS1IHFH7Rj8AWj1crkhfC8Vv0AWnygveUxtbvk7HHmFsy3MY<o:p></o:p></p>
+        <p class="MsoNormal">yudwDavhy3uB/Z4SYXlGqhCiI8ozId+BOL9BAzU/2eEJ/2jog8pwVFRKcW6mQGuV<o:p></o:p></p>
+        <p class="MsoNormal">/H1q/bVjkHNdwvQqufMDVfqCO8GCVOS/rvVwdeAzyCgj8lYTji2VP+H685QafmUE<o:p></o:p></p>
+        <p class="MsoNormal">t68N/MOF/W/Ptg2aQ1ZsGvu/4SZgi3Se57XQuXzFAJjcPRlYoIGLAXcFsFzfxQ8J<o:p></o:p></p>
+        <p class="MsoNormal">eoWAoSN2RsMRf3ibZ+nPz/xWv1hC1qIlSvBRIxG272noBrQR1yZf6Q+dqsEFVQvd<o:p></o:p></p>
+        <p class="MsoNormal">JLFL7JcerCAeiAgvrTzP14jK9hzo+b0KtxUhpwHceWi9hRHmknTYgM8RCOI5djXQ<o:p></o:p></p>
+        <p class="MsoNormal">n+wpRYh/3mkaDswQf93n<o:p></o:p></p>
+        <p class="MsoNormal">=zhEX<o:p></o:p></p>
+        <p class="MsoNormal">-----END PGP PUBLIC KEY BLOCK-----<o:p></o:p></p>
+        <p class="MsoNormal"><o:p> </o:p></p>
+        <p class="MsoNormal"><o:p> </o:p></p>
+        <p class="MsoNormal"><span
+style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;mso-fareast-language:EN-GB"><o:p> </o:p></span></p>
+        <table class="MsoNormalTable" border="0" cellspacing="0"
+          cellpadding="0" width="1329"
+style="width:996.75pt;margin-left:-5.4pt;border-collapse:collapse">
+          <tbody>
+            <tr>
+              <td width="149" valign="top"
+style="width:111.75pt;background:#E5E5E5;padding:0cm 5.4pt 0cm 5.4pt">
+                <p class="MsoNormal"><b><span
+style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:black;mso-fareast-language:EN-GB">Details:</span></b><span
+style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;mso-fareast-language:EN-GB"><o:p></o:p></span></p>
+              </td>
+              <td width="1180" valign="top"
+style="width:885.0pt;background:white;padding:0cm 5.4pt 0cm 5.4pt">
+                <p class="MsoNormal"><span
+style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:black;mso-fareast-language:EN-GB">Prof.
+                    William (Bill) J Buchanan, OBE, FRSE (Fellow of the
+                    Royal Society of Edinburgh), PhD, PFHEA, CEng, BSc
+                    (Hons)</span><span
+style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;mso-fareast-language:EN-GB"><o:p></o:p></span></p>
+              </td>
+            </tr>
+            <tr>
+              <td width="149" valign="top"
+style="width:111.75pt;background:#E5E5E5;padding:0cm 5.4pt 0cm 5.4pt">
+                <p class="MsoNormal"><b><span
+style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:black;mso-fareast-language:EN-GB">Address:</span></b><span
+style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;mso-fareast-language:EN-GB"><o:p></o:p></span></p>
+              </td>
+              <td width="1180" valign="top"
+style="width:885.0pt;background:white;padding:0cm 5.4pt 0cm 5.4pt">
+                <p class="MsoNormal"><span
+style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:black;mso-fareast-language:EN-GB">Professor
+                    of Applied Cryptography, Edinburgh Napier
+                    University, <br>
+                    10 Colinton Road, Edinburgh. EH10 5DT</span><span
+style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;mso-fareast-language:EN-GB"><o:p></o:p></span></p>
+              </td>
+            </tr>
+            <tr>
+              <td width="149" valign="top"
+style="width:111.75pt;background:#E5E5E5;padding:0cm 5.4pt 0cm 5.4pt">
+                <p class="MsoNormal"><b><span
+style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:black;mso-fareast-language:EN-GB">Tel:</span></b><span
+style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;mso-fareast-language:EN-GB"><o:p></o:p></span></p>
+                <p class="MsoNormal"><b><span
+style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:black;mso-fareast-language:EN-GB">My
+                      Web Site:</span></b><span
+style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;mso-fareast-language:EN-GB"><o:p></o:p></span></p>
+                <p class="MsoNormal"><b><span
+style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:black;mso-fareast-language:EN-GB">YouTube:<o:p></o:p></span></b></p>
+                <p class="MsoNormal"><b><span
+style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:black;mso-fareast-language:EN-GB">Wikipedia
+                      page:</span></b><span
+style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;mso-fareast-language:EN-GB"><o:p></o:p></span></p>
+                <p class="MsoNormal"><b><span
+style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:black;mso-fareast-language:EN-GB">LinkedIn:</span></b><span
+style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;mso-fareast-language:EN-GB"><o:p></o:p></span></p>
+                <p class="MsoNormal"><b><span
+style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:black;mso-fareast-language:EN-GB">Twitter:<o:p></o:p></span></b></p>
+                <p class="MsoNormal"><b><span
+style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:black;mso-fareast-language:EN-GB">My
+                      Blog:</span></b><span
+style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;mso-fareast-language:EN-GB"><o:p></o:p></span></p>
+              </td>
+              <td width="1180" valign="top"
+style="width:885.0pt;background:white;padding:0cm 5.4pt 0cm 5.4pt">
+                <p class="MsoNormal"><span
+style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:black;mso-fareast-language:EN-GB">+44
+                    (0)131 455 2759</span><span
+style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;mso-fareast-language:EN-GB"><o:p></o:p></span></p>
+                <p class="MsoNormal"><span
+style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:black;mso-fareast-language:EN-GB"><a
+                      href="https://asecuritysite.com"
+                      moz-do-not-send="true"><span style="color:#0563C1">https://asecuritysite.com</span></a>
+                  </span><span
+style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;mso-fareast-language:EN-GB"><o:p></o:p></span></p>
+                <p class="MsoNormal"><span
+style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:black;mso-fareast-language:EN-GB"><a
+                      href="https://www.youtube.com/billbuchanan"
+                      moz-do-not-send="true"><span style="color:#0563C1">https://www.youtube.com/billbuchanan</span></a><o:p></o:p></span></p>
+                <p class="MsoNormal"><span
+style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:black;mso-fareast-language:EN-GB"><a
+href="https://en.wikipedia.org/wiki/Bill_Buchanan_(computer_scientist)"
+                      moz-do-not-send="true"><span style="color:#0563C1">https://en.wikipedia.org/wiki/Bill_Buchanan_(computer_scientist)</span></a><o:p></o:p></span></p>
+                <p class="MsoNormal"><span
+style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:black;mso-fareast-language:EN-GB"><a
+                      href="https://www.linkedin.com/in/billatnapier/"
+                      moz-do-not-send="true"><span style="color:#0563C1">https://www.linkedin.com/in/billatnapier/</span></a><o:p></o:p></span></p>
+                <p class="MsoNormal"><span
+style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:black;mso-fareast-language:EN-GB"><a
+                      href="https://twitter.com/billatnapier"
+                      moz-do-not-send="true"><span style="color:#0563C1">https://twitter.com/billatnapier</span></a>
+                    <o:p></o:p></span></p>
+                <p class="MsoNormal"><span
+style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:black;mso-fareast-language:EN-GB"><a
+href="https://medium.com/asecuritysite-when-bob-met-alice"
+                      moz-do-not-send="true"><span style="color:#0563C1">https://medium.com/asecuritysite-when-bob-met-alice</span></a>
+                  </span><span
+style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;mso-fareast-language:EN-GB"><o:p></o:p></span></p>
+              </td>
+            </tr>
+            <tr>
+              <td width="149" valign="top"
+style="width:111.75pt;background:#E5E5E5;padding:0cm 5.4pt 0cm 5.4pt"> <br>
+              </td>
+              <td width="1180" valign="top"
+style="width:885.0pt;background:white;padding:0cm 5.4pt 0cm 5.4pt"> <br>
+              </td>
+            </tr>
+            <tr>
+              <td width="149" valign="top"
+style="width:111.75pt;background:#E5E5E5;padding:0cm 5.4pt 0cm 5.4pt"> <br>
+              </td>
+              <td width="1180" valign="top"
+style="width:885.0pt;background:white;padding:0cm 5.4pt 0cm 5.4pt"> <br>
+              </td>
+            </tr>
+            <tr>
+              <td width="149" valign="top"
+style="width:111.75pt;background:#E5E5E5;padding:0cm 5.4pt 0cm 5.4pt">
+                <p class="MsoNormal"><b><span
+style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:black;mso-fareast-language:EN-GB">Research
+                      page:</span></b><b><span
+style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;mso-fareast-language:EN-GB"><o:p></o:p></span></b></p>
+                <p class="MsoNormal"><b><span
+style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:black;mso-fareast-language:EN-GB">Instagram:<o:p></o:p></span></b></p>
+                <p class="MsoNormal"><b><span
+style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:black;mso-fareast-language:EN-GB">Research:
+                      <o:p></o:p></span></b></p>
+              </td>
+              <td width="1180" valign="top"
+style="width:885.0pt;background:white;padding:0cm 5.4pt 0cm 5.4pt">
+                <p class="MsoNormal"><span
+style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:black;mso-fareast-language:EN-GB"><a
+href="https://napier-repository.worktribe.com/person/110736/bill-buchanan"
+                      moz-do-not-send="true"><span style="color:#0563C1">https://napier-repository.worktribe.com/person/110736/bill-buchanan</span></a><o:p></o:p></span></p>
+                <p class="MsoNormal"><span
+style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:black;mso-fareast-language:EN-GB"><a
+                      href="https://www.instagram.com/billatnapier"
+                      moz-do-not-send="true"><span style="color:#0563C1">https://www.instagram.com/billatnapier</span></a><o:p></o:p></span></p>
+                <p class="MsoNormal"><span
+style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:black;mso-fareast-language:EN-GB">[<a
+href="https://scholar.google.com/citations?hl=en&amp;user=ghqbp04AAAAJ&amp;view_op=list_works&amp;sortby=pubdate"
+                      moz-do-not-send="true"><span style="color:#0563C1">Google
+                        Scholar</span></a>][<a
+href="https://www.researchgate.net/profile/William-Buchanan-3"
+                      moz-do-not-send="true"><span style="color:#0563C1">ResearchGate</span></a>][<a
+                      href="https://orcid.org/0000-0003-0809-3523"
+                      moz-do-not-send="true"><span style="color:#0563C1">ORCID</span></a>][<a
+href="https://arxiv.org/search/cs?searchtype=author&amp;query=Buchanan%2C+W+J"
+                      moz-do-not-send="true"><span style="color:#0563C1">Arxiv</span></a>][<a
+                      href="https://dblp.org/pid/04/5266.html"
+                      moz-do-not-send="true"><span style="color:#0563C1">DBLP</span></a>]<o:p></o:p></span></p>
+              </td>
+            </tr>
+            <tr>
+              <td width="149" valign="top"
+style="width:111.75pt;background:#E5E5E5;padding:0cm 5.4pt 0cm 5.4pt">
+                <p class="MsoNormal"><b><span
+style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:black;mso-fareast-language:EN-GB">Podcast:<o:p></o:p></span></b></p>
+              </td>
+              <td width="1180" valign="top"
+style="width:885.0pt;background:white;padding:0cm 5.4pt 0cm 5.4pt">
+                <p class="MsoNormal"><span
+style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:black;mso-fareast-language:EN-GB">Apple
+                    [<a
+href="https://podcasts.apple.com/us/podcast/a-security-podcast/id1617044319"
+                      target="_blank" moz-do-not-send="true"><span
+                        style="color:#0563C1">here</span></a>] Spotify [<a
+href="https://open.spotify.com/show/3SX5sY2PqQowc3aA6xGoVO"
+                      target="_blank" moz-do-not-send="true"><span
+                        style="color:#0563C1">here</span></a>]</span><span
+style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;mso-fareast-language:EN-GB"><o:p></o:p></span></p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="MsoNormal"><span
+style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:white"> </span><o:p></o:p></p>
+      </div>
+    </blockquote>
+  </body>
+</html>
+
+--------------K0HW5cWO9VUuWVwtfQslxIjR--
+
+--------------GOrClR0WgXDnMeRRniOlTk5Y
+Content-Type: application/pgp-keys; name="OpenPGP_0xB77598B41C4CD6DE.asc"
+Content-Disposition: attachment; filename="OpenPGP_0xB77598B41C4CD6DE.asc"
+Content-Description: OpenPGP public key
+Content-Transfer-Encoding: 7bit
+
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+xjMEZ7oAfhYJKwYBBAHaRw8BAQdAEwCnKN/ijJSkfTxi1onXorA237KZregOMUHr
+s6b59JbNJ0RlY2xhbiBDb3ggPDQwNzM1Nzc5QGxpdmUubmFwaWVyLmFjLnVrPsKP
+BBMWCAA3FiEExhSYzRgjDfziXXjpt3WYtBxM1t4FAme6AH4FCQWjmoACGwMECwkI
+BwUVCAkKCwUWAgMBAAAKCRC3dZi0HEzW3uJQAQCuxVvk3lHvZNnaxyzDyAiPZmlW
+jXQ8VR+KVd4SziTAnQEAuPdOIqTF80TSFmGbuZcOWJwE/1ASoHUupYMYiRG2IQTO
+OARnugB+EgorBgEEAZdVAQUBAQdAN1vkGnqylncIRSGEMe4Xbqid+KBswESS7MNg
+e9vPXyYDAQgHwn4EGBYIACYWIQTGFJjNGCMN/OJdeOm3dZi0HEzW3gUCZ7oAfgUJ
+BaOagAIbDAAKCRC3dZi0HEzW3o9BAQDVuYhoeMvT4KZZllUDm2K6W9A4t0G6rR9F
+lExy0zu7JwD/UDQ0gjm15g54PVebpJDvwlEjZzO5tMNclPf+D0LGVAI=
+=l60b
+-----END PGP PUBLIC KEY BLOCK-----
+
+--------------GOrClR0WgXDnMeRRniOlTk5Y--
+
+--------------Q9IJzJbmgzms0FpJIe1ripWd--
