@@ -324,6 +324,8 @@ In the following we will implement ECDH using the secp256k1 curve (as used in Bi
 
 Web link (ECDH):  [here](https://asecuritysite.com/hazmat/hashnew13)
 
+Ensure you use the command `python3` if executing the python code from the virtual machines terminal. 
+
 ```python
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.asymmetric import ec
@@ -332,6 +334,8 @@ from cryptography.hazmat.primitives import serialization
 from cryptography.hazmat.backends import default_backend
 import binascii
 import sys
+
+size=32
 
 Bob_private_key = ec.generate_private_key(ec.SECP256K1(),default_backend())
 Alice_private_key = ec.generate_private_key(ec.SECP256K1(),default_backend())
@@ -361,7 +365,7 @@ print("Alice's public key: ",enc_point)
 
 
 print ("\nBob's derived key: ",binascii.b2a_hex(Bob_derived_key).decode())
-print("Alice's derived key: ",binascii.b2a_hex(Alice_derived_key).decode())())
+print("Alice's derived key: ",binascii.b2a_hex(Alice_derived_key).decode())
 ```
 
 Now modify the code to implement the SECP192R1 and also for the SECP521R1 curve. What do you notice about the sizes of the keys created between the different curve types?

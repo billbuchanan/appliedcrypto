@@ -1,6 +1,6 @@
 ![esecurity](https://raw.githubusercontent.com/billbuchanan/appliedcrypto/master/z_associated/esecurity_graphics.jpg)
 
-In this lab, either catch-up on your labs, complete the AWS labs for cryptography or complete the mini-project.
+In this lab, either catch up on your labs, complete the AWS labs for cryptography or complete the mini-project (either Mini-project 1 or Mini-project 2).
 
 # Unit 5a: AWS Labs for Cryptography
 There are a range of labs to complete using your AWS lab environment:
@@ -15,10 +15,18 @@ There are a range of labs to complete using your AWS lab environment:
 * Envelope encryption. [Go](https://asecuritysite.com/aws/lab08). An additional lab to outline the usage of envelope encryption in KMS.
 
 
+# Unit 5a: Mini-project 1
+We can use JavaScript to implement cryptography in the browser. In this case, we will implement cryptography using the WebCrypto integration:
 
-# Unit 5a: Mini-project
+* Task 1: Integrate the symmetric key methods of AES GCM [here](https://asecuritysite.com/webcrypto/crypt_gcm), AES CBC [here](https://asecuritysite.com/webcrypto/crypt_cbc) and AES CTR [here](https://asecuritysite.com/webcrypto/crypt_ctr) in a single Web page, and where you can click on a button and it will implement the required mode. For this, take the HTML code defined on related pages, and integrate them together into a single page, and then load that page into the browser.
+* Task 2: Integrate the hashing methods for SHA-1, SHA-256, SHA-384 and SHA-512 from the page [here](https://asecuritysite.com/webcrypto/crypt_hash), but select them with buttons rather than from a pull-down menu.
+* Task 3: Integrate the signing methods for ECC [here](https://asecuritysite.com/webcrypto/crypt_ecdsa_enc), but use buttons for the signature methods, such as for "P256/SHA1" and "P256/SHA256".
+* Task 4: Integrate the signing methods for RSA [here](https://asecuritysite.com/webcrypto/crypt_rsa5_enc), but use buttons for the signature methods, such as for "RSA-1024" and "RSA-2048".
+* If you can, integrate all these methods into a single page.
 
-Objective: In this lab we will build a basic infrastructure for integrating and testing cryptograph. 
+# Unit 5a: Mini-project 2
+
+Objective: In this lab we will build a basic infrastructure for integrating and testing cryptography. 
 
 Open up your Ubuntu instance and conduct this lab. The lab is [here](https://github.com/billbuchanan/esecurity/blob/master/unit05a_mini_project/lab_mini_project.pdf).
 
