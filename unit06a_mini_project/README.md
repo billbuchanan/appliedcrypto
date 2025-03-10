@@ -124,12 +124,12 @@ The following is some sample code you can test your hashes against:
 import hashlib;
 import passlib.hash;
 
-string="password"
-print "General Hashes"
-print "MD5:"+hashlib.md5(string).hexdigest()
-print "SHA1:"+hashlib.sha1(string).hexdigest()
-print "SHA256:"+hashlib.sha256(string).hexdigest()
-print "SHA512:"+hashlib.sha512(string).hexdigest()
+string="password".encode()
+print ("General Hashes")
+print ("MD5:"+hashlib.md5(string).hexdigest())
+print ("SHA1:"+hashlib.sha1(string).hexdigest())
+print ("SHA256:"+hashlib.sha256(string).hexdigest())
+print ("SHA512:"+hashlib.sha512(string).hexdigest())
 ```
 
 To test your PBKDF2 code, you will have to take the salt generated randomly from your Web page and copy it. For example:
