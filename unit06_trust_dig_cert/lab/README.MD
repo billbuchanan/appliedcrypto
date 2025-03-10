@@ -501,7 +501,7 @@ Run the code and answer the following questions:
 * Which key (public or private key) is used to verify the signature?
 
 # AWS Lab
-Within digital signatures, we have two main three main signatures: RSA and ECDSA.
+Within digital signatures, we have two main signatures: RSA, ECDSA and EdDSA. In AWS, we can implement RSA (with PSS) and ECDSA.
 
 ## RSA PSS Signatures
 In digital signing, we use our private key to sign for a message, and then the proof of signing is done with our public key. This happens for a Bitcoin transaction, and where we take the private key from our wallet and then sign for a transaction. The public key is then used to prove that the user signing the transaction. While Bitcoin uses ECDSA, we can also use RSA signing. A common method is RSASSA_PSS_SHA_256.
