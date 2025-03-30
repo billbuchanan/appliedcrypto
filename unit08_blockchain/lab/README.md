@@ -561,6 +561,8 @@ Complete the following:
 ## ERC-721 (Creating an NFT)
 For normal crypto tokens (ERC-20) we use FT (Fungible Tokens) and where there is a finite number of these, and each of these is the same. For example, I could release one million ERC-20 tokens and then trade with them. They will all have the same value, and I cannot mint any more. With NFTs (ERC-721), we can mint any number of cryptography tokens, and each will have an owner. Each of these can have its own value, or be pinned to a physical asset or identity. For example, as a tutor, I could assign each of my students to an NFT, and where we link the NFT to the student. Overall, we create these with a smart contract, and where there is an "owner" of the creation of the tokens. It is this account that will create the tokens as required, and then allocate them to new owners.
 
+A demo of this is [here](https://www.youtube.com/watch?v=p85yuFkNCbw).
+
 First, we start off with a smart contract:
 
 ```Solidity
