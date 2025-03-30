@@ -2,178 +2,9 @@
 
 # Lab 8: Blockchain and Cryptocurrencies
 
-Aim:		To provide a foundation in understanding in Bitcoin and Blockchain.
+Aim:		To provide a foundation for understanding Bitcoin and Blockchain.
 
-## Activities
-### L1.1	Using blockchain.info:
-Find the details of the genesis block [here](https://www.blockchain.com/btc/block/0): 
-And with
-* Date created:
-* Reward:
-* Number of transactions:
-* Size of block:
-* Which account received the mining reward for the genesis block (last four digits):
-* How many USD does the original miner have in the account they used for the first genesis record:
-* When did the genesis block creator stop trading?
-
-
-### L1.2	Using blockchain.info:
-
-Determine the following [here](https://www.blockchain.com/charts):
-
-* Total bitcoins in circulation:
-* Most recent hash block (last four hex digits):
-* Block reward per block:
-* Difficulty:
-* Average time between blocks:
-* Market capitalisation (USD):
-* 24 hr price (USD):
-* 24hr transactions (USD):
-* Hash rate:
-* Last successful miner:
-* Maximum block size:
-* Balance for 1GbVUSW5WJmRCpaCJ4hanUny77oDaWW4to:
-
-
-### L1.3	
-Download and create the Python file defined on this page [here](https://asecuritysite.com/encryption/bit):
-
-```Python
-import httplib2
-
-resp, content = httplib2.Http().request("https://blockchain.info/q/latesthash")
-print("Latest hash: ",content)
-
-resp, content = httplib2.Http().request("https://blockchain.info/q/bcperblock")
-print("Block reward per block: ",float(content))
-
-resp, content = httplib2.Http().request("https://blockchain.info/q/getblockcount")
-print("Longest block: ",content)
-
-resp, content = httplib2.Http().request("https://blockchain.info/q/getdifficulty")
-print("Difficulty: ",content)
-
-resp, content = httplib2.Http().request("https://blockchain.info/q/probability")
-print("Mining probability: ",content)
-
-resp, content = httplib2.Http().request("https://blockchain.info/q/interval")
-print("Average time between blocks (seconds): ",content.decode())
-
-resp, content = httplib2.Http().request("https://blockchain.info/q/eta")
-print("Time to next block (seconds): ",content.decode())
-
-resp, content = httplib2.Http().request("https://blockchain.info/q/marketcap")
-print("Market capitalisation (Million USD): ",float(content)/1000000)
-
-
-resp, content = httplib2.Http().request("https://blockchain.info/q/24hrprice")
-print("24hr price (USD): ",content.decode())
-
-resp, content = httplib2.Http().request("https://blockchain.info/q/24hrtransactioncount")
-print("24hr transactions: ",content.decode())
-
-resp, content = httplib2.Http().request("https://blockchain.info/q/hashrate")
-print("Hash rate: ",content.decode())
-
-resp, content = httplib2.Http().request("https://blockchain.info/q/addressbalance/1GbVUSW5WJmRCpaCJ4hanUny77oDaWW4to?confirmations=1")
-print("Account balance for 1Gb...4to (BTC): ",int(content)/100000000)
-
-resp, content = httplib2.Http().request("https://blockchain.info/q/getreceivedbyaddress/1GbVUSW5WJmRCpaCJ4hanUny77oDaWW4to?confirmations=1")
-print("Received for 1Gb...4to (BTC): ",int(content)/100000000)
-
-```
-
-Now run the Python file, and compare the results in L.1.2.
-
-* Total bitcoins in circulation:
-* Most recent hash block (last four hex digits):
-* Block reward per block:
-* Difficulty:
-* Average time between blocks:
-* Market capitalisation (USD):
-* 24 hr price (USD):
-* 24hr transactions (USD):
-* Hash rate:
-* Balance for 1GbVUSW5WJmRCpaCJ4hanUny77oDaWW4to:
-
-## Introduction
-This provides an outline of cryptocurrencies and blockchain:
-
-* Lab (PDF): [here](https://asecuritysite.com/public/blockchain_lab.pdf)
-
-## Part A
-
-**Using blockchain.info, find the details of the genesis block:**
-
-Date created:
-
-Reward:
-
-Number of transactions:
-
-Size of block:
-
-Which account received the mining reward for the genesis block (last four digits):
-
-How many USD does the original miner have in the account they used for the first genesis record:
-
-When did the genesis block creator stop trading?
-
-
-**L1.2	Using blockchain.info, determine the following:**
-
-Total bitcoins in circulation:
-
-Most recent hash block (last four hex digits):
-
-Block reward per block:
-
-Difficulty:
-
-Average time between blocks:
-
-Market capitalisation (USD):
-
-24 hr price (USD):
-
-24hr transactions (USD):
-
-Hash rate:
-
-Last successful miner:
-
-Maximum block size:
-
-Balance for 1GbVUSW5WJmRCpaCJ4hanUny77oDaWW4to:
-
-
-**L1.3 Download and created the Python file defined on this page:**
-
-https://asecuritysite.com/encryption/bit
-
-Now run the Python file, and compare the results in L.1.2.
-
-Total bitcoins in circulation:
-
-Most recent hash block (last four hex digits):
-
-Block reward per block:
-
-Difficulty:
-
-Average time between blocks:
-
-Market capitalisation (USD):
-
-24 hr price (USD):
-
-24hr transactions (USD):
-
-Hash rate:
-
-
-
-## B	Ethereum
+## A Ethereum
 We will be using the Sepolia test network. If you have to setup your wallet, the details are:
 
 * Network name: Sepolia
@@ -299,7 +130,7 @@ Note: You can get Ether for our wallet [here](https://sepoliafaucet.com/).
 
 
 ## Creating ERC-20 tokens
-Within the Ethereum blockchain, we can record transactions and run smart contracts. These things allow us to run DApps (decentralized applications) and which can support the running of the infrastructure in return for some payment (Ether). A DApp can also create tokens for new currencies, shares in a company or to prove the ownership of an asset. ERC-20 is a standard format for a Fungible Token and which can support the sharing, transfer and storage of tokens. These tokens are supported by the whole of the Ethereum infrastructure and can be easily traded. They support a number of mandatory functions:
+Within the Ethereum blockchain, we can record transactions and run smart contracts. These things allow us to run DApps (decentralized applications) and which can support the running of the infrastructure in return for some payment (Ether). A DApp can also create tokens for new currencies, shares in a company or to prove the ownership of an asset. ERC-20 is a standard format for a Fungible Token that supports the sharing, transfer, and storage of tokens. These tokens are supported by the whole of the Ethereum infrastructure and can be easily traded. They support a number of mandatory functions:
 
 
 * totalSupply. This function is the total number of ERC-20 tokens that have been created.
@@ -811,6 +642,169 @@ And if we want to view the name and the owner of the token number 2, we get it h
 
 In this case, we see that Alice is the owner of the token (as she has an address of 0x39…).
 
+# Part B
+
+## B.1	Using blockchain.info:
+Find the details of the genesis block [here](https://www.blockchain.com/btc/block/0): 
+And with
+* Date created:
+* Reward:
+* Number of transactions:
+* Size of block:
+* Which account received the mining reward for the genesis block (last four digits):
+* How many USD does the original miner have in the account they used for the first genesis record:
+* When did the genesis block creator stop trading?
+
+
+## B.2	Using blockchain.info:
+
+Determine the following [here](https://www.blockchain.com/charts):
+
+* Total bitcoins in circulation:
+* Most recent hash block (last four hex digits):
+* Block reward per block:
+* Difficulty:
+* Average time between blocks:
+* Market capitalisation (USD):
+* 24 hr price (USD):
+* 24hr transactions (USD):
+* Hash rate:
+* Last successful miner:
+* Maximum block size:
+* Balance for 1GbVUSW5WJmRCpaCJ4hanUny77oDaWW4to:
+
+
+## B.3	
+Download and create the Python file defined on this page [here](https://asecuritysite.com/encryption/bit):
+
+```Python
+import httplib2
+
+resp, content = httplib2.Http().request("https://blockchain.info/q/latesthash")
+print("Latest hash: ",content)
+
+resp, content = httplib2.Http().request("https://blockchain.info/q/bcperblock")
+print("Block reward per block: ",float(content))
+
+resp, content = httplib2.Http().request("https://blockchain.info/q/getblockcount")
+print("Longest block: ",content)
+
+resp, content = httplib2.Http().request("https://blockchain.info/q/getdifficulty")
+print("Difficulty: ",content)
+
+resp, content = httplib2.Http().request("https://blockchain.info/q/probability")
+print("Mining probability: ",content)
+
+resp, content = httplib2.Http().request("https://blockchain.info/q/interval")
+print("Average time between blocks (seconds): ",content.decode())
+
+resp, content = httplib2.Http().request("https://blockchain.info/q/eta")
+print("Time to next block (seconds): ",content.decode())
+
+resp, content = httplib2.Http().request("https://blockchain.info/q/marketcap")
+print("Market capitalisation (Million USD): ",float(content)/1000000)
+
+
+resp, content = httplib2.Http().request("https://blockchain.info/q/24hrprice")
+print("24hr price (USD): ",content.decode())
+
+resp, content = httplib2.Http().request("https://blockchain.info/q/24hrtransactioncount")
+print("24hr transactions: ",content.decode())
+
+resp, content = httplib2.Http().request("https://blockchain.info/q/hashrate")
+print("Hash rate: ",content.decode())
+
+resp, content = httplib2.Http().request("https://blockchain.info/q/addressbalance/1GbVUSW5WJmRCpaCJ4hanUny77oDaWW4to?confirmations=1")
+print("Account balance for 1Gb...4to (BTC): ",int(content)/100000000)
+
+resp, content = httplib2.Http().request("https://blockchain.info/q/getreceivedbyaddress/1GbVUSW5WJmRCpaCJ4hanUny77oDaWW4to?confirmations=1")
+print("Received for 1Gb...4to (BTC): ",int(content)/100000000)
+
+```
+
+Now run the Python file, and compare the results in L.1.2.
+
+* Total bitcoins in circulation:
+* Most recent hash block (last four hex digits):
+* Block reward per block:
+* Difficulty:
+* Average time between blocks:
+* Market capitalisation (USD):
+* 24 hr price (USD):
+* 24hr transactions (USD):
+* Hash rate:
+* Balance for 1GbVUSW5WJmRCpaCJ4hanUny77oDaWW4to:
+
+
+# Part C
+
+## C.1 Using blockchain.info, find the details of the genesis block:
+
+Date created:
+
+Reward:
+
+Number of transactions:
+
+Size of block:
+
+Which account received the mining reward for the genesis block (last four digits):
+
+How many USD does the original miner have in the account they used for the first genesis record:
+
+When did the genesis block creator stop trading?
+
+
+## C.2	Using blockchain.info, determine the following:
+
+Total bitcoins in circulation:
+
+Most recent hash block (last four hex digits):
+
+Block reward per block:
+
+Difficulty:
+
+Average time between blocks:
+
+Market capitalisation (USD):
+
+24 hr price (USD):
+
+24hr transactions (USD):
+
+Hash rate:
+
+Last successful miner:
+
+Maximum block size:
+
+Balance for 1GbVUSW5WJmRCpaCJ4hanUny77oDaWW4to:
+
+
+## C.3 Download and created the Python file defined on this page:
+
+https://asecuritysite.com/encryption/bit
+
+Now run the Python file, and compare the results in L.1.2.
+
+Total bitcoins in circulation:
+
+Most recent hash block (last four hex digits):
+
+Block reward per block:
+
+Difficulty:
+
+Average time between blocks:
+
+Market capitalisation (USD):
+
+24 hr price (USD):
+
+24hr transactions (USD):
+
+Hash rate:
 
 # Additional Tutorial
 At the end of this lab, remember to stop your Blockchain (Control-C from the console that is running Geth), and shut down your VM. You may also want to use “rm -r mynapier” in order to delete your blockchain.
