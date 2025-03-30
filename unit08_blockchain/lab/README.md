@@ -725,6 +725,91 @@ Complete the following:
 * Setup your smart contact, and then add a few cities of the world, and prove that it works. 
 * Ask another person, or your tutor, to add a city to your smart contract, and prove that it works.
 
+## ERC-721 (Creating an NFT)
+For normal crypto tokens (ERC-20) we use FT (Fungible Tokens) and where there is a finite number of these, and each of these is the same. For example, I could release one million ERC-20 tokens and then trade with them. They will all have the same value, and I cannot mint any more. With NFTs (ERC-721), we can mint any number of cryptography tokens, and each will have an owner. Each of these can have its own value, or be pinned to a physical asset or identity. For example, as a tutor, I could assign each of my students to an NFT, and where we link the NFT to the student. Overall, we create these with a smart contract, and where there is an "owner" of the creation of the tokens. It is this account that will create the tokens as required, and then allocate them to new owners.
+
+First, we start off with a smart contract:
+
+```Solidity
+pragma solidity ^0.8.0;
+
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
+import "@openzeppelin/contracts/utils/Counters.sol";
+
+contract BillToken is ERC721URIStorage{
+    using Counters for Counters.Counter;
+    Counters.Counter private _tokenIds;
+    mapping(string => uint8) hashes;
+    
+    constructor() ERC721("Bill Token", "BTK") {}
+  
+    function awardItem(address recipient, string memory hash, string memory metadata) public returns (uint256){
+        require(hashes[hash] != 1);
+        hashes[hash] = 1;
+        _tokenIds.increment();
+        uint256 newItemId = _tokenIds.current();
+        _mint(recipient, newItemId);
+        _setTokenURI(newItemId, metadata);
+        
+        return newItemId;
+    }
+}
+```
+
+This contract defines we are creating a "Bill Token", and where Open Zeppelin will integrate all the required methods that are required to interact with the token (such as creating it, viewing the ownership of tokens, and in allocating it to another owner). For this, we can use Remix (here) to create and compile the code:
+
+![Alt text](https://asecuritysite.com/public/estate55.png)
+
+Once it has been compiled, we can then test it locally by running our own Ethereum network. We do this by running ganche:
+
+![Alt text](https://asecuritysite.com/public/estate56.png)
+
+We can see this has a number of accounts already created. Now we will deploy the smart contract for “Bill Token” to the local network. For this we have Web3 Provider as our environment, and then select our contract (“BillToken”):
+
+![Alt text](https://asecuritysite.com/public/estate57.png)
+
+If successful, we will see the account of “0x78…” be charged some gas, and where the contact has been created:
+
+![Alt text](https://asecuritysite.com/public/estate58.png)
+
+The address of “0x7d8..” is now the owner of the creator of the token, and then can allocate these to other addresses. We now have a number of functions that we can use to “mint” and allocate the tokens:
+
+![Alt text](https://asecuritysite.com/public/estate59.png)
+
+The awardItem function can be used to mint an NFT and allocate it to a given address. So, let’s say we are giving our NFTs for module marks in Applied Cryptography. First we create the metadata for the NFT as a Json file, and add it to a URL:
+
+```JSON
+                {
+                "name": "Applied Crypto",
+                "description": "Public Key Encryption",
+                "image": "https://asecuritysite.com/public/bob.png",
+                "grade": 87
+                }
+```
+
+Let’s now allocate one new “Bill Token” to the third address on the address list (0x391…). We will allocate this address to Alice, and where Bob is the creator of the NTF:
+
+![Alt text](https://asecuritysite.com/public/estate60.png)
+
+Once we transact, we can see the miners have successfully picked up the mint:
+
+![Alt text](https://asecuritysite.com/public/estate61.png)
+
+And that the owner of the NFT (Bob) has been charged some gas (0.01 Eth):
+
+![Alt text](https://asecuritysite.com/public/estate62.png)
+
+If we now look at Alice’s balance, we see she has one token:
+
+![Alt text](https://asecuritysite.com/public/estate63.png)
+
+And if we want to view the name and the owner of the token number 2, we get it here:
+
+![Alt text](https://asecuritysite.com/public/estate64.png)
+
+In this case, we see that Alice is the owner of the token (as she has an address of 0x39…).
+
+
 # Additional Tutorial
 At the end of this lab, remember to stop your Blockchain (Control-C from the console that is running Geth), and shut down your VM. You may also want to use “rm -r mynapier” in order to delete your blockchain.
 ## Using Geth
