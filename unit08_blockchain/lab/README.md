@@ -616,11 +616,11 @@ Let’s now allocate one new “Bill Token” to (0xbB15B38e4ef6aF154b89A2E57E03
 
 Next we will create a second token:
 
-![Alt text](https://asecuritysite.com/public/eth_104.png)
+![Alt text](https://asecuritysite.com/public/eth_103.png)
 
 Finally, we can view the contract:
 
-![Alt text](https://asecuritysite.com/public/eth_105.png)
+![Alt text](https://asecuritysite.com/public/eth_104.png)
 
 # Part B
 
