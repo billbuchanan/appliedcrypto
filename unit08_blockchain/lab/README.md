@@ -593,25 +593,13 @@ contract BillToken is ERC721URIStorage{
 
 This contract defines we are creating a "Bill Token", and where Open Zeppelin will integrate all the required methods that are required to interact with the token (such as creating it, viewing the ownership of tokens, and in allocating it to another owner). For this, we can use Remix (here) to create and compile the code:
 
-![Alt text](https://asecuritysite.com/public/estate55.png)
+![Alt text](https://asecuritysite.com/public/eth_100.png)
 
-Once it has been compiled, we can then test it locally by running our own Ethereum network. We do this by running ganche:
+We can then deploy our contract:
 
-![Alt text](https://asecuritysite.com/public/estate56.png)
+![Alt text](https://asecuritysite.com/public/eth_101.png)
 
-We can see this has a number of accounts already created. Now we will deploy the smart contract for “Bill Token” to the local network. For this we have Web3 Provider as our environment, and then select our contract (“BillToken”):
-
-![Alt text](https://asecuritysite.com/public/estate57.png)
-
-If successful, we will see the account of “0x78…” be charged some gas, and where the contact has been created:
-
-![Alt text](https://asecuritysite.com/public/estate58.png)
-
-The address of “0x7d8..” is now the owner of the creator of the token, and then can allocate these to other addresses. We now have a number of functions that we can use to “mint” and allocate the tokens:
-
-![Alt text](https://asecuritysite.com/public/estate59.png)
-
-The awardItem function can be used to mint an NFT and allocate it to a given address. So, let’s say we are giving our NFTs for module marks in Applied Cryptography. First we create the metadata for the NFT as a Json file, and add it to a URL:
+The awardItem function can be used to mint an NFT and allocate it to a given address. So, let’s say we are giving our NFTs for module marks in Applied Cryptography. First we create the metadata for the NFT as a JSON file, and add it to a URL:
 
 ```JSON
                 {
@@ -622,27 +610,17 @@ The awardItem function can be used to mint an NFT and allocate it to a given add
                 }
 ```
 
-Let’s now allocate one new “Bill Token” to the third address on the address list (0x391…). We will allocate this address to Alice, and where Bob is the creator of the NTF:
+Let’s now allocate one new “Bill Token” to (0xbB15B38e4ef6aF154b89A2E57E03Cd5cbD752233)
 
-![Alt text](https://asecuritysite.com/public/estate60.png)
+![Alt text](https://asecuritysite.com/public/eth_102.png)
 
-Once we transact, we can see the miners have successfully picked up the mint:
+Next we will create a second token:
 
-![Alt text](https://asecuritysite.com/public/estate61.png)
+![Alt text](https://asecuritysite.com/public/eth_104.png)
 
-And that the owner of the NFT (Bob) has been charged some gas (0.01 Eth):
+Finally, we can view the contract:
 
-![Alt text](https://asecuritysite.com/public/estate62.png)
-
-If we now look at Alice’s balance, we see she has one token:
-
-![Alt text](https://asecuritysite.com/public/estate63.png)
-
-And if we want to view the name and the owner of the token number 2, we get it here:
-
-![Alt text](https://asecuritysite.com/public/estate64.png)
-
-In this case, we see that Alice is the owner of the token (as she has an address of 0x39…).
+![Alt text](https://asecuritysite.com/public/eth_105.png)
 
 # Part B
 
