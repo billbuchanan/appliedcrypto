@@ -195,7 +195,7 @@ You need to mine for some Ether. We can do this on one of these faucets:
 
 
 ## Setting up your Ethereum wallet on Sepolia
-The Sepolia network allows a user to test an Ethereum application, and using free Ether. Initially setup your MetaMask wallet. A document to outline how you set this up is [here](https://github.com/billbuchanan/appliedcrypto/blob/main/unit08_blockchain/lab/Metamask.pdf). Once you have set it up, answer the following:
+The Sepolia network allows a user to test an Ethereum application and using free Ether. Initially, set up your MetaMask wallet. A document to outline how you set this up is [here](https://github.com/billbuchanan/appliedcrypto/blob/main/unit08_blockchain/lab/Metamask.pdf). Once you have set it up, answer the following:
 
 * What is your public ID (just define the first four hex values)?
 * Find out someone else's public ID, and send them 0.001 Ether. If you are doing the lab on your own, send it to Bill (ID: 0xbB15B38e4ef6aF154b89A2E57E03Cd5cbD752233 []).
@@ -203,6 +203,8 @@ The Sepolia network allows a user to test an Ethereum application, and using fre
 * Can you see your transaction on the Sepolia Ethereum network for the person you send it to?
 * What was the transaction fee for the transfer? If you were using the main Ethereum network, how much would the transaction cost in Dollars?
 * Ask someone to send you 0.001 Ether. Did you receive it? If you are doing the lab on your own, ask your lab tutor to send you 0.001 Ether.
+
+A demo of this part of the lab is [here](https://www.youtube.com/watch?v=xeaDE8wgVVQ).
 
 ## Creating a Smart Contract in Ethereum
 So, let’s write a bit of code that does some simple maths. In the following we will implement sqrt(), sqr(), mul(), sub(), and add(). First, we open up https://remix.ethereum.org/. and enter the following Solidy contract:
