@@ -8,7 +8,7 @@ Aim:		To provide a foundation for understanding Bitcoin and Blockchain.
 We will be using the Sepolia test network. If you have to setup your wallet, the details are:
 
 * Network name: Sepolia
-* RPC Url: https://rpc.sepolia.org
+* RPC Url: https://rpc.sepolia.org or https://sepolia.infura.io/
 * Chain ID: 11155111
 * Symbol: SepoliaEth
 * Explorer: https://sepolia.etherscan.io
