@@ -5,7 +5,7 @@
 Aim:		To provide a foundation for understanding Bitcoin and Blockchain.
 
 ## A Ethereum
-We will be using the Sepolia test network. If you have to setup your wallet, the details are:
+We will be using the Sepolia test network. If you have to set up your wallet, the details are:
 
 * Network name: Sepolia
 * RPC Url: https://rpc.sepolia.org or https://sepolia.infura.io/
