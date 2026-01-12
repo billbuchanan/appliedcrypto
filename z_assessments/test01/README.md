@@ -3,7 +3,7 @@
 # Test 1
 There will be four main questions in the exam: Symmetric Key (Unit 1), Hashing (Unit 2), Public Key (Unit 3), Key Exchange (Unit 4) and Digital Certificates (Unit 5). An outline is [here](https://www.youtube.com/watch?v=Oj3T2UO1WDw&feature=emb_title), and some learning outcomes are [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/learning_outcomes.md). A PDF version of the questions is [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/2021_fake_exam_questions.pdf) and a fake example paper is [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/fake_exam_paper.md).
 
-**Test date:** 17 Mar 2025: 6pm (campus-based - JKCC) or 6:30pm (distance-learning). The time of the test is 95 minutes (1 hour, 25 minutes).
+**Test date:** 16 Mar 2026: 6pm (campus-based - JKCC) or 6:30pm (distance-learning). The time of the test is 95 minutes (1 hour, 25 minutes).
 
 Some test details are:
 
@@ -12,7 +12,7 @@ Some test details are:
 * No use of chat/AI bots.
 * A copied answer is likely to be graded with a score of zero, and copying and pasting from on-line content could be highlighted for an issue.
 * No chat windows should be open for the test.
-* Distance learning student will need to enable remote desktop share and their Web camera.
+* Distance learning students will need to enable remote desktop share and their Web camera.
 
 ## Lectures
 The main lectures are [here](https://youtube.com/playlist?list=PLqhpVxkBo1dMOOH0R7t0SKftJF20hwzaE).
