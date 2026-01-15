@@ -34,7 +34,7 @@ print("PBKDF2 (SHA1):"+passlib.hash.pbkdf2_sha1.hash(string, salt=salt.encode())
 print ("PBKDF2 (SHA256):"+passlib.hash.pbkdf2_sha256.hash(string, salt=salt.encode()))
 print("PBKDF2 (SHA512):"+passlib.hash.pbkdf2_sha512.hash(string, salt=salt.encode()))
 print("CTA PBKDF2:"+passlib.hash.cta_pbkdf2_sha1.hash(string, salt=salt.encode()))
-print ("DLITZ PBKDF2:"+passlib.hash.dlitz_pbkdf2_sha1.hash(string, salt=salt.encode()))
+print ("DLITZ PBKDF2:"+passlib.hash.dlitz_pbkdf2_sha1.hash(string, salt=salt))
 
 print ("MS Windows Hashes")
 print ("LM Hash:"+passlib.hash.lmhash.hash(string))
