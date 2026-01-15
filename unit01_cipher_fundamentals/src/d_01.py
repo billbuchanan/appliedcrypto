@@ -12,15 +12,10 @@ def get_if_prime(val):
 
 	for k in range(0, 10000):
 		testval = 6 * k + 1;
-                if (testval>max):
-			break
-                if (val % testval == 0):
+        if (val % testval == 0):
 			return (False)
-                testval = 6 * k - 1;
-                if (testval>max):
-			break
- 
-                if (val % testval == 0):
+        testval = 6 * k - 1;
+        if (val % testval == 0):
 			return (False)
 	return (true)
 
