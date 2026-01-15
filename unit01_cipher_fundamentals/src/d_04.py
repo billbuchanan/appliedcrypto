@@ -46,6 +46,6 @@ def is_probable_prime(n):
 
 rtn=is_probable_prime(testval)
 if (rtn==True):
-	print str(testval) + " is a prime"
+	print (str(testval) + " is a prime")
 else:
-	print str(testval) + " is not a prime"
+	print (str(testval) + " is not a prime")
