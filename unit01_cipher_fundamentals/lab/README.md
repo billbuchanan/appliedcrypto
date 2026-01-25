@@ -26,6 +26,7 @@ Test for the following prime numbers:
 Using: [here](https://asecuritysite.com/principles_pub/gcd)
 
 Determine the GCD for the following:
+
 88, 46:
 
 105, 35: 
