@@ -7,13 +7,13 @@ Objective: The key objective of this lab is to be introduced to some of the fund
 Go to **vsoc2.napier.ac.uk** and find your folder. Run your Ubuntu instance [demo](https://youtu.be/v6H7lHblKes). The virtual machine's **password** is *napier123*. Lab demo: (Note that you will be using Ubuntu, while the demo shows Kali). A demo of the lab is [here](https://www.youtube.com/watch?v=v6H7lHblKes).
 
 ## Introduction
-Note: Most of the examples are in Python 3. If there are Python 2 examples, remember and put parenthesis around the print statement string, such as print (hex(val)).
+Note: Most of the examples are in Python 3. If there are Python 2 examples, remember to put parentheses around the print statement string, such as print (hex(val)).
 
 ### A.1	Is prime?
-Using: [here](http://asecuritysite.com/Encryption/testprime)
-
+Using: [here](https://asecuritysite.com/principles_pub/is_prime)
 
 Test for the following prime numbers:
+
 91: [Yes] [No]	
 
 421: [Yes] [No]
@@ -26,6 +26,7 @@ Test for the following prime numbers:
 Using: [here](https://asecuritysite.com/principles_pub/gcd)
 
 Determine the GCD for the following:
+
 88, 46:
 
 105, 35: 
@@ -152,20 +153,6 @@ In several cases in cryptography, we try and factorize a value into its factors.
 Web link (Factorization): [here](https://asecuritysite.com/primes/factors)
 
 Think of two extremely large values and determine their factors. 
-
-
-### A.13 Compression
-Another format we can use for our data is compression, and we can do the compression before or after the encryption process. One of the most popular methods is gzip compress, and which uses the LZ method to reduce the number of bits used. For this we will use node.js. Create a file named a_13.js and  determine what the following Base64 conversions are when they are uncompressed (Hint: they are cities of the World):
-
-Web link (Compression): [here](https://asecuritysite.com/encryption/gzip)
-
-Take a string of “abc” and compress it, and now keep building up the string with the same sequence (such as “abcabc…”). What do you observe from the length of the compression string if you use a random characters of the same length as an input:
-	
-```python
-eJzzyc9Lyc8DAAgpAms=
-eJxzSi3KycwDAAfXAl0=
-eJzzSy1XiMwvygYADKUC8A==
-```
 
 ## B	GCD
 GCD is known as the greatest common divisor, or greatest common factor (gcf), and is the largest positive integer that divides into two numbers without a remain-der. For example, the GCD of 9 and 15 is 3. It is used many encryption algorithms, and a sample algorithm to determine the GCD of two values (a and b) is given on:
