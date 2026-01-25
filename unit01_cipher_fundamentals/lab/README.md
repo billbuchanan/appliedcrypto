@@ -7,13 +7,13 @@ Objective: The key objective of this lab is to be introduced to some of the fund
 Go to **vsoc2.napier.ac.uk** and find your folder. Run your Ubuntu instance [demo](https://youtu.be/v6H7lHblKes). The virtual machine's **password** is *napier123*. Lab demo: (Note that you will be using Ubuntu, while the demo shows Kali). A demo of the lab is [here](https://www.youtube.com/watch?v=v6H7lHblKes).
 
 ## Introduction
-Note: Most of the examples are in Python 3. If there are Python 2 examples, remember and put parenthesis around the print statement string, such as print (hex(val)).
+Note: Most of the examples are in Python 3. If there are Python 2 examples, remember ato put parenthese around the print statement string, such as print (hex(val)).
 
 ### A.1	Is prime?
-Using: [here](http://asecuritysite.com/Encryption/testprime)
-
+Using: [here]([http://asecuritysite.com/Encryption/testprime](https://asecuritysite.com/principles_pub/is_prime))
 
 Test for the following prime numbers:
+
 91: [Yes] [No]	
 
 421: [Yes] [No]
