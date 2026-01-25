@@ -154,20 +154,6 @@ Web link (Factorization): [here](https://asecuritysite.com/primes/factors)
 
 Think of two extremely large values and determine their factors. 
 
-
-### A.13 Compression
-Another format we can use for our data is compression, and we can do the compression before or after the encryption process. One of the most popular methods is gzip compress, and which uses the LZ method to reduce the number of bits used. For this we will use node.js. Create a file named a_13.js and  determine what the following Base64 conversions are when they are uncompressed (Hint: they are cities of the World):
-
-Web link (Compression): [here](https://asecuritysite.com/encryption/gzip)
-
-Take a string of “abc” and compress it, and now keep building up the string with the same sequence (such as “abcabc…”). What do you observe from the length of the compression string if you use a random characters of the same length as an input:
-	
-```python
-eJzzyc9Lyc8DAAgpAms=
-eJxzSi3KycwDAAfXAl0=
-eJzzSy1XiMwvygYADKUC8A==
-```
-
 ## B	GCD
 GCD is known as the greatest common divisor, or greatest common factor (gcf), and is the largest positive integer that divides into two numbers without a remain-der. For example, the GCD of 9 and 15 is 3. It is used many encryption algorithms, and a sample algorithm to determine the GCD of two values (a and b) is given on:
 
