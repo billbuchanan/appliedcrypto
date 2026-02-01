@@ -8,16 +8,80 @@ Lab Demo: [here](https://youtu.be/N3UADaXmOik)
 Sample answers: [here](https://github.com/billbuchanan/appliedcrypto/blob/master/unit02_symmetric/lab/possible_ans.md)
 
 # Part 1: Standard Lab
-## A	OpenSSL
-OpenSSL is a standard tool that we used in encryption. It supports many of the standard symmetric key methods, including AES, 3DES and ChaCha20.
+## A Symmetric Key
+
+| No | Description | Result | 
+|-------|--------|---------|
+| 1 | Log into vSoC 2, and select your Ubuntu host (or your own AWS EC2 instance or virtual machine). | What is your IP address? |
+| 2 | Use: ```openssl list -cipher-commands``` | Outline five encryption methods that are supported:   |
+| 3 | Use: ```openssl version``` | Outline the version of OpenSSL:    |
+| 4 | Using openssl and the command in the form: ```openssl prime -hex 1111``` | Check if the following are prime numbers: |  42 [Yes][No] 1421 [Yes][No] | 
+| 5 | Now create a file named myfile.txt (either use nano or another editor). Next. encrypt with aes-256-cbc <br> ```openssl enc -aes-256-cbc -in myfile.txt -out encrypted.bin -pbkdf2``` and enter your password. | Use the following command to view the output file: ```cat encrypted.bin``` Is it easy to write out or transmit the output: [Yes][No]. What does the ```-pbkdf2``` part do? | 
+| 6 | Now repeat the previous command and add the –base64 option. <br>```openssl enc -aes-256-cbc -in myfile.txt -out encrypted.bin –base64 -pbkdf2``` | Use the following command to view the output file: ```cat encrypted.bin``` Is it easy to write out or transmit the output: [Yes][No]
+| 7 | Now repeat the previous command and observe the encrypted output. <br>```openssl enc -aes-256-cbc -in myfile.txt -out encrypted.bin –base64 -pbkdf2``` | Has the output changed? [Yes][No] Why has it changed? |
+| 8 | Now let’s decrypt the encrypted file with the correct format: ```openssl enc -d -aes-256-cbc -in encrypted.bin -pass pass:napier -base64 -pbkdf2``` Has the output been decrypted correctly? | What happens when you use the wrong password? |
+| 9 | If you are working in the lab, now give your secret passphrase to your neighbour, and get them to encrypt a secret message for you.  To receive a file, you listen on a given port (such as Port 1234) ```nc -l -p 1234 > enc.bin``` And then send to a given IP address with: ```nc -w 3 [IP] 1234 < enc.bin``` | Did you manage to decrypt their message? [Yes][No] | 
 
 
-### A.1	
+10.  With OpenSSL, we can define a fixed salt value that has been used in the ciphering process. For example, in Linux:
 
-Using: 
+```
+echo -n "Hello" | openssl enc -aes-128-cbc -pass pass:"london" -e -base64 -S 241fa86763b85341 -pbkdf2
+```
+and then decrypt:
+```
+echo 9Z+NtmCdQSpmRl+eZebFXQ== | openssl enc -aes-128-cbc -pass pass:"london" -d  -base64 -S 241fa86763b85341 -pbkdf2
 
-* openssl list -cipher-commands
-* openssl version
+Hello     
+```  
+
+For a ciphertext for 256-bit AES CBC and a message of “Hello” with a salt value of  ```241fa86763b85341```, try the following passwords, and determine the password used for a ciphertext of ```tZCdiQE4L6QT+Dff82F5bw==```   [qwerty][inkwell][london][paris][cake]
+
+
+11. Now, use the decryption method to prove that you can decrypt the ciphertext.
+
+```
+echo tZCdiQE4L6QT+Dff82F5bw== | openssl enc -aes-256-cbc -pass pass:"password" -d  -base64 -S 241fa86763b85341 -pbkdf2
+```
+
+Did you confirm the right password? [Yes/No] 
+
+12.  Investigate the following commands by running them several times:
+```
+echo -n "Hello" | openssl enc -aes-128-cbc -pass pass:"london" -e -base64 -S 241fa86763b85341 -pbkdf2
+echo -n "Hello" | openssl enc -aes-128-cbc -pass pass:"london" -e -base64 -salt -pbkdf2
+```
+What do you observe? Why do you think causes the changes? 
+
+13. We don't always need to use a file to save the cipher, too. With the following, we will encrypt the plaintext of "melon":
+
+```
+echo "melon" | openssl enc -e -aes-128-cbc  -pass pass:stirling -base64 -pbkdf2         
+U2FsdGVkX18cryB3vdNj+Tax1PGecO6ZOW2WL1LmdKQ=
+```
+and then we can decrypt with:
+
+```
+echo "U2FsdGVkX18cryB3vdNj+Tax1PGecO6ZOW2WL1LmdKQ=" | openssl enc -d -aes-128-cbc -pass pass:stirling -base64 -pbkdf2
+
+melon
+```
+
+Now crack the following cipher using a Scottish city as a password (the password is in lower case):
+
+```
+U2FsdGVkX1+7VpBGwevibQGgescaz5nsArtGLNqFaXk=
+```
+
+What is the fruit in the plaintext?
+
+Now try:
+
+```
+U2FsdGVkX18vpjgccu7VkPZrkncqADuy1kVKU9LbLec=
+```
+
+What is the fruit?
 
 Outline five encryption methods that are supported:
 
