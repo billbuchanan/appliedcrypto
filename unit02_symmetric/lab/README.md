@@ -12,7 +12,7 @@ Sample answers: [here](https://github.com/billbuchanan/appliedcrypto/blob/master
 
 | No | Description | Result | 
 |-------|--------|---------|
-| 1 | Log into vSoC 2, and select your Kali host on the public network. | What is your IP address? |
+| 1 | Log into vSoC 2, and select your Ubuntu host (or your own AWS EC2 instance or virtual machine). | What is your IP address? |
 | 2 | Use: ```openssl list -cipher-commands``` | Outline five encryption methods that are supported:   |
 | 3 | Use: ```openssl version``` | Outline the version of OpenSSL:    |
 | 4 | Using openssl and the command in the form: ```openssl prime -hex 1111``` | Check if the following are prime numbers: |  42 [Yes][No] 1421 [Yes][No] | 
@@ -23,7 +23,7 @@ Sample answers: [here](https://github.com/billbuchanan/appliedcrypto/blob/master
 | 9 | If you are working in the lab, now give your secret passphrase to your neighbour, and get them to encrypt a secret message for you.  To receive a file, you listen on a given port (such as Port 1234) ```nc -l -p 1234 > enc.bin``` And then send to a given IP address with: ```nc -w 3 [IP] 1234 < enc.bin``` | Did you manage to decrypt their message? [Yes][No] | 
 
 
-10.  With OpenSSL, we can define a fixed salt value that has been used in the cipher process. For example, in Linux:
+10.  With OpenSSL, we can define a fixed salt value that has been used in the ciphering process. For example, in Linux:
 
 ```
 echo -n "Hello" | openssl enc -aes-128-cbc -pass pass:"london" -e -base64 -S 241fa86763b85341 -pbkdf2
