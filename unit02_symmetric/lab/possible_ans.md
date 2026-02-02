@@ -56,47 +56,13 @@ echo -n "Hello" | openssl enc -aes-256-cbc -pass pass:"paris" -e -base64 -S 241f
 tZCdiQE4L6QT+Dff82F5bw==
 ```
 
-
-## Q9
+## Q11
 
 ```
 echo tZCdiQE4L6QT+Dff82F5bw== | openssl enc -aes-256-cbc -pass pass:paris"" -d  -base64 -S 241fa86763b85341 -pbkdf2
 Hello
 ```
 
-## Q10
-
-```
-echo -n "Hello" | openssl enc -aes-128-cbc -pass pass:"london" -e -base64 -S 241fa86763b85341 -pbkdf2
-echo -n "Hello" | openssl enc -aes-128-cbc -pass pass:"london" -e -base64 -salt -pbkdf2
-
-9Z+NtmCdQSpmRl+eZebFXQ==
-U2FsdGVkX1/8ajTn5wyaPAk2PBG/n+nJ38w1N/vZt38=
-
-echo -n "Hello" | openssl enc -aes-128-cbc -pass pass:"london" -e -base64 -S 241fa86763b85341 -pbkdf2
-echo -n "Hello" | openssl enc -aes-128-cbc -pass pass:"london" -e -base64 -salt -pbkdf2
-
-9Z+NtmCdQSpmRl+eZebFXQ==
-U2FsdGVkX1/VCIe2O1KaYL4NhwY5lpAPO9wMtyWc9Xo=
-```
-
-With the first command, we use the same salt value each time, but the second command uses a random salt value, so it will change each time. 
-
-## Q11
-
-Part 1 (password is glasgow):
-```
-echo "U2FsdGVkX1+7VpBGwevibQGgescaz5nsArtGLNqFaXk="  | openssl enc -d -aes-128-cbc  -pass pass:glasgow -base64 -pbkdf2
-banana
-
-```
-
-Part 2 (password is edinburgh): 
-```
-echo "U2FsdGVkX18vpjgccu7VkPZrkncqADuy1kVKU9LbLec=" | openssl enc -d -aes-128-cbc  -pass pass:edinburgh -base64 -pbkdf2
-kiwi
-
-```
 
 ## Q12
 
@@ -120,6 +86,22 @@ When we have a fixed salt value, we get the same cipher each time for a given sy
 9Z+NtmCdQSpmRl+eZebFXQ==
 % echo -n "Hello" | openssl enc -aes-128-cbc -pass pass:"london" -e -base64 -S 241fa86763b85341 -pbkdf2
 9Z+NtmCdQSpmRl+eZebFXQ==
+```
+
+## Q13
+
+Part 1 (password is glasgow):
+```
+echo "U2FsdGVkX1+7VpBGwevibQGgescaz5nsArtGLNqFaXk="  | openssl enc -d -aes-128-cbc  -pass pass:glasgow -base64 -pbkdf2
+banana
+
+```
+
+Part 2 (password is edinburgh): 
+```
+echo "U2FsdGVkX18vpjgccu7VkPZrkncqADuy1kVKU9LbLec=" | openssl enc -d -aes-128-cbc  -pass pass:edinburgh -base64 -pbkdf2
+kiwi
+
 ```
 ## D Python Coding (Encrypting)
 ### D.1
