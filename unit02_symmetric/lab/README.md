@@ -7,6 +7,12 @@ Lab Demo: [here](https://youtu.be/N3UADaXmOik)
 
 Sample answers: [here](https://github.com/billbuchanan/appliedcrypto/blob/master/unit02_symmetric/lab/possible_ans.md)
 
+You can complete:
+
+* Standard lab [here](https://github.com/billbuchanan/appliedcrypto/tree/main/unit02_symmetric/lab#a-symmetric-key).
+* Advanced lab [here](https://github.com/billbuchanan/appliedcrypto/tree/main/unit02_symmetric/lab#part-2-advanced-lab).
+* AWS Lab [here](https://github.com/billbuchanan/appliedcrypto/tree/main/unit02_symmetric/lab#part-2-advanced-lab).
+* 
 # Part 1: Standard Lab
 ## A Symmetric Key
 
