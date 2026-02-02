@@ -12,15 +12,15 @@ Sample answers: [here](https://github.com/billbuchanan/appliedcrypto/blob/master
 
 | No | Description | Result | 
 |-------|--------|---------|
-| 1 | Log into vSoC 2, and select your Ubuntu host (or your own AWS EC2 instance or virtual machine). | What is your IP address? |
-| 2 | Use: ```openssl list -cipher-commands``` | Outline five encryption methods that are supported:   |
-| 3 | Use: ```openssl version``` | Outline the version of OpenSSL:    |
-| 4 | Using openssl and the command in the form: ```openssl prime -hex 1111``` | Check if the following are prime numbers: |  42 [Yes][No] 1421 [Yes][No] | 
-| 5 | Now create a file named myfile.txt (either use nano or another editor). Next. encrypt with aes-256-cbc <br> ```openssl enc -aes-256-cbc -in myfile.txt -out encrypted.bin -pbkdf2``` and enter your password. | Use the following command to view the output file: ```cat encrypted.bin``` Is it easy to write out or transmit the output: [Yes][No]. What does the ```-pbkdf2``` part do? | 
-| 6 | Now repeat the previous command and add the –base64 option. <br>```openssl enc -aes-256-cbc -in myfile.txt -out encrypted.bin –base64 -pbkdf2``` | Use the following command to view the output file: ```cat encrypted.bin``` Is it easy to write out or transmit the output: [Yes][No]
-| 7 | Now repeat the previous command and observe the encrypted output. <br>```openssl enc -aes-256-cbc -in myfile.txt -out encrypted.bin –base64 -pbkdf2``` | Has the output changed? [Yes][No] Why has it changed? |
-| 8 | Now let’s decrypt the encrypted file with the correct format: ```openssl enc -d -aes-256-cbc -in encrypted.bin -pass pass:napier -base64 -pbkdf2``` Has the output been decrypted correctly? | What happens when you use the wrong password? |
-| 9 | If you are working in the lab, now give your secret passphrase to your neighbour, and get them to encrypt a secret message for you.  To receive a file, you listen on a given port (such as Port 1234) ```nc -l -p 1234 > enc.bin``` And then send to a given IP address with: ```nc -w 3 [IP] 1234 < enc.bin``` | Did you manage to decrypt their message? [Yes][No] | 
+|  | Log into vSoC 2, and select your Ubuntu host (or your own AWS EC2 instance or virtual machine). | What is your IP address? |
+| 1 | Use: ```openssl list -cipher-commands``` | Outline five encryption methods that are supported:   |
+|  | Use: ```openssl version``` | Outline the version of OpenSSL:    |
+| 2 | Using openssl and the command in the form: ```openssl prime -hex 1111``` | Check if the following are prime numbers: <br> 42 [Yes][No] 1421 [Yes][No] | 
+| 3 | Now create a file named myfile.txt (either use nano or another editor). Next. encrypt with aes-256-cbc <br> ```openssl enc -aes-256-cbc -in myfile.txt -out encrypted.bin -pbkdf2``` and enter your password. | Use the following command to view the output file: ```cat encrypted.bin``` Is it easy to write out or transmit the output: [Yes][No]. What does the ```-pbkdf2``` part do? | 
+| 4 | Now repeat the previous command and add the –base64 option. <br>```openssl enc -aes-256-cbc -in myfile.txt -out encrypted.bin –base64 -pbkdf2``` | Use the following command to view the output file: ```cat encrypted.bin``` Is it easy to write out or transmit the output: [Yes][No]
+| 5 | Now repeat the previous command and observe the encrypted output. <br>```openssl enc -aes-256-cbc -in myfile.txt -out encrypted.bin –base64 -pbkdf2``` | Has the output changed? [Yes][No] Why has it changed? |
+| 6 | Now let’s decrypt the encrypted file with the correct format: ```openssl enc -d -aes-256-cbc -in encrypted.bin -pass pass:napier -base64 -pbkdf2``` Has the output been decrypted correctly? | What happens when you use the wrong password? |
+| 7 | If you are working in the lab, now give your secret passphrase to your neighbour, and get them to encrypt a secret message for you.  To receive a file, you listen on a given port (such as Port 1234) ```nc -l -p 1234 > enc.bin``` And then send to a given IP address with: ```nc -w 3 [IP] 1234 < enc.bin``` | Did you manage to decrypt their message? [Yes][No] | 
 
 
 10.  With OpenSSL, we can define a fixed salt value that has been used in the ciphering process. For example, in Linux:

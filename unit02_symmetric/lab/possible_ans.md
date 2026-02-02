@@ -1,41 +1,102 @@
 ## A OpenSSL
 ### A.1 - A.7
 
-A.1) 
+## Q2
+```
+% openssl version
+OpenSSL 3.3.1 4 Jun 2024 (Library: OpenSSL 3.3.1 4 Jun 2024)
+```
 
-     openssl list -cipher-commands
+## Q3
+```
+% openssl prime -hex 1111 
+1111 (1111) is not prime
 
-     openssl version
+```
 
-A.2) 
+## Q4
+```
+% openssl enc -aes-256-cbc -in myfile.txt -out encrypted.bin -pbkdf2
+enter AES-256-CBC encryption password:
+Verifying - enter AES-256-CBC encryption password:
+% cat encrypted.bin 
+Salted__?P*?!\ ???	8???]?\[?B%   
+```
 
-     openssl prime –hex 1111
+## Q5
 
-A.3)
+```
+% openssl enc -aes-256-cbc -in myfile.txt -out encrypted.bin -base64 -pbkdf2
+enter AES-256-CBC encryption password:
+Verifying - enter AES-256-CBC encryption password:
+% cat encrypted.bin 
+U2FsdGVkX18fxEIzLHSfpYfpaLajibZ7ScHDCqemSEw=
+```
 
-     openssl enc -aes-256-cbc -in myfile.txt -out encrypted.bin
+## Q6
+```
+% openssl enc -aes-256-cbc -in myfile.txt -out encrypted.bin -base64 -pbkdf2
+enter AES-256-CBC encryption password:
+Verifying - enter AES-256-CBC encryption password:
+% cat encrypted.bin
+U2FsdGVkX19d2L46jUg46+IO1WOOAjKJ/0O473YMxlI=
+```
 
-A.4)
+We use a random salt value each time, as we have now specified a salt value.
 
-     openssl enc -aes-256-cbc -in myfile.txt -out encrypted.bin -base64
+## Q7
+```
+% openssl enc -d -aes-256-cbc -in encrypted.bin -pass pass:napier -base64 -pbkdf2
+My message
+```
+## Q8
 
-A.6)
+```
+echo -n "Hello" | openssl enc -aes-256-cbc -pass pass:"paris" -e -base64 -S 241fa86763b85341 -pbkdf2
+tZCdiQE4L6QT+Dff82F5bw==
+```
 
-If you used ***napier*** as the password, you can decrypt the file using:
 
-     openssl enc -d -aes-256-cbc -in encrypted.bin -pass pass:napier -base64
+## Q9
 
-A.7)
+```
+echo tZCdiQE4L6QT+Dff82F5bw== | openssl enc -aes-256-cbc -pass pass:paris"" -d  -base64 -S 241fa86763b85341 -pbkdf2
+Hello
+```
 
-Encrypt the file using blowfish:
+## Q10
 
-     openssl enc -blowfish -in myfile.txt -out encrypted.bin -base64
-     
-If you used ***napier*** as the password, you can decrypt the file using:
+```
+echo -n "Hello" | openssl enc -aes-128-cbc -pass pass:"london" -e -base64 -S 241fa86763b85341 -pbkdf2
+echo -n "Hello" | openssl enc -aes-128-cbc -pass pass:"london" -e -base64 -salt -pbkdf2
 
-     openssl enc -d -blowfish -in encrypted.bin -pass pass:napier -base64 
-     
-**NOTE:** if you get an empty output, ensure that you have added a super secret message in the *myfile.txt* and execute again the previous commands.
+9Z+NtmCdQSpmRl+eZebFXQ==
+U2FsdGVkX1/8ajTn5wyaPAk2PBG/n+nJ38w1N/vZt38=
+
+echo -n "Hello" | openssl enc -aes-128-cbc -pass pass:"london" -e -base64 -S 241fa86763b85341 -pbkdf2
+echo -n "Hello" | openssl enc -aes-128-cbc -pass pass:"london" -e -base64 -salt -pbkdf2
+
+9Z+NtmCdQSpmRl+eZebFXQ==
+U2FsdGVkX1/VCIe2O1KaYL4NhwY5lpAPO9wMtyWc9Xo=
+```
+
+With the first command, we use the same salt value each time, but the second command uses a random salt value, so it will change each time. 
+
+## Q11
+
+Part 1 (password is glasgow):
+```
+echo "U2FsdGVkX1+7VpBGwevibQGgescaz5nsArtGLNqFaXk="  | openssl enc -d -aes-128-cbc  -pass pass:glasgow -base64 -pbkdf2
+banana
+
+```
+
+Part 2 (password is edinburgh): 
+```
+echo "U2FsdGVkX18vpjgccu7VkPZrkncqADuy1kVKU9LbLec=" | openssl enc -d -aes-128-cbc  -pass pass:edinburgh -base64 -pbkdf2
+kiwi
+
+```
 
 ## D Python Coding (Encrypting)
 ### D.1
