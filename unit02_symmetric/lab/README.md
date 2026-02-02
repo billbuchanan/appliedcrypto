@@ -389,10 +389,10 @@ Now modify your coding for 256-bit AES ECB encryption so that you can enter the 
 | 029c4dd71cdae632ec33e2be7674cc14 |	“changeme”| |
 | d8f11e13d25771e83898efdbad0e522c |	“123456”| |
 
-Now modify your coding for 64-bit DES ECB encryption so that you can enter the ciphertext and an encryption key, and the code will decrypt to provide the result. You should use CMS for padding. With this, determine the plaintext for the following (note, all the plain text values are countries around the World):
+Now modify your coding for 64-bit 3DES ECB encryption so that you can enter the ciphertext and an encryption key, and the code will decrypt to provide the result. You should use CMS for padding. With this, determine the plaintext for the following (note, all the plain text values are countries around the World):
 
 
-| CMS Cipher (64-bit DES ECB) |		Key 	|	Plain text |
+| CMS Cipher (64-bit 3DES ECB) |		Key 	|	Plain text |
 |-----------|-----------|-----------|
 | f37ee42f2267458d	| 	“hello” |  | 
 | 67b7d1162394b868	| 	“ankle” |  | 
