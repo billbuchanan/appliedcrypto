@@ -110,6 +110,17 @@ U2FsdGVkX1/a7uOjGnWDGkl1gtCmcp+y+AwIGS0uP8o=
 % echo -n "Hello" | openssl enc -aes-128-cbc -pass pass:"london" -e -base64 -salt -pbkdf2
 U2FsdGVkX1/8PQ8BeSd1P4wYso+XSKSf1pSrsbG6WPo=
 ```
+
+When we have a fixed salt value, we get the same cipher each time for a given symmetric key:
+
+```
+% echo -n "Hello" | openssl enc -aes-128-cbc -pass pass:"london" -e -base64 -S 241fa86763b85341 -pbkdf2
+9Z+NtmCdQSpmRl+eZebFXQ==
+% echo -n "Hello" | openssl enc -aes-128-cbc -pass pass:"london" -e -base64 -S 241fa86763b85341 -pbkdf2
+9Z+NtmCdQSpmRl+eZebFXQ==
+% echo -n "Hello" | openssl enc -aes-128-cbc -pass pass:"london" -e -base64 -S 241fa86763b85341 -pbkdf2
+9Z+NtmCdQSpmRl+eZebFXQ==
+```
 ## D Python Coding (Encrypting)
 ### D.1
 
