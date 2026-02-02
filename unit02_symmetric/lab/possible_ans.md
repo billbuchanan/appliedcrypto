@@ -98,6 +98,18 @@ kiwi
 
 ```
 
+## Q12
+
+With the -salt value we generate a different cipher each time, as we generate a different salt value:
+
+```
+% echo -n "Hello" | openssl enc -aes-128-cbc -pass pass:"london" -e -base64 -salt -pbkdf2
+U2FsdGVkX1/baLG/7GCmdxeaT4un1m6VStqZ5vUtCx8=
+% echo -n "Hello" | openssl enc -aes-128-cbc -pass pass:"london" -e -base64 -salt -pbkdf2
+U2FsdGVkX1/a7uOjGnWDGkl1gtCmcp+y+AwIGS0uP8o=
+% echo -n "Hello" | openssl enc -aes-128-cbc -pass pass:"london" -e -base64 -salt -pbkdf2
+U2FsdGVkX1/8PQ8BeSd1P4wYso+XSKSf1pSrsbG6WPo=
+```
 ## D Python Coding (Encrypting)
 ### D.1
 
