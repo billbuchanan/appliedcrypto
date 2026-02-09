@@ -68,7 +68,7 @@ SHA-384 hex chars:
 
 SHA-512 hex chars:
 
-How does the number of hex characters relate to the length of the hash signature:
+How does the number of hex characters relate to the length of the hash signature?
 
 
 ### A.4	
@@ -119,13 +119,13 @@ From Ubuntu, download the following ZIP file:
 
 Web link (PS Files): [here](http://asecuritysite.com/letters.zip)
 
-On your Ubuntu instance, you should be able to view the files by double clicking on them in the file explorer (as you should have a PostScript viewer installed).
+On your Ubuntu instance, you should be able to view the files by double-clicking on them in the file explorer (as you should have a PostScript viewer installed).
 
 Do the files have different contents?
 
 
 
-Now determine the MD5 signature for them. What can you observe from the result?
+Now, determine the MD5 signature for them. What can you observe from the result?
 
 
 
@@ -143,6 +143,12 @@ Hash rate for SHA-256:
 Hash rate for APR1:
 
 **Hint** - You can use *hashcat --help* to find all the flags that you can use!
+
+Also, if you want to remove the hashed password you have already cracked, you can:
+
+```
+rm .hashcat\hashcat.potfile
+```
 
 ### B.2	
 On Ubuntu, next create a word file (words) with the words of “napier”, “password” “Ankle123” and “inkwell”
