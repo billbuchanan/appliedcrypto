@@ -23,7 +23,7 @@ You are requested to investigate, build a prototype, and evaluate one of the fol
 * **Passwordless systems**. This supports MFA using biometrics, NFC, and BLE, and supports FIDO2 using public key encryption.
 * **Privacy-Preserving Machine Learning**. With this, we can use cryptographic methods to preserve the privacy of our data for machine-learning applications.
 * **Assessment of AI-generated code**. GenAI can be used to generate cryptographic code for a given specification. This requirement will investigate the success of the code generation of a given specification and assess its success or otherwise, and will involve compiling the code, and then assessing its performance with human-written performance, or could relate to a static analysis of the code.
-* **Side Challenge Analysis of Cryptography**. Cryptographic code - if not designed correctly - can leak information within the execution of code. This specification will set up running code that could be used to assess whether there is information leaked from the execution of the code, such as for bits in the encryption key used.
+* **Side Challenge Analysis of Cryptography**. Cryptographic code - if not designed correctly - can leak information within the execution of code. This specification will set up running code that can be used to assess whether information is leaked during code execution, such as bits of the encryption key used.
 
 There are many different methods involved in each of these areas, so while your literature review might have a relatively wide scope, you might want to focus in on one or more methods for your implementation and evaluation. You may also pick another related area, but this would have to be approved by your tutor.
 
