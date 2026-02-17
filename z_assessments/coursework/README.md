@@ -12,6 +12,7 @@ You are requested to investigate, build a prototype, and evaluate one of the fol
 
 * **Zero-knowledge proof (ZKP) methods**. This involves using cryptography to allow users to prove shared knowledge without having to reveal the original information. This might involve passing on knowledge of a password, without actually revealing the password.
 * **Homomorphic encryption**. This involves processing encrypted data and can be partial homomorphic encryption (where a few mathematical methods can be implemented) or full homomorphic encryption.
+* **AI and Cryptographic flaws**. This involves using GenAI to investigate how it can be used to identify flaws in cryptographic code, such as static flaws caused by the incorrect parameters, or in dynamic flaws, such as pointer memory violations.
 * **Light-weight cryptography**. This involves cryptography methods that support encryption, which are suitable for IoT devices. This is normally optimised in terms of reducing processing requirements, memory utilisation, and energy drain.
 * **Quantum-robust cryptography**. Quantum computers are likely to crack existing public key methods, and thus we need to move toward public key methods which are quantum robust.
 * **Key Distribution Centres**. The complexity of handling keys is an increasing challenge for many companies. Within a KDC, we can implement methods which will generate encryption keys for users. This topic will involve investigating possible methods that could be used.
@@ -20,6 +21,7 @@ You are requested to investigate, build a prototype, and evaluate one of the fol
 * **IPFS (Interplanetary File System)**. This breaks files into chunks and then distributes them around the world and where we can integrate version control on files. Overall, it has advanced in reducing latency, improving resilience, and avoiding censorship.
 * **Passwordless systems**. This supports MFA using biometrics, NFC, and BLE, and supports FIDO2 using public key encryption.
 * **Privacy-Preserving Machine Learning**. With this, we can use cryptographic methods to preserve the privacy of our data for machine-learning applications.
+  **Assessment of AI-generated code**. GenAI can be used to generate cryptographic code for a given purpose. This requirement will investigate the success of the code generation of a given specification and assess its success or otherwise. 
 
 There are many different methods involved in each of these areas, so while your literature review might have a relatively wide scope, you might want to focus in on one or more methods for your implementation and evaluation. You may also pick another related area, but this would have to be approved by your tutor.
 
