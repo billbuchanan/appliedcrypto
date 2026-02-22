@@ -15,55 +15,56 @@ Note: If you are using Python 3, instead of "pip install pycrypto" you can insta
 With public key encryption, we can use the public key to either encrypt data, or it can be used to prove a digital signature. The following is a public key generated with the GPG program:
 ```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: GnuPG v2.0.21 (MingW32)
 
-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
-=R5Hk
+mQINBGAtkzYBEACkIejC2VRgZQ9uWwDlgdwtzNb6zQ3TPk6hU604XB+8eYAhM8q7
++u19vbnKQfT+asaunJO6VGdTAyUwJqYAnQAguAMOJpYcMVfLFdFkxmJ/WHssxtZN
+Y5Y0uJ8w5jQhPhBTN0CIFBgcM95gUxADbIDZoxhL8PcCz7C/d9a1AItZLg/QWkXp
+k0sQdvM+ki3kCoa7cVF499NgXNmkdUIdbFxR/l6nhMO0y8ZC5rc1GVTVKeKmFjZ5
+obPKv9Gzrg0hFqe8v0M2UkdVDUhQxRPhvofhKuATF3oTVjCpdsiAnoE5ym4TKYS6
+nnJykQnDdk0sLjjDy3ypfPXzSj4guJRi46AtYi/gsKNob52va3kdXjf/ZrRP4+PS
+N6ODYP0VBaCQ58KGYIzjNWXwB2U8dk/WFLAL5kvj0jEIr0DzJyxaW3kZ6XXQlHTB
+Um+PFd3h6nPSXq/7f69y3Wdlda4WeJSXXk2MUzVdlOlQIJxtyt4z/o2zi0cYqgP6
+ZBLu9T8rhJY447sTiZx/8eDCdhGLtkMkqS8vxxpbonRKaog1hJ0cYKO13QmsudSp
+n/23cO7gdIWMzGxYW5MFiHmNLo/9vCWbQPhM07Z+lunTlZIHVDGbjpfeNuJKU+uZ
+NtUhec+rOcf+Fl2Wh8PTOy0J13sEgJLf8w4SOlPR8wWkEuu0uC26fm1MRQARAQAB
+tCdCaWxsIEJ1Y2hhbmFuIDxCLkJ1Y2hhbmFuQG5hcGllci5hYy51az6JAlQEEwEI
+AD4CGwMFCwkIBwIGFQoJCAsCBBYCAwECHgECF4AWIQSIFvygLS/JJTJT9vZIquNs
+qTrj2AUCZ7MoYgUJDTJqJgAKCRBIquNsqTrj2NTAEACYQNG9cY37izksv3+YkrgA
+hq7aIoECCFQ8vg+dDRRhXWFsDJ7XOc/w8o4y4TyPoMPSz7p+SpU0af6Xvn/j+Zu7
+U0ZXLQGBkfkl6enddHOIi34gy9QdpKtxSWvHrLT1c+keyUP5wVotnqrebJnNqTQc
+iIQcB0G8iw0TC3nIIv8OdzExmuG3eKcCSNTAEBws5/H9J5d/4YA48IGG7Xw6chE5
+PS/JUqLLEf4EbrJ+VpNBLnWrREmgDiWFNdJEIbfQlZLUwlSVNgwOIuvT6W9BVmQJ
+mGRXj+5mo1/vDIj1mPKWrPs/+avXW7eo8PJc013xODE5XJyocHRD+Bfp8smrG0wG
+/MxONrtL6IVTEzmwMFDwD+XSjMZpCrXqscDyoAqU92Eqlkaf8dqWmcMNtU5UU+HT
+hZBcs2uTB2P30/2O9LU1e64gHoLJBSQLEYh5dFRkIgQOCr/pjLCCAKg3oQflt36X
+wRj/RLcj1eoARNbeNOoN1yAnlTYUxTxY3Pdgs/O15bcD0DYUAKrRNsXzHuPeKU6X
+2A7UeqbIbNqfV/yyJaxT0B7NZlZ2X0+LBNg1+euhawfcNxlZZTnP04lX85dL9nnE
+5YbW5GUYRgo3N1AiqsvQrZ45Qd9DOmIiMw6WhtaJ3Lhve6imrPS0H6y+U09q/RPQ
+Y5dG8XrrUVTQGtkDzpvOybkCDQRgLZM2ARAAsfxQeEZirG6H6zhKSlPRhnVqUIQA
+F5LSnCaIdjPxVtO1y6GESwT3vkRcNqEaCSFh4cMKeLZjYPWAuqriKVmPBvp8TBQa
+YTLcBZRBBCYeqVYdklDDChW8xcrWzIYs5vHOhnHklEZGsnGkpV8zScJIG3iKqINp
+5i3SjnUKBooDR0dKHcv3mA3BHm6HBR9EqVMoTq42ssPypOtB3jHFPB9mxzIHOCrc
+U851IRMhRxiIFFPldFQNeucNWCTAmiBFBAZmW5sOjfeOvWd0R7iPatdqK+0QeBx+
+MbeIEYNBfoLwedMDMszmtGidPhoc3bECzp3JFW6VTetvb/84eO/WdZXtOectMVJP
+QXcyfzu0OMqWNV9tOHxsCXUY1tvJWYm+AiTuSbyuJv6UI/LyfbqDBYX2yNHw1iTY
+HIjjk02RER9R4Wk0PdLxQlb7r5zwNOIM5mz7202BunB0e4qLbpH2tp9zLxrUxc8r
+XqvSmTRv6NE95gPvagWORVnIe96Ag6kRA/ifstZQEldlB7LLWetpmDLj+wcdXMur
+qHiPUJxg9vdZ939P/1AXM2iSLYp76VR0NR3WnavOwv8xLkGn0sYXBOKOMh8AGvUT
+oAjFGfCIAlAw7ZcXyfbtgpmBnVCcQKu7Ft7x/L5Wh5XCeHJa4eih09I4d248yDr+
+rB4ZBqbjh/b1IX0AEQEAAYkCPAQYAQgAJgIbDBYhBIgW/KAtL8klMlP29kiq42yp
+OuPYBQJnuIjWBQkJafXmAAoJEEiq42ypOuPY+h0P/3e8YtIqHMALBYh1Ct/P/zqZ
+FF1i2uzqmxC9oZg4ul/ex8nqdC1fku+leEOsd9uLMuvNFe8pUrVD2nhv+STV2njN
+fxR1yUJs2vNTXIbqRpQHbbc2bV5oSEOycXvxWRdT9fEkYaKxQlmvkU7AcUode4Uy
+nsg0L9JxPLEEmaDfxr67rHu8DaKdP/w9bOBjKA6AER9RG3QBuoaZ/FzuWmiZI/GE
+mzwMZJq+SINbcfmYWM+4tZYGotxlMRNMCatMKr4iyWQzH1C32049nTMqM0gm6CqX
+LEL2z8HhQgPSZbjYmS1IHFH7Rj8AWj1crkhfC8Vv0AWnygveUxtbvk7HHmFsy3MY
+yudwDavhy3uB/Z4SYXlGqhCiI8ozId+BOL9BAzU/2eEJ/2jog8pwVFRKcW6mQGuV
+/H1q/bVjkHNdwvQqufMDVfqCO8GCVOS/rvVwdeAzyCgj8lYTji2VP+H685QafmUE
+t68N/MOF/W/Ptg2aQ1ZsGvu/4SZgi3Se57XQuXzFAJjcPRlYoIGLAXcFsFzfxQ8J
+eoWAoSN2RsMRf3ibZ+nPz/xWv1hC1qIlSvBRIxG272noBrQR1yZf6Q+dqsEFVQvd
+JLFL7JcerCAeiAgvrTzP14jK9hzo+b0KtxUhpwHceWi9hRHmknTYgM8RCOI5djXQ
+n+wpRYh/3mkaDswQf93n
+=zhEX
 -----END PGP PUBLIC KEY BLOCK-----
 ```
 
@@ -754,7 +755,7 @@ gpg –d myfile.asc > myfile.txt
 
 Can you decrypt the message:
 
-#### 5. Next using this public key file, send Bill (w.buchanan@napier.ac.uk) a question (http://asecuritysite.com/public.txt):
+#### 5. Next, using this public key file, send Bill (w.buchanan@napier.ac.uk) a question (http://asecuritysite.com/public.txt):
 
 ```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
@@ -771,19 +772,19 @@ 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
-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
+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
@@ -794,21 +795,21 @@ HIjjk02RER9R4Wk0PdLxQlb7r5zwNOIM5mz7202BunB0e4qLbpH2tp9zLxrUxc8r
 XqvSmTRv6NE95gPvagWORVnIe96Ag6kRA/ifstZQEldlB7LLWetpmDLj+wcdXMur
 qHiPUJxg9vdZ939P/1AXM2iSLYp76VR0NR3WnavOwv8xLkGn0sYXBOKOMh8AGvUT
 oAjFGfCIAlAw7ZcXyfbtgpmBnVCcQKu7Ft7x/L5Wh5XCeHJa4eih09I4d248yDr+
-rB4ZBqbjh/b1IX0AEQEAAYkCPAQYAQgAJhYhBIgW/KAtL8klMlP29kiq42ypOuPY
-BQJgLZM2AhsMBQkHhh9mAAoJEEiq42ypOuPYUHQP/0tDfIRQtpfepxMweq04Kw7Q
-BvEL5VVKpx5aTSq4aEU8LBFbs+DJjzkFq69YXfVlHGlt1+I5B+Aglmv+Qy/v/eo7
-dNwtPQ0uVSd8vqNIjB0QxBZ2Sx86zMbxifRno/hetQK3dXdxJO7L7KBDBX/4W8wl
-vxVPb4hufOE8UDldqm0J1OHfB8d4NXKoLibqagELWwbyG+QxsdINMEApaqjKEEv+
-Suu6Pn6eSvfjJUdRXL3aDqm4sVNwnmjJREy6640fErv0VdfkoO9W9j7h1dE3ij5W
-HUVXOCmFwKZWGv7C1qOZoCP8kvNu/KT2KvyKlywdft8X5eGVFu7XNZqxNw8w2b6c
-Obk+jFONuSNDEkpatvRkqcl4ZKT9d1lSTgLhMYEOyeRM+IyKjYtGNjXvTI+CW7xr
-2MEBjT9tTsCF+JJdjkEu9+JfEBJScpe254QVIN0BIWpN9Yiboq4PJWgazxtxPjNf
-cDsx8KpdKAuqi/uq5NPooCTmx2UN3qZC9dX1vBAxSggIt29Xg0EQyW8FW7cL/C2I
-SN5Ngz5QUKuN0BeOnqRoPaBdFrTTnW7uXsl4LXpP23rfpisKVtEfiXb13322SByX
-gTAYItr3IsyMEYriggMBpjqKaE3TxdwxETxHh9ktvj5aITWHWkq7corz/hR+POnF
-nucbcNB98DkLlND905oV
-=XVeB
------END PGP PUBLIC KEY BLOCK-----	
+rB4ZBqbjh/b1IX0AEQEAAYkCPAQYAQgAJgIbDBYhBIgW/KAtL8klMlP29kiq42yp
+OuPYBQJnuIjWBQkJafXmAAoJEEiq42ypOuPY+h0P/3e8YtIqHMALBYh1Ct/P/zqZ
+FF1i2uzqmxC9oZg4ul/ex8nqdC1fku+leEOsd9uLMuvNFe8pUrVD2nhv+STV2njN
+fxR1yUJs2vNTXIbqRpQHbbc2bV5oSEOycXvxWRdT9fEkYaKxQlmvkU7AcUode4Uy
+nsg0L9JxPLEEmaDfxr67rHu8DaKdP/w9bOBjKA6AER9RG3QBuoaZ/FzuWmiZI/GE
+mzwMZJq+SINbcfmYWM+4tZYGotxlMRNMCatMKr4iyWQzH1C32049nTMqM0gm6CqX
+LEL2z8HhQgPSZbjYmS1IHFH7Rj8AWj1crkhfC8Vv0AWnygveUxtbvk7HHmFsy3MY
+yudwDavhy3uB/Z4SYXlGqhCiI8ozId+BOL9BAzU/2eEJ/2jog8pwVFRKcW6mQGuV
+/H1q/bVjkHNdwvQqufMDVfqCO8GCVOS/rvVwdeAzyCgj8lYTji2VP+H685QafmUE
+t68N/MOF/W/Ptg2aQ1ZsGvu/4SZgi3Se57XQuXzFAJjcPRlYoIGLAXcFsFzfxQ8J
+eoWAoSN2RsMRf3ibZ+nPz/xWv1hC1qIlSvBRIxG272noBrQR1yZf6Q+dqsEFVQvd
+JLFL7JcerCAeiAgvrTzP14jK9hzo+b0KtxUhpwHceWi9hRHmknTYgM8RCOI5djXQ
+n+wpRYh/3mkaDswQf93n
+=zhEX
+-----END PGP PUBLIC KEY BLOCK-----
 ```
 
 
@@ -843,7 +844,7 @@ On your Ubuntu instance setup your new keys for ssh:
 ssh-add ~/.ssh/id_git
 ```
 
-Now create a Github account and upload your public key to Github (select Settings-> New SSH key or Add SSH key).  Create a new repository on your GitHub site, and add a new file to it. Next go to your Ubuntu instance and see if you can clone of a new directory:
+Now create a GitHub account and upload your public key to Github (select Settings-> New SSH key or Add SSH key).  Create a new repository on your GitHub site, and add a new file to it. Next go to your Ubuntu instance and see if you can clone of a new directory:
 
 git clone ssh://git@github.com/<user>/<repository name>.git
 
@@ -861,7 +862,7 @@ The key things learnt:
 
 A reflective statement:
 
-* In ECC, we use a 256-bit private key. This is used to generate the key for signing Bitcoin transactions. Do you think that a 256-bit key is largest enough? If we use a cracker what performs 1 Tera keys per second, will someone be able to determine our private key?
+* In ECC, we use a 256-bit private key. This is used to generate the key for signing Bitcoin transactions. Do you think that a 256-bit key is largest enough? If we use a cracker that performs 1 Tera keys per second, will someone be able to determine our private key?
 
 ## Additional
 The following is code which performs RSA key generation, and the encryption and decryption of a message (https://asecuritysite.com/encryption/rsa_example):
