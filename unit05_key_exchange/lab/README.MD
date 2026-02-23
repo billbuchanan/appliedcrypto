@@ -10,23 +10,23 @@ Web link (Demo): https://youtu.be/Lnw4FhiOwiU
 ### A.1	
 Bob and Alice have agreed on the values:
 
-g=2879, N= 9929
+g=2879, p= 9929
 
-Bob Select x=6, Alice selects y=9
+Bob Select b=6, Alice selects a=9
 
 Now calculate (using a calculator):
 
-Alice’s A value (g<sup>x</sup> mod N):	
+Alice’s A value (A=g<sup>a</sup> mod N):	
 	
-Bob’s B value (g<sup>y</sup> mod N):
+Bob’s B value (B=g<sup>b</sup> mod N):
 
 ### A.2	
 Now they exchange the values. Next calculate the shared key:
 
 
-Alice’s value (B<sup>x</sup> mod N):	
+Alice’s value (key=B<sup>a</sup> mod N):	
 	
-Bobs’s value (A<sup>y</sup> mod N):
+Bobs’s value (key=A<sup>b</sup> mod N):
 
 Do they match? [Yes] [No]
 
