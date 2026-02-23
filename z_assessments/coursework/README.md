@@ -62,6 +62,6 @@ The marking schedule is:
 Your coursework document should be created either as a PDF document or as a Word document. The preferred method of submitting the code you have used, and associated documentation, is to use a private GitHub. This should then be shared with w.buchanan@napier.ac.uk. Do not make your repository public until after the submission of your coursework.
 
 ## Outline
-An outline is [here](https://www.youtube.com/watch?v=f4JaPx6MSYE)
+An outline is [here](https://www.youtube.com/watch?v=f4JaPx6MSYE) and some samples from the past are [here](https://github.com/billbuchanan/appliedcrypto/edit/main/z_assessments/coursework/samples).
 
 
