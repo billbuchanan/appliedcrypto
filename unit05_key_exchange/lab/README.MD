@@ -14,11 +14,13 @@ g=2879, p= 9929
 
 Bob Select b=6, Alice selects a=9
 
-Now calculate (using a calculator):
+Now calculate (using a calculator or Python:
 
 Alice’s A value (A=g<sup>a</sup> mod N):	
 	
 Bob’s B value (B=g<sup>b</sup> mod N):
+
+Note: In Python, we can use A=pow(g,a,p)
 
 ### A.2	
 Now they exchange the values. Next calculate the shared key:
