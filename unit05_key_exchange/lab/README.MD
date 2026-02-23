@@ -129,7 +129,41 @@ Curve 2559 is a popular curve. Using Google, can you find some popular uses of C
 
 Can you explain how you would use these EC parameters to perform the ECDH key exchange?
 
+### B.3 
+Now we will implement a key exchange in OpenSSL with ECDH. Implement the following, and check that the derived keys are the same. First generate Alice's private and public keys:
 
+```
+% openssl ecparam -name secp256k1 -genkey -out alice_private.pem
+% openssl ec -in alice_private.pem -pubout -out alice_public.pem
+```
+and then Bob's:
+```
+% openssl ecparam -name secp256k1 -genkey -out bob_private.pem
+% openssl ec -in bob_private.pem -pubout -out bob_public.pem
+```
+
+Alice generates derived key:
+```
+% openssl pkeyutl -derive -inkey alice_private.pem -peerkey bob_public.pem -out shared_secret.bin
+```
+and Bob does the same:
+```
+Bob generates derived key
+% openssl pkeyutl -derive -inkey bob_private.pem -peerkey alice_public.pem -out shared_secret2.bin
+```
+
+and then we can check the derived keys to see if they are the same:
+```
+% xxd shared_secret.bin
+00000000: e92e c12b 608c 223e d17a 93b7 1758 f9c7  ...+`.">.z...X..
+00000010: 1d99 b760 6302 860e ca6e b031 8ac1 a034  ...`c....n.1...4
+```
+and:
+```
+% xxd shared_secret2.bin
+00000000: e92e c12b 608c 223e d17a 93b7 1758 f9c7  ...+`.">.z...X..
+00000010: 1d99 b760 6302 860e ca6e b031 8ac1 a034  ...`c....n.1...4
+```
 
 
 
