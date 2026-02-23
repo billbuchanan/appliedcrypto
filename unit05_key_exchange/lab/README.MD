@@ -129,7 +129,8 @@ Curve 2559 is a popular curve. Using Google, can you find some popular uses of C
 
 Can you explain how you would use these EC parameters to perform the ECDH key exchange?
 
-### B.3 Now we will implement a key exchange in OpenSSL with ECDH. Implement the following, and check that the derived keys are the same. First generate Alice's private and public keys:
+### B.3 
+Now we will implement a key exchange in OpenSSL with ECDH. Implement the following, and check that the derived keys are the same. First generate Alice's private and public keys:
 
 ```
 % openssl ecparam -name secp256k1 -genkey -out alice_private.pem
