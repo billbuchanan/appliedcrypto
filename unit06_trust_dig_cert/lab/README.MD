@@ -51,7 +51,7 @@ Who is the issuer on the certificate?
 
 ### A.4	
 
-Google moved in July 2018 to mark sites as being insecure if they did not have a match between their digital certificate and the site. First, open a browser and see if you can access hmizoapex.bank.in (you can try both https and http for the connection). 
+Google moved in July 2018 to mark sites as being insecure if they did not have a match between their digital certificate and the site. First, open a browser and see if you can access mizoapex.bank.in (you can try both https and http for the connection). 
 
 * Run a scan from [SSLLabs](https://www.ssllabs.com/) on testfire.net. What do you observe from the result?
 * What is the SSLLabs rating on this site? Is it "A", "B", "C", "D", "E" or "F"?
