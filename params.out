@@ -1,0 +1,18 @@
+    DH Parameters: (1024 bit)
+    P:   
+        00:ca:b8:9a:80:e0:8d:c9:f2:a8:35:55:0f:ff:dd:
+        b5:35:96:83:79:f7:6f:7a:84:e0:59:ac:59:0a:94:
+        8b:e8:c1:6a:4d:61:c7:90:a1:18:2d:77:78:bb:7c:
+        7e:e8:a1:f1:9c:2c:a7:0f:db:fa:07:79:b4:35:b1:
+        c5:91:99:26:6a:95:96:32:50:9c:e2:f0:90:82:24:
+        16:9a:56:b9:87:87:86:d4:ba:f4:b6:76:52:99:4a:
+        25:59:50:ce:8f:7a:a8:92:9e:a0:8a:82:09:f5:b1:
+        7c:03:7e:c2:ab:90:f1:14:a7:1b:b3:14:55:ca:28:
+        3a:2a:45:ad:a9:09:93:14:df
+    G:    2 (0x2)
+    recommended-private-length: 175 bits
+-----BEGIN DH PARAMETERS-----
+MIGLAoGBAMq4moDgjcnyqDVVD//dtTWWg3n3b3qE4FmsWQqUi+jBak1hx5ChGC13
+eLt8fuih8Zwspw/b+gd5tDWxxZGZJmqVljJQnOLwkIIkFppWuYeHhtS69LZ2UplK
+JVlQzo96qJKeoIqCCfWxfAN+wquQ8RSnG7MUVcooOipFrakJkxTfAgECAgIArw==
+-----END DH PARAMETERS-----
