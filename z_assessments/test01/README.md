@@ -9,10 +9,11 @@ Some test details are:
 
 * It is an open-book test.  No use of GenAI mode in browsers. You cannot use Google.com, and should only use (duckduckgo.com)[https://duckduckgo.com].
 * No copying and pasting is allowed for the questions, and answers will be checked against on-line sources for copying. 
-* No use of chat/AI bots.
+* No use of chat/AI bots. Any student found using GenAI may be reported for academic misconduct.
 * A copied answer is likely to be graded with a score of zero, and copying and pasting from on-line content could be highlighted for an issue.
 * No chat windows should be open for the test.
 * Distance learning students will need to enable remote desktop share and their Web camera.
+* We will be running scripts to detect copying and pasting, so please do not do this.
 
 ## Lectures
 The main lectures are [here](https://youtube.com/playlist?list=PLqhpVxkBo1dMOOH0R7t0SKftJF20hwzaE).
