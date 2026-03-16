@@ -7,6 +7,7 @@ There will be four main questions in the exam: Symmetric Key (Unit 1), Hashing (
 
 Some test details are:
 
+* The test is taken on Moodle, and where the link will appear before the test.
 * It is an open-book test.  No use of GenAI mode in browsers. You cannot use Google.com, and should only use (duckduckgo.com)[https://duckduckgo.com].
 * No copying and pasting is allowed for the questions, and answers will be checked against on-line sources for copying. 
 * No use of chat/AI bots. Any student found using GenAI may be reported for academic misconduct.
@@ -14,7 +15,8 @@ Some test details are:
 * No chat windows should be open for the test.
 * Distance learning students will need to enable remote desktop share and their Web camera.
 * We will be running scripts to detect copying and pasting, so please do not do this.
-
+* For campus-based students, we will use desktop computers. Notes can be available in an electronic or printed form.
+  
 ## Lectures
 The main lectures are [here](https://youtube.com/playlist?list=PLqhpVxkBo1dMOOH0R7t0SKftJF20hwzaE).
 
