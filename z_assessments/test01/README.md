@@ -15,7 +15,7 @@ Some test details are:
 * No chat windows should be open for the test.
 * Distance learning students will need to enable remote desktop share and their Web camera.
 * We will be running scripts to detect copying and pasting, so please do not do this.
-* For campus-based students, we will use desktop computers. Notes can be available in an electronic or printed form, but only for personal 8se (no sharing notes with other students).
+* For campus-based students, we will use desktop computers in the JKCC. Notes can be available in an electronic or printed form, but only for personal 8se (no sharing notes with other students).
   
 ## Lectures
 The main lectures are [here](https://youtube.com/playlist?list=PLqhpVxkBo1dMOOH0R7t0SKftJF20hwzaE).
