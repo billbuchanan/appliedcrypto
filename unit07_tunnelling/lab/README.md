@@ -16,7 +16,7 @@ The Ssllabs tool (https://ssllabs.com) can be used to assess the security of the
 * Who is the signer of the digital certificate?
 * The expiry date on the digital certificate?
 * What is the hashing method on the certificate?
-* If it uses RSA keys, what is the e value that is used in the encryption (Me mod N)?			
+* If it uses RSA keys, what is the e value that is used in the encryption (M^e mod N)?			
 * Determine a weak cipher suite used and example why it might be weak?
 * Is SSL v2 supported?
 * If SSL v2 was supported, what problems might there be with the site (this will require some research)?			
