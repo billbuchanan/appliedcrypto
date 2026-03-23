@@ -3,17 +3,20 @@
 # Test 1
 There will be four main questions in the exam: Symmetric Key (Unit 1), Hashing (Unit 2), Public Key (Unit 3), Key Exchange (Unit 4) and Digital Certificates (Unit 5). An outline is [here](https://www.youtube.com/watch?v=Oj3T2UO1WDw&feature=emb_title), and some learning outcomes are [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/learning_outcomes.md). A PDF version of the questions is [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/2021_fake_exam_questions.pdf) and a fake example paper is [here](https://github.com/billbuchanan/appliedcrypto/blob/master/z_assessments/test01/fake_exam_paper.md).
 
-**Test date:** 16 Mar 2026: 6pm (campus-based - JKCC) or 6:30pm (distance-learning). The time of the test is 95 minutes (1 hour, 25 minutes).
+**Test date:** 16 Mar 2026: 6pm (campus-based - JKCC) or 6:30pm (distance-learning). The time of the test is 95 minutes (1 hour, 35 minutes).
 
 Some test details are:
 
+* The test is taken on Moodle, and where the link will appear before the test.
 * It is an open-book test.  No use of GenAI mode in browsers. You cannot use Google.com, and should only use (duckduckgo.com)[https://duckduckgo.com].
 * No copying and pasting is allowed for the questions, and answers will be checked against on-line sources for copying. 
-* No use of chat/AI bots.
+* No use of chat/AI bots. Any student found using GenAI may be reported for academic misconduct.
 * A copied answer is likely to be graded with a score of zero, and copying and pasting from on-line content could be highlighted for an issue.
 * No chat windows should be open for the test.
 * Distance learning students will need to enable remote desktop share and their Web camera.
-
+* We will be running scripts to detect copying and pasting, so please do not do this.
+* For campus-based students, we will use desktop computers in the JKCC. Notes can be available in an electronic or printed form, but only for personal 8se (no sharing notes with other students).
+  
 ## Lectures
 The main lectures are [here](https://youtube.com/playlist?list=PLqhpVxkBo1dMOOH0R7t0SKftJF20hwzaE).
 
