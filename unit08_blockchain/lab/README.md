@@ -95,7 +95,7 @@ The address in the screenshot above is “0xe983b8c6a1d9f581514ca7a5bd5ff494da43
 
 ![image](https://asecuritysite.com/public/eth005a.png))
 
-The address of the contract is "0xe983b8c6a1d9f581514ca7a5bd5ff494da43944a", so you can visit it from from: [here](https://sepolia.etherscan.io/address/0xe983b8c6a1d9f581514ca7a5bd5ff494da43944a). We now need to verify and publish the contact, with click on “Verify and Publish”:
+The address of the contract is "0xe983b8c6a1d9f581514ca7a5bd5ff494da43944a", so you can visit it from: [here](https://sepolia.etherscan.io/address/0xe983b8c6a1d9f581514ca7a5bd5ff494da43944a). We now need to verify and publish the contact, with click on “Verify and Publish”:
     
 ![here](https://asecuritysite.com/public/eth006.png)   
 
