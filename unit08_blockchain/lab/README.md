@@ -4,6 +4,11 @@
 
 Aim:		To provide a foundation for understanding Bitcoin and Blockchain.
 
+You can either 
+
+* Deploy a smart contract to the Sopolia test network. For this, continue with the lab below.
+* Create your own Ethereum network. The tutorial for this is [here](https://github.com/billbuchanan/nethermind/).
+
 ## A Ethereum
 We will be using the Sepolia test network. If you have to set up your wallet, the details are:
 
