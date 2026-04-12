@@ -22,6 +22,7 @@ You need to mine for some Ether. We can do this on one of these faucets:
 * https://faucet-sepolia.rockx.com/
 * https://faucet.quicknode.com/ethereum/sepolia
 * https://sepoliafaucet.com/ (Alchemy's free faucet)
+* https://cloud.google.com/application/web3/faucet/ethereum/sepolia
 
 
 ## Setting up your Ethereum wallet on Sepolia
