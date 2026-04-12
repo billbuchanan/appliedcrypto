@@ -72,12 +72,12 @@ In this case, the "public" part makes sure we can see the output of the function
 
 ![here](https://asecuritysite.com/public/eth001.png)
 
-Once entered, we can then compile it with the Solidity compiler. It is important to take a note of the compiler version at this stage, as we will need this later:
+Once entered, we can then compile it with the Solidity compiler. It is important to take a note of the compiler version at this stage, as we will need this later (Note: on some Remix version, the operation to connect the wallet is "WalletConnect"):
 
 
 ![here](https://asecuritysite.com/public/eth002.png)
    
-Once compiled we can then deploy the smart contract to a test network (Sepolia). For this , we need to connect our Metamask wallet:
+Once compiled, we can then deploy the smart contract to a test network (Sepolia). For this , we need to connect our Metamask wallet:
    
 ![here](https://asecuritysite.com/public/eth003.png)   
 
