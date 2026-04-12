@@ -4,6 +4,11 @@
 
 Aim:		To provide a foundation for understanding Bitcoin and Blockchain.
 
+You can either 
+
+* Deploy a smart contract to the Sopolia test network. For this, continue with the lab below.
+* Create your own Ethereum network. The tutorial for this is [here](https://github.com/billbuchanan/nethermind/).
+
 ## A Ethereum
 We will be using the Sepolia test network. If you have to set up your wallet, the details are:
 
@@ -16,13 +21,13 @@ We will be using the Sepolia test network. If you have to set up your wallet, th
 You need to mine for some Ether. We can do this on one of these faucets:
 
 
-* https://sepoliafaucet.net
 * https://coinbase.com/faucets/ethereum-sepolia-faucet
 * https://grabteeth.xyz
 * https://sepolia-faucet.pk910.de/ (PoW powered)
 * https://faucet-sepolia.rockx.com/
 * https://faucet.quicknode.com/ethereum/sepolia
 * https://sepoliafaucet.com/ (Alchemy's free faucet)
+* https://cloud.google.com/application/web3/faucet/ethereum/sepolia
 
 
 ## Setting up your Ethereum wallet on Sepolia
@@ -72,12 +77,12 @@ In this case, the "public" part makes sure we can see the output of the function
 
 ![here](https://asecuritysite.com/public/eth001.png)
 
-Once entered, we can then compile it with the Solidity compiler. It is important to take a note of the compiler version at this stage, as we will need this later:
+Once entered, we can then compile it with the Solidity compiler. It is important to take a note of the compiler version at this stage, as we will need this later (Note: on some Remix version, the operation to connect the wallet is "WalletConnect"):
 
 
 ![here](https://asecuritysite.com/public/eth002.png)
    
-Once compiled we can then deploy the smart contract to a test network (Sepolia). For this , we need to connect our Metamask wallet:
+Once compiled, we can then deploy the smart contract to a test network (Sepolia). For this , we need to connect our Metamask wallet:
    
 ![here](https://asecuritysite.com/public/eth003.png)   
 
@@ -87,36 +92,9 @@ Once it has been deployed, we can see our wallet identifies the deployed contrac
  ![here](https://asecuritysite.com/public/eth004.png)     
 
 And clicking through gives us the address of the contract, and then viewing it on the explorer, we can see the transaction:
-    
-![here](https://asecuritysite.com/public/eth005.png)     
 
 
-The address in the screenshot above is “0xe983b8c6a1d9f581514ca7a5bd5ff494da43944a”, so you can click on your own address and view the smart contract in Etherscan. 
-
-![image](https://asecuritysite.com/public/eth005a.png))
-
-The address of the contract is "0xe983b8c6a1d9f581514ca7a5bd5ff494da43944a", so you can visit it from from: [here](https://sepolia.etherscan.io/address/0xe983b8c6a1d9f581514ca7a5bd5ff494da43944a). We now need to verify and publish the contact, with click on “Verify and Publish”:
-    
-![here](https://asecuritysite.com/public/eth006.png)   
-
-
-After this, we can define the Compiler Version and the licence
-    
- ![here](https://asecuritysite.com/public/eth007.png)   
-
-We then need to add your code for it to be checked:
-    
- ![here](https://asecuritysite.com/public/eth008.png)       
-
- It takes around 30 seconds, but, eventually, we should have our code accepted:
-    
- ![here](https://asecuritysite.com/public/eth009.png)        
-
-
-We now have the contract published to the Sepolia test network:
-    
-![here](https://asecuritysite.com/public/eth010.png)       
-
+![here](https://asecuritysite.com/public/eth005_new.png)   
 
 Next, by selected the Contract tab, and can view the read parameters. The exposed functions are add(), mul(), sqr(), sqrt() and sub():
     
