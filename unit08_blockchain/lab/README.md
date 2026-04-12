@@ -92,36 +92,9 @@ Once it has been deployed, we can see our wallet identifies the deployed contrac
  ![here](https://asecuritysite.com/public/eth004.png)     
 
 And clicking through gives us the address of the contract, and then viewing it on the explorer, we can see the transaction:
-    
-![here](https://asecuritysite.com/public/eth005.png)     
 
 
-The address in the screenshot above is “0xe983b8c6a1d9f581514ca7a5bd5ff494da43944a”, so you can click on your own address and view the smart contract in Etherscan. 
-
-![image](https://asecuritysite.com/public/eth005a.png))
-
-The address of the contract is "0xe983b8c6a1d9f581514ca7a5bd5ff494da43944a", so you can visit it from: [here](https://sepolia.etherscan.io/address/0xe983b8c6a1d9f581514ca7a5bd5ff494da43944a). We now need to verify and publish the contact, with click on “Verify and Publish”:
-    
-![here](https://asecuritysite.com/public/eth006.png)   
-
-
-After this, we can define the Compiler Version and the licence
-    
- ![here](https://asecuritysite.com/public/eth007.png)   
-
-We then need to add your code for it to be checked:
-    
- ![here](https://asecuritysite.com/public/eth008.png)       
-
- It takes around 30 seconds, but, eventually, we should have our code accepted:
-    
- ![here](https://asecuritysite.com/public/eth009.png)        
-
-
-We now have the contract published to the Sepolia test network:
-    
-![here](https://asecuritysite.com/public/eth010.png)       
-
+![here](https://asecuritysite.com/public/eth005_new.png)   
 
 Next, by selected the Contract tab, and can view the read parameters. The exposed functions are add(), mul(), sqr(), sqrt() and sub():
     
