@@ -16,7 +16,6 @@ We will be using the Sepolia test network. If you have to set up your wallet, th
 You need to mine for some Ether. We can do this on one of these faucets:
 
 
-* https://sepoliafaucet.net
 * https://coinbase.com/faucets/ethereum-sepolia-faucet
 * https://grabteeth.xyz
 * https://sepolia-faucet.pk910.de/ (PoW powered)
