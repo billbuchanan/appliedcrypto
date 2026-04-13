@@ -42,7 +42,7 @@ The Sepolia network allows a user to test an Ethereum application and using free
 
 A demo of this part of the lab is [here](https://www.youtube.com/watch?v=xeaDE8wgVVQ).
 
-** Note: In the latest version of the Sepolia Testnet, there is no need to verify the contact once it is deployed.** 
+**Note: In the latest version of the Sepolia Testnet, there is no need to verify the contact once it is deployed.** 
 
 ## Creating a Smart Contract in Ethereum
 So, let’s write a bit of code that does some simple maths. In the following we will implement sqrt(), sqr(), mul(), sub(), and add(). First, we open up https://remix.ethereum.org/. and enter the following Solidy contract:
