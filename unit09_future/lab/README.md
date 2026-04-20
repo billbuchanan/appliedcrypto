@@ -7,7 +7,7 @@ Aim:		To provide a foundation in some of the up-and-coming methods in cryptograp
 **New feature:** Repl.it code additions.
 
 ## A Running a local blockchain
-In a previous lab we ran our blockchain on the Ropsten test network. In this tutorial, we will run a local blockchain using ganache. We can install from:
+In a previous lab we ran our blockchain on the Sepolia test network. In this tutorial, we will run a local blockchain using Ganache. We can install from:
 
 ```Solidity
 https://trufflesuite.com/ganache/
