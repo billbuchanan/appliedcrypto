@@ -1,4 +1,4 @@
-<img width="738" height="754" alt="image" src="https://github.com/user-attachments/assets/6be5de60-fe4f-4162-9e58-6a64558ff176" />![esecurity](https://raw.githubusercontent.com/billbuchanan/esecurity/master/z_associated/esecurity_graphics.jpg)
+![esecurity](https://raw.githubusercontent.com/billbuchanan/esecurity/master/z_associated/esecurity_graphics.jpg)
 
 # Lab 8: Blockchain and Cryptocurrencies
 
