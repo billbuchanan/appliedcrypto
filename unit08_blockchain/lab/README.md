@@ -369,73 +369,78 @@ When you create your own contract, make sure you change the public constructor()
 
 The wallet ID is the public ID of your wallet in Metamask. Now we compile:
 
-![Alt text](https://asecuritysite.com/public/sc01.png)
+<img width="2262" height="1144" alt="image" src="https://github.com/user-attachments/assets/80888040-5c1d-434b-8963-645455477880" />
+
 
 Next, we will deploy to the Sepolia test network:
 
-![Alt text](https://asecuritysite.com/public/sc02.png)
+<img width="2408" height="1212" alt="image" src="https://github.com/user-attachments/assets/5a4abe08-d80e-46f0-8734-406d5f5fba90" />
+
 
 After this, our contract will be shown as being pending deployment:
 
-![Alt text](https://asecuritysite.com/public/sc03.png)
+<img width="2426" height="1188" alt="image" src="https://github.com/user-attachments/assets/deef1e96-26d0-47e2-8b06-6403a1b5fb80" />
+
 
 It will take 10–15 minutes to deploy, but it can be speeded up by increasing the gas limit:
 
-![Alt text](https://asecuritysite.com/public/sc04.png)
+<img width="636" height="1060" alt="image" src="https://github.com/user-attachments/assets/26b9fd02-7aca-4e1c-90a4-5f6c8ba1f746" />
 
 Once deployed, we can view the contract details:
 
-![Alt text](https://asecuritysite.com/public/sc05.png)
+<img width="2408" height="1190" alt="image" src="https://github.com/user-attachments/assets/7ff793fd-ccb2-496c-91a0-f8ca7faa27c6" />
 
 And can then view the transaction for the contract [here](https://sepolia.etherscan.io/tx/0x876a5bba07b8b85e53e3273bdb69337d766de7daefe25564c6b3be31db75a0c2).
 
-![Alt text](https://asecuritysite.com/public/sc06.png)
+<img width="1455" height="684" alt="image" src="https://github.com/user-attachments/assets/175ba265-07c9-4da8-abd5-780e61a6f41e" />
 
 And then view the contact: 
 <!-- [here](https://ropsten.etherscan.io/address/0x7db2f938e1037a13dde315634a71a91625542a52")] -->
 
-![Alt text](https://asecuritysite.com/public/sc07.png)
+<img width="2236" height="1196" alt="image" src="https://github.com/user-attachments/assets/144a2b24-8bc3-453e-ab5f-180639cd08b3" />
 
 Next, we select the Contract tab:
-    
-![Alt text](https://asecuritysite.com/public/sc08.png)
+
+<img width="2156" height="1210" alt="image" src="https://github.com/user-attachments/assets/56abba9f-e6f3-4534-a008-df342cbc2dc2" />
 
 And then select "Verify and Publish" and enter the details of the compiler version (v0.4.26):
 
-![Alt text](https://asecuritysite.com/public/sc09.png)
+<img width="1868" height="1070" alt="image" src="https://github.com/user-attachments/assets/52828533-9af5-40aa-9401-f16eb1b16367" />
+
 
 We then need to copy-and-paste the contract code into the Source Code text box:
 
-![Alt text](https://asecuritysite.com/public/sc10.png)
+<img width="2174" height="1192" alt="image" src="https://github.com/user-attachments/assets/c45e502b-3ab6-4d05-853d-bfd872e5d45c" />
 
 After less than 45 seconds, the contract will be approved [here](https://sepolia.etherscan.io/address/0xf221126aeb22f441f3912a9d4bb859e4504b44fa):
-    
-![Alt text](https://asecuritysite.com/public/sc11.png)
+
+<img width="2094" height="1210" alt="image" src="https://github.com/user-attachments/assets/d3455980-f55e-483e-8d80-f6f7695791a0" />
 
 When the contact is run there is a constructor to transfer the tokens to the wallet we have defined (and who will be the owner of the token). We can now go back to the wallet which is specified, to see if the tokens have been transferred [here](https://sepolia.etherscan.io/address/0xbb15b38e4ef6af154b89a2e57e03cd5cbd752233):
 
-![Alt text](https://asecuritysite.com/public/sc12.png)
+<img width="2214" height="1146" alt="image" src="https://github.com/user-attachments/assets/1f169f76-311f-4463-a832-551cd887d504" />
 
-Next, we can transfer the tokens into our wallet, by defining the contract address:
 
-![Alt text](https://asecuritysite.com/public/sc13.png)
+Next, we can transfer the tokens into our wallet by defining the contract address:
+
+<img width="2220" height="1152" alt="image" src="https://github.com/user-attachments/assets/ac60ce9e-8c41-4479-b985-5b73cf23ff91" />
 
 We will now have our new tokens in the wallet:
 
-![Alt text](https://asecuritysite.com/public/sc14.png)
+<img width="2258" height="1150" alt="image" src="https://github.com/user-attachments/assets/e050efd2-ba23-4c20-8d10-20727fc25553" />
 
 And with:
 
-![Alt text](https://asecuritysite.com/public/sc15.png)
+<img width="2164" height="1126" alt="image" src="https://github.com/user-attachments/assets/5aad51f8-a663-497a-952c-18d71212497e" />
 
 We can now transfer the cryptocurrency to another wallet:
 
-![Alt text](https://asecuritysite.com/public/sc16.png)
+<img width="1455" height="644" alt="image" src="https://github.com/user-attachments/assets/d77ee0da-2a17-45e9-ab61-fb9e62ca6121" />
 
 We can view the ENUToken:
 <!-- [here](https://ropsten.etherscan.io/token/0x7db2f938e1037a13dde315634a71a91625542a52)] -->
 
-![Alt text](https://asecuritysite.com/public/sc17.png)
+<img width="2684" height="952" alt="image" src="https://github.com/user-attachments/assets/f8495628-1970-413a-bddd-4c0ea8230c53" />
 
 Now answer the following:
 
@@ -487,27 +492,32 @@ contract ExampleApp {
 
 This has an add() method to add a new string to myArray, and a show() which will show the contents of myArray. The view element added to show() makes sure it is just a read function (and that we do not write to the function). We can then compile it in remix:
 
-![Alt text](https://asecuritysite.com/public/estate01.png)
+<img width="1556" height="735" alt="image" src="https://github.com/user-attachments/assets/792262c7-c90f-4fe9-ba39-cb7a0e4e4ac1" />
+
 
 Now we can deploy:
 
-![Alt text](https://asecuritysite.com/public/estate02.png)
+<img width="1556" height="872" alt="image" src="https://github.com/user-attachments/assets/3fa10e19-a098-430e-ba00-154bcbf2f255" />
 
-This creates a new contact [here](https://ropsten.etherscan.io/address/0xc79961ad2fdf3fcb4a57ebeaab78a1e3f8bf373c):
 
-![Alt text](https://asecuritysite.com/public/estate03.png)
+This creates a new contract [here](https://ropsten.etherscan.io/address/0xc79961ad2fdf3fcb4a57ebeaab78a1e3f8bf373c):
 
-If we look at the contract we get:
+<img width="1556" height="657" alt="image" src="https://github.com/user-attachments/assets/94738beb-538a-4327-92f6-00562fef4da0" />
 
-![Alt text](https://asecuritysite.com/public/estate04.png)
+If we look at the contract, we get:
 
-Next we can Verify the contract:
+<img width="1556" height="772" alt="image" src="https://github.com/user-attachments/assets/e122db42-664b-45eb-b743-5f913440753e" />
 
-![Alt text](https://asecuritysite.com/public/estate05.png)
 
-Note that the compiler we used is 0.4.24. We then add our code, and then the contact is validated:
+Next we can verify the contract:
 
-![Alt text](https://asecuritysite.com/public/estate06.png)
+<img width="1556" height="959" alt="image" src="https://github.com/user-attachments/assets/e59d14f2-cc0d-4525-b6c0-5c872403abb7" />
+
+
+Note that the compiler we used is 0.4.24. We then add our code, and then the contract is validated:
+
+<img width="1556" height="871" alt="image" src="https://github.com/user-attachments/assets/f1b1a111-f6fc-4db6-896f-fbde847836da" />
+
 
 It is now complete [here](https://ropsten.etherscan.io/address/0xc79961ad2fdf3fcb4a57ebeaab78a1e3f8bf373c):
 
