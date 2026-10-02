@@ -1,4 +1,4 @@
-![esecurity](https://raw.githubusercontent.com/billbuchanan/esecurity/master/z_associated/esecurity_graphics.jpg)
+<img width="738" height="754" alt="image" src="https://github.com/user-attachments/assets/6be5de60-fe4f-4162-9e58-6a64558ff176" />![esecurity](https://raw.githubusercontent.com/billbuchanan/esecurity/master/z_associated/esecurity_graphics.jpg)
 
 # Lab 8: Blockchain and Cryptocurrencies
 
@@ -521,35 +521,37 @@ Note that the compiler we used is 0.4.24. We then add our code, and then the con
 
 It is now complete [here](https://ropsten.etherscan.io/address/0xc79961ad2fdf3fcb4a57ebeaab78a1e3f8bf373c):
 
-![Alt text](https://asecuritysite.com/public/estate07.png)
+<img width="1556" height="673" alt="image" src="https://github.com/user-attachments/assets/22354b10-c580-41cf-a54c-776ab43baa59" />
 
-This will cost us some gas as we change the state of the smart contact:
+This will cost us some gas as we change the state of the smart contract:
 
-![Alt text](https://asecuritysite.com/public/estate08.png)
+<img width="1556" height="786" alt="image" src="https://github.com/user-attachments/assets/a65edd3e-a4ec-42ad-bd78-00a361e94fbe" />
 
-Once it has been mined, the smart contact will be updated:
+Once it has been mined, the smart contract will be updated:
 
-![Alt text](https://asecuritysite.com/public/estate09.png)
+<img width="1556" height="801" alt="image" src="https://github.com/user-attachments/assets/7957eb99-264d-439b-b4e3-92ca09d638e5" />
 
 We can then use the View() method to see the string:
 
-![Alt text](https://asecuritysite.com/public/estate10.png)
+<img width="738" height="754" alt="image" src="https://github.com/user-attachments/assets/9e67cd2a-521d-4def-bdd3-37bd68499958" />
 
 Now we add “Glasgow”:
 
-![Alt text](https://asecuritysite.com/public/estate11.png)
+<img width="1556" height="799" alt="image" src="https://github.com/user-attachments/assets/50767e5e-766d-4c82-9dfb-4212cd6a5364" />
+
 
 And once it has been mined, we can go back and show the new state:
 
-![Alt text](https://asecuritysite.com/public/estate12.png)
+<img width="732" height="760" alt="image" src="https://github.com/user-attachments/assets/bf209ff3-60b5-4c25-9eb7-6e4a1e49b455" />
+
 
 Complete the following:
 
-* Setup your smart contact, and then add a few cities of the world, and prove that it works. 
+* Setup your smart contract, and then add a few cities of the world, and prove that it works. 
 * Ask another person, or your tutor, to add a city to your smart contract, and prove that it works.
 
 ## ERC-721 (Creating an NFT)
-For normal crypto tokens (ERC-20) we use FT (Fungible Tokens) and where there is a finite number of these, and each of these is the same. For example, I could release one million ERC-20 tokens and then trade with them. They will all have the same value, and I cannot mint any more. With NFTs (ERC-721), we can mint any number of cryptography tokens, and each will have an owner. Each of these can have its own value, or be pinned to a physical asset or identity. For example, as a tutor, I could assign each of my students to an NFT, and where we link the NFT to the student. Overall, we create these with a smart contract, and where there is an "owner" of the creation of the tokens. It is this account that will create the tokens as required, and then allocate them to new owners.
+For normal crypto tokens (ERC-20), we use FT (Fungible Tokens) and where there is a finite number of these, and each of these is the same. For example, I could release one million ERC-20 tokens and then trade with them. They will all have the same value, and I cannot mint any more. With NFTs (ERC-721), we can mint any number of cryptography tokens, and each will have an owner. Each of these can have its own value, or be pinned to a physical asset or identity. For example, as a tutor, I could assign each of my students to an NFT, and where we link the NFT to the student. Overall, we create these with a smart contract, and where there is an "owner" of the creation of the tokens. It is this account that will create the tokens as required, and then allocate them to new owners.
 
 A demo of this is [here](https://www.youtube.com/watch?v=p85yuFkNCbw).
 
@@ -583,11 +585,13 @@ contract BillToken is ERC721URIStorage{
 
 This contract defines we are creating a "Bill Token", and where Open Zeppelin will integrate all the required methods that are required to interact with the token (such as creating it, viewing the ownership of tokens, and in allocating it to another owner). For this, we can use Remix (here) to create and compile the code:
 
-![Alt text](https://asecuritysite.com/public/eth_100.png)
+<img width="2754" height="1112" alt="image" src="https://github.com/user-attachments/assets/2906e043-f433-46d3-8dcb-3a30a9d3687a" />
+
 
 We can then deploy our contract:
 
-![Alt text](https://asecuritysite.com/public/eth_101.png)
+<img width="2646" height="1754" alt="image" src="https://github.com/user-attachments/assets/a6acea78-1908-4112-8290-b7c9b08d6e8b" />
+
 
 The awardItem function can be used to mint an NFT and allocate it to a given address. So, let’s say we are giving our NFTs for module marks in Applied Cryptography. First we create the metadata for the NFT as a JSON file, and add it to a URL:
 
@@ -602,15 +606,16 @@ The awardItem function can be used to mint an NFT and allocate it to a given add
 
 Let’s now allocate one new “Bill Token” to (0xbB15B38e4ef6aF154b89A2E57E03Cd5cbD752233)
 
-![Alt text](https://asecuritysite.com/public/eth_102.png)
+<img width="2712" height="1312" alt="image" src="https://github.com/user-attachments/assets/432725e2-30bb-43c4-a6b2-fb8ac5a41f43" />
 
-Next we will create a second token:
+Next, we will create a second token:
 
-![Alt text](https://asecuritysite.com/public/eth_103.png)
+<img width="2718" height="1294" alt="image" src="https://github.com/user-attachments/assets/fcb7c46a-73fa-4e76-9afd-d6fda152b086" />
 
 Finally, we can view the contract:
 
-![Alt text](https://asecuritysite.com/public/eth_104.png)
+<img width="2786" height="1266" alt="image" src="https://github.com/user-attachments/assets/4ea7920f-99eb-4d24-8d27-aaf86182f40e" />
+
 
 # Part B
 
